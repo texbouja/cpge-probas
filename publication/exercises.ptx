@@ -69,7 +69,7 @@
         <!-- The next elements say how the levels deep to break up the    -->
         <!-- numbering of the respective elements. Can't be more than the -->
         <!-- @level on divisions above.                                   -->
-        <blocks level="0"/>
+        <blocks level="1"/>
         <projects level="1"/>
         <equations level="1"/>
         <footnotes level="1"/>
@@ -79,22 +79,23 @@
         <chunking level="2"/>
         <tableofcontents level="3"/>
         <exercise-reading hint="yes" answer="yes" solution="yes"/>
-        <exercise-inline hint="yes" answer="yes" solution="yes"/>
+        <exercise-inline hint="yes" answer="no" solution="no"/>
         <exercise-divisional hint="yes" answer="yes" solution="yes"/>
         <exercise-worksheet hint="yes" answer="yes" solution="yes"/>
-        <exercise-project hint="yes" answer="yes" solution="yes"/>
+        <exercise-project hint="yes" answer="no" solution="no"/>
+        <activity hint="yes" answer="yes" solution="yes"/>
 </common>
   <!-- LaTeX specific options: set @print="yes" to get pdf set up   -->
   <!-- for printing; set @sides="two" if the printing would be two- -->
   <!-- sided.  @pageref="yes/no" controls whether page number are   -->
   <!-- included in cross-references                                 -->
-  <latex print="yes" sides="two" font-size="11" pageref="no">
+  <latex print="yes" sides="two" font-size="10" pageref="no">
         <!-- <cover front="images/front" back="images/back" /> -->
         <asymptote links="no"/>
         <worksheet formatted="no"/>
         <page>
-            <geometry>papersize={7in,10in}, width=33pc, height=51pc, inner=.75in, outer=.75in, top=0.75in, twoside, ignoreheadfoot, </geometry>
-        </page>
+            <geometry>paper=a5paper, inner=1cm, outer=.5cm, top=1cm, bottom=1cm,</geometry>
+        </page> 
     </latex>
 
    <html short-answer-responses="always">
