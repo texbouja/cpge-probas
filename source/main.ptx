@@ -1,22 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+<pretext xml:lang="fr-FR" xmlns:xi="http://www.w3.org/2001/XInclude">
   <!-- we first include a file which contains the docinfo element: -->
   <xi:include href="./docinfo.ptx" />
+  <book xml:id="proba-disc" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Probabilités discrètes</title>
 
-  <book xml:id="my-great-book">
-    <title>My Great Book</title>
-    <subtitle>An example to get you started</subtitle>
-
+    <subtitle>Classes MP/MP*</subtitle>
     <!-- Include frontmatter -->
-    <xi:include href="./frontmatter.ptx" />
+    <!-- <xi:include href="./frontmatter.ptx" /> -->
+    <!-- Include sections -->
+    <chapter xml:id="ch-probabiltes-discretes">
+      <title>Probabilité discrètes</title>
 
-    <!-- Include chapters -->
-    <xi:include href="./ch-chapter-title.ptx" />
+      <objectives>
+        <title>objectifs d'apprentissage</title>
 
+        <introduction>
+          <p>
+            À la fin de ce chapitre, vous devriez être capable de :
+          </p>
+        </introduction>
 
+        <ul>
+          <li>
+            <p>
+              construire un modèle mathématique qui décrit une expérience aléatoire ;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              exprimer un événement dans l'espace construit et calculer sa probabilité ;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              utiliser des variables aléatoires pour modéliser les résultats d'une expérience aléatoire ;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              utiliser le langage des probabilités pour traiter des problèmes dans d'autres sections du programme
+            </p>
+          </li>
+        </ul>
+      </objectives>
+
+      <xi:include href="./sec-generalites.ptx" />
+      <xi:include href="./sec-variables_aleatoires.ptx" />
+      <xi:include href="./sec-esperance_et_moments.ptx" />
+      <xi:include href="./sec-fonctions_generatrices.ptx" />
+    </chapter>
+
+   
+    <xi:include href="./ch-exercices.ptx" />
     <!-- Include backmatter -->
-    <xi:include href="./backmatter.ptx" />
-
+    <!-- <xi:include href="./backmatter.ptx" /> -->
   </book>
 </pretext>

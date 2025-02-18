@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+
+<chapter xml:id="ch-exercices" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Exercices : Probabilités discrètes</title>
+    
+
+
+
+<!-- <exercises xml:id="exercices-varaldis" xmlns:xi="http://www.w3.org/2001/XInclude"> -->
+
+    <exercise>
+        <title>Une caractérisation de la loi de Poisson</title>
+    
+
+        <introduction>
+            <p>
+                On considère une variable aléatoire discrète <m>N</m> sur l'espace probabilisé <m>(\Omega, \mathcal{A}, \Pr)</m> telle que <m>N(\Omega)=\N</m> et <m>\Pr(N=n) \neq 0</m> pour tout <m>n \in \N</m>.
+                Si la variable aléatoire <m>N</m> prend la valeur <m>n</m>, on procède à une succession de <m>n</m> épreuves de Bernoulli indépendantes de paramètre <m>p \in] 0,1[</m>.
+                On note <m>S</m> et <m>E</m> les variables aléatoires représentant respectivement le nombre de succès et d'échecs dans ces <m>n</m> épreuves.
+            </p>
+        </introduction>
+
+
+        <task>
+            <p>
+                Montrer que si <m>N</m> suit une loi de Poisson de paramètre <m>\lambda>0</m>, les variables <m>S</m> et <m>E</m> suivent aussi des lois de Poisson dont on déterminera les paramètres.
+                Montrer que les variables <m>E</m> et <m>S</m> sont indépendantes.
+            </p>
+        </task>
+
+
+        <task>
+            <p>
+                Montrer réciproquement que si <m>S</m> et <m>E</m> sont indépendantes, alors <m>N</m> suit une loi de Poisson.
+                Pour cela, on montrera :
+            </p>
+
+            <ul>
+                <li>
+                    <p>
+                        qu'il existe deux suites <m>\left(u_{n}\right)_{n \in \N}</m> et <m>\left(v_{n}\right)_{n \in \N}</m> telles que :
+                        <me>
+                            \forall(m, n) \in \N^{2} \quad(m+n) ! \Pr(N=m+n)=u_{m} v_{n}
+                        </me>
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        que les suites <m>\left(u_{n}\right)_{n \in \N}</m> et <m>\left(v_{n}\right)_{n \in \N}</m> sont géométriques.
+                    </p>
+                </li>
+            </ul>
+        </task>
+    </exercise>
+
+    <exercise>
+        <title>Lancer de pièce jusqu'au premier pile</title>
+
+            <introduction>
+                <p>
+                    On lance une pièce de monnaie jusqu'à l'obtention du premier pile, la probabilité d'obtenir pile étant <m>p \in] 0,1[</m>.
+                    Soit <m>N</m> la variable aléatoire représentant le nombre de lancers nécessaires.
+                    Si <m>N=n</m>, on relance ensuite <m>n</m> fois la pièce et on appelle <m>X</m> la variable aléatoire représentant le nombre de piles obtenu.
+                </p>
+            </introduction>
+
+
+            <task>
+                <p>
+                    Déterminer la loi de <m>N</m>, celle du couple <m>(N, X)</m>, puis la loi de <m>X</m>.
+                </p>
+            </task>
+
+
+            <task>
+                <p>
+                    Montrer que <m>X</m> a même loi que le produit de deux variables indépendantes <m>Y</m> et <m>Z</m> telles que <m>Y</m> suive une loi de Bernoulli et <m>Z</m> une loi géométrique de même paramètre.
+                </p>
+            </task>
+
+
+            <task>
+                <p>
+                    En déduire l'espérance et la variance de <m>X</m>.
+                </p>
+            </task>
+    </exercise>
+
+    <exercise>
+        <title>Loi sur les nombres premiers</title>
+        <introduction>
+            <p>
+                Soit <m>\mathcal{P}</m> l'ensemble des nombres premiers.
+                Soit <m>X</m> une variable aléatoire à valeurs dans <m>\N^{*}</m> dont la loi est définie par :
+                <me>
+                    \forall n \in \N^{*} \quad \Pr(X=n)=\frac{n^{-s}}{\zeta(s)}
+                </me>
+            </p>
+        </introduction>
+
+            <task>
+                <p>
+                    Justifier qu'on définit bien ainsi la loi d'une variable aléatoire.
+                </p>
+            </task>
+
+
+            <task>
+                <p>
+                    Pour tout <m>n \in \N^{*}</m>, on considère <m>A_{n}</m> : « <m>n</m> divise <m>X</m> ».
+                    Montrer que <m>\left(A_{p}\right)_{p \in \mathcal{P}}</m> est une famille d'événements indépendants.
+                    En déduire une preuve de :
+                    <me>
+                        \prod_{p \in \mathcal{P}}\left(1-\frac{1}{p^{s}}\right)=\frac{1}{\zeta(s)}
+                    </me>
+                </p>
+            </task>
+
+
+            <task>
+                <p>
+                    Montrer que la probabilité qu'aucun carré différent de 1 ne divise <m>X</m> vaut <m>\frac{1}{\zeta(2 s)}</m>.
+                </p>
+            </task>
+    </exercise>
+
+    <exercise>
+        <title>Taux de panne</title>
+
+        <introduction>
+            <p>
+                Soit <m>X</m> une variable aléatoire discrète à valeurs dans <m>\N^{*}</m> vérifiant :
+                <me>
+                    \forall n \in \N^{*} \quad \Pr(X \geqslant n)>0
+                </me>
+                <m>X</m> représente le moment où un mécanisme tombe en panne. C'est à dire le numéro de l'instance de son cycle de fonctionnement où il tombe en panne. En principe, sous l'effet de l'usure, plus la durée de son fonctionnement est grande plus la probabilité que le mécanisme tombe en panne augmente. 
+                </p> 
+                <p>que On appelle taux de panne associé à <m>X</m> la suite réelle <m>\left(x_{n}\right)_{n \in \N^{*}}</m> définie par :
+                <me>
+                    \forall n \in \N^{*} \quad x_{n}=\Pr(X=n \mid X \geqslant n)
+                </me>
+                <m>x_n</m> est la probabilité pour que le mécanisme tombe en panne à l'instant <m>n</m> sachant qu'il a fonctionné jusqu'à cet instant. 
+            </p>
+            </introduction>
+
+
+            <task>
+                
+                <statement>
+                    <p>
+                        Exprimer <m>p_{n}=\Pr(X=n)</m> en fonction des <m>x_{k}</m>.
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Éviter de diviser par <m>x_n</m>. Exprimer <m>\Pr(X\geq n)</m> comme un produit de facteurs <m>(1-x_k)</m>.
+                    </p>
+                </hint>
+                <answer>
+                    <p>
+                        <me>
+                            \forall n \in \N^{*} \quad p_{n}=x_{n}\prod_{k=1}^{n-1}(1-x_{k})
+                        </me> 
+                    </p>
+                </answer>
+
+                <solution>
+                    <p>
+                        On a <m>(X=n)\subset (X\geqslant n)</m> donc <m>\Pr(X=n)=\Pr(X=n,X\geq n)</m>.
+                        Ce qui donne
+                        <men xml:id="eq-tauxpanne">
+                            x_n=\Pr(X=n\mid X\geq n)=\frac{\Pr(X=n)}{\Pr(X\geq n)}
+                        </men>
+                        On en déduit que 
+                        <me>
+                            1-x_n=\frac{\Pr(X\geq n)-\Pr(X=n)}{\Pr(X\geq n)}=\frac{\Pr(X\geq n+1)}{\Pr(X\geq n)}
+                        </me>
+                        Ce qui donne par télescopage 
+                        <me>
+                            \prod_{k=1}^{n-1}(1-x_k)=\frac{\Pr(X\geq n)}{\Pr(X\geq 1)}=\Pr(X\geq n)
+                        </me>
+                        La relation <xref ref="eq-tauxpanne"/> signifie que <m>p_n=x_n\Pr(X\geq n)</m> donc finalement 
+                        <men xml:id="eqn-pnexpr">
+                            p_n=x_n\prod_{k=1}^{n-1}(1-x_k)
+                        </men>
+                        
+                        
+                        
+                        
+
+
+
+
+
+
+
+
+
+
+
+                        
+                    </p>
+                </solution>
+            </task>
+
+
+            <task><title>Caractérisation du taux de panne</title>
+                <statement>
+                    <p>
+                        <ol marker="1.">
+                            <li>
+                                <p>
+                                    Montrer que <m>0 \leqslant x_{n} \lt 1</m> pour tout <m>n \in \N^{*}</m> et que la série de terme général <m>x_{n}</m> diverge.
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    Réciproquement, soit <m>\left(x_{n}\right)_{n \in \N^{*}}</m> une suite à valeur dans <m>[0,1[</m> telle que la série de terme général <m>x_{n}</m> diverge.
+                                    Montrer qu'il existe une variable aléatoire dont le taux de panne est la suite <m>\left(x_{n}\right)</m>.
+                                </p>
+                            </li>
+                        </ol>
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        On rappelle que pour une suite <m>(p_n)_n</m> de réels positifs sommable et de somme <m>1</m>, il existe une variable aléatoire <m>X</m> telle que <m>\Pr(X=n)=p_n</m> pour tout <m>n</m>.   
+                    </p>
+                </hint>
+
+                <solution>
+                    <ol marker="1.">
+                        <li>
+                            <p>
+                                Soit <m>n\in\N^*</m> et supposons que <m>x_n=1</m>.
+                                Alors <m>p_n=\Pr(X\geq n)</m>, ou encore <m>\Pr(X=n)=\Pr(X\geq n)</m>.
+                                Ce qui implique que <m>\Pr(X\geq n+1)=0</m> contredisant l'hypothèse faite dans l'énoncé.
+                                Alors <m>x_n\lt1</m>.
+                            </p>
+
+                            <p>
+                                Ensuite <m>P(X\geq n+1)</m> est le reste de la série convergente <m>\sum p_k</m> donc il converge vers <m>0</m>. Ce qui implique que 
+                                <me>
+                                \sum_{k=1}^{n}\ln(1-x_n)=\ln\bigl(\Pr(X\geq n)\bigr)\longrightarrow -\infty
+                                </me>
+                                La série <m>\sum x_n</m> est nécessairement divergente car dans le cas contraire <m>(x_n)_n</m> convergerait vers <m>0</m> et on aurait donc <m>-\ln(1-x_n)\sim x_n</m> ce qui impliquerait que la série <m>\sum \ln(1-x_n)</m> est convergente.  
+                            </p>
+                        </li>
+
+                        <li>
+                            <p> Soit <m>\sum x_n</m> une série divergente à termes dans <m>[0,1[</m> et posons <m>v_1=1</m> pour tout <m>n\geq 2</m>
+                                <me>
+                                    v_n=\prod_{k=1}^{n-1}(1-x_k) \qtext{et} p_n=x_nv_n
+                                </me>
+                            Avec ces relations on a 
+                                <me>
+                                    v_n-v_{n+1}=v_nx_n=p_n
+                                </me>
+                            On peut ensuite écrire 
+                            <me>
+                                \ln v_n=\sum_{k=1}^{n-1}\ln(1-x_n)\leqslant -\sum_{k=1}^{n-1} x_k
+                            </me>
+                            Puisque la série de réels positif<m>\sum x_n</m> est divergente positive sa suite des sommes partielles tend vers <m>+\infty</m> et on a donc 
+                            <m>\ln v_n\longrightarrow-\infty</m>. Par suite <m>v_n\longrightarrow 0</m>. Puisque <m>p_n=v_n-v_{n+1}</m> alors la série <m>\sum p_n</m> est convergente de somme <m>v_1=1</m>.
+                            </p>
+                            <p>
+                                Il existe donc une VADR <m>X</m> tel que <m>P(X=n)=p_n</m> pour tout <m>n\in\N^*</m>. 
+                            </p>
+                        </li>
+                    </ol>
+                </solution>
+            </task>
+
+
+            <task>
+            <statement>
+                <p>
+                    Montrer que la variable <m>X</m> suit une loi géométrique si, et seulement si, son taux de panne est constant.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    On suppose que <m>X</m> suit une loi géométrique de paramètre <m>p</m>. Alors pour tout <m>n\in\N^*</m> on a
+                    <m>P(X=n)=p(1-p)^{n-1}</m>. Donc 
+                    <me>P(X=n+1)=\sum_{k=n+1}p(1-p)^{k-1}=(1-p)^n</me>
+                    Par suite 
+                    <me>\Pr(X=n\mid X\geq n)=\frac{\Pr(X=n)}{\Pr(X\geq n)}=\frac{p(1-p)^{n-1}}{(1-p)^{n-1}}=p</me>. 
+                    Donc le taux de panne est constant.
+
+                    Réciproquement, on suppose que le taux de panne est constant de valeur <m>p</m>. Alors pour tout <m>n\in\N^*</m> on a
+                    <me>P(X=n)=x_n\prod_{k=1}^{n-1}(1-x_k)=p(1-p)^{n-1}</me>. 
+                    
+                    Donc <m>X</m> suit une loi géométrique de paramètre <m>p</m>.
+                </p>
+                <p> Noter que cela signifie que le taux de panne est constant si et seulement si les événements «le mécanisme tombe en panne à l'instant <m>n</m>» sont mutuellement indépendants et ont tous la même probabilité. Il n'y a aucun effet d'usure.
+                </p>
+            </solution>
+            </task>
+    </exercise>
+
+
+    <exercise>
+    <title>Maximums et minimums provisoires</title>
+    <introduction>
+        <p>
+            Soit <m>n \in \N^{*}</m>. On désigne par <m>\Omega</m> l'ensemble des permutations de <m>\llbracket 1, n \rrbracket</m>. On munit <m>\Omega</m> de la probabilité uniforme. Pour <m>\sigma \in \Omega</m> et <m>i \in \llbracket 1, n \rrbracket</m>, on dit que <m>\sigma(i)</m> est un maximum (resp. minimum) provisoire de <m>\sigma</m> si :
+            <me>
+                \sigma(i) = \max (\sigma(1), \sigma(2), \ldots, \sigma(i))
+            </me>
+            (resp. <m>\sigma(i) = \min (\sigma(1), \sigma(2), \ldots, \sigma(i))</m>).
+            On désigne par <m>X_{n}</m> (resp. <m>Y_{n}</m>) les variables aléatoires représentant le nombre de maximums (resp. minimums) provisoires des permutations de <m>\llbracket 1, n \rrbracket</m>.
+        </p>
+        </introduction>
+        <task>
+            <p>
+                Montrer que les variables <m>X_{n}</m> et <m>Y_{n}</m> ont même loi.
+            </p>
+        </task>
+        <task>
+            <p>
+                Déterminer la loi de <m>X_{3}</m>, son espérance et sa variance.
+            </p>
+        </task>
+        <task>
+            <p>
+                Déterminer la loi du couple <m>(X_{3}, Y_{3})</m> et sa covariance.
+            </p>
+        </task>
+        <task>
+            <p>
+                Pour <m>n \in \N^{*}</m>, on note <m>g_{n}</m> la fonction génératrice de <m>X_{n}</m>.
+            </p>
+            <ol marker="1.">
+                <li>
+                    <p>
+                        Pour <m>1 \leqslant k \leqslant n</m>, on note <m>Z_{k}</m> la variable indicatrice de l'événement « <m>\sigma(k)</m> est un maximum ». Montrer que les variables <m>Z_{1}, Z_{2}, \ldots, Z_{n}</m> sont indépendantes.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Exprimer <m>X_{n}</m> en fonction de <m>Z_{1}, Z_{2}, \ldots, Z_{n}</m>. En déduire <m>g_{n}</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        En déduire <m>\Pr(X_{n}=1)</m>, <m>\Pr(X_{n}=2)</m>, <m>\Pr(X_{n}=n)</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Déterminer <m>\Es(X_{n})</m> et <m>\Va(X_{n})</m> (sous forme de sommes) et un équivalent de <m>\Es(X_{n})</m> et de <m>\Va(X_{n})</m> quand <m>n</m> tend vers <m>+\infty</m>.
+                    </p>
+                </li>
+            </ol>
+        </task>
+</exercise>
+
+
+<exercise>
+    <title>Formule du crible</title>
+    <introduction>
+        <p>
+            Soit <m>A_{1}, A_{2}, \ldots, A_{n}</m> des événements d'un espace probabilisé <m>(\Omega, \mathcal{A}, \Pr)</m>.
+        </p>
+    </introduction>
+        <task>
+            <p>
+                Montrer que <m>1_{\bigcup_{i=1}^{n} A_{i}} = 1 - \prod_{i=1}^{n} (1 - \mathbf{1}_{A_{i}})</m>. En déduire la formule du crible :
+                <me>
+                    \Pr\Big(\bigcup_{i=1}^{n} A_{i}\Big) = \sum_{k=1}^{n} \bigg((-1)^{k-1} \sum_{I \subset [1, n] \atop \card I = k} \Pr\Big(\bigcap_{i \in I} A_{I}\Big)\bigg).
+                </me>
+            </p>
+        </task>
+        <task>
+            <p>
+                Soient <m>n \in \N^{*}</m> et <m>(X_{k})_{k \in \N^{*}}</m> une suite de variables indépendantes d'un espace probabilisé <m>(\Omega, \mathcal{A}, \Pr)</m> suivant toutes la loi uniforme sur <m>\llbracket 1, n \rrbracket</m>. On note <m>X</m> la variable aléatoire égale au nombre de tirages nécessaires pour obtenir tous les numéros entre 1 et <m>n</m> au moins une fois (et à <m>+\infty</m> si on n'obtient jamais les <m>n</m> numéros). Pour <m>j \in \llbracket 1, n \rrbracket</m> et <m>m \in \N</m>, on note <m>B_{j, m}</m> l'événement : « au bout de <m>m</m> tirages, le numéro <m>j</m> n'est pas encore apparu ».
+            </p>
+            <ol marker="1.">
+                <li>
+                    <p>
+                        Calculer <m>\Pr(B_{j_{1}, m} \cap B_{j_{2}, m} \cap \cdots \cap B_{j_{k}, m})</m> où <m>j_{1}, j_{2}, \ldots, j_{k}</m> sont des indices distincts compris entre 1 et <m>n</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        En déduire que :
+                        <me>
+                            \Pr(X \gt m) = \sum_{k=1}^{n} (-1)^{k-1} \binom{n}{k} \Big(\frac{n - k}{n}\Big)^{m}.
+                        </me>
+                        Calculer <m>\lim_{m \rightarrow +\infty} \Pr(X \gt m)</m>. Interpréter.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Montrer que <m>\Es(X) = n \sum_{k=1}^{n} (-1)^{k-1} \frac{\binom{n}{k}}{k}</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Montrer que <m>\Es(X) = n \left(1 + \frac{1}{2} + \cdots + \frac{1}{n}\right)</m>. En déduire un équivalent de <m>\Es(X)</m> quand <m>n</m> tend vers <m>+\infty</m>.
+                    </p>
+                </li>
+            </ol>
+        </task>
+</exercise>
+
+
+<exercise>
+    <title>Variables aléatoires uniformes et Poisson</title>
+    <introduction>
+        <p>
+            Soient un entier <m>n \geqslant 1</m> et une suite <m>(U_{k})_{k \in \N^{*}}</m> de variables aléatoires indépendantes et de même loi uniforme sur <m>\llbracket 1, n \rrbracket</m>. Pour tout <m>i \in \llbracket 1, n \rrbracket</m>, on définit :
+            <me>
+                X_{i}^{(0)} = 0 \quad \text{et} \quad X_{i}^{(m)} = \card\{k \in \llbracket 1, m \rrbracket \mid U_{k} = i\} \quad \forall m \geqslant 1.
+            </me>
+        </p>
+        </introduction>
+        <task>
+            <p>
+                Quelle est la loi de <m>X_{i}^{(m)}</m> pour <m>i \in \llbracket 1, n \rrbracket</m> et <m>m \geqslant 1</m> ?
+            </p>
+        </task>
+        <task>
+            <p>
+                Soit <m>m \geqslant 1</m> et <m>(i, j) \in \llbracket 1, n \rrbracket^{2}</m> avec <m>i \neq j</m>. Calculer la covariance des variables aléatoires <m>X_{i}^{(m)}</m> et <m>X_{j}^{(m)}</m>. Sont-elles indépendantes ?
+            </p>
+        </task>
+        <task>
+            <p>
+                Soit <m>\lambda\gt0</m> et <m>N</m> une variable aléatoire suivant une loi de Poisson de paramètre <m>\lambda</m>, indépendante des variables <m>U_{k}</m>. On pose :
+                <me>
+                    \forall i \in \llbracket 1, n \rrbracket \quad Y_{i} = X_{i}^{(N)}.
+                </me>
+            </p>
+            <ol marker="1.">
+                <li>
+                    <p>
+                        Déterminer, en fonction de <m>\lambda</m> et <m>n</m>, la loi de <m>Y_{i}</m> pour tout <m>i \in \llbracket 1, n \rrbracket</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Déterminer la loi conjointe de <m>(Y_{1}, \ldots, Y_{n})</m>.
+                    </p>
+                </li>
+            </ol>
+        </task>
+</exercise>
+
+
+<exercise>
+    <title>Centrale 2015</title>
+    <introduction>
+        <p>
+            Soit <m>(\Omega, \mathcal{A}, \Pr)</m> un espace probabilisé et <m>(E_{n})_{n \in \N} \in \mathcal{A}^{\N}</m> une suite d'événements. On suppose que <m>\sum_{n=0}^{+\infty} \Pr(E_{n}) \lt +\infty</m>, c'est-à-dire que la série converge.
+        </p>
+    </introduction>
+        <task>
+            <p>
+                On note <m>1_{X}</m> la fonction indicatrice d'un ensemble <m>X</m>. Soit <m>Z = \sum_{n=0}^{+\infty} 1_{E_{n}}</m> (on convient que <m>Z = +\infty</m> si la série diverge). Prouver que <m>Z</m> est une variable aléatoire discrète.
+            </p>
+        </task>
+        <task>
+            <p>
+                Soit <m>F = \{\omega \in \Omega \mid \omega \text{ appartient à un nombre fini de } E_{n}\}</m>. Prouver que <m>F</m> est un événement et que <m>\Pr(F) = 1</m>.
+            </p>
+        </task>
+        <task>
+            <p>
+                Prouver que <m>Z</m> est d'espérance finie.
+            </p>
+        </task>
+</exercise>
+
+
+
+<exercise>
+    <title>Marche aléatoire dans <m>\mathbb{Z}</m></title>
+    <introduction>
+        <p>
+            Soit <m>(X_{n})_{n \in \N^{*}}</m> une suite de variables aléatoires, sur le même espace probabilisé <m>(\Omega, \mathcal{A}, \Pr)</m>, indépendantes et de même loi définie par :
+            <me>
+                \Pr(X_{n} = 1) = p \quad \text{et} \quad \Pr(X_{n} = -1) = 1 - p,
+            </me>
+            où <m>p \in [0, 1]</m>. On pose <m>S_{0} = 0</m> et, pour tout <m>n \in \N^{*}</m>, <m>S_{n} = \sum_{k=1}^{n} X_{k}</m>. La suite <m>(S_{n})</m> est appelée marche aléatoire dans <m>\mathbb{Z}</m>.
+        </p>
+        </introduction>
+        <task>
+            <p>
+                Déterminer <m>u_{n} = \Pr(S_{n} = 0)</m> pour tout <m>n \in \N</m>.
+            </p>
+        </task>
+        <task>
+            <p>
+                On note <m>f(x)</m> la somme de la série entière <m>\sum u_{n} x^{n}</m>. Montrer que :
+                <me>
+                    \forall x \in ]-1, 1[ \quad f(x) = \frac{1}{\sqrt{1 - 4 p (1 - p) x^{2}}}.
+                </me>
+            </p>
+        </task>
+        <task>
+            <p>
+                Pour tout entier naturel non nul <m>k</m>, on note <m>A_{k}</m> l'événement « le mobile retourne pour la première fois à l'origine au bout de <m>k</m> déplacements », c'est-à-dire :
+                <me>
+                    A_{k} = (S_{k} = 0) \cap \left(\bigcap_{i=1}^{k-1} (S_{i} \neq 0)\right).
+                </me>
+                On pose <m>v_{k} = \Pr(A_{k})</m> pour tout <m>k \geqslant 1</m> et <m>v_{0} = 0</m>.
+            </p>
+            <ol marker="1.">
+                <li>
+                    <p>
+                        Montrer que, pour tout entier naturel <m>n</m> non nul, on a :
+                        <me>
+                            (S_{n} = 0) = \sum_{k=1}^{n} \Pr((S_{n} = 0) \cap A_{k}).
+                        </me>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        En déduire que, pour tout entier naturel non nul <m>n</m>, on a :
+                        <me>
+                            u_{n} = \sum_{k=0}^{n} u_{n - k} v_{k}.
+                        </me>
+                    </p>
+                </li>
+            </ol>
+        </task>
+</exercise>
+
+
+<exercise>
+    <title>Loi faible des grands nombres dans <m>L_{1}</m></title>
+    <introduction>
+        <p>
+            Soit <m>(X_{n})_{n \geqslant 1}</m> une suite de variables aléatoires réelles discrètes, deux à deux indépendantes, de même loi, possédant une espérance finie <m>m</m>. On pose, pour tout <m>n \in \N^{*}</m>, <m>Y_{n} = \frac{1}{n} (X_{1} + \cdots + X_{n})</m>.
+        </p>
+        </introduction>
+        <task>
+            <p>
+                Soit <m>\varepsilon \gt 0</m>.
+            </p>
+            <ol marker="1.">
+                <li>
+                    <p>
+                        Pour <m>c\gt0</m>, on définit <m>g: \R \rightarrow \R</m> par :
+                        <me>
+                            g(x) = \begin{cases}
+                            x \amp \text{si } |x| \leqslant c, \\
+                            0 \amp \text{sinon.}
+                            \end{cases}
+                        </me>
+                        Montrer que la variable aléatoire <m>g(X_{1})</m> est d'espérance finie et que l'on peut choisir <m>c</m> tel que <m>\Es(|g(X_{1}) - X_{1}|) \leqslant \frac{\varepsilon}{2}</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        On pose <m>a = \Es(g(X_{1}))</m>. Montrer que :
+                        <me>
+                            \Es(|g(X_{1}) - X_{1} - a|) \leqslant \varepsilon.
+                        </me>
+                    </p>
+                </li>
+            </ol>
+        </task>
+</exercise>
+
+
+<exercise>
+    <title>Modèle de Galton-Watson</title>
+    <introduction>
+        <p>
+            On observe des virus qui se reproduisent tous selon la même loi avant de mourir : un virus donne naissance en une journée à <m>X</m> virus, où <m>X</m> est une variable aléatoire à valeurs dans <m>\N</m>. Pour tout <m>k \in \N</m>, on note <m>\Pr(X = k) = p_{k}</m>. On suppose <m>p_{1}\gt0</m> et <m>p_{0} + p_{1} \lt 1</m>. On note <m>f</m> la fonction génératrice de <m>X</m>. On part au jour zéro de <m>X_{0} = 1</m> virus. Au premier jour, on a donc <m>X_{1}</m> virus, où <m>X_{1}</m> suit la loi de <m>X</m> ; chacun de ces <m>X_{1}</m> virus évolue alors indépendamment des autres virus et se reproduit selon la même loi avant de mourir : cela conduit à avoir <m>X_{2}</m> virus au deuxième jour ; et le processus continue de la sorte. On note <m>u_{n} = \Pr(X_{n} = 0)</m>.
+        </p>
+        </introduction>
+        <task>
+            <p>
+                Calculer <m>u_{0}</m>, <m>u_{1}</m>.
+            </p>
+        </task>
+        <task>
+            <p>
+                Montrer que la suite <m>(u_{n})_{n \in \N}</m> est convergente.
+            </p>
+        </task>
+        <task>
+            <p>
+                Montrer que pour tout entier <m>n \geqslant 0</m>, on a <m>u_{n+1} = f(u_{n})</m>.
+            </p>
+        </task>
+        <task>
+            <p>
+                Que peut-on dire de la limite de <m>(u_{n})_{n \in \N}</m> ? Discuter selon la valeur de <m>\Es(X)</m>. Interpréter le résultat.
+            </p>
+        </task>
+</exercise>
+
+
+<exercise>
+    <title>Somme aléatoire de variables aléatoires</title>
+    <introduction>
+        <p>
+            Soit <m>(X_{n})_{n \geqslant 1}</m> une suite de variables aléatoires réelles discrètes, toutes de même loi, et <m>N</m> une variable aléatoire à valeurs dans <m>\N</m>. On suppose que <m>N</m> et les variables <m>X_{n}</m> pour <m>n \in \N^{*}</m> forment une suite de variables aléatoires indépendantes. On pose :
+            <me>
+                \forall n \in \N^{*} \quad S_{n} = \sum_{k=1}^{n} X_{k} \quad \text{et} \quad S_{0} = 0.
+            </me>
+        </p>
+        </introduction>
+        <task>
+            <p>
+                Montrer que <m>S_{N}</m> est une variable aléatoire.
+            </p>
+        </task>
+        <task>
+            <p>
+                Déterminer la loi de <m>S_{N}</m> lorsque les <m>X_{k}</m> suivent la loi de Bernoulli de paramètre <m>p</m> et <m>N</m> la loi de Poisson de paramètre <m>\lambda</m>.
+            </p>
+        </task>
+        <task>
+            <p>
+                Déterminer la loi de <m>S_{N}</m> lorsque les <m>X_{k}</m> suivent la loi géométrique de paramètre <m>p</m> et <m>N</m> la loi géométrique de paramètre <m>p^{\prime}</m>.
+            </p>
+        </task>
+        <task>
+            <p>
+                On suppose que les variables aléatoires <m>X_{n}</m> sont à valeurs dans <m>\N</m>.
+            </p>
+            <ol marker="1.">
+                <li>
+                    <p>
+                        Montrer que <m>G_{S_{N}} = G_{N} \circ G_{X_{1}}</m> sur <m>[0, 1]</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Montrer que, si <m>X_{1}</m> et <m>N</m> sont d'espérance finie, alors <m>S_{N}</m> est d'espérance finie et vérifie la première formule de Wald :
+                        <me>
+                            \Es(S_{N}) = \Es(X_{1}) \Es(N).
+                        </me>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Montrer que, si <m>X_{1}</m> et <m>N</m> possèdent un moment d'ordre 2, alors <m>S_{N}</m> possède aussi un moment d'ordre 2 et vérifie la seconde formule de Wald :
+                        <me>
+                            \Va(S_{N}) = \Va(X_{1}) \Es(N) + (\Es(X_{1}))^{2} \Va(N).
+                        </me>
+                    </p>
+                </li>
+            </ol>
+        </task>
+</exercise>
+
+
+<exercise>
+    <title>Succès consécutifs</title>
+    <introduction>
+        <p>
+            On considère une suite d'épreuves de Bernoulli indépendantes. À chaque épreuve, la probabilité de succès est <m>p \in ]0, 1[</m>. On se donne un entier <m>r</m> strictement positif. Pour <m>n \in \N^{*}</m>, on note <m>\Pi_{n}</m> la probabilité qu'au cours des <m>n</m> premières épreuves, on ait obtenu <m>r</m> succès consécutifs (au moins une fois).
+        </p>
+        </introduction>
+        <task>
+            <p>
+                Calculer <m>\Pi_{0}</m>, <m>\Pi_{1}</m>, ..., <m>\Pi_{r}</m>.
+            </p>
+        </task>
+        <task>
+            <p>
+                Montrer que, pour <m>n \geqslant r</m>, on a <m>\Pi_{n+1} = \Pi_{n} + (1 - \Pi_{n-r}) p^{r} (1 - p)</m>.
+            </p>
+        </task>
+        <task>
+            <p>
+                Montrer que la suite <m>(\Pi_{n})_{n \in \N}</m> est convergente. Calculer sa limite.
+            </p>
+        </task>
+        <task>
+            <p>
+                Déduire de la question 1 que l'on peut définir une variable aléatoire <m>T</m> égale au temps d'attente de <m>r</m> succès consécutifs. On définira <m>(T = k)</m> comme l'événement « on a obtenu des succès aux épreuves de rang <m>k - r + 1</m>, <m>k - r + 2</m>, ..., <m>k</m> sans jamais avoir obtenu <m>r</m> succès consécutifs auparavant ».
+            </p>
+        </task>
+        <task>
+            <p>
+                Montrer que :
+                <me>
+                    \Es(T) = \frac{1 - p^{r}}{(1 - p) p^{r}}.
+                </me>
+            </p>
+        </task>
+</exercise>
+
+
+<exercise>
+    <title>Marche aléatoire dans <m>\mathbb{Z}</m> : premier retour à l'origine</title>
+    <introduction>
+        <p>
+            Soit <m>(X_{n})_{n \in \N^{*}}</m> une suite de variables aléatoires, sur le même espace probabilisé <m>(\Omega, \mathcal{A}, \Pr)</m>, indépendantes et de même loi définie par :
+            <me>
+                \Pr(X_{n} = 1) = p \quad \text{et} \quad \Pr(X_{n} = -1) = 1 - p,
+            </me>
+            où <m>p \in [0, 1]</m>. On pose <m>S_{0} = 0</m> et, pour tout <m>n \in \N^{*}</m>, <m>S_{n} = \sum_{k=1}^{n} X_{k}</m>. La suite <m>(S_{n})</m> est appelée marche aléatoire dans <m>\mathbb{Z}</m>.
+        </p>
+    </introduction>
+        <task>
+            <p>
+                Déterminer <m>u_{n} = \Pr(S_{n} = 0)</m> pour tout <m>n \in \N</m>.
+            </p>
+        </task>
+        <task>
+            <p>
+                On note <m>f(x)</m> la somme de la série entière <m>\sum u_{n} x^{n}</m>. Montrer que :
+                <me>
+                    \forall x \in ]-1, 1[ \quad f(x) = \frac{1}{\sqrt{1 - 4 p (1 - p) x^{2}}}.
+                </me>
+            </p>
+        </task>
+        <task>
+            <p>
+                Pour tout entier naturel non nul <m>k</m>, on note <m>A_{k}</m> l'événement « le mobile retourne pour la première fois à l'origine au bout de <m>k</m> déplacements », c'est-à-dire :
+                <me>
+                    A_{k} = (S_{k} = 0) \cap \left(\bigcap_{i=1}^{k-1} (S_{i} \neq 0)\right).
+                </me>
+                On pose <m>v_{k} = \Pr(A_{k})</m> pour tout <m>k \geqslant 1</m> et <m>v_{0} = 0</m>.
+            </p>
+            <ol marker="1.">
+                <li>
+                    <p>
+                        Montrer que, pour tout entier naturel <m>n</m> non nul, on a :
+                        <me>
+                            (S_{n} = 0) = \sum_{k=1}^{n} \Pr((S_{n} = 0) \cap A_{k}).
+                        </me>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        En déduire que, pour tout entier naturel non nul <m>n</m>, on a :
+                        <me>
+                            u_{n} = \sum_{k=0}^{n} u_{n - k} v_{k}.
+                        </me>
+                    </p>
+                </li>
+            </ol>
+        </task>
+</exercise>
+
+
+
+<exercise>
+    <title>Inégalité de Kolmogorov</title>
+    <introduction>
+        <p>
+            Soit <m>X_{1}, \ldots, X_{n}</m> des variables aléatoires réelles discrètes de l'espace probabilisé <m>(\Omega, \mathcal{A}, \Pr)</m>, indépendantes, ayant un moment d'ordre 2, centrées, ainsi que <m>a \in \R_{+}^{*}</m>. On pose, pour tout <m>i \in \llbracket 1, n \rrbracket</m> :
+            <me>
+                S_{i} = X_{1} + \cdots + X_{i}, \quad B_{i} = \left\{\left|S_{1}\right| \lt a\right\} \cap \ldots \cap \left\{\left|S_{i-1}\right| \lt a\right\} \cap \left\{\left|S_{i}\right| \geqslant a\right\}.
+            </me>
+        </p>
+    </introduction>
+        <task>
+            <p>
+                Montrer que, pour <m>i \in \llbracket 1, n \rrbracket</m>, les variables <m>S_{i} \mathbf{1}_{B_{i}}</m> et <m>S_{n} - S_{i}</m> sont indépendantes. En déduire que :
+                <me>
+                    \Es(S_{n}^{2} \mathbf{1}_{B_{i}}) = \Es(S_{i}^{2} \mathbf{1}_{B_{i}}) + \Es((S_{n} - S_{i})^{2} \mathbf{1}_{B_{i}}) \geqslant a^{2} \Pr(B_{i}).
+                </me>
+            </p>
+        </task>
+        <task>
+            <p>
+                On pose <m>C = \left\{\sup \left(\left|S_{1}\right|, \left|S_{2}\right|, \ldots, \left|S_{n}\right|\right) \geqslant a\right\}</m>. Montrer que <m>\Pr(C) = \sum_{i=1}^{n} \Pr(B_{i})</m>.
+            </p>
+        </task>
+        <task>
+            <p>
+                En déduire l'inégalité de Kolmogorov :
+                <me>
+                    \Pr\left(\sup \left(\left|S_{1}\right|, \left|S_{2}\right|, \ldots, \left|S_{n}\right|\right) \geqslant a\right) \leqslant \frac{\Va(S_{n})}{a^{2}}.
+                </me>
+            </p>
+        </task>
+</exercise>
+
+
+
+<exercise>
+    <title>Inégalité de Le Cam</title>
+    <introduction>
+        <p>
+            L'objet de l'exercice est d'étudier l'approximation de la loi binomiale par la loi de Poisson. Toutes les variables aléatoires considérées sont définies sur le même espace probabilisé <m>(\Omega, \mathcal{A}, \Pr)</m> et sont à valeurs dans <m>\N</m>.
+        </p>
+    </introduction>
+        <task>
+            <p>
+                Soit <m>X</m> et <m>Y</m> deux telles variables aléatoires. Pour tout <m>k \in \N</m>, on pose <m>p_{k} = \Pr(X = k)</m> et <m>q_{k} = \Pr(Y = k)</m>. On définit la distance entre <m>X</m> et <m>Y</m> par :
+                <me>
+                    \mathrm{d}(X, Y) = \frac{1}{2} \sum_{k=0}^{+\infty} \left|p_{k} - q_{k}\right|.
+                </me>
+            </p>
+            <ol marker="1.">
+                <li>
+                    <p>
+                        Montrer que pour toute partie <m>A</m> de <m>\N</m>, on a :
+                        <me>
+                            |\Pr(X \in A) - \Pr(Y \in A)| \leqslant \mathrm{d}(X, Y).
+                        </me>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Démontrer la formule :
+                        <me>
+                            \mathrm{d}(X, Y) = 1 - \sum_{k=0}^{+\infty} \min(p_{k}, q_{k}).
+                        </me>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        En déduire :
+                        <me>
+                            \mathrm{d}(X, Y) \leqslant \Pr(X \neq Y).
+                        </me>
+                    </p>
+                </li>
+            </ol>
+        </task>
+</exercise>
+
+
+
+<exercise>
+    <title>Convergence presque sûre</title>
+    <introduction>
+        <p>
+            Soit <m>(X_{n})_{n \in \N}</m> une suite de variables aléatoires réelles et <m>X</m> une variable aléatoire réelle définies sur <m>(\Omega, \mathcal{A}, \Pr)</m>. On pose :
+            <me>
+                B = \left\{\omega \in \Omega \mid \lim_{n \rightarrow +\infty} X_{n}(\omega) = X(\omega)\right\}.
+            </me>
+            Pour tout <m>k \in \N^{*}</m>, on pose :
+            <me>
+                C_{k} = \bigcup_{n \in \N} \bigcap_{p \geqslant n} \left(\left|X_{p} - X\right| \leqslant \frac{1}{k}\right).
+            </me>
+            On dit que la suite <m>(X_{n})_{n \in \N}</m> converge presque sûrement vers <m>X</m> si <m>\Pr(B) = 1</m>.
+        </p>
+    </introduction>
+        <task>
+            <p>
+                Montrer que l'on a <m>\Pr(B) = \lim_{k \rightarrow +\infty} \Pr(C_{k})</m>.
+            </p>
+        </task>
+        <task>
+            <p>
+                On suppose que :
+                <me>
+                    \forall \varepsilon\gt0 \quad \Pr\left(\bigcap_{n \in \N} \bigcup_{p \geqslant n} \left(|X_{p} - X|\gt\varepsilon\right)\right) = 0.
+                </me>
+                Montrer que la suite <m>(X_{n})_{n \in \N}</m> converge presque sûrement vers <m>X</m>.
+            </p>
+        </task>
+        <task>
+            <p>
+                Montrer que si la série de terme général <m>\Pr(|X_{n} - X|\gt\varepsilon)</m> converge pour tout <m>\varepsilon\gt0</m>, alors la suite <m>(X_{n})_{n \in \N}</m> converge presque sûrement vers <m>X</m>.
+            </p>
+        </task>
+</exercise>
+
+
+<exercise>
+    <title>Fonction génératrice des moments</title>
+    <introduction>
+        <p>
+            Soit <m>X</m> une variable aléatoire discrète, pas presque sûrement constante, sur l'espace probabilisé <m>(\Omega, \mathcal{A}, \Pr)</m>. On pose, pour <m>t \in \R</m>, <m>L_{X}(t) = \Es(e^{t X})</m> (la fonction <m>L_{X}</m> est appelée fonction génératrice des moments de la variable aléatoire <m>X</m>). On suppose qu'il existe un intervalle <m>]\alpha, \beta[</m> contenant 0 tel que <m>L_{X}(t) \lt +\infty</m> pour tout <m>t \in ]\alpha, \beta[</m>.
+        </p>
+    </introduction>
+        <task>
+            <p>
+                Soit <m>a \lt b</m> deux réels tels que <m>[a, b] \subset ]\alpha, \beta[</m>. On considère <m>\delta\gt0</m> tel que <m>[a - \delta, b + \delta] \subset ]\alpha, \beta[</m>. Soit <m>k \in \N</m>. Montrer qu'il existe <m>C\gt0</m> tel que :
+                <me>
+                    \forall t \in [a, b] \quad \forall u \in \R \quad |u|^{k} e^{t u} \leqslant C \left(e^{(a - \delta) u} + e^{(b + \delta) u}\right).
+                </me>
+                En déduire que <m>X^{k} e^{t X}</m> est d'espérance finie pour tout <m>t \in ]\alpha, \beta[</m>.
+            </p>
+        </task>
+        <task>
+            <p>
+                Montrer que <m>L_{X}</m> est de classe <m>\mathcal{C}^{\infty}</m> sur <m>]\alpha, \beta[</m> et vérifie :
+                <me>
+                    \forall t \in ]\alpha, \beta[ \quad \forall k \in \N \quad L_{X}^{(k)}(t) = \Es(X^{k} e^{t X}).
+                </me>
+                En déduire, pour tout <m>k \in \N</m>, une expression du moment d'ordre <m>k</m> de <m>X</m>. On note <m>m</m> l'espérance de <m>X</m>.
+            </p>
+        </task>
+</exercise>
+
+<exercise>
+    <title>Théorème de Weierstrass</title>
+    <introduction>
+        <p>
+            Soit <m>f</m> une fonction continue de <m>[0, 1]</m> dans <m>\R</m>. Soit <m>x \in [0, 1]</m>. On considère une suite <m>(X_{n})_{n \geqslant 1}</m> de variables de Bernoulli de paramètre <m>x</m>, indépendantes, sur le même espace probabilisé. Pour <m>n \geqslant 1</m>, on pose <m>Y_{n} = \frac1n(X_{1} + \cdots + X_{n})</m>.
+        </p>
+        </introduction>
+        <!-- <task>
+            <p>
+                Soit <m>\varepsilon\gt0</m>. Par uniforme continuité de <m>f</m> sur <m>[0, 1]</m>, il existe <m>\eta\gt0</m> tel que :
+                <me>
+                    \forall(t, u) \in [0, 1]^{2} \quad |t - u| \leqslant \eta \Longrightarrow |f(t) - f(u)| \leqslant \varepsilon.
+                </me>
+            </p>
+        </task> -->
+        <task>
+            <p>
+                Montrer que :
+                <me>
+                    \forall(t, u) \in [0, 1]^{2} \quad |f(t) - f(u)| \leqslant \frac{2 \Vert f \Vert _{\infty} (t - u)^{2}}{\eta^{2}} + \varepsilon.
+                </me>
+            </p>
+        </task>
+        <task>
+            <p>
+                Montrer que :
+                <me>
+                    \left|\Es(f(Y_{n})) - f(x)\right| \leqslant \frac{2 \Vert f \Vert _{\infty} \Va(Y_{n})}{\eta^{2}} + \varepsilon \leqslant \frac{2 \Vert f \Vert _{\infty}}{n \eta^{2}} + \varepsilon.
+                </me>
+            </p>
+        </task>
+        <task >
+            <statement>
+                <p>
+                   En déduire que la suite de fonctions polynomiales <m>(B_n(f))_n</m> définie par 
+                   <me>
+                    \forall t\in[0,1],\;
+                    B_n(f)(t)\sum_{k=0}^nf(k/n)\binom{n}{k}t^k(1-t)^{n-k}
+                   </me>
+                   converge uniformément vers <m>f</m> sur <m>[0,1]</m>.
+                </p>
+            </statement>
+        </task>
+</exercise>
+
+<exercise>
+    <title>File d'attente</title>
+    <introduction>
+        <p>
+            Soit <m>n</m> un entier supérieur ou égal à 2. On considère une file d'attente avec un guichet et <m>n</m> clients qui attendent. Chaque minute, un guichet se libère. Le guichetier choisit alors le client qu'il appelle selon le processus aléatoire suivant :
+            <ul>
+                <li>avec probabilité 2, il appelle le client en première position dans la file,</li>
+                <li>sinon, il choisit de manière équiprobable parmi les <m>n - 1</m> autres clients.</li>
+            </ul>
+            Enfin, un nouveau client arrive dans la file et se place en dernière position (de telle sorte qu'il y a toujours exactement <m>n</m> clients qui attendent). Pour tout <m>k \in \llbracket 1, n \rrbracket</m>, on note <m>T_{k}</m> le temps d'attente d'un client qui se trouve en position <m>k</m> dans la file.
+        </p>
+        </introduction>
+        <task>
+            <p>
+                Quelle est la loi de <m>T_{1}</m> ? Donner son espérance, sa variance.
+            </p>
+        </task>
+        <task>
+            <p>
+                Montrer que, pour tout <m>k \in \llbracket 1, n \rrbracket</m>, la variable <m>T_{k}</m> est d'espérance finie.
+            </p>
+        </task>
+        <task>
+            <p>
+                Écrire une relation entre <m>\Es(T_{k})</m> et <m>\Es(T_{k-1})</m> pour tout <m>k \geqslant 2</m>. En déduire une expression de <m>\Es(T_{k})</m> en fonction de <m>k</m> et <m>n</m>. On pourra considérer la suite <m>((n + k - 2) \Es(T_{k}))_{1 \leqslant k \leqslant n}</m>.
+            </p>
+        </task>
+        <task>
+            <p>
+                Comparer les caractéristiques de cette file d'attente et d'une file d'attente « classique » (premier arrivé, premier servi).
+            </p>
+        </task>
+</exercise>
+
+
+    <!-- </exercises> -->
+</chapter>
