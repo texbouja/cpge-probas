@@ -1079,25 +1079,7 @@
             On note <m>C_n(a, b)</m> le nombre de ces lignes qui vont du point <m>(0, a)</m> au point <m>(n, b)</m>.
             Expliciter <m>C_n(a, b)</m> et exprimer la loi de <m>X_n</m> en fonction de ces nombres.
             <figure xml:id="chemin-marche">
-              <image>
-                <latex-image>
-              \begin{tikzpicture}
-              \draw [dashed, opacity=.5] (0,-3.5) grid (11.5,3.5) ;
-              \draw [->] (0,0) -- ++(11,0) node [below] {$k$};
-              \draw [->]   (0,-3.5) -- ++(0,7) node [left] {$S_k$};
-              \draw [line width=1pt] (0,1) node [left] {$(0,a)$}  -- 
-              ++(1,1) -- ++(1,1) -- ++(1,-1) -- ++(1,-1) -- ++(1,-1) -- ++(1,-1) -- ++(1,1) -- ++(1,1) -- ++(1,1) -- ++(1,-1)   node [below] {$(n,b)$} ;
-              \draw [line width=1pt, dashed]
-                (0,-1) node [left] {$(0,-a)$} -- ++(1,-1) -- ++(1,-1) -- ++(1,1) -- ++(1,1) -- ++(1,1) ;
-              \fill 
-                (0,1) circle (2pt) 
-                (5,0) node [anchor=south west] {$(k,0)$} circle (2pt)
-                (10,1) circle (2pt);
-              \node at (3,2) [above] {$\mathcal C$} ; 
-              \node at (3,-2) [below] {$\mathcal C'$} ;
-              \end{tikzpicture}
-                </latex-image>
-              </image>
+              <image source="images/chemin-marche-1.svg"/>
             </figure>
           </p>
         </statement>
