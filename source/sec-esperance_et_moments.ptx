@@ -1500,7 +1500,7 @@
 
                     <figure xml:id="fig-network">
                         <caption>Representation du réseaux étudié</caption>
-                            <image width="33%" source="images/chemin-marche-1.svg"/>
+                            <image width="33%" source="images/network.svg"/>
                     </figure>
                     </explanation>
 
