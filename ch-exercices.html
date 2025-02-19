@@ -8,7 +8,7 @@
 <html lang="fr-FR" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Exercices : Probabilités discrètes</title>
+<title>Exercices</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -207,20 +207,134 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter active"><div class="toc-title-box"><a href="ch-exercices.html" class="internal"><span class="codenumber">2</span> <span class="title">Exercices : Probabilités discrètes</span></a></div></li>
+<li class="toc-item toc-exercises active"><div class="toc-title-box"><a href="ch-exercices.html" class="internal"><span class="codenumber">2</span> <span class="title">Exercices</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-exercices"><h2 class="heading">
-<span class="type">Chapitre</span><span class="space"> </span><span class="codenumber">2</span><span class="space"> </span><span class="title">Exercices : Probabilités discrètes</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="exercises" id="ch-exercices"><h2 class="heading hide-type">
+<span class="type">Exercices</span><span class="space"> </span><span class="codenumber">2</span><span class="space"> </span><span class="title">Exercices</span>
 </h2>
 <article class="exercise exercise-like" id="ch-exercices-2"><h2 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">91</span><span class="period">.</span><span class="space"> </span><span class="title">Une caractérisation de la loi de Poisson.</span>
+<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Caractérisation de la loi géometrique décalée.</span>
 </h2>
-<div class="introduction" id="ch-exercices-2-2"><div class="para" id="ch-exercices-2-2-1">On considère une variable aléatoire discrète <span class="process-math">\(N\)</span> sur l’espace probabilisé <span class="process-math">\((\Omega, \mathcal{A}, \Pr)\)</span> telle que <span class="process-math">\(N(\Omega)=\N\)</span> et <span class="process-math">\(\Pr(N=n) \neq 0\)</span> pour tout <span class="process-math">\(n \in \N\text{.}\)</span> Si la variable aléatoire <span class="process-math">\(N\)</span> prend la valeur <span class="process-math">\(n\text{,}\)</span> on procède à une succession de <span class="process-math">\(n\)</span> épreuves de Bernoulli indépendantes de paramètre <span class="process-math">\(p \in] 0,1[\text{.}\)</span> On note <span class="process-math">\(S\)</span> et <span class="process-math">\(E\)</span> les variables aléatoires représentant respectivement le nombre de succès et d’échecs dans ces <span class="process-math">\(n\)</span> épreuves.</div></div>
-<article class="task exercise-like" id="ch-exercices-2-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="ch-exercices-2-3-1">Montrer que si <span class="process-math">\(N\)</span> suit une loi de Poisson de paramètre <span class="process-math">\(\lambda&gt;0\text{,}\)</span> les variables <span class="process-math">\(S\)</span> et <span class="process-math">\(E\)</span> suivent aussi des lois de Poisson dont on déterminera les paramètres. Montrer que les variables <span class="process-math">\(E\)</span> et <span class="process-math">\(S\)</span> sont indépendantes.</div></article><article class="task exercise-like" id="ch-exercices-2-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para" id="ch-exercices-2-4-1">Montrer réciproquement que si <span class="process-math">\(S\)</span> et <span class="process-math">\(E\)</span> sont indépendantes, alors <span class="process-math">\(N\)</span> suit une loi de Poisson. Pour cela, on montrera :</div>
-<ul class="disc" id="ch-exercices-2-4-2">
-<li id="ch-exercices-2-4-2-1"><div class="para logical" id="ch-exercices-2-4-2-1-1">
+<div class="introduction" id="ch-exercices-2-2"><div class="para" id="ch-exercices-2-2-1">On considère <span class="process-math">\(X \)</span> et <span class="process-math">\(Y \)</span> deux variables aléatoires sur <span class="process-math">\((\Omega, \mathcal{A}, \mathbb{P}) \text{,}\)</span> à valeurs dans <span class="process-math">\(\mathbb{N} \text{,}\)</span> indépendantes, de même loi. On pose <span class="process-math">\(D = X - Y \)</span> et <span class="process-math">\(I = \min(X, Y) \text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="ch-exercices-2-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>On suppose que pour tout <span class="process-math">\(k \)</span> dans <span class="process-math">\(\mathbb{N} \text{,}\)</span> <span class="process-math">\(\mathbb{P}(X = k) = pq^k \text{,}\)</span> où <span class="process-math">\(p \in [0, 1[ \)</span> et <span class="process-math">\(q = 1 - p \text{.}\)</span> <ol class="lower-alpha lower-alpha-level-1" id="ch-exercices-2-3-1-6">
+<li id="ch-exercices-2-3-1-6-1"><div class="para" id="p-derived-ch-exercices-2-3-1-6-1">Déterminer la loi conjointe de <span class="process-math">\((D, I) \text{.}\)</span>
+</div></li>
+<li id="ch-exercices-2-3-1-6-2"><div class="para" id="p-derived-ch-exercices-2-3-1-6-2">Déterminer les lois marginales de <span class="process-math">\(D \)</span> et <span class="process-math">\(I \text{.}\)</span> Vérifier que <span class="process-math">\(D \)</span> et <span class="process-math">\(I \)</span> sont indépendantes.</div></li>
+</ol>
+<div class="solutions"><details id="ch-exercices-2-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="lower-alpha lower-alpha-level-1" id="ch-exercices-2-3-2-1">
+<li id="ch-exercices-2-3-2-1-1">
+<div class="para logical" id="ch-exercices-2-3-2-1-1-1">
+<div class="para">On a <span class="process-math">\(D(\Omega) = \mathbb{Z} \)</span> et <span class="process-math">\(I(\Omega) = \mathbb{N} \text{.}\)</span>
+</div>
+<ul class="disc" id="ch-exercices-2-3-2-1-1-1-3">
+<li id="ch-exercices-2-3-2-1-1-1-3-1"><div class="para logical" id="ch-exercices-2-3-2-1-1-1-3-1-1">
+<div class="para">Si <span class="process-math">\(k \geq 0 \text{,}\)</span> alors on a :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\{D = k\} \cap \{I = \ell\} = \{X - Y = k\} \cap \{Y = \ell\} = \{X = k + \ell\} \cap \{Y = \ell\}
+\end{equation*}
+</div>
+<div class="para">et donc, par indépendance de <span class="process-math">\(X \)</span> et <span class="process-math">\(Y \)</span> :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(\{D = k\} \cap \{I = \ell\}) = \mathbb{P}(\{X = k + \ell\} \cap \{Y = \ell\}) = pq^{k + \ell} pq^\ell = p^2 q^{k + 2\ell}.
+\end{equation*}
+</div>
+</div></li>
+<li id="ch-exercices-2-3-2-1-1-1-3-2"><div class="para logical" id="ch-exercices-2-3-2-1-1-1-3-2-1">
+<div class="para">Si <span class="process-math">\(k \lt 0 \text{,}\)</span> alors on a :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\{D = k\} \cap \{I = \ell\} = \{X - Y = k\} \cap \{X = \ell\} = \{X = \ell\} \cap \{Y = -k + \ell\}
+\end{equation*}
+</div>
+<div class="para">et donc, par indépendance de <span class="process-math">\(X \)</span> et <span class="process-math">\(Y \)</span> :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(\{D = k\} \cap \{I = \ell\}) = \mathbb{P}(\{X = \ell\} \cap \{Y = -k + \ell\}) = pq^\ell pq^{-k + \ell} = p^2 q^{-k + 2\ell}.
+\end{equation*}
+</div>
+</div></li>
+</ul>
+</div>
+<div class="para" id="ch-exercices-2-3-2-1-1-2">Dans tous les cas, on trouve <span class="process-math">\(\mathbb{P}(\{D = k\} \cap \{I = \ell\}) = p^2 q^{|k| + 2\ell} \text{.}\)</span>
+</div>
+</li>
+<li id="ch-exercices-2-3-2-1-2">
+<ul class="disc" id="ch-exercices-2-3-2-1-2-1">
+<li id="ch-exercices-2-3-2-1-2-1-1"><div class="para" id="p-derived-ch-exercices-2-3-2-1-2-1-1">Pour <span class="process-math">\(k \in \mathbb{Z} \text{,}\)</span> on a :<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(D = k) = \sum_{\ell=0}^{+\infty} \mathbb{P}(\{D = k\} \cap \{I = \ell\}) = \sum_{\ell=0}^{+\infty} p^2 q^{|k| + 2\ell} = \frac{p^2 q^{|k|}}{1 - q^2} = \frac{p q^{|k|}}{1 + q}.
+\end{equation*}
+</div>
+</div></li>
+<li id="ch-exercices-2-3-2-1-2-1-2"><div class="para" id="p-derived-ch-exercices-2-3-2-1-2-1-2">Pour <span class="process-math">\(\ell \in \mathbb{N} \text{,}\)</span> on a :<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(I = \ell) = \sum_{k=-\infty}^{+\infty} \mathbb{P}(\{D = k\} \cap \{I = \ell\}) = \sum_{k=-\infty}^{+\infty} p^2 q^{|k| + 2\ell} = p^2 q^{2\ell} \left( \frac{2}{1 - q} - 1 \right) = p q^{2\ell} (1 + q).
+\end{equation*}
+</div>
+</div></li>
+</ul>
+<div class="para logical" id="ch-exercices-2-3-2-1-2-2">
+<div class="para">On vérifie que <span class="process-math">\(D \)</span> et <span class="process-math">\(I \)</span> sont indépendantes car :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(\{D = k\} \cap \{I = \ell\}) = \mathbb{P}(D = k) \mathbb{P}(I = \ell).
+\end{equation*}
+</div>
+</div>
+</li>
+</ol></div></details></div></article><article class="task exercise-like" id="ch-exercices-2-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para logical" id="ch-exercices-2-4-1-1">
+<div class="para">On suppose que les variables <span class="process-math">\(D \)</span> et <span class="process-math">\(I \)</span> sont indépendantes et que <span class="process-math">\(\mathbb{P}(X = n) \neq 0 \)</span> pour tout <span class="process-math">\(n \in \mathbb{N} \text{.}\)</span> Montrer qu’il existe <span class="process-math">\(p \in [0, 1[ \text{,}\)</span> tel que, pour tout <span class="process-math">\(k \in \mathbb{N} \text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(X = k) = p q^k.
+\end{equation*}
+</div>
+</div>
+<div class="solutions"><details id="ch-exercices-2-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="ch-exercices-2-4-2-1">
+<div class="para">Comme précédemment, on a :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\forall k \in \mathbb{N}, \quad \{D = k\} \cap \{I = \ell\} = \{X = k + \ell\} \cap \{Y = \ell\}.
+\end{equation*}
+</div>
+<div class="para">Par indépendance de <span class="process-math">\(X \)</span> et <span class="process-math">\(Y \)</span> d’une part, de <span class="process-math">\(D \)</span> et <span class="process-math">\(I \)</span> d’autre part, on en déduit :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(D = k) \mathbb{P}(I = \ell) = \mathbb{P}(X = k + \ell) \mathbb{P}(Y = \ell) = \mathbb{P}(X = k + \ell) \mathbb{P}(X = \ell) \neq 0,
+\end{equation*}
+</div>
+<div class="para">par hypothèse. On a en particulier, pour tout <span class="process-math">\(k \in \mathbb{N} \)</span> :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(D = k) \mathbb{P}(I = 0) = \mathbb{P}(X = k) \mathbb{P}(X = 0),
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(D = k) \mathbb{P}(I = 1) = \mathbb{P}(X = k + 1) \mathbb{P}(X = 1).
+\end{equation*}
+</div>
+<div class="para">En divisant les égalités, on obtient :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\mathbb{P}(X = k + 1)}{\mathbb{P}(X = k)} = \frac{\mathbb{P}(I = 1) \mathbb{P}(X = 0)}{\mathbb{P}(I = 0) \mathbb{P}(X = 1)}.
+\end{equation*}
+</div>
+<div class="para">Ce rapport est indépendant de <span class="process-math">\(k \)</span> et strictement positif. On le note <span class="process-math">\(q \text{.}\)</span> La suite <span class="process-math">\((\mathbb{P}(X = k)) \)</span> est géométrique de raison <span class="process-math">\(q \text{.}\)</span> Pour tout <span class="process-math">\(k \in \mathbb{N} \text{,}\)</span> on a <span class="process-math">\(\mathbb{P}(X = k) = \mathbb{P}(X = 0) q^k \text{.}\)</span> La série <span class="process-math">\(\sum \mathbb{P}(X = k) \)</span> converge et a pour somme 1 donc <span class="process-math">\(q \lt 1 \)</span> et <span class="process-math">\(\mathbb{P}(X = 0) = 1 - q \text{.}\)</span> En posant <span class="process-math">\(p = 1 - q \text{,}\)</span> on a le résultat voulu.</div>
+</div></div></details></div></article></article><article class="exercise exercise-like" id="ch-exercices-3"><h2 class="heading">
+<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Une caractérisation de la loi de Poisson.</span>
+</h2>
+<div class="introduction" id="ch-exercices-3-2"><div class="para" id="ch-exercices-3-2-1">On considère une variable aléatoire discrète <span class="process-math">\(N\)</span> sur l’espace probabilisé <span class="process-math">\((\Omega, \mathcal{A}, \Pr)\)</span> telle que <span class="process-math">\(N(\Omega)=\N\)</span> et <span class="process-math">\(\Pr(N=n) \neq 0\)</span> pour tout <span class="process-math">\(n \in \N\text{.}\)</span> Si la variable aléatoire <span class="process-math">\(N\)</span> prend la valeur <span class="process-math">\(n\text{,}\)</span> on procède à une succession de <span class="process-math">\(n\)</span> épreuves de Bernoulli indépendantes de paramètre <span class="process-math">\(p \in] 0,1[\text{.}\)</span> On note <span class="process-math">\(S\)</span> et <span class="process-math">\(E\)</span> les variables aléatoires représentant respectivement le nombre de succès et d’échecs dans ces <span class="process-math">\(n\)</span> épreuves.</div></div>
+<article class="task exercise-like" id="ch-exercices-3-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="ch-exercices-3-3-1">Montrer que si <span class="process-math">\(N\)</span> suit une loi de Poisson de paramètre <span class="process-math">\(\lambda&gt;0\text{,}\)</span> les variables <span class="process-math">\(S\)</span> et <span class="process-math">\(E\)</span> suivent aussi des lois de Poisson dont on déterminera les paramètres. Montrer que les variables <span class="process-math">\(E\)</span> et <span class="process-math">\(S\)</span> sont indépendantes.</div></article><article class="task exercise-like" id="ch-exercices-3-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="ch-exercices-3-4-1">Montrer réciproquement que si <span class="process-math">\(S\)</span> et <span class="process-math">\(E\)</span> sont indépendantes, alors <span class="process-math">\(N\)</span> suit une loi de Poisson. Pour cela, on montrera :</div>
+<ul class="disc" id="ch-exercices-3-4-2">
+<li id="ch-exercices-3-4-2-1"><div class="para logical" id="ch-exercices-3-4-2-1-1">
 <div class="para">qu’il existe deux suites <span class="process-math">\(\left(u_{n}\right)_{n \in \N}\)</span> et <span class="process-math">\(\left(v_{n}\right)_{n \in \N}\)</span> telles que :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -228,20 +342,20 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 </div></li>
-<li id="ch-exercices-2-4-2-2"><div class="para" id="ch-exercices-2-4-2-2-1">que les suites <span class="process-math">\(\left(u_{n}\right)_{n \in \N}\)</span> et <span class="process-math">\(\left(v_{n}\right)_{n \in \N}\)</span> sont géométriques.</div></li>
-</ul></article></article><article class="exercise exercise-like" id="ch-exercices-3"><h2 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">92</span><span class="period">.</span><span class="space"> </span><span class="title">Lancer de pièce jusqu’au premier pile.</span>
+<li id="ch-exercices-3-4-2-2"><div class="para" id="ch-exercices-3-4-2-2-1">que les suites <span class="process-math">\(\left(u_{n}\right)_{n \in \N}\)</span> et <span class="process-math">\(\left(v_{n}\right)_{n \in \N}\)</span> sont géométriques.</div></li>
+</ul></article></article><article class="exercise exercise-like" id="ch-exercices-4"><h2 class="heading">
+<span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Lancer de pièce jusqu’au premier pile.</span>
 </h2>
-<div class="introduction" id="ch-exercices-3-2"><div class="para" id="ch-exercices-3-2-1">On lance une pièce de monnaie jusqu’à l’obtention du premier pile, la probabilité d’obtenir pile étant <span class="process-math">\(p \in] 0,1[\text{.}\)</span> Soit <span class="process-math">\(N\)</span> la variable aléatoire représentant le nombre de lancers nécessaires. Si <span class="process-math">\(N=n\text{,}\)</span> on relance ensuite <span class="process-math">\(n\)</span> fois la pièce et on appelle <span class="process-math">\(X\)</span> la variable aléatoire représentant le nombre de piles obtenu.</div></div>
-<article class="task exercise-like" id="ch-exercices-3-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="ch-exercices-3-3-1">Déterminer la loi de <span class="process-math">\(N\text{,}\)</span> celle du couple <span class="process-math">\((N, X)\text{,}\)</span> puis la loi de <span class="process-math">\(X\text{.}\)</span>
-</div></article><article class="task exercise-like" id="ch-exercices-3-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para" id="ch-exercices-3-4-1">Montrer que <span class="process-math">\(X\)</span> a même loi que le produit de deux variables indépendantes <span class="process-math">\(Y\)</span> et <span class="process-math">\(Z\)</span> telles que <span class="process-math">\(Y\)</span> suive une loi de Bernoulli et <span class="process-math">\(Z\)</span> une loi géométrique de même paramètre.</div></article><article class="task exercise-like" id="ch-exercices-3-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<div class="para" id="ch-exercices-3-5-1">En déduire l’espérance et la variance de <span class="process-math">\(X\text{.}\)</span>
-</div></article></article><article class="exercise exercise-like" id="ch-exercices-4"><h2 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">93</span><span class="period">.</span><span class="space"> </span><span class="title">Loi sur les nombres premiers.</span>
+<div class="introduction" id="ch-exercices-4-2"><div class="para" id="ch-exercices-4-2-1">On lance une pièce de monnaie jusqu’à l’obtention du premier pile, la probabilité d’obtenir pile étant <span class="process-math">\(p \in] 0,1[\text{.}\)</span> Soit <span class="process-math">\(N\)</span> la variable aléatoire représentant le nombre de lancers nécessaires. Si <span class="process-math">\(N=n\text{,}\)</span> on relance ensuite <span class="process-math">\(n\)</span> fois la pièce et on appelle <span class="process-math">\(X\)</span> la variable aléatoire représentant le nombre de piles obtenu.</div></div>
+<article class="task exercise-like" id="ch-exercices-4-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="ch-exercices-4-3-1">Déterminer la loi de <span class="process-math">\(N\text{,}\)</span> celle du couple <span class="process-math">\((N, X)\text{,}\)</span> puis la loi de <span class="process-math">\(X\text{.}\)</span>
+</div></article><article class="task exercise-like" id="ch-exercices-4-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="ch-exercices-4-4-1">Montrer que <span class="process-math">\(X\)</span> a même loi que le produit de deux variables indépendantes <span class="process-math">\(Y\)</span> et <span class="process-math">\(Z\)</span> telles que <span class="process-math">\(Y\)</span> suive une loi de Bernoulli et <span class="process-math">\(Z\)</span> une loi géométrique de même paramètre.</div></article><article class="task exercise-like" id="ch-exercices-4-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="ch-exercices-4-5-1">En déduire l’espérance et la variance de <span class="process-math">\(X\text{.}\)</span>
+</div></article></article><article class="exercise exercise-like" id="ch-exercices-5"><h2 class="heading">
+<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Loi sur les nombres premiers.</span>
 </h2>
-<div class="introduction" id="ch-exercices-4-2"><div class="para logical" id="ch-exercices-4-2-1">
+<div class="introduction" id="ch-exercices-5-2"><div class="para logical" id="ch-exercices-5-2-1">
 <div class="para">Soit <span class="process-math">\(\mathcal{P}\)</span> l’ensemble des nombres premiers. Soit <span class="process-math">\(X\)</span> une variable aléatoire à valeurs dans <span class="process-math">\(\N^{*}\)</span> dont la loi est définie par :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -249,22 +363,22 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 </div></div>
-<article class="task exercise-like" id="ch-exercices-4-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="ch-exercices-4-3-1">Justifier qu’on définit bien ainsi la loi d’une variable aléatoire.</div></article><article class="task exercise-like" id="ch-exercices-4-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para logical" id="ch-exercices-4-4-1">
+<article class="task exercise-like" id="ch-exercices-5-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="ch-exercices-5-3-1">Justifier qu’on définit bien ainsi la loi d’une variable aléatoire.</div></article><article class="task exercise-like" id="ch-exercices-5-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para logical" id="ch-exercices-5-4-1">
 <div class="para">Pour tout <span class="process-math">\(n \in \N^{*}\text{,}\)</span> on considère <span class="process-math">\(A_{n}\)</span> : « <span class="process-math">\(n\)</span> divise <span class="process-math">\(X\)</span> ». Montrer que <span class="process-math">\(\left(A_{p}\right)_{p \in \mathcal{P}}\)</span> est une famille d’événements indépendants. En déduire une preuve de :</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \prod_{p \in \mathcal{P}}\left(1-\frac{1}{p^{s}}\right)=\frac{1}{\zeta(s)}
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="ch-exercices-4-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<div class="para" id="ch-exercices-4-5-1">Montrer que la probabilité qu’aucun carré différent de 1 ne divise <span class="process-math">\(X\)</span> vaut <span class="process-math">\(\frac{1}{\zeta(2 s)}\text{.}\)</span>
-</div></article></article><article class="exercise exercise-like" id="ch-exercices-5"><h2 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">94</span><span class="period">.</span><span class="space"> </span><span class="title">Taux de panne.</span>
+</div></article><article class="task exercise-like" id="ch-exercices-5-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="ch-exercices-5-5-1">Montrer que la probabilité qu’aucun carré différent de 1 ne divise <span class="process-math">\(X\)</span> vaut <span class="process-math">\(\frac{1}{\zeta(2 s)}\text{.}\)</span>
+</div></article></article><article class="exercise exercise-like" id="ch-exercices-6"><h2 class="heading">
+<span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Taux de panne.</span>
 </h2>
-<div class="introduction" id="ch-exercices-5-2">
-<div class="para logical" id="ch-exercices-5-2-1">
+<div class="introduction" id="ch-exercices-6-2">
+<div class="para logical" id="ch-exercices-6-2-1">
 <div class="para">Soit <span class="process-math">\(X\)</span> une variable aléatoire discrète à valeurs dans <span class="process-math">\(\N^{*}\)</span> vérifiant :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -274,7 +388,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">
 <span class="process-math">\(X\)</span> représente le moment où un mécanisme tombe en panne. C’est à dire le numéro de l’instance de son cycle de fonctionnement où il tombe en panne. En principe, sous l’effet de l’usure, plus la durée de son fonctionnement est grande plus la probabilité que le mécanisme tombe en panne augmente.</div>
 </div>
-<div class="para logical" id="ch-exercices-5-2-2">
+<div class="para logical" id="ch-exercices-6-2-2">
 <div class="para">que On appelle taux de panne associé à <span class="process-math">\(X\)</span> la suite réelle <span class="process-math">\(\left(x_{n}\right)_{n \in \N^{*}}\)</span> définie par :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -285,20 +399,20 @@ eBookConfig.enable_chatcodes =  false;
 <span class="process-math">\(x_n\)</span> est la probabilité pour que le mécanisme tombe en panne à l’instant <span class="process-math">\(n\)</span> sachant qu’il a fonctionné jusqu’à cet instant.</div>
 </div>
 </div>
-<article class="task exercise-like" id="ch-exercices-5-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="ch-exercices-5-3-1-1">Exprimer <span class="process-math">\(p_{n}=\Pr(X=n)\)</span> en fonction des <span class="process-math">\(x_{k}\text{.}\)</span>
+<article class="task exercise-like" id="ch-exercices-6-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="ch-exercices-6-3-1-1">Exprimer <span class="process-math">\(p_{n}=\Pr(X=n)\)</span> en fonction des <span class="process-math">\(x_{k}\text{.}\)</span>
 </div>
 <div class="solutions">
-<details id="ch-exercices-5-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Indication</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="ch-exercices-5-3-2-1">Éviter de diviser par <span class="process-math">\(x_n\text{.}\)</span> Exprimer <span class="process-math">\(\Pr(X\geq n)\)</span> comme un produit de facteurs <span class="process-math">\((1-x_k)\text{.}\)</span>
-</div></div></details><details id="ch-exercices-5-3-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Réponse</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="ch-exercices-5-3-3-1"><div class="displaymath process-math">
+<details id="ch-exercices-6-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Indication</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="ch-exercices-6-3-2-1">Éviter de diviser par <span class="process-math">\(x_n\text{.}\)</span> Exprimer <span class="process-math">\(\Pr(X\geq n)\)</span> comme un produit de facteurs <span class="process-math">\((1-x_k)\text{.}\)</span>
+</div></div></details><details id="ch-exercices-6-3-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Réponse</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="ch-exercices-6-3-3-1"><div class="displaymath process-math">
 \begin{equation*}
 \forall n \in \N^{*} \quad p_{n}=x_{n}\prod_{k=1}^{n-1}(1-x_{k})
 \end{equation*}
-</div></div></div></details><details id="ch-exercices-5-3-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="ch-exercices-5-3-4-1">
+</div></div></div></details><details id="ch-exercices-6-3-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="ch-exercices-6-3-4-1">
 <div class="para">On a <span class="process-math">\((X=n)\subset (X\geqslant n)\)</span> donc <span class="process-math">\(\Pr(X=n)=\Pr(X=n,X\geq n)\text{.}\)</span> Ce qui donne</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-tauxpanne.html" id="eq-tauxpanne">
 \begin{equation}
-x_n=\Pr(X=n\mid X\geq n)=\frac{\Pr(X=n)}{\Pr(X\geq n)}\tag{2.1}
+x_n=\Pr(X=n\mid X\geq n)=\frac{\Pr(X=n)}{\Pr(X\geq n)}\tag{2.3}
 \end{equation}
 </div>
 <div class="para">On en déduit que</div>
@@ -313,28 +427,28 @@ x_n=\Pr(X=n\mid X\geq n)=\frac{\Pr(X=n)}{\Pr(X\geq n)}\tag{2.1}
 \prod_{k=1}^{n-1}(1-x_k)=\frac{\Pr(X\geq n)}{\Pr(X\geq 1)}=\Pr(X\geq n)
 \end{equation*}
 </div>
-<div class="para">La relation <a href="ch-exercices.html#eq-tauxpanne" class="xref" data-knowl="./knowl/xref/eq-tauxpanne.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Équation 2.1">(2.1)</a> signifie que <span class="process-math">\(p_n=x_n\Pr(X\geq n)\)</span> donc finalement</div>
+<div class="para">La relation <a href="ch-exercices.html#eq-tauxpanne" class="xref" data-knowl="./knowl/xref/eq-tauxpanne.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Équation 2.3">(2.3)</a> signifie que <span class="process-math">\(p_n=x_n\Pr(X\geq n)\)</span> donc finalement</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-tauxpanne.html" id="eqn-pnexpr">
 \begin{equation}
-p_n=x_n\prod_{k=1}^{n-1}(1-x_k)\tag{2.2}
+p_n=x_n\prod_{k=1}^{n-1}(1-x_k)\tag{2.4}
 \end{equation}
 </div>
 </div></div></details>
-</div></article><article class="task exercise-like" id="ch-exercices-5-4"><h3 class="heading">
+</div></article><article class="task exercise-like" id="ch-exercices-6-4"><h3 class="heading">
 <span class="codenumber">(b)</span><span class="space"> </span><span class="title">Caractérisation du taux de panne.</span>
 </h3>
-<div class="para logical" id="ch-exercices-5-4-2-1"><ol class="decimal ol-marker-1" id="ch-exercices-5-4-2-1-1">
-<li id="ch-exercices-5-4-2-1-1-1"><div class="para" id="ch-exercices-5-4-2-1-1-1-1">Montrer que <span class="process-math">\(0 \leqslant x_{n} \lt 1\)</span> pour tout <span class="process-math">\(n \in \N^{*}\)</span> et que la série de terme général <span class="process-math">\(x_{n}\)</span> diverge.</div></li>
-<li id="ch-exercices-5-4-2-1-1-2"><div class="para" id="ch-exercices-5-4-2-1-1-2-1">Réciproquement, soit <span class="process-math">\(\left(x_{n}\right)_{n \in \N^{*}}\)</span> une suite à valeur dans <span class="process-math">\([0,1[\)</span> telle que la série de terme général <span class="process-math">\(x_{n}\)</span> diverge. Montrer qu’il existe une variable aléatoire dont le taux de panne est la suite <span class="process-math">\(\left(x_{n}\right)\text{.}\)</span>
+<div class="para logical" id="ch-exercices-6-4-2-1"><ol class="decimal ol-marker-1" id="ch-exercices-6-4-2-1-1">
+<li id="ch-exercices-6-4-2-1-1-1"><div class="para" id="ch-exercices-6-4-2-1-1-1-1">Montrer que <span class="process-math">\(0 \leqslant x_{n} \lt 1\)</span> pour tout <span class="process-math">\(n \in \N^{*}\)</span> et que la série de terme général <span class="process-math">\(x_{n}\)</span> diverge.</div></li>
+<li id="ch-exercices-6-4-2-1-1-2"><div class="para" id="ch-exercices-6-4-2-1-1-2-1">Réciproquement, soit <span class="process-math">\(\left(x_{n}\right)_{n \in \N^{*}}\)</span> une suite à valeur dans <span class="process-math">\([0,1[\)</span> telle que la série de terme général <span class="process-math">\(x_{n}\)</span> diverge. Montrer qu’il existe une variable aléatoire dont le taux de panne est la suite <span class="process-math">\(\left(x_{n}\right)\text{.}\)</span>
 </div></li>
 </ol></div>
 <div class="solutions">
-<details id="ch-exercices-5-4-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Indication</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="ch-exercices-5-4-3-1">On rappelle que pour une suite <span class="process-math">\((p_n)_n\)</span> de réels positifs sommable et de somme <span class="process-math">\(1\text{,}\)</span> il existe une variable aléatoire <span class="process-math">\(X\)</span> telle que <span class="process-math">\(\Pr(X=n)=p_n\)</span> pour tout <span class="process-math">\(n\text{.}\)</span>
-</div></div></details><details id="ch-exercices-5-4-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="decimal ol-marker-1" id="ch-exercices-5-4-4-1">
-<li id="ch-exercices-5-4-4-1-1">
-<div class="para" id="ch-exercices-5-4-4-1-1-1">Soit <span class="process-math">\(n\in\N^*\)</span> et supposons que <span class="process-math">\(x_n=1\text{.}\)</span> Alors <span class="process-math">\(p_n=\Pr(X\geq n)\text{,}\)</span> ou encore <span class="process-math">\(\Pr(X=n)=\Pr(X\geq n)\text{.}\)</span> Ce qui implique que <span class="process-math">\(\Pr(X\geq n+1)=0\)</span> contredisant l’hypothèse faite dans l’énoncé. Alors <span class="process-math">\(x_n\lt1\text{.}\)</span>
+<details id="ch-exercices-6-4-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Indication</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="ch-exercices-6-4-3-1">On rappelle que pour une suite <span class="process-math">\((p_n)_n\)</span> de réels positifs sommable et de somme <span class="process-math">\(1\text{,}\)</span> il existe une variable aléatoire <span class="process-math">\(X\)</span> telle que <span class="process-math">\(\Pr(X=n)=p_n\)</span> pour tout <span class="process-math">\(n\text{.}\)</span>
+</div></div></details><details id="ch-exercices-6-4-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="decimal ol-marker-1" id="ch-exercices-6-4-4-1">
+<li id="ch-exercices-6-4-4-1-1">
+<div class="para" id="ch-exercices-6-4-4-1-1-1">Soit <span class="process-math">\(n\in\N^*\)</span> et supposons que <span class="process-math">\(x_n=1\text{.}\)</span> Alors <span class="process-math">\(p_n=\Pr(X\geq n)\text{,}\)</span> ou encore <span class="process-math">\(\Pr(X=n)=\Pr(X\geq n)\text{.}\)</span> Ce qui implique que <span class="process-math">\(\Pr(X\geq n+1)=0\)</span> contredisant l’hypothèse faite dans l’énoncé. Alors <span class="process-math">\(x_n\lt1\text{.}\)</span>
 </div>
-<div class="para logical" id="ch-exercices-5-4-4-1-1-2">
+<div class="para logical" id="ch-exercices-6-4-4-1-1-2">
 <div class="para">Ensuite <span class="process-math">\(P(X\geq n+1)\)</span> est le reste de la série convergente <span class="process-math">\(\sum p_k\)</span> donc il converge vers <span class="process-math">\(0\text{.}\)</span> Ce qui implique que</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -344,8 +458,8 @@ p_n=x_n\prod_{k=1}^{n-1}(1-x_k)\tag{2.2}
 <div class="para">La série <span class="process-math">\(\sum x_n\)</span> est nécessairement divergente car dans le cas contraire <span class="process-math">\((x_n)_n\)</span> convergerait vers <span class="process-math">\(0\)</span> et on aurait donc <span class="process-math">\(-\ln(1-x_n)\sim x_n\)</span> ce qui impliquerait que la série <span class="process-math">\(\sum \ln(1-x_n)\)</span> est convergente.</div>
 </div>
 </li>
-<li id="ch-exercices-5-4-4-1-2">
-<div class="para logical" id="ch-exercices-5-4-4-1-2-1">
+<li id="ch-exercices-6-4-4-1-2">
+<div class="para logical" id="ch-exercices-6-4-4-1-2-1">
 <div class="para">Soit <span class="process-math">\(\sum x_n\)</span> une série divergente à termes dans <span class="process-math">\([0,1[\)</span> et posons <span class="process-math">\(v_1=1\)</span> pour tout <span class="process-math">\(n\geq 2\)</span>
 </div>
 <div class="displaymath process-math">
@@ -368,14 +482,14 @@ v_n-v_{n+1}=v_nx_n=p_n
 <div class="para">Puisque la série de réels positif<span class="process-math">\(\sum x_n\)</span> est divergente positive sa suite des sommes partielles tend vers <span class="process-math">\(+\infty\)</span> et on a donc <span class="process-math">\(\ln v_n\longrightarrow-\infty\text{.}\)</span> Par suite <span class="process-math">\(v_n\longrightarrow 0\text{.}\)</span> Puisque <span class="process-math">\(p_n=v_n-v_{n+1}\)</span> alors la série <span class="process-math">\(\sum p_n\)</span> est convergente de somme <span class="process-math">\(v_1=1\text{.}\)</span>
 </div>
 </div>
-<div class="para" id="ch-exercices-5-4-4-1-2-2">Il existe donc une VADR <span class="process-math">\(X\)</span> tel que <span class="process-math">\(P(X=n)=p_n\)</span> pour tout <span class="process-math">\(n\in\N^*\text{.}\)</span>
+<div class="para" id="ch-exercices-6-4-4-1-2-2">Il existe donc une VADR <span class="process-math">\(X\)</span> tel que <span class="process-math">\(P(X=n)=p_n\)</span> pour tout <span class="process-math">\(n\in\N^*\text{.}\)</span>
 </div>
 </li>
 </ol></div></details>
-</div></article><article class="task exercise-like" id="ch-exercices-5-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<div class="para" id="ch-exercices-5-5-1-1">Montrer que la variable <span class="process-math">\(X\)</span> suit une loi géométrique si, et seulement si, son taux de panne est constant.</div>
-<div class="solutions"><details id="ch-exercices-5-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para logical" id="ch-exercices-5-5-2-1">
+</div></article><article class="task exercise-like" id="ch-exercices-6-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="ch-exercices-6-5-1-1">Montrer que la variable <span class="process-math">\(X\)</span> suit une loi géométrique si, et seulement si, son taux de panne est constant.</div>
+<div class="solutions"><details id="ch-exercices-6-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ch-exercices-6-5-2-1">
 <div class="para">On suppose que <span class="process-math">\(X\)</span> suit une loi géométrique de paramètre <span class="process-math">\(p\text{.}\)</span> Alors pour tout <span class="process-math">\(n\in\N^*\)</span> on a <span class="process-math">\(P(X=n)=p(1-p)^{n-1}\text{.}\)</span> Donc</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -397,53 +511,104 @@ P(X=n)=x_n\prod_{k=1}^{n-1}(1-x_k)=p(1-p)^{n-1}\text{.}
 <div class="para">Donc <span class="process-math">\(X\)</span> suit une loi géométrique de paramètre <span class="process-math">\(p\text{.}\)</span>
 </div>
 </div>
-<div class="para" id="ch-exercices-5-5-2-2">Noter que cela signifie que le taux de panne est constant si et seulement si les événements «le mécanisme tombe en panne à l’instant <span class="process-math">\(n\)</span>» sont mutuellement indépendants et ont tous la même probabilité. Il n’y a aucun effet d’usure.</div>
-</div></details></div></article></article><article class="exercise exercise-like" id="ch-exercices-6"><h2 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">95</span><span class="period">.</span><span class="space"> </span><span class="title">Maximums et minimums provisoires.</span>
+<div class="para" id="ch-exercices-6-5-2-2">Noter que cela signifie que le taux de panne est constant si et seulement si les événements «le mécanisme tombe en panne à l’instant <span class="process-math">\(n\)</span>» sont mutuellement indépendants et ont tous la même probabilité. Il n’y a aucun effet d’usure.</div>
+</div></details></div></article></article><article class="exercise exercise-like" id="ch-exercices-7"><h2 class="heading">
+<span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Maximums et minimums provisoires.</span>
 </h2>
-<div class="introduction" id="ch-exercices-6-2"><div class="para logical" id="ch-exercices-6-2-1">
-<div class="para">Soit <span class="process-math">\(n \in \N^{*}\text{.}\)</span> On désigne par <span class="process-math">\(\Omega\)</span> l’ensemble des permutations de <span class="process-math">\(\llbracket 1, n \rrbracket\text{.}\)</span> On munit <span class="process-math">\(\Omega\)</span> de la probabilité uniforme. Pour <span class="process-math">\(\sigma \in \Omega\)</span> et <span class="process-math">\(i \in \llbracket 1, n \rrbracket\text{,}\)</span> on dit que <span class="process-math">\(\sigma(i)\)</span> est un maximum (resp. minimum) provisoire de <span class="process-math">\(\sigma\)</span> si :</div>
+<div class="introduction" id="ch-exercices-7-2"><div class="para logical" id="ch-exercices-7-2-1">
+<div class="para">Soit <span class="process-math">\(n \in \mathbb{N}^*\text{.}\)</span> On désigne par <span class="process-math">\(\Omega\)</span> l’ensemble des permutations de <span class="process-math">\([1, n]\text{.}\)</span> On munit <span class="process-math">\(\Omega\)</span> de la probabilité uniforme. Pour <span class="process-math">\(\sigma \in \Omega\)</span> et <span class="process-math">\(i \in [1, n]\text{,}\)</span> on dit que <span class="process-math">\(\sigma(i)\)</span> est un <em class="emphasis">maximum provisoire</em> (resp. <em class="emphasis">minimum provisoire</em>) de <span class="process-math">\(\sigma\)</span> si :</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\sigma(i) = \max (\sigma(1), \sigma(2), \ldots, \sigma(i))
+\sigma(i) = \max(\sigma(1), \sigma(2), \ldots, \sigma(i)) \quad \text{(resp. } \sigma(i) = \min(\sigma(1), \sigma(2), \ldots, \sigma(i))\text{)}.
 \end{equation*}
 </div>
-<div class="para">(resp. <span class="process-math">\(\sigma(i) = \min (\sigma(1), \sigma(2), \ldots, \sigma(i))\)</span>). On désigne par <span class="process-math">\(X_{n}\)</span> (resp. <span class="process-math">\(Y_{n}\)</span>) les variables aléatoires représentant le nombre de maximums (resp. minimums) provisoires des permutations de <span class="process-math">\(\llbracket 1, n \rrbracket\text{.}\)</span>
+<div class="para">On désigne par <span class="process-math">\(X_n\)</span> (resp. <span class="process-math">\(Y_n\)</span>) les variables aléatoires représentant le nombre de maximums (resp. minimums) provisoires des permutations de <span class="process-math">\([1, n]\text{.}\)</span>
 </div>
-</div></div>
-<article class="task exercise-like" id="ch-exercices-6-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="ch-exercices-6-3-1">Montrer que les variables <span class="process-math">\(X_{n}\)</span> et <span class="process-math">\(Y_{n}\)</span> ont même loi.</div></article><article class="task exercise-like" id="ch-exercices-6-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para" id="ch-exercices-6-4-1">Déterminer la loi de <span class="process-math">\(X_{3}\text{,}\)</span> son espérance et sa variance.</div></article><article class="task exercise-like" id="ch-exercices-6-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<div class="para" id="ch-exercices-6-5-1">Déterminer la loi du couple <span class="process-math">\((X_{3}, Y_{3})\)</span> et sa covariance.</div></article><article class="task exercise-like" id="ch-exercices-6-6"><h3 class="heading"><span class="codenumber">(d)</span></h3>
-<div class="para" id="ch-exercices-6-6-1">Pour <span class="process-math">\(n \in \N^{*}\text{,}\)</span> on note <span class="process-math">\(g_{n}\)</span> la fonction génératrice de <span class="process-math">\(X_{n}\text{.}\)</span>
-</div>
-<ol class="decimal ol-marker-1" id="ch-exercices-6-6-2">
-<li id="ch-exercices-6-6-2-1"><div class="para" id="ch-exercices-6-6-2-1-1">Pour <span class="process-math">\(1 \leqslant k \leqslant n\text{,}\)</span> on note <span class="process-math">\(Z_{k}\)</span> la variable indicatrice de l’événement « <span class="process-math">\(\sigma(k)\)</span> est un maximum ». Montrer que les variables <span class="process-math">\(Z_{1}, Z_{2}, \ldots, Z_{n}\)</span> sont indépendantes.</div></li>
-<li id="ch-exercices-6-6-2-2"><div class="para" id="ch-exercices-6-6-2-2-1">Exprimer <span class="process-math">\(X_{n}\)</span> en fonction de <span class="process-math">\(Z_{1}, Z_{2}, \ldots, Z_{n}\text{.}\)</span> En déduire <span class="process-math">\(g_{n}\text{.}\)</span>
-</div></li>
-<li id="ch-exercices-6-6-2-3"><div class="para" id="ch-exercices-6-6-2-3-1">En déduire <span class="process-math">\(\Pr(X_{n}=1)\text{,}\)</span> <span class="process-math">\(\Pr(X_{n}=2)\text{,}\)</span> <span class="process-math">\(\Pr(X_{n}=n)\text{.}\)</span>
-</div></li>
-<li id="ch-exercices-6-6-2-4"><div class="para" id="ch-exercices-6-6-2-4-1">Déterminer <span class="process-math">\(\Es(X_{n})\)</span> et <span class="process-math">\(\Va(X_{n})\)</span> (sous forme de sommes) et un équivalent de <span class="process-math">\(\Es(X_{n})\)</span> et de <span class="process-math">\(\Va(X_{n})\)</span> quand <span class="process-math">\(n\)</span> tend vers <span class="process-math">\(+\infty\text{.}\)</span>
-</div></li>
-</ol></article></article><article class="exercise exercise-like" id="ch-exercices-7"><h2 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">96</span><span class="period">.</span><span class="space"> </span><span class="title">Formule du crible.</span>
-</h2>
-<div class="introduction" id="ch-exercices-7-2"><div class="para" id="ch-exercices-7-2-1">Soit <span class="process-math">\(A_{1}, A_{2}, \ldots, A_{n}\)</span> des événements d’un espace probabilisé <span class="process-math">\((\Omega, \mathcal{A}, \Pr)\text{.}\)</span>
 </div></div>
 <article class="task exercise-like" id="ch-exercices-7-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para logical" id="ch-exercices-7-3-1">
+<div class="para" id="ch-exercices-7-3-1-1">Montrer que les variables <span class="process-math">\(X_n\)</span> et <span class="process-math">\(Y_n\)</span> ont même loi.</div>
+<div class="solutions"><details id="ch-exercices-7-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="ch-exercices-7-3-2-1">
+<div class="para">On observe qu’en <span class="process-math">\(1\text{,}\)</span> il y a toujours un maximum et un minimum provisoire, et donc que <span class="process-math">\(X_n\)</span> et <span class="process-math">\(Y_n\)</span> sont à valeurs dans <span class="process-math">\([1, n]\text{.}\)</span> L’application <span class="process-math">\(f : \Omega \to \Omega\)</span> qui à la permutation <span class="process-math">\(\sigma\)</span> associe la permutation <span class="process-math">\(\sigma' : k \mapsto n + 1 - \sigma(k)\)</span> est clairement bijective. Pour <span class="process-math">\(i \in [1, n]\text{,}\)</span> <span class="process-math">\(\sigma(i)\)</span> est un maximum provisoire de <span class="process-math">\(\sigma\)</span> si, et seulement si, <span class="process-math">\(\sigma'(i)\)</span> est un minimum provisoire de <span class="process-math">\(\sigma\text{.}\)</span> En effet :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sigma(i) = \max(\sigma(1), \ldots, \sigma(i)) \quad \text{équivaut à} \quad n + 1 - \sigma'(i) = \max(n + 1 - \sigma'(1), \ldots, n + 1 - \sigma'(i)),
+\end{equation*}
+</div>
+<div class="para">ce qui équivaut à :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sigma'(i) = \min(\sigma'(1), \ldots, \sigma'(i)).
+\end{equation*}
+</div>
+<div class="para">On en déduit que, pour tout <span class="process-math">\(k \in [1, n]\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sigma \in \{X_n = k\} \quad \text{si et seulement si} \quad \sigma' \in \{Y_n = k\}.
+\end{equation*}
+</div>
+<div class="para">Comme <span class="process-math">\(f\)</span> est bijective, on a <span class="process-math">\(\text{card}(\{X_n = k\}) = \text{card}(\{Y_n = k\})\text{,}\)</span> et donc <span class="process-math">\(\mathbb{P}(X_n = k) = \mathbb{P}(Y_n = k)\text{,}\)</span> car <span class="process-math">\(\Omega\)</span> est muni de la probabilité uniforme.</div>
+</div></div></details></div></article><article class="task exercise-like" id="ch-exercices-7-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="ch-exercices-7-4-1-1">Déterminer la loi de <span class="process-math">\(X_3\text{,}\)</span> son espérance et sa variance.</div>
+<div class="solutions"><details id="ch-exercices-7-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="ch-exercices-7-4-2-1">
+<ul class="disc" id="ch-exercices-7-4-2-1-1">
+<li id="ch-exercices-7-4-2-1-1-1"><div class="para" id="p-derived-ch-exercices-7-4-2-1-1-1">La permutation <span class="process-math">\(\sigma\)</span> est dans <span class="process-math">\(\{X_3 = 1\}\)</span> si, et seulement si, <span class="process-math">\(\sigma(1) = 3\text{.}\)</span> On en déduit <span class="process-math">\(\mathbb{P}(X_3 = 1) = \frac{1}{3}\text{.}\)</span>
+</div></li>
+<li id="ch-exercices-7-4-2-1-1-2"><div class="para" id="p-derived-ch-exercices-7-4-2-1-1-2">On a <span class="process-math">\(\{X_3 = 3\} = \{\text{Id}_{[1,3]}\}\text{.}\)</span> On en déduit <span class="process-math">\(\mathbb{P}(X_3 = 3) = \frac{1}{6}\text{.}\)</span>
+</div></li>
+<li id="ch-exercices-7-4-2-1-1-3"><div class="para" id="p-derived-ch-exercices-7-4-2-1-1-3">Enfin, <span class="process-math">\(\mathbb{P}(X_3 = 2) = 1 - \frac{1}{3} - \frac{1}{6} = \frac{1}{2}\text{.}\)</span>
+</div></li>
+</ul>
+<div class="para">On obtient :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{E}(X_3) = \frac{11}{6} \quad \text{et} \quad \mathbb{V}(X_3) = \frac{17}{36}.
+\end{equation*}
+</div>
+</div></div></details></div></article><article class="task exercise-like" id="ch-exercices-7-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="ch-exercices-7-5-1-1">Déterminer la loi du couple <span class="process-math">\((X_3, Y_3)\)</span> et sa covariance.</div>
+<div class="solutions"><details id="ch-exercices-7-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="ch-exercices-7-5-2-1">
+<div class="para">Pour <span class="process-math">\((k, \ell) \in [1, 3]^2\text{,}\)</span> on a <span class="process-math">\(\mathbb{P}(X_3 = k, Y_3 = \ell) = 0\)</span> si <span class="process-math">\(k + \ell \geq 4\text{.}\)</span> En effet, sauf pour <span class="process-math">\(i = 1\text{,}\)</span> <span class="process-math">\(\sigma(i)\)</span> ne peut pas être à la fois un maximum provisoire et un minimum provisoire. On obtient :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{|c|c|c|c|}
+\hline
+X  \amp   Y  \amp   1  \amp   2  \amp   3 \\
+\hline
+1  \amp   0  \amp   \frac{1}{6}  \amp   \frac{1}{6} \\
+\hline
+2  \amp   \frac{1}{6}  \amp   \frac{1}{3}  \amp   0 \\
+\hline
+3  \amp   \frac{1}{6}  \amp   0  \amp   0 \\
+\hline
+\end{array}
+\end{equation*}
+</div>
+<div class="para">On trouve :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{E}(X_3 Y_3) = 3 \quad \text{et} \quad \text{Cov}(X_3, Y_3) = -\frac{13}{36}.
+\end{equation*}
+</div>
+</div></div></details></div></article></article><article class="exercise exercise-like" id="ch-exercices-8"><h2 class="heading">
+<span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Formule du crible.</span>
+</h2>
+<div class="introduction" id="ch-exercices-8-2"><div class="para" id="ch-exercices-8-2-1">Soit <span class="process-math">\(A_{1}, A_{2}, \ldots, A_{n}\)</span> des événements d’un espace probabilisé <span class="process-math">\((\Omega, \mathcal{A}, \Pr)\text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="ch-exercices-8-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para logical" id="ch-exercices-8-3-1">
 <div class="para">Montrer que <span class="process-math">\(1_{\bigcup_{i=1}^{n} A_{i}} = 1 - \prod_{i=1}^{n} (1 - \mathbf{1}_{A_{i}})\text{.}\)</span> En déduire la formule du crible :</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \Pr\Big(\bigcup_{i=1}^{n} A_{i}\Big) = \sum_{k=1}^{n} \bigg((-1)^{k-1} \sum_{I \subset [1, n] \atop \card I = k} \Pr\Big(\bigcap_{i \in I} A_{I}\Big)\bigg).
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="ch-exercices-7-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para" id="ch-exercices-7-4-1">Soient <span class="process-math">\(n \in \N^{*}\)</span> et <span class="process-math">\((X_{k})_{k \in \N^{*}}\)</span> une suite de variables indépendantes d’un espace probabilisé <span class="process-math">\((\Omega, \mathcal{A}, \Pr)\)</span> suivant toutes la loi uniforme sur <span class="process-math">\(\llbracket 1, n \rrbracket\text{.}\)</span> On note <span class="process-math">\(X\)</span> la variable aléatoire égale au nombre de tirages nécessaires pour obtenir tous les numéros entre 1 et <span class="process-math">\(n\)</span> au moins une fois (et à <span class="process-math">\(+\infty\)</span> si on n’obtient jamais les <span class="process-math">\(n\)</span> numéros). Pour <span class="process-math">\(j \in \llbracket 1, n \rrbracket\)</span> et <span class="process-math">\(m \in \N\text{,}\)</span> on note <span class="process-math">\(B_{j, m}\)</span> l’événement : « au bout de <span class="process-math">\(m\)</span> tirages, le numéro <span class="process-math">\(j\)</span> n’est pas encore apparu ».</div>
-<ol class="decimal ol-marker-1" id="ch-exercices-7-4-2">
-<li id="ch-exercices-7-4-2-1"><div class="para" id="ch-exercices-7-4-2-1-1">Calculer <span class="process-math">\(\Pr(B_{j_{1}, m} \cap B_{j_{2}, m} \cap \cdots \cap B_{j_{k}, m})\)</span> où <span class="process-math">\(j_{1}, j_{2}, \ldots, j_{k}\)</span> sont des indices distincts compris entre 1 et <span class="process-math">\(n\text{.}\)</span>
+</div></article><article class="task exercise-like" id="ch-exercices-8-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="ch-exercices-8-4-1">Soient <span class="process-math">\(n \in \N^{*}\)</span> et <span class="process-math">\((X_{k})_{k \in \N^{*}}\)</span> une suite de variables indépendantes d’un espace probabilisé <span class="process-math">\((\Omega, \mathcal{A}, \Pr)\)</span> suivant toutes la loi uniforme sur <span class="process-math">\(\llbracket 1, n \rrbracket\text{.}\)</span> On note <span class="process-math">\(X\)</span> la variable aléatoire égale au nombre de tirages nécessaires pour obtenir tous les numéros entre 1 et <span class="process-math">\(n\)</span> au moins une fois (et à <span class="process-math">\(+\infty\)</span> si on n’obtient jamais les <span class="process-math">\(n\)</span> numéros). Pour <span class="process-math">\(j \in \llbracket 1, n \rrbracket\)</span> et <span class="process-math">\(m \in \N\text{,}\)</span> on note <span class="process-math">\(B_{j, m}\)</span> l’événement : « au bout de <span class="process-math">\(m\)</span> tirages, le numéro <span class="process-math">\(j\)</span> n’est pas encore apparu ».</div>
+<ol class="decimal ol-marker-1" id="ch-exercices-8-4-2">
+<li id="ch-exercices-8-4-2-1"><div class="para" id="ch-exercices-8-4-2-1-1">Calculer <span class="process-math">\(\Pr(B_{j_{1}, m} \cap B_{j_{2}, m} \cap \cdots \cap B_{j_{k}, m})\)</span> où <span class="process-math">\(j_{1}, j_{2}, \ldots, j_{k}\)</span> sont des indices distincts compris entre 1 et <span class="process-math">\(n\text{.}\)</span>
 </div></li>
-<li id="ch-exercices-7-4-2-2"><div class="para logical" id="ch-exercices-7-4-2-2-1">
+<li id="ch-exercices-8-4-2-2"><div class="para logical" id="ch-exercices-8-4-2-2-1">
 <div class="para">En déduire que :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -452,14 +617,14 @@ P(X=n)=x_n\prod_{k=1}^{n-1}(1-x_k)=p(1-p)^{n-1}\text{.}
 </div>
 <div class="para">Calculer <span class="process-math">\(\lim_{m \rightarrow +\infty} \Pr(X \gt m)\text{.}\)</span> Interpréter.</div>
 </div></li>
-<li id="ch-exercices-7-4-2-3"><div class="para" id="ch-exercices-7-4-2-3-1">Montrer que <span class="process-math">\(\Es(X) = n \sum_{k=1}^{n} (-1)^{k-1} \frac{\binom{n}{k}}{k}\text{.}\)</span>
+<li id="ch-exercices-8-4-2-3"><div class="para" id="ch-exercices-8-4-2-3-1">Montrer que <span class="process-math">\(\Es(X) = n \sum_{k=1}^{n} (-1)^{k-1} \frac{\binom{n}{k}}{k}\text{.}\)</span>
 </div></li>
-<li id="ch-exercices-7-4-2-4"><div class="para" id="ch-exercices-7-4-2-4-1">Montrer que <span class="process-math">\(\Es(X) = n \left(1 + \frac{1}{2} + \cdots + \frac{1}{n}\right)\text{.}\)</span> En déduire un équivalent de <span class="process-math">\(\Es(X)\)</span> quand <span class="process-math">\(n\)</span> tend vers <span class="process-math">\(+\infty\text{.}\)</span>
+<li id="ch-exercices-8-4-2-4"><div class="para" id="ch-exercices-8-4-2-4-1">Montrer que <span class="process-math">\(\Es(X) = n \left(1 + \frac{1}{2} + \cdots + \frac{1}{n}\right)\text{.}\)</span> En déduire un équivalent de <span class="process-math">\(\Es(X)\)</span> quand <span class="process-math">\(n\)</span> tend vers <span class="process-math">\(+\infty\text{.}\)</span>
 </div></li>
-</ol></article></article><article class="exercise exercise-like" id="ch-exercices-8"><h2 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">97</span><span class="period">.</span><span class="space"> </span><span class="title">Variables aléatoires uniformes et Poisson.</span>
+</ol></article></article><article class="exercise exercise-like" id="ch-exercices-9"><h2 class="heading">
+<span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Variables aléatoires uniformes et Poisson.</span>
 </h2>
-<div class="introduction" id="ch-exercices-8-2"><div class="para logical" id="ch-exercices-8-2-1">
+<div class="introduction" id="ch-exercices-9-2"><div class="para logical" id="ch-exercices-9-2-1">
 <div class="para">Soient un entier <span class="process-math">\(n \geqslant 1\)</span> et une suite <span class="process-math">\((U_{k})_{k \in \N^{*}}\)</span> de variables aléatoires indépendantes et de même loi uniforme sur <span class="process-math">\(\llbracket 1, n \rrbracket\text{.}\)</span> Pour tout <span class="process-math">\(i \in \llbracket 1, n \rrbracket\text{,}\)</span> on définit :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -467,10 +632,10 @@ X_{i}^{(0)} = 0 \quad \text{et} \quad X_{i}^{(m)} = \card\{k \in \llbracket 1, m
 \end{equation*}
 </div>
 </div></div>
-<article class="task exercise-like" id="ch-exercices-8-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="ch-exercices-8-3-1">Quelle est la loi de <span class="process-math">\(X_{i}^{(m)}\)</span> pour <span class="process-math">\(i \in \llbracket 1, n \rrbracket\)</span> et <span class="process-math">\(m \geqslant 1\)</span> ?</div></article><article class="task exercise-like" id="ch-exercices-8-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para" id="ch-exercices-8-4-1">Soit <span class="process-math">\(m \geqslant 1\)</span> et <span class="process-math">\((i, j) \in \llbracket 1, n \rrbracket^{2}\)</span> avec <span class="process-math">\(i \neq j\text{.}\)</span> Calculer la covariance des variables aléatoires <span class="process-math">\(X_{i}^{(m)}\)</span> et <span class="process-math">\(X_{j}^{(m)}\text{.}\)</span> Sont-elles indépendantes ?</div></article><article class="task exercise-like" id="ch-exercices-8-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<div class="para logical" id="ch-exercices-8-5-1">
+<article class="task exercise-like" id="ch-exercices-9-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="ch-exercices-9-3-1">Quelle est la loi de <span class="process-math">\(X_{i}^{(m)}\)</span> pour <span class="process-math">\(i \in \llbracket 1, n \rrbracket\)</span> et <span class="process-math">\(m \geqslant 1\)</span> ?</div></article><article class="task exercise-like" id="ch-exercices-9-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="ch-exercices-9-4-1">Soit <span class="process-math">\(m \geqslant 1\)</span> et <span class="process-math">\((i, j) \in \llbracket 1, n \rrbracket^{2}\)</span> avec <span class="process-math">\(i \neq j\text{.}\)</span> Calculer la covariance des variables aléatoires <span class="process-math">\(X_{i}^{(m)}\)</span> et <span class="process-math">\(X_{j}^{(m)}\text{.}\)</span> Sont-elles indépendantes ?</div></article><article class="task exercise-like" id="ch-exercices-9-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para logical" id="ch-exercices-9-5-1">
 <div class="para">Soit <span class="process-math">\(\lambda\gt0\)</span> et <span class="process-math">\(N\)</span> une variable aléatoire suivant une loi de Poisson de paramètre <span class="process-math">\(\lambda\text{,}\)</span> indépendante des variables <span class="process-math">\(U_{k}\text{.}\)</span> On pose :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -478,23 +643,23 @@ X_{i}^{(0)} = 0 \quad \text{et} \quad X_{i}^{(m)} = \card\{k \in \llbracket 1, m
 \end{equation*}
 </div>
 </div>
-<ol class="decimal ol-marker-1" id="ch-exercices-8-5-2">
-<li id="ch-exercices-8-5-2-1"><div class="para" id="ch-exercices-8-5-2-1-1">Déterminer, en fonction de <span class="process-math">\(\lambda\)</span> et <span class="process-math">\(n\text{,}\)</span> la loi de <span class="process-math">\(Y_{i}\)</span> pour tout <span class="process-math">\(i \in \llbracket 1, n \rrbracket\text{.}\)</span>
+<ol class="decimal ol-marker-1" id="ch-exercices-9-5-2">
+<li id="ch-exercices-9-5-2-1"><div class="para" id="ch-exercices-9-5-2-1-1">Déterminer, en fonction de <span class="process-math">\(\lambda\)</span> et <span class="process-math">\(n\text{,}\)</span> la loi de <span class="process-math">\(Y_{i}\)</span> pour tout <span class="process-math">\(i \in \llbracket 1, n \rrbracket\text{.}\)</span>
 </div></li>
-<li id="ch-exercices-8-5-2-2"><div class="para" id="ch-exercices-8-5-2-2-1">Déterminer la loi conjointe de <span class="process-math">\((Y_{1}, \ldots, Y_{n})\text{.}\)</span>
+<li id="ch-exercices-9-5-2-2"><div class="para" id="ch-exercices-9-5-2-2-1">Déterminer la loi conjointe de <span class="process-math">\((Y_{1}, \ldots, Y_{n})\text{.}\)</span>
 </div></li>
-</ol></article></article><article class="exercise exercise-like" id="ch-exercices-9"><h2 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">98</span><span class="period">.</span><span class="space"> </span><span class="title">Centrale 2015.</span>
+</ol></article></article><article class="exercise exercise-like" id="ch-exercices-10"><h2 class="heading">
+<span class="codenumber">9<span class="period">.</span></span><span class="space"> </span><span class="title">Centrale 2015.</span>
 </h2>
-<div class="introduction" id="ch-exercices-9-2"><div class="para" id="ch-exercices-9-2-1">Soit <span class="process-math">\((\Omega, \mathcal{A}, \Pr)\)</span> un espace probabilisé et <span class="process-math">\((E_{n})_{n \in \N} \in \mathcal{A}^{\N}\)</span> une suite d’événements. On suppose que <span class="process-math">\(\sum_{n=0}^{+\infty} \Pr(E_{n}) \lt +\infty\text{,}\)</span> c’est-à-dire que la série converge.</div></div>
-<article class="task exercise-like" id="ch-exercices-9-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="ch-exercices-9-3-1">On note <span class="process-math">\(1_{X}\)</span> la fonction indicatrice d’un ensemble <span class="process-math">\(X\text{.}\)</span> Soit <span class="process-math">\(Z = \sum_{n=0}^{+\infty} 1_{E_{n}}\)</span> (on convient que <span class="process-math">\(Z = +\infty\)</span> si la série diverge). Prouver que <span class="process-math">\(Z\)</span> est une variable aléatoire discrète.</div></article><article class="task exercise-like" id="ch-exercices-9-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para" id="ch-exercices-9-4-1">Soit <span class="process-math">\(F = \{\omega \in \Omega \mid \omega \text{ appartient à un nombre fini de } E_{n}\}\text{.}\)</span> Prouver que <span class="process-math">\(F\)</span> est un événement et que <span class="process-math">\(\Pr(F) = 1\text{.}\)</span>
-</div></article><article class="task exercise-like" id="ch-exercices-9-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<div class="para" id="ch-exercices-9-5-1">Prouver que <span class="process-math">\(Z\)</span> est d’espérance finie.</div></article></article><article class="exercise exercise-like" id="ch-exercices-10"><h2 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">99</span><span class="period">.</span><span class="space"> </span><span class="title">Marche aléatoire dans <span class="process-math">\(\mathbb{Z}\)</span>.</span>
+<div class="introduction" id="ch-exercices-10-2"><div class="para" id="ch-exercices-10-2-1">Soit <span class="process-math">\((\Omega, \mathcal{A}, \Pr)\)</span> un espace probabilisé et <span class="process-math">\((E_{n})_{n \in \N} \in \mathcal{A}^{\N}\)</span> une suite d’événements. On suppose que <span class="process-math">\(\sum_{n=0}^{+\infty} \Pr(E_{n}) \lt +\infty\text{,}\)</span> c’est-à-dire que la série converge.</div></div>
+<article class="task exercise-like" id="ch-exercices-10-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="ch-exercices-10-3-1">On note <span class="process-math">\(1_{X}\)</span> la fonction indicatrice d’un ensemble <span class="process-math">\(X\text{.}\)</span> Soit <span class="process-math">\(Z = \sum_{n=0}^{+\infty} 1_{E_{n}}\)</span> (on convient que <span class="process-math">\(Z = +\infty\)</span> si la série diverge). Prouver que <span class="process-math">\(Z\)</span> est une variable aléatoire discrète.</div></article><article class="task exercise-like" id="ch-exercices-10-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="ch-exercices-10-4-1">Soit <span class="process-math">\(F = \{\omega \in \Omega \mid \omega \text{ appartient à un nombre fini de } E_{n}\}\text{.}\)</span> Prouver que <span class="process-math">\(F\)</span> est un événement et que <span class="process-math">\(\Pr(F) = 1\text{.}\)</span>
+</div></article><article class="task exercise-like" id="ch-exercices-10-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="ch-exercices-10-5-1">Prouver que <span class="process-math">\(Z\)</span> est d’espérance finie.</div></article></article><article class="exercise exercise-like" id="ch-exercices-11"><h2 class="heading">
+<span class="codenumber">10<span class="period">.</span></span><span class="space"> </span><span class="title">Marche aléatoire dans <span class="process-math">\(\mathbb{Z}\)</span>.</span>
 </h2>
-<div class="introduction" id="ch-exercices-10-2"><div class="para logical" id="ch-exercices-10-2-1">
+<div class="introduction" id="ch-exercices-11-2"><div class="para logical" id="ch-exercices-11-2-1">
 <div class="para">Soit <span class="process-math">\((X_{n})_{n \in \N^{*}}\)</span> une suite de variables aléatoires, sur le même espace probabilisé <span class="process-math">\((\Omega, \mathcal{A}, \Pr)\text{,}\)</span> indépendantes et de même loi définie par :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -504,18 +669,18 @@ X_{i}^{(0)} = 0 \quad \text{et} \quad X_{i}^{(m)} = \card\{k \in \llbracket 1, m
 <div class="para">où <span class="process-math">\(p \in [0, 1]\text{.}\)</span> On pose <span class="process-math">\(S_{0} = 0\)</span> et, pour tout <span class="process-math">\(n \in \N^{*}\text{,}\)</span> <span class="process-math">\(S_{n} = \sum_{k=1}^{n} X_{k}\text{.}\)</span> La suite <span class="process-math">\((S_{n})\)</span> est appelée marche aléatoire dans <span class="process-math">\(\mathbb{Z}\text{.}\)</span>
 </div>
 </div></div>
-<article class="task exercise-like" id="ch-exercices-10-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="ch-exercices-10-3-1">Déterminer <span class="process-math">\(u_{n} = \Pr(S_{n} = 0)\)</span> pour tout <span class="process-math">\(n \in \N\text{.}\)</span>
-</div></article><article class="task exercise-like" id="ch-exercices-10-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para logical" id="ch-exercices-10-4-1">
+<article class="task exercise-like" id="ch-exercices-11-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="ch-exercices-11-3-1">Déterminer <span class="process-math">\(u_{n} = \Pr(S_{n} = 0)\)</span> pour tout <span class="process-math">\(n \in \N\text{.}\)</span>
+</div></article><article class="task exercise-like" id="ch-exercices-11-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para logical" id="ch-exercices-11-4-1">
 <div class="para">On note <span class="process-math">\(f(x)\)</span> la somme de la série entière <span class="process-math">\(\sum u_{n} x^{n}\text{.}\)</span> Montrer que :</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \forall x \in ]-1, 1[ \quad f(x) = \frac{1}{\sqrt{1 - 4 p (1 - p) x^{2}}}.
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="ch-exercices-10-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<div class="para logical" id="ch-exercices-10-5-1">
+</div></article><article class="task exercise-like" id="ch-exercices-11-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para logical" id="ch-exercices-11-5-1">
 <div class="para">Pour tout entier naturel non nul <span class="process-math">\(k\text{,}\)</span> on note <span class="process-math">\(A_{k}\)</span> l’événement « le mobile retourne pour la première fois à l’origine au bout de <span class="process-math">\(k\)</span> déplacements », c’est-à-dire :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -525,8 +690,8 @@ A_{k} = (S_{k} = 0) \cap \left(\bigcap_{i=1}^{k-1} (S_{i} \neq 0)\right).
 <div class="para">On pose <span class="process-math">\(v_{k} = \Pr(A_{k})\)</span> pour tout <span class="process-math">\(k \geqslant 1\)</span> et <span class="process-math">\(v_{0} = 0\text{.}\)</span>
 </div>
 </div>
-<ol class="decimal ol-marker-1" id="ch-exercices-10-5-2">
-<li id="ch-exercices-10-5-2-1"><div class="para logical" id="ch-exercices-10-5-2-1-1">
+<ol class="decimal ol-marker-1" id="ch-exercices-11-5-2">
+<li id="ch-exercices-11-5-2-1"><div class="para logical" id="ch-exercices-11-5-2-1-1">
 <div class="para">Montrer que, pour tout entier naturel <span class="process-math">\(n\)</span> non nul, on a :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -534,7 +699,7 @@ A_{k} = (S_{k} = 0) \cap \left(\bigcap_{i=1}^{k-1} (S_{i} \neq 0)\right).
 \end{equation*}
 </div>
 </div></li>
-<li id="ch-exercices-10-5-2-2"><div class="para logical" id="ch-exercices-10-5-2-2-1">
+<li id="ch-exercices-11-5-2-2"><div class="para logical" id="ch-exercices-11-5-2-2-1">
 <div class="para">En déduire que, pour tout entier naturel non nul <span class="process-math">\(n\text{,}\)</span> on a :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -542,16 +707,16 @@ u_{n} = \sum_{k=0}^{n} u_{n - k} v_{k}.
 \end{equation*}
 </div>
 </div></li>
-</ol></article></article><article class="exercise exercise-like" id="ch-exercices-11"><h2 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">100</span><span class="period">.</span><span class="space"> </span><span class="title">Loi faible des grands nombres dans <span class="process-math">\(L_{1}\)</span>.</span>
+</ol></article></article><article class="exercise exercise-like" id="ch-exercices-12"><h2 class="heading">
+<span class="codenumber">11<span class="period">.</span></span><span class="space"> </span><span class="title">Loi faible des grands nombres dans <span class="process-math">\(L_{1}\)</span>.</span>
 </h2>
-<div class="introduction" id="ch-exercices-11-2"><div class="para" id="ch-exercices-11-2-1">Soit <span class="process-math">\((X_{n})_{n \geqslant 1}\)</span> une suite de variables aléatoires réelles discrètes, deux à deux indépendantes, de même loi, possédant une espérance finie <span class="process-math">\(m\text{.}\)</span> On pose, pour tout <span class="process-math">\(n \in \N^{*}\text{,}\)</span> <span class="process-math">\(Y_{n} = \frac{1}{n} (X_{1} + \cdots + X_{n})\text{.}\)</span>
+<div class="introduction" id="ch-exercices-12-2"><div class="para" id="ch-exercices-12-2-1">Soit <span class="process-math">\((X_{n})_{n \geqslant 1}\)</span> une suite de variables aléatoires réelles discrètes, deux à deux indépendantes, de même loi, possédant une espérance finie <span class="process-math">\(m\text{.}\)</span> On pose, pour tout <span class="process-math">\(n \in \N^{*}\text{,}\)</span> <span class="process-math">\(Y_{n} = \frac{1}{n} (X_{1} + \cdots + X_{n})\text{.}\)</span>
 </div></div>
-<article class="task exercise-like" id="ch-exercices-11-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="ch-exercices-11-3-1">Soit <span class="process-math">\(\varepsilon \gt 0\text{.}\)</span>
+<article class="task exercise-like" id="ch-exercices-12-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="ch-exercices-12-3-1">Soit <span class="process-math">\(\varepsilon \gt 0\text{.}\)</span>
 </div>
-<ol class="decimal ol-marker-1" id="ch-exercices-11-3-2">
-<li id="ch-exercices-11-3-2-1"><div class="para logical" id="ch-exercices-11-3-2-1-1">
+<ol class="decimal ol-marker-1" id="ch-exercices-12-3-2">
+<li id="ch-exercices-12-3-2-1"><div class="para logical" id="ch-exercices-12-3-2-1-1">
 <div class="para">Pour <span class="process-math">\(c\gt0\text{,}\)</span> on définit <span class="process-math">\(g: \R \rightarrow \R\)</span> par :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -564,7 +729,7 @@ x \amp \text{si } |x| \leqslant c, \\
 <div class="para">Montrer que la variable aléatoire <span class="process-math">\(g(X_{1})\)</span> est d’espérance finie et que l’on peut choisir <span class="process-math">\(c\)</span> tel que <span class="process-math">\(\Es(|g(X_{1}) - X_{1}|) \leqslant \frac{\varepsilon}{2}\text{.}\)</span>
 </div>
 </div></li>
-<li id="ch-exercices-11-3-2-2"><div class="para logical" id="ch-exercices-11-3-2-2-1">
+<li id="ch-exercices-12-3-2-2"><div class="para logical" id="ch-exercices-12-3-2-2-1">
 <div class="para">On pose <span class="process-math">\(a = \Es(g(X_{1}))\text{.}\)</span> Montrer que :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -572,21 +737,21 @@ x \amp \text{si } |x| \leqslant c, \\
 \end{equation*}
 </div>
 </div></li>
-</ol></article></article><article class="exercise exercise-like" id="ch-exercices-12"><h2 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">101</span><span class="period">.</span><span class="space"> </span><span class="title">Modèle de Galton-Watson.</span>
+</ol></article></article><article class="exercise exercise-like" id="ch-exercices-13"><h2 class="heading">
+<span class="codenumber">12<span class="period">.</span></span><span class="space"> </span><span class="title">Modèle de Galton-Watson.</span>
 </h2>
-<div class="introduction" id="ch-exercices-12-2"><div class="para" id="ch-exercices-12-2-1">On observe des virus qui se reproduisent tous selon la même loi avant de mourir : un virus donne naissance en une journée à <span class="process-math">\(X\)</span> virus, où <span class="process-math">\(X\)</span> est une variable aléatoire à valeurs dans <span class="process-math">\(\N\text{.}\)</span> Pour tout <span class="process-math">\(k \in \N\text{,}\)</span> on note <span class="process-math">\(\Pr(X = k) = p_{k}\text{.}\)</span> On suppose <span class="process-math">\(p_{1}\gt0\)</span> et <span class="process-math">\(p_{0} + p_{1} \lt 1\text{.}\)</span> On note <span class="process-math">\(f\)</span> la fonction génératrice de <span class="process-math">\(X\text{.}\)</span> On part au jour zéro de <span class="process-math">\(X_{0} = 1\)</span> virus. Au premier jour, on a donc <span class="process-math">\(X_{1}\)</span> virus, où <span class="process-math">\(X_{1}\)</span> suit la loi de <span class="process-math">\(X\)</span> ; chacun de ces <span class="process-math">\(X_{1}\)</span> virus évolue alors indépendamment des autres virus et se reproduit selon la même loi avant de mourir : cela conduit à avoir <span class="process-math">\(X_{2}\)</span> virus au deuxième jour ; et le processus continue de la sorte. On note <span class="process-math">\(u_{n} = \Pr(X_{n} = 0)\text{.}\)</span>
+<div class="introduction" id="ch-exercices-13-2"><div class="para" id="ch-exercices-13-2-1">On observe des virus qui se reproduisent tous selon la même loi avant de mourir : un virus donne naissance en une journée à <span class="process-math">\(X\)</span> virus, où <span class="process-math">\(X\)</span> est une variable aléatoire à valeurs dans <span class="process-math">\(\N\text{.}\)</span> Pour tout <span class="process-math">\(k \in \N\text{,}\)</span> on note <span class="process-math">\(\Pr(X = k) = p_{k}\text{.}\)</span> On suppose <span class="process-math">\(p_{1}\gt0\)</span> et <span class="process-math">\(p_{0} + p_{1} \lt 1\text{.}\)</span> On note <span class="process-math">\(f\)</span> la fonction génératrice de <span class="process-math">\(X\text{.}\)</span> On part au jour zéro de <span class="process-math">\(X_{0} = 1\)</span> virus. Au premier jour, on a donc <span class="process-math">\(X_{1}\)</span> virus, où <span class="process-math">\(X_{1}\)</span> suit la loi de <span class="process-math">\(X\)</span> ; chacun de ces <span class="process-math">\(X_{1}\)</span> virus évolue alors indépendamment des autres virus et se reproduit selon la même loi avant de mourir : cela conduit à avoir <span class="process-math">\(X_{2}\)</span> virus au deuxième jour ; et le processus continue de la sorte. On note <span class="process-math">\(u_{n} = \Pr(X_{n} = 0)\text{.}\)</span>
 </div></div>
-<article class="task exercise-like" id="ch-exercices-12-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="ch-exercices-12-3-1">Calculer <span class="process-math">\(u_{0}\text{,}\)</span> <span class="process-math">\(u_{1}\text{.}\)</span>
-</div></article><article class="task exercise-like" id="ch-exercices-12-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para" id="ch-exercices-12-4-1">Montrer que la suite <span class="process-math">\((u_{n})_{n \in \N}\)</span> est convergente.</div></article><article class="task exercise-like" id="ch-exercices-12-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<div class="para" id="ch-exercices-12-5-1">Montrer que pour tout entier <span class="process-math">\(n \geqslant 0\text{,}\)</span> on a <span class="process-math">\(u_{n+1} = f(u_{n})\text{.}\)</span>
-</div></article><article class="task exercise-like" id="ch-exercices-12-6"><h3 class="heading"><span class="codenumber">(d)</span></h3>
-<div class="para" id="ch-exercices-12-6-1">Que peut-on dire de la limite de <span class="process-math">\((u_{n})_{n \in \N}\)</span> ? Discuter selon la valeur de <span class="process-math">\(\Es(X)\text{.}\)</span> Interpréter le résultat.</div></article></article><article class="exercise exercise-like" id="ch-exercices-13"><h2 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">102</span><span class="period">.</span><span class="space"> </span><span class="title">Somme aléatoire de variables aléatoires.</span>
+<article class="task exercise-like" id="ch-exercices-13-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="ch-exercices-13-3-1">Calculer <span class="process-math">\(u_{0}\text{,}\)</span> <span class="process-math">\(u_{1}\text{.}\)</span>
+</div></article><article class="task exercise-like" id="ch-exercices-13-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="ch-exercices-13-4-1">Montrer que la suite <span class="process-math">\((u_{n})_{n \in \N}\)</span> est convergente.</div></article><article class="task exercise-like" id="ch-exercices-13-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="ch-exercices-13-5-1">Montrer que pour tout entier <span class="process-math">\(n \geqslant 0\text{,}\)</span> on a <span class="process-math">\(u_{n+1} = f(u_{n})\text{.}\)</span>
+</div></article><article class="task exercise-like" id="ch-exercices-13-6"><h3 class="heading"><span class="codenumber">(d)</span></h3>
+<div class="para" id="ch-exercices-13-6-1">Que peut-on dire de la limite de <span class="process-math">\((u_{n})_{n \in \N}\)</span> ? Discuter selon la valeur de <span class="process-math">\(\Es(X)\text{.}\)</span> Interpréter le résultat.</div></article></article><article class="exercise exercise-like" id="ch-exercices-14"><h2 class="heading">
+<span class="codenumber">13<span class="period">.</span></span><span class="space"> </span><span class="title">Somme aléatoire de variables aléatoires.</span>
 </h2>
-<div class="introduction" id="ch-exercices-13-2"><div class="para logical" id="ch-exercices-13-2-1">
+<div class="introduction" id="ch-exercices-14-2"><div class="para logical" id="ch-exercices-14-2-1">
 <div class="para">Soit <span class="process-math">\((X_{n})_{n \geqslant 1}\)</span> une suite de variables aléatoires réelles discrètes, toutes de même loi, et <span class="process-math">\(N\)</span> une variable aléatoire à valeurs dans <span class="process-math">\(\N\text{.}\)</span> On suppose que <span class="process-math">\(N\)</span> et les variables <span class="process-math">\(X_{n}\)</span> pour <span class="process-math">\(n \in \N^{*}\)</span> forment une suite de variables aléatoires indépendantes. On pose :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -594,18 +759,18 @@ x \amp \text{si } |x| \leqslant c, \\
 \end{equation*}
 </div>
 </div></div>
-<article class="task exercise-like" id="ch-exercices-13-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="ch-exercices-13-3-1">Montrer que <span class="process-math">\(S_{N}\)</span> est une variable aléatoire.</div></article><article class="task exercise-like" id="ch-exercices-13-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para" id="ch-exercices-13-4-1">Déterminer la loi de <span class="process-math">\(S_{N}\)</span> lorsque les <span class="process-math">\(X_{k}\)</span> suivent la loi de Bernoulli de paramètre <span class="process-math">\(p\)</span> et <span class="process-math">\(N\)</span> la loi de Poisson de paramètre <span class="process-math">\(\lambda\text{.}\)</span>
-</div></article><article class="task exercise-like" id="ch-exercices-13-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<div class="para" id="ch-exercices-13-5-1">Déterminer la loi de <span class="process-math">\(S_{N}\)</span> lorsque les <span class="process-math">\(X_{k}\)</span> suivent la loi géométrique de paramètre <span class="process-math">\(p\)</span> et <span class="process-math">\(N\)</span> la loi géométrique de paramètre <span class="process-math">\(p^{\prime}\text{.}\)</span>
-</div></article><article class="task exercise-like" id="ch-exercices-13-6"><h3 class="heading"><span class="codenumber">(d)</span></h3>
-<div class="para" id="ch-exercices-13-6-1">On suppose que les variables aléatoires <span class="process-math">\(X_{n}\)</span> sont à valeurs dans <span class="process-math">\(\N\text{.}\)</span>
+<article class="task exercise-like" id="ch-exercices-14-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="ch-exercices-14-3-1">Montrer que <span class="process-math">\(S_{N}\)</span> est une variable aléatoire.</div></article><article class="task exercise-like" id="ch-exercices-14-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="ch-exercices-14-4-1">Déterminer la loi de <span class="process-math">\(S_{N}\)</span> lorsque les <span class="process-math">\(X_{k}\)</span> suivent la loi de Bernoulli de paramètre <span class="process-math">\(p\)</span> et <span class="process-math">\(N\)</span> la loi de Poisson de paramètre <span class="process-math">\(\lambda\text{.}\)</span>
+</div></article><article class="task exercise-like" id="ch-exercices-14-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="ch-exercices-14-5-1">Déterminer la loi de <span class="process-math">\(S_{N}\)</span> lorsque les <span class="process-math">\(X_{k}\)</span> suivent la loi géométrique de paramètre <span class="process-math">\(p\)</span> et <span class="process-math">\(N\)</span> la loi géométrique de paramètre <span class="process-math">\(p^{\prime}\text{.}\)</span>
+</div></article><article class="task exercise-like" id="ch-exercices-14-6"><h3 class="heading"><span class="codenumber">(d)</span></h3>
+<div class="para" id="ch-exercices-14-6-1">On suppose que les variables aléatoires <span class="process-math">\(X_{n}\)</span> sont à valeurs dans <span class="process-math">\(\N\text{.}\)</span>
 </div>
-<ol class="decimal ol-marker-1" id="ch-exercices-13-6-2">
-<li id="ch-exercices-13-6-2-1"><div class="para" id="ch-exercices-13-6-2-1-1">Montrer que <span class="process-math">\(G_{S_{N}} = G_{N} \circ G_{X_{1}}\)</span> sur <span class="process-math">\([0, 1]\text{.}\)</span>
+<ol class="decimal ol-marker-1" id="ch-exercices-14-6-2">
+<li id="ch-exercices-14-6-2-1"><div class="para" id="ch-exercices-14-6-2-1-1">Montrer que <span class="process-math">\(G_{S_{N}} = G_{N} \circ G_{X_{1}}\)</span> sur <span class="process-math">\([0, 1]\text{.}\)</span>
 </div></li>
-<li id="ch-exercices-13-6-2-2"><div class="para logical" id="ch-exercices-13-6-2-2-1">
+<li id="ch-exercices-14-6-2-2"><div class="para logical" id="ch-exercices-14-6-2-2-1">
 <div class="para">Montrer que, si <span class="process-math">\(X_{1}\)</span> et <span class="process-math">\(N\)</span> sont d’espérance finie, alors <span class="process-math">\(S_{N}\)</span> est d’espérance finie et vérifie la première formule de Wald :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -613,7 +778,7 @@ x \amp \text{si } |x| \leqslant c, \\
 \end{equation*}
 </div>
 </div></li>
-<li id="ch-exercices-13-6-2-3"><div class="para logical" id="ch-exercices-13-6-2-3-1">
+<li id="ch-exercices-14-6-2-3"><div class="para logical" id="ch-exercices-14-6-2-3-1">
 <div class="para">Montrer que, si <span class="process-math">\(X_{1}\)</span> et <span class="process-math">\(N\)</span> possèdent un moment d’ordre 2, alors <span class="process-math">\(S_{N}\)</span> possède aussi un moment d’ordre 2 et vérifie la seconde formule de Wald :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -621,28 +786,28 @@ x \amp \text{si } |x| \leqslant c, \\
 \end{equation*}
 </div>
 </div></li>
-</ol></article></article><article class="exercise exercise-like" id="ch-exercices-14"><h2 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">103</span><span class="period">.</span><span class="space"> </span><span class="title">Succès consécutifs.</span>
+</ol></article></article><article class="exercise exercise-like" id="ch-exercices-15"><h2 class="heading">
+<span class="codenumber">14<span class="period">.</span></span><span class="space"> </span><span class="title">Succès consécutifs.</span>
 </h2>
-<div class="introduction" id="ch-exercices-14-2"><div class="para" id="ch-exercices-14-2-1">On considère une suite d’épreuves de Bernoulli indépendantes. À chaque épreuve, la probabilité de succès est <span class="process-math">\(p \in ]0, 1[\text{.}\)</span> On se donne un entier <span class="process-math">\(r\)</span> strictement positif. Pour <span class="process-math">\(n \in \N^{*}\text{,}\)</span> on note <span class="process-math">\(\Pi_{n}\)</span> la probabilité qu’au cours des <span class="process-math">\(n\)</span> premières épreuves, on ait obtenu <span class="process-math">\(r\)</span> succès consécutifs (au moins une fois).</div></div>
-<article class="task exercise-like" id="ch-exercices-14-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="ch-exercices-14-3-1">Calculer <span class="process-math">\(\Pi_{0}\text{,}\)</span> <span class="process-math">\(\Pi_{1}\text{,}\)</span> ..., <span class="process-math">\(\Pi_{r}\text{.}\)</span>
-</div></article><article class="task exercise-like" id="ch-exercices-14-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para" id="ch-exercices-14-4-1">Montrer que, pour <span class="process-math">\(n \geqslant r\text{,}\)</span> on a <span class="process-math">\(\Pi_{n+1} = \Pi_{n} + (1 - \Pi_{n-r}) p^{r} (1 - p)\text{.}\)</span>
-</div></article><article class="task exercise-like" id="ch-exercices-14-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<div class="para" id="ch-exercices-14-5-1">Montrer que la suite <span class="process-math">\((\Pi_{n})_{n \in \N}\)</span> est convergente. Calculer sa limite.</div></article><article class="task exercise-like" id="ch-exercices-14-6"><h3 class="heading"><span class="codenumber">(d)</span></h3>
-<div class="para" id="ch-exercices-14-6-1">Déduire de la question 1 que l’on peut définir une variable aléatoire <span class="process-math">\(T\)</span> égale au temps d’attente de <span class="process-math">\(r\)</span> succès consécutifs. On définira <span class="process-math">\((T = k)\)</span> comme l’événement « on a obtenu des succès aux épreuves de rang <span class="process-math">\(k - r + 1\text{,}\)</span> <span class="process-math">\(k - r + 2\text{,}\)</span> ..., <span class="process-math">\(k\)</span> sans jamais avoir obtenu <span class="process-math">\(r\)</span> succès consécutifs auparavant ».</div></article><article class="task exercise-like" id="ch-exercices-14-7"><h3 class="heading"><span class="codenumber">(e)</span></h3>
-<div class="para logical" id="ch-exercices-14-7-1">
+<div class="introduction" id="ch-exercices-15-2"><div class="para" id="ch-exercices-15-2-1">On considère une suite d’épreuves de Bernoulli indépendantes. À chaque épreuve, la probabilité de succès est <span class="process-math">\(p \in ]0, 1[\text{.}\)</span> On se donne un entier <span class="process-math">\(r\)</span> strictement positif. Pour <span class="process-math">\(n \in \N^{*}\text{,}\)</span> on note <span class="process-math">\(\Pi_{n}\)</span> la probabilité qu’au cours des <span class="process-math">\(n\)</span> premières épreuves, on ait obtenu <span class="process-math">\(r\)</span> succès consécutifs (au moins une fois).</div></div>
+<article class="task exercise-like" id="ch-exercices-15-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="ch-exercices-15-3-1">Calculer <span class="process-math">\(\Pi_{0}\text{,}\)</span> <span class="process-math">\(\Pi_{1}\text{,}\)</span> ..., <span class="process-math">\(\Pi_{r}\text{.}\)</span>
+</div></article><article class="task exercise-like" id="ch-exercices-15-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="ch-exercices-15-4-1">Montrer que, pour <span class="process-math">\(n \geqslant r\text{,}\)</span> on a <span class="process-math">\(\Pi_{n+1} = \Pi_{n} + (1 - \Pi_{n-r}) p^{r} (1 - p)\text{.}\)</span>
+</div></article><article class="task exercise-like" id="ch-exercices-15-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="ch-exercices-15-5-1">Montrer que la suite <span class="process-math">\((\Pi_{n})_{n \in \N}\)</span> est convergente. Calculer sa limite.</div></article><article class="task exercise-like" id="ch-exercices-15-6"><h3 class="heading"><span class="codenumber">(d)</span></h3>
+<div class="para" id="ch-exercices-15-6-1">Déduire de la question 1 que l’on peut définir une variable aléatoire <span class="process-math">\(T\)</span> égale au temps d’attente de <span class="process-math">\(r\)</span> succès consécutifs. On définira <span class="process-math">\((T = k)\)</span> comme l’événement « on a obtenu des succès aux épreuves de rang <span class="process-math">\(k - r + 1\text{,}\)</span> <span class="process-math">\(k - r + 2\text{,}\)</span> ..., <span class="process-math">\(k\)</span> sans jamais avoir obtenu <span class="process-math">\(r\)</span> succès consécutifs auparavant ».</div></article><article class="task exercise-like" id="ch-exercices-15-7"><h3 class="heading"><span class="codenumber">(e)</span></h3>
+<div class="para logical" id="ch-exercices-15-7-1">
 <div class="para">Montrer que :</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \Es(T) = \frac{1 - p^{r}}{(1 - p) p^{r}}.
 \end{equation*}
 </div>
-</div></article></article><article class="exercise exercise-like" id="ch-exercices-15"><h2 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">104</span><span class="period">.</span><span class="space"> </span><span class="title">Marche aléatoire dans <span class="process-math">\(\mathbb{Z}\)</span> : premier retour à l’origine.</span>
+</div></article></article><article class="exercise exercise-like" id="ch-exercices-16"><h2 class="heading">
+<span class="codenumber">15<span class="period">.</span></span><span class="space"> </span><span class="title">Marche aléatoire dans <span class="process-math">\(\mathbb{Z}\)</span> : premier retour à l’origine.</span>
 </h2>
-<div class="introduction" id="ch-exercices-15-2"><div class="para logical" id="ch-exercices-15-2-1">
+<div class="introduction" id="ch-exercices-16-2"><div class="para logical" id="ch-exercices-16-2-1">
 <div class="para">Soit <span class="process-math">\((X_{n})_{n \in \N^{*}}\)</span> une suite de variables aléatoires, sur le même espace probabilisé <span class="process-math">\((\Omega, \mathcal{A}, \Pr)\text{,}\)</span> indépendantes et de même loi définie par :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -652,18 +817,18 @@ x \amp \text{si } |x| \leqslant c, \\
 <div class="para">où <span class="process-math">\(p \in [0, 1]\text{.}\)</span> On pose <span class="process-math">\(S_{0} = 0\)</span> et, pour tout <span class="process-math">\(n \in \N^{*}\text{,}\)</span> <span class="process-math">\(S_{n} = \sum_{k=1}^{n} X_{k}\text{.}\)</span> La suite <span class="process-math">\((S_{n})\)</span> est appelée marche aléatoire dans <span class="process-math">\(\mathbb{Z}\text{.}\)</span>
 </div>
 </div></div>
-<article class="task exercise-like" id="ch-exercices-15-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="ch-exercices-15-3-1">Déterminer <span class="process-math">\(u_{n} = \Pr(S_{n} = 0)\)</span> pour tout <span class="process-math">\(n \in \N\text{.}\)</span>
-</div></article><article class="task exercise-like" id="ch-exercices-15-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para logical" id="ch-exercices-15-4-1">
+<article class="task exercise-like" id="ch-exercices-16-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="ch-exercices-16-3-1">Déterminer <span class="process-math">\(u_{n} = \Pr(S_{n} = 0)\)</span> pour tout <span class="process-math">\(n \in \N\text{.}\)</span>
+</div></article><article class="task exercise-like" id="ch-exercices-16-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para logical" id="ch-exercices-16-4-1">
 <div class="para">On note <span class="process-math">\(f(x)\)</span> la somme de la série entière <span class="process-math">\(\sum u_{n} x^{n}\text{.}\)</span> Montrer que :</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \forall x \in ]-1, 1[ \quad f(x) = \frac{1}{\sqrt{1 - 4 p (1 - p) x^{2}}}.
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="ch-exercices-15-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<div class="para logical" id="ch-exercices-15-5-1">
+</div></article><article class="task exercise-like" id="ch-exercices-16-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para logical" id="ch-exercices-16-5-1">
 <div class="para">Pour tout entier naturel non nul <span class="process-math">\(k\text{,}\)</span> on note <span class="process-math">\(A_{k}\)</span> l’événement « le mobile retourne pour la première fois à l’origine au bout de <span class="process-math">\(k\)</span> déplacements », c’est-à-dire :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -673,8 +838,8 @@ A_{k} = (S_{k} = 0) \cap \left(\bigcap_{i=1}^{k-1} (S_{i} \neq 0)\right).
 <div class="para">On pose <span class="process-math">\(v_{k} = \Pr(A_{k})\)</span> pour tout <span class="process-math">\(k \geqslant 1\)</span> et <span class="process-math">\(v_{0} = 0\text{.}\)</span>
 </div>
 </div>
-<ol class="decimal ol-marker-1" id="ch-exercices-15-5-2">
-<li id="ch-exercices-15-5-2-1"><div class="para logical" id="ch-exercices-15-5-2-1-1">
+<ol class="decimal ol-marker-1" id="ch-exercices-16-5-2">
+<li id="ch-exercices-16-5-2-1"><div class="para logical" id="ch-exercices-16-5-2-1-1">
 <div class="para">Montrer que, pour tout entier naturel <span class="process-math">\(n\)</span> non nul, on a :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -682,7 +847,7 @@ A_{k} = (S_{k} = 0) \cap \left(\bigcap_{i=1}^{k-1} (S_{i} \neq 0)\right).
 \end{equation*}
 </div>
 </div></li>
-<li id="ch-exercices-15-5-2-2"><div class="para logical" id="ch-exercices-15-5-2-2-1">
+<li id="ch-exercices-16-5-2-2"><div class="para logical" id="ch-exercices-16-5-2-2-1">
 <div class="para">En déduire que, pour tout entier naturel non nul <span class="process-math">\(n\text{,}\)</span> on a :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -690,10 +855,10 @@ u_{n} = \sum_{k=0}^{n} u_{n - k} v_{k}.
 \end{equation*}
 </div>
 </div></li>
-</ol></article></article><article class="exercise exercise-like" id="ch-exercices-16"><h2 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">105</span><span class="period">.</span><span class="space"> </span><span class="title">Inégalité de Kolmogorov.</span>
+</ol></article></article><article class="exercise exercise-like" id="ch-exercices-17"><h2 class="heading">
+<span class="codenumber">16<span class="period">.</span></span><span class="space"> </span><span class="title">Inégalité de Kolmogorov.</span>
 </h2>
-<div class="introduction" id="ch-exercices-16-2"><div class="para logical" id="ch-exercices-16-2-1">
+<div class="introduction" id="ch-exercices-17-2"><div class="para logical" id="ch-exercices-17-2-1">
 <div class="para">Soit <span class="process-math">\(X_{1}, \ldots, X_{n}\)</span> des variables aléatoires réelles discrètes de l’espace probabilisé <span class="process-math">\((\Omega, \mathcal{A}, \Pr)\text{,}\)</span> indépendantes, ayant un moment d’ordre 2, centrées, ainsi que <span class="process-math">\(a \in \R_{+}^{*}\text{.}\)</span> On pose, pour tout <span class="process-math">\(i \in \llbracket 1, n \rrbracket\)</span> :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -701,31 +866,31 @@ S_{i} = X_{1} + \cdots + X_{i}, \quad B_{i} = \left\{\left|S_{1}\right| \lt a\ri
 \end{equation*}
 </div>
 </div></div>
-<article class="task exercise-like" id="ch-exercices-16-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para logical" id="ch-exercices-16-3-1">
+<article class="task exercise-like" id="ch-exercices-17-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para logical" id="ch-exercices-17-3-1">
 <div class="para">Montrer que, pour <span class="process-math">\(i \in \llbracket 1, n \rrbracket\text{,}\)</span> les variables <span class="process-math">\(S_{i} \mathbf{1}_{B_{i}}\)</span> et <span class="process-math">\(S_{n} - S_{i}\)</span> sont indépendantes. En déduire que :</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \Es(S_{n}^{2} \mathbf{1}_{B_{i}}) = \Es(S_{i}^{2} \mathbf{1}_{B_{i}}) + \Es((S_{n} - S_{i})^{2} \mathbf{1}_{B_{i}}) \geqslant a^{2} \Pr(B_{i}).
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="ch-exercices-16-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para" id="ch-exercices-16-4-1">On pose <span class="process-math">\(C = \left\{\sup \left(\left|S_{1}\right|, \left|S_{2}\right|, \ldots, \left|S_{n}\right|\right) \geqslant a\right\}\text{.}\)</span> Montrer que <span class="process-math">\(\Pr(C) = \sum_{i=1}^{n} \Pr(B_{i})\text{.}\)</span>
-</div></article><article class="task exercise-like" id="ch-exercices-16-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<div class="para logical" id="ch-exercices-16-5-1">
+</div></article><article class="task exercise-like" id="ch-exercices-17-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="ch-exercices-17-4-1">On pose <span class="process-math">\(C = \left\{\sup \left(\left|S_{1}\right|, \left|S_{2}\right|, \ldots, \left|S_{n}\right|\right) \geqslant a\right\}\text{.}\)</span> Montrer que <span class="process-math">\(\Pr(C) = \sum_{i=1}^{n} \Pr(B_{i})\text{.}\)</span>
+</div></article><article class="task exercise-like" id="ch-exercices-17-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para logical" id="ch-exercices-17-5-1">
 <div class="para">En déduire l’inégalité de Kolmogorov :</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \Pr\left(\sup \left(\left|S_{1}\right|, \left|S_{2}\right|, \ldots, \left|S_{n}\right|\right) \geqslant a\right) \leqslant \frac{\Va(S_{n})}{a^{2}}.
 \end{equation*}
 </div>
-</div></article></article><article class="exercise exercise-like" id="ch-exercices-17"><h2 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">106</span><span class="period">.</span><span class="space"> </span><span class="title">Inégalité de Le Cam.</span>
+</div></article></article><article class="exercise exercise-like" id="ch-exercices-18"><h2 class="heading">
+<span class="codenumber">17<span class="period">.</span></span><span class="space"> </span><span class="title">Inégalité de Le Cam.</span>
 </h2>
-<div class="introduction" id="ch-exercices-17-2"><div class="para" id="ch-exercices-17-2-1">L’objet de l’exercice est d’étudier l’approximation de la loi binomiale par la loi de Poisson. Toutes les variables aléatoires considérées sont définies sur le même espace probabilisé <span class="process-math">\((\Omega, \mathcal{A}, \Pr)\)</span> et sont à valeurs dans <span class="process-math">\(\N\text{.}\)</span>
+<div class="introduction" id="ch-exercices-18-2"><div class="para" id="ch-exercices-18-2-1">L’objet de l’exercice est d’étudier l’approximation de la loi binomiale par la loi de Poisson. Toutes les variables aléatoires considérées sont définies sur le même espace probabilisé <span class="process-math">\((\Omega, \mathcal{A}, \Pr)\)</span> et sont à valeurs dans <span class="process-math">\(\N\text{.}\)</span>
 </div></div>
-<article class="task exercise-like" id="ch-exercices-17-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para logical" id="ch-exercices-17-3-1">
+<article class="task exercise-like" id="ch-exercices-18-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para logical" id="ch-exercices-18-3-1">
 <div class="para">Soit <span class="process-math">\(X\)</span> et <span class="process-math">\(Y\)</span> deux telles variables aléatoires. Pour tout <span class="process-math">\(k \in \N\text{,}\)</span> on pose <span class="process-math">\(p_{k} = \Pr(X = k)\)</span> et <span class="process-math">\(q_{k} = \Pr(Y = k)\text{.}\)</span> On définit la distance entre <span class="process-math">\(X\)</span> et <span class="process-math">\(Y\)</span> par :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -733,8 +898,8 @@ S_{i} = X_{1} + \cdots + X_{i}, \quad B_{i} = \left\{\left|S_{1}\right| \lt a\ri
 \end{equation*}
 </div>
 </div>
-<ol class="decimal ol-marker-1" id="ch-exercices-17-3-2">
-<li id="ch-exercices-17-3-2-1"><div class="para logical" id="ch-exercices-17-3-2-1-1">
+<ol class="decimal ol-marker-1" id="ch-exercices-18-3-2">
+<li id="ch-exercices-18-3-2-1"><div class="para logical" id="ch-exercices-18-3-2-1-1">
 <div class="para">Montrer que pour toute partie <span class="process-math">\(A\)</span> de <span class="process-math">\(\N\text{,}\)</span> on a :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -742,7 +907,7 @@ S_{i} = X_{1} + \cdots + X_{i}, \quad B_{i} = \left\{\left|S_{1}\right| \lt a\ri
 \end{equation*}
 </div>
 </div></li>
-<li id="ch-exercices-17-3-2-2"><div class="para logical" id="ch-exercices-17-3-2-2-1">
+<li id="ch-exercices-18-3-2-2"><div class="para logical" id="ch-exercices-18-3-2-2-1">
 <div class="para">Démontrer la formule :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -750,7 +915,7 @@ S_{i} = X_{1} + \cdots + X_{i}, \quad B_{i} = \left\{\left|S_{1}\right| \lt a\ri
 \end{equation*}
 </div>
 </div></li>
-<li id="ch-exercices-17-3-2-3"><div class="para logical" id="ch-exercices-17-3-2-3-1">
+<li id="ch-exercices-18-3-2-3"><div class="para logical" id="ch-exercices-18-3-2-3-1">
 <div class="para">En déduire :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -758,46 +923,93 @@ S_{i} = X_{1} + \cdots + X_{i}, \quad B_{i} = \left\{\left|S_{1}\right| \lt a\ri
 \end{equation*}
 </div>
 </div></li>
-</ol></article></article><article class="exercise exercise-like" id="ch-exercices-18"><h2 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">107</span><span class="period">.</span><span class="space"> </span><span class="title">Convergence presque sûre.</span>
+</ol></article></article><article class="exercise exercise-like" id="ch-exercices-19"><h2 class="heading">
+<span class="codenumber">18<span class="period">.</span></span><span class="space"> </span><span class="title">Convergence presque sûre.</span>
 </h2>
-<div class="introduction" id="ch-exercices-18-2"><div class="para logical" id="ch-exercices-18-2-1">
-<div class="para">Soit <span class="process-math">\((X_{n})_{n \in \N}\)</span> une suite de variables aléatoires réelles et <span class="process-math">\(X\)</span> une variable aléatoire réelle définies sur <span class="process-math">\((\Omega, \mathcal{A}, \Pr)\text{.}\)</span> On pose :</div>
+<div class="introduction" id="ch-exercices-19-2"><div class="para logical" id="ch-exercices-19-2-1">
+<div class="para">Soit <span class="process-math">\((X_n)_{n \in \mathbb{N}}\)</span> une suite de variables aléatoires réelles et <span class="process-math">\(X\)</span> une variable aléatoire réelle définies sur <span class="process-math">\((\Omega, \mathcal{A}, \mathbb{P})\text{.}\)</span> On pose :</div>
 <div class="displaymath process-math">
 \begin{equation*}
-B = \left\{\omega \in \Omega \mid \lim_{n \rightarrow +\infty} X_{n}(\omega) = X(\omega)\right\}.
+B = \left\{ \omega \in \Omega \mid \lim_{n \to +\infty} X_n(\omega) = X(\omega) \right\}.
 \end{equation*}
 </div>
-<div class="para">Pour tout <span class="process-math">\(k \in \N^{*}\text{,}\)</span> on pose :</div>
-<div class="displaymath process-math">
-\begin{equation*}
-C_{k} = \bigcup_{n \in \N} \bigcap_{p \geqslant n} \left(\left|X_{p} - X\right| \leqslant \frac{1}{k}\right).
-\end{equation*}
-</div>
-<div class="para">On dit que la suite <span class="process-math">\((X_{n})_{n \in \N}\)</span> converge presque sûrement vers <span class="process-math">\(X\)</span> si <span class="process-math">\(\Pr(B) = 1\text{.}\)</span>
+<div class="para">On dit que la suite <span class="process-math">\((X_n)_{n \in \mathbb{N}}\)</span> converge presque sûrement vers <span class="process-math">\(X\)</span> si <span class="process-math">\(\mathbb{P}(B) = 1\text{.}\)</span>
 </div>
 </div></div>
-<article class="task exercise-like" id="ch-exercices-18-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="ch-exercices-18-3-1">Montrer que l’on a <span class="process-math">\(\Pr(B) = \lim_{k \rightarrow +\infty} \Pr(C_{k})\text{.}\)</span>
-</div></article><article class="task exercise-like" id="ch-exercices-18-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para logical" id="ch-exercices-18-4-1">
+<article class="task exercise-like" id="ch-exercices-19-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para logical" id="ch-exercices-19-3-1-1">
+<div class="para">Montrer que l’on a <span class="process-math">\(\mathbb{P}(B) = \lim_{k \to +\infty} \mathbb{P}(C_k)\text{,}\)</span> où :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C_k = \bigcap_{n \in \mathbb{N}} \bigcup_{p \geq n} \left\{ |X_p - X| \leq \frac{1}{k} \right\}.
+\end{equation*}
+</div>
+</div>
+<div class="solutions"><details id="ch-exercices-19-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="ch-exercices-19-3-2-1">
+<div class="para">On a :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B = \left\{ \omega \in \Omega \mid \forall k \in \mathbb{N}^*, \exists n \in \mathbb{N}, \forall p \geq n, |X_p(\omega) - X(\omega)| \leq \frac{1}{k} \right\}.
+\end{equation*}
+</div>
+<div class="para">En d’autres termes, <span class="process-math">\(B\)</span> est l’ensemble des <span class="process-math">\(\omega \in \Omega\)</span> pour lesquels la suite <span class="process-math">\((X_n(\omega))\)</span> converge vers <span class="process-math">\(X(\omega)\text{.}\)</span> On peut réécrire <span class="process-math">\(B\)</span> comme :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B = \bigcap_{k \in \mathbb{N}^*} \bigcup_{n \in \mathbb{N}} \bigcap_{p \geq n} \left\{ |X_p - X| \leq \frac{1}{k} \right\}.
+\end{equation*}
+</div>
+<div class="para">Par continuité décroissante de la probabilité, on a :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(B) = \lim_{k \to +\infty} \mathbb{P}\left( \bigcup_{n \in \mathbb{N}} \bigcap_{p \geq n} \left\{ |X_p - X| \leq \frac{1}{k} \right\} \right) = \lim_{k \to +\infty} \mathbb{P}(C_k).
+\end{equation*}
+</div>
+</div></div></details></div></article><article class="task exercise-like" id="ch-exercices-19-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para logical" id="ch-exercices-19-4-1-1">
 <div class="para">On suppose que :</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\forall \varepsilon\gt0 \quad \Pr\left(\bigcap_{n \in \N} \bigcup_{p \geqslant n} \left(|X_{p} - X|\gt\varepsilon\right)\right) = 0.
+\forall \varepsilon \gt 0, \quad \mathbb{P}\left( \bigcup_{n \in \mathbb{N}} \bigcap_{p \geq n} \left\{ |X_p - X| \gt \varepsilon \right\} \right) = 0.
 \end{equation*}
 </div>
-<div class="para">Montrer que la suite <span class="process-math">\((X_{n})_{n \in \N}\)</span> converge presque sûrement vers <span class="process-math">\(X\text{.}\)</span>
+<div class="para">Montrer que la suite <span class="process-math">\((X_n)_{n \in \mathbb{N}}\)</span> converge presque sûrement vers <span class="process-math">\(X\text{.}\)</span>
 </div>
-</div></article><article class="task exercise-like" id="ch-exercices-18-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<div class="para" id="ch-exercices-18-5-1">Montrer que si la série de terme général <span class="process-math">\(\Pr(|X_{n} - X|\gt\varepsilon)\)</span> converge pour tout <span class="process-math">\(\varepsilon\gt0\text{,}\)</span> alors la suite <span class="process-math">\((X_{n})_{n \in \N}\)</span> converge presque sûrement vers <span class="process-math">\(X\text{.}\)</span>
-</div></article></article><article class="exercise exercise-like" id="ch-exercices-19"><h2 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">108</span><span class="period">.</span><span class="space"> </span><span class="title">Fonction génératrice des moments.</span>
+</div>
+<div class="solutions"><details id="ch-exercices-19-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="ch-exercices-19-4-2-1">
+<div class="para">Par hypothèse, pour tout <span class="process-math">\(\varepsilon \gt 0\text{,}\)</span> on a :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}\left( \bigcup_{n \in \mathbb{N}} \bigcap_{p \geq n} \left\{ |X_p - X| \gt \varepsilon \right\} \right) = 0.
+\end{equation*}
+</div>
+<div class="para">Cela signifie que, pour tout <span class="process-math">\(\varepsilon \gt 0\text{,}\)</span> l’ensemble des <span class="process-math">\(\omega \in \Omega\)</span> pour lesquels <span class="process-math">\(|X_p(\omega) - X(\omega)| \gt \varepsilon\)</span> pour une infinité de <span class="process-math">\(p\)</span> est de probabilité nulle. Par conséquent, pour presque tout <span class="process-math">\(\omega \in \Omega\text{,}\)</span> la suite <span class="process-math">\((X_n(\omega))\)</span> converge vers <span class="process-math">\(X(\omega)\text{,}\)</span> c’est-à-dire que <span class="process-math">\(\mathbb{P}(B) = 1\text{.}\)</span>
+</div>
+</div></div></details></div></article><article class="task exercise-like" id="ch-exercices-19-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="ch-exercices-19-5-1-1">Montrer que si la série de terme général <span class="process-math">\(\mathbb{P}(|X_n - X| \gt \varepsilon)\)</span> converge pour tout <span class="process-math">\(\varepsilon \gt 0\text{,}\)</span> alors la suite <span class="process-math">\((X_n)_{n \in \mathbb{N}}\)</span> converge presque sûrement vers <span class="process-math">\(X\text{.}\)</span>
+</div>
+<div class="solutions"><details id="ch-exercices-19-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="ch-exercices-19-5-2-1">
+<div class="para">Si la série de terme général <span class="process-math">\(\mathbb{P}(|X_n - X| \gt \varepsilon)\)</span> converge pour tout <span class="process-math">\(\varepsilon \gt 0\text{,}\)</span> alors, d’après le lemme de Borel-Cantelli, on a :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}\left( \bigcup_{n \in \mathbb{N}} \bigcap_{p \geq n} \left\{ |X_p - X| \gt \varepsilon \right\} \right) = 0.
+\end{equation*}
+</div>
+<div class="para">En effet, le lemme de Borel-Cantelli affirme que si <span class="process-math">\(\sum_{n=1}^{+\infty} \mathbb{P}(A_n) \lt +\infty\text{,}\)</span> alors <span class="process-math">\(\mathbb{P}\left( \limsup_{n \to +\infty} A_n \right) = 0\text{.}\)</span> Appliqué à <span class="process-math">\(A_n = \{ |X_n - X| \gt \varepsilon \}\text{,}\)</span> cela donne :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}\left( \bigcup_{n \in \mathbb{N}} \bigcap_{p \geq n} \left\{ |X_p - X| \gt \varepsilon \right\} \right) = 0.
+\end{equation*}
+</div>
+<div class="para">Par conséquent, la suite <span class="process-math">\((X_n)_{n \in \mathbb{N}}\)</span> converge presque sûrement vers <span class="process-math">\(X\text{.}\)</span>
+</div>
+</div></div></details></div></article></article><article class="exercise exercise-like" id="ch-exercices-20"><h2 class="heading">
+<span class="codenumber">19<span class="period">.</span></span><span class="space"> </span><span class="title">Fonction génératrice des moments.</span>
 </h2>
-<div class="introduction" id="ch-exercices-19-2"><div class="para" id="ch-exercices-19-2-1">Soit <span class="process-math">\(X\)</span> une variable aléatoire discrète, pas presque sûrement constante, sur l’espace probabilisé <span class="process-math">\((\Omega, \mathcal{A}, \Pr)\text{.}\)</span> On pose, pour <span class="process-math">\(t \in \R\text{,}\)</span> <span class="process-math">\(L_{X}(t) = \Es(e^{t X})\)</span> (la fonction <span class="process-math">\(L_{X}\)</span> est appelée fonction génératrice des moments de la variable aléatoire <span class="process-math">\(X\)</span>). On suppose qu’il existe un intervalle <span class="process-math">\(]\alpha, \beta[\)</span> contenant 0 tel que <span class="process-math">\(L_{X}(t) \lt +\infty\)</span> pour tout <span class="process-math">\(t \in ]\alpha, \beta[\text{.}\)</span>
+<div class="introduction" id="ch-exercices-20-2"><div class="para" id="ch-exercices-20-2-1">Soit <span class="process-math">\(X\)</span> une variable aléatoire discrète, pas presque sûrement constante, sur l’espace probabilisé <span class="process-math">\((\Omega, \mathcal{A}, \Pr)\text{.}\)</span> On pose, pour <span class="process-math">\(t \in \R\text{,}\)</span> <span class="process-math">\(L_{X}(t) = \Es(e^{t X})\)</span> (la fonction <span class="process-math">\(L_{X}\)</span> est appelée fonction génératrice des moments de la variable aléatoire <span class="process-math">\(X\)</span>). On suppose qu’il existe un intervalle <span class="process-math">\(]\alpha, \beta[\)</span> contenant 0 tel que <span class="process-math">\(L_{X}(t) \lt +\infty\)</span> pour tout <span class="process-math">\(t \in ]\alpha, \beta[\text{.}\)</span>
 </div></div>
-<article class="task exercise-like" id="ch-exercices-19-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para logical" id="ch-exercices-19-3-1">
+<article class="task exercise-like" id="ch-exercices-20-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<ol class="lower-alpha lower-alpha-level-1" id="ch-exercices-20-3-1">
+<li id="ch-exercices-20-3-1-1"><div class="para logical" id="ch-exercices-20-3-1-1-1">
 <div class="para">Soit <span class="process-math">\(a \lt b\)</span> deux réels tels que <span class="process-math">\([a, b] \subset ]\alpha, \beta[\text{.}\)</span> On considère <span class="process-math">\(\delta\gt0\)</span> tel que <span class="process-math">\([a - \delta, b + \delta] \subset ]\alpha, \beta[\text{.}\)</span> Soit <span class="process-math">\(k \in \N\text{.}\)</span> Montrer qu’il existe <span class="process-math">\(C\gt0\)</span> tel que :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -806,8 +1018,8 @@ C_{k} = \bigcup_{n \in \N} \bigcap_{p \geqslant n} \left(\left|X_{p} - X\right| 
 </div>
 <div class="para">En déduire que <span class="process-math">\(X^{k} e^{t X}\)</span> est d’espérance finie pour tout <span class="process-math">\(t \in ]\alpha, \beta[\text{.}\)</span>
 </div>
-</div></article><article class="task exercise-like" id="ch-exercices-19-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para logical" id="ch-exercices-19-4-1">
+</div></li>
+<li id="ch-exercices-20-3-1-2"><div class="para logical" id="ch-exercices-20-3-1-2-1">
 <div class="para">Montrer que <span class="process-math">\(L_{X}\)</span> est de classe <span class="process-math">\(\mathcal{C}^{\infty}\)</span> sur <span class="process-math">\(]\alpha, \beta[\)</span> et vérifie :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -816,29 +1028,130 @@ C_{k} = \bigcup_{n \in \N} \bigcap_{p \geqslant n} \left(\left|X_{p} - X\right| 
 </div>
 <div class="para">En déduire, pour tout <span class="process-math">\(k \in \N\text{,}\)</span> une expression du moment d’ordre <span class="process-math">\(k\)</span> de <span class="process-math">\(X\text{.}\)</span> On note <span class="process-math">\(m\)</span> l’espérance de <span class="process-math">\(X\text{.}\)</span>
 </div>
-</div></article></article><article class="exercise exercise-like" id="ch-exercices-20"><h2 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">109</span><span class="period">.</span><span class="space"> </span><span class="title">Théorème de Weierstrass.</span>
+</div></li>
+</ol></article><article class="task exercise-like" id="ch-exercices-20-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="ch-exercices-20-4-1-1">Montrer que la fonction <span class="process-math">\(\Psi_X(t) = \ln L_X(t)\)</span> est strictement convexe.</div>
+<div class="solutions"><details id="ch-exercices-20-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="ch-exercices-20-4-2-1">
+<div class="para">La fonction <span class="process-math">\(\Psi_X(t) = \ln L_X(t)\)</span> est strictement convexe car sa dérivée seconde est strictement positive. En effet, on a :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Psi_X''(t) = \frac{L_X''(t) L_X(t) - (L_X'(t))^2}{L_X(t)^2} \gt 0,
+\end{equation*}
+</div>
+<div class="para">car <span class="process-math">\(L_X''(t) L_X(t) - (L_X'(t))^2 = \mathbb{E}(X^2 e^{tX}) \mathbb{E}(e^{tX}) - (\mathbb{E}(X e^{tX}))^2 \gt 0\)</span> par l’inégalité de Cauchy-Schwarz.</div>
+</div></div></details></div></article><article class="task exercise-like" id="ch-exercices-20-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para logical" id="ch-exercices-20-5-1-1">
+<div class="para">Montrer que les inégalités de Chernov suivantes sont vérifiées :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(X \leq c) \leq e^{-g(c)} \quad \text{si} \quad c \lt m,
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(X \geq c) \leq e^{-g(c)} \quad \text{si} \quad c \gt m,
+\end{equation*}
+</div>
+<div class="para">où <span class="process-math">\(g(c) = \sup_{t \in ]\alpha, \beta[} (ct - \Psi_X(t))\text{.}\)</span>
+</div>
+</div>
+<div class="solutions"><details id="ch-exercices-20-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="ch-exercices-20-5-2-1">
+<div class="para">Les inégalités de Chernov sont obtenues en utilisant la convexité de <span class="process-math">\(\Psi_X\text{.}\)</span> Pour <span class="process-math">\(c \lt m\text{,}\)</span> on a :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(X \leq c) = \mathbb{P}(e^{tX} \leq e^{tc}) \leq \frac{\mathbb{E}(e^{tX})}{e^{tc}} = e^{-(ct - \Psi_X(t))}.
+\end{equation*}
+</div>
+<div class="para">En prenant le supremum sur <span class="process-math">\(t \in ]\alpha, \beta[\text{,}\)</span> on obtient :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(X \leq c) \leq e^{-g(c)}.
+\end{equation*}
+</div>
+<div class="para">De même, pour <span class="process-math">\(c \gt m\text{,}\)</span> on a :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(X \geq c) = \mathbb{P}(e^{tX} \geq e^{tc}) \leq \frac{\mathbb{E}(e^{tX})}{e^{tc}} = e^{-(ct - \Psi_X(t))}.
+\end{equation*}
+</div>
+<div class="para">En prenant le supremum sur <span class="process-math">\(t \in ]\alpha, \beta[\text{,}\)</span> on obtient :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(X \geq c) \leq e^{-g(c)}.
+\end{equation*}
+</div>
+</div></div></details></div></article><article class="task exercise-like" id="ch-exercices-20-6"><h3 class="heading"><span class="codenumber">(d)</span></h3>
+<div class="para logical" id="ch-exercices-20-6-1-1">
+<div class="para">On considère une suite <span class="process-math">\((X_n)_{n \geq 1}\)</span> de variables aléatoires indépendantes suivant la même loi que <span class="process-math">\(X\text{.}\)</span> On pose, pour tout <span class="process-math">\(n \in \mathbb{N}^*\text{,}\)</span> <span class="process-math">\(S_n = \sum_{k=1}^n X_k\text{.}\)</span>
+</div>
+<ol class="lower-alpha lower-alpha-level-1" id="ch-exercices-20-6-1-1-5">
+<li id="ch-exercices-20-6-1-1-5-1"><div class="para" id="p-derived-ch-exercices-20-6-1-1-5-1">Montrer que, pour tout <span class="process-math">\(c \in \mathbb{R}\text{,}\)</span> on a :<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}\left(\frac{S_n}{n} \leq c\right) \leq e^{-n g(c)} \quad \text{si} \quad c \lt m,
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}\left(\frac{S_n}{n} \geq c\right) \leq e^{-n g(c)} \quad \text{si} \quad c \gt m.
+\end{equation*}
+</div>
+</div></li>
+<li id="ch-exercices-20-6-1-1-5-2"><div class="para" id="p-derived-ch-exercices-20-6-1-1-5-2">Montrer que, pour tout <span class="process-math">\(\varepsilon \gt 0\text{,}\)</span> on a :<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}\left(\left|\frac{S_n}{n} - m\right| \geq \varepsilon\right) \leq 2 e^{-n \min(g(m + \varepsilon), g(m - \varepsilon))}.
+\end{equation*}
+</div>
+</div></li>
+<li id="ch-exercices-20-6-1-1-5-3"><div class="para" id="p-derived-ch-exercices-20-6-1-1-5-3">En utilisant le résultat de l’exercice 16.25, montrer que la suite <span class="process-math">\(\left(\frac{S_n}{n}\right)\)</span> converge presque sûrement vers <span class="process-math">\(m\text{.}\)</span>
+</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="ch-exercices-20-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="ch-exercices-20-6-2-1"><ol class="lower-alpha lower-alpha-level-1" id="ch-exercices-20-6-2-1-1">
+<li id="ch-exercices-20-6-2-1-1-1"><div class="para" id="p-derived-ch-exercices-20-6-2-1-1-1">Pour <span class="process-math">\(c \lt m\text{,}\)</span> on a :<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}\left(\frac{S_n}{n} \leq c\right) = \mathbb{P}\left(S_n \leq n c\right) \leq e^{-n g(c)},
+\end{equation*}
+</div>où <span class="process-math">\(g(c) = \sup_{t \in ]\alpha, \beta[} (ct - \Psi_X(t))\text{.}\)</span> De même, pour <span class="process-math">\(c \gt m\text{,}\)</span> on a :<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}\left(\frac{S_n}{n} \geq c\right) = \mathbb{P}\left(S_n \geq n c\right) \leq e^{-n g(c)}.
+\end{equation*}
+</div>
+</div></li>
+<li id="ch-exercices-20-6-2-1-1-2"><div class="para" id="p-derived-ch-exercices-20-6-2-1-1-2">Pour <span class="process-math">\(\varepsilon \gt 0\text{,}\)</span> on a :<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}\left(\left|\frac{S_n}{n} - m\right| \geq \varepsilon\right) = \mathbb{P}\left(\frac{S_n}{n} \leq m - \varepsilon\right) + \mathbb{P}\left(\frac{S_n}{n} \geq m + \varepsilon\right).
+\end{equation*}
+</div>En appliquant les inégalités de Chernov, on obtient :<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}\left(\left|\frac{S_n}{n} - m\right| \geq \varepsilon\right) \leq e^{-n g(m - \varepsilon)} + e^{-n g(m + \varepsilon)} \leq 2 e^{-n \min(g(m + \varepsilon), g(m - \varepsilon))}.
+\end{equation*}
+</div>
+</div></li>
+<li id="ch-exercices-20-6-2-1-1-3"><div class="para" id="p-derived-ch-exercices-20-6-2-1-1-3">D’après l’exercice 16.25, si la série de terme général <span class="process-math">\(\mathbb{P}(|X_n - X| \gt \varepsilon)\)</span> converge pour tout <span class="process-math">\(\varepsilon \gt 0\text{,}\)</span> alors la suite <span class="process-math">\((X_n)\)</span> converge presque sûrement vers <span class="process-math">\(X\text{.}\)</span> En appliquant ce résultat à <span class="process-math">\(\left(\frac{S_n}{n}\right)\text{,}\)</span> on obtient que <span class="process-math">\(\left(\frac{S_n}{n}\right)\)</span> converge presque sûrement vers <span class="process-math">\(m\text{.}\)</span>
+</div></li>
+</ol></div></div></details></div></article></article><article class="exercise exercise-like" id="ch-exercices-21"><h2 class="heading">
+<span class="codenumber">20<span class="period">.</span></span><span class="space"> </span><span class="title">Théorème de Weierstrass.</span>
 </h2>
-<div class="introduction" id="ch-exercices-20-2"><div class="para" id="ch-exercices-20-2-1">Soit <span class="process-math">\(f\)</span> une fonction continue de <span class="process-math">\([0, 1]\)</span> dans <span class="process-math">\(\R\text{.}\)</span> Soit <span class="process-math">\(x \in [0, 1]\text{.}\)</span> On considère une suite <span class="process-math">\((X_{n})_{n \geqslant 1}\)</span> de variables de Bernoulli de paramètre <span class="process-math">\(x\text{,}\)</span> indépendantes, sur le même espace probabilisé. Pour <span class="process-math">\(n \geqslant 1\text{,}\)</span> on pose <span class="process-math">\(Y_{n} = \frac1n(X_{1} + \cdots + X_{n})\text{.}\)</span>
+<div class="introduction" id="ch-exercices-21-2"><div class="para" id="ch-exercices-21-2-1">Soit <span class="process-math">\(f\)</span> une fonction continue de <span class="process-math">\([0, 1]\)</span> dans <span class="process-math">\(\R\text{.}\)</span> Soit <span class="process-math">\(x \in [0, 1]\text{.}\)</span> On considère une suite <span class="process-math">\((X_{n})_{n \geqslant 1}\)</span> de variables de Bernoulli de paramètre <span class="process-math">\(x\text{,}\)</span> indépendantes, sur le même espace probabilisé. Pour <span class="process-math">\(n \geqslant 1\text{,}\)</span> on pose <span class="process-math">\(Y_{n} = \frac1n(X_{1} + \cdots + X_{n})\text{.}\)</span>
 </div></div>
-<article class="task exercise-like" id="ch-exercices-20-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para logical" id="ch-exercices-20-3-1">
+<article class="task exercise-like" id="ch-exercices-21-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para logical" id="ch-exercices-21-3-1">
 <div class="para">Montrer que :</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \forall(t, u) \in [0, 1]^{2} \quad |f(t) - f(u)| \leqslant \frac{2 \Vert f \Vert _{\infty} (t - u)^{2}}{\eta^{2}} + \varepsilon.
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="ch-exercices-20-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para logical" id="ch-exercices-20-4-1">
+</div></article><article class="task exercise-like" id="ch-exercices-21-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para logical" id="ch-exercices-21-4-1">
 <div class="para">Montrer que :</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \left|\Es(f(Y_{n})) - f(x)\right| \leqslant \frac{2 \Vert f \Vert _{\infty} \Va(Y_{n})}{\eta^{2}} + \varepsilon \leqslant \frac{2 \Vert f \Vert _{\infty}}{n \eta^{2}} + \varepsilon.
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="ch-exercices-20-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<div class="para logical" id="ch-exercices-20-5-1-1">
+</div></article><article class="task exercise-like" id="ch-exercices-21-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para logical" id="ch-exercices-21-5-1-1">
 <div class="para">En déduire que la suite de fonctions polynomiales <span class="process-math">\((B_n(f))_n\)</span> définie par</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -848,23 +1161,176 @@ B_n(f)(t)\sum_{k=0}^nf(k/n)\binom{n}{k}t^k(1-t)^{n-k}
 </div>
 <div class="para">converge uniformément vers <span class="process-math">\(f\)</span> sur <span class="process-math">\([0,1]\text{.}\)</span>
 </div>
-</div></article></article><article class="exercise exercise-like" id="ch-exercices-21"><h2 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">110</span><span class="period">.</span><span class="space"> </span><span class="title">File d’attente.</span>
+</div></article></article><article class="exercise exercise-like" id="ch-exercices-22"><h2 class="heading">
+<span class="codenumber">21<span class="period">.</span></span><span class="space"> </span><span class="title">File d’attente.</span>
 </h2>
-<div class="introduction" id="ch-exercices-21-2"><div class="para logical" id="ch-exercices-21-2-1">
+<div class="introduction" id="ch-exercices-22-2"><div class="para logical" id="ch-exercices-22-2-1">
 <div class="para">Soit <span class="process-math">\(n\)</span> un entier supérieur ou égal à 2. On considère une file d’attente avec un guichet et <span class="process-math">\(n\)</span> clients qui attendent. Chaque minute, un guichet se libère. Le guichetier choisit alors le client qu’il appelle selon le processus aléatoire suivant :</div>
-<ul class="disc" id="ch-exercices-21-2-1-3">
-<li id="ch-exercices-21-2-1-3-1"><div class="para" id="p-derived-ch-exercices-21-2-1-3-1">avec probabilité 2, il appelle le client en première position dans la file,</div></li>
-<li id="ch-exercices-21-2-1-3-2"><div class="para" id="p-derived-ch-exercices-21-2-1-3-2">sinon, il choisit de manière équiprobable parmi les <span class="process-math">\(n - 1\)</span> autres clients.</div></li>
+<ul class="disc" id="ch-exercices-22-2-1-3">
+<li id="ch-exercices-22-2-1-3-1"><div class="para" id="p-derived-ch-exercices-22-2-1-3-1">avec probabilité 2, il appelle le client en première position dans la file,</div></li>
+<li id="ch-exercices-22-2-1-3-2"><div class="para" id="p-derived-ch-exercices-22-2-1-3-2">sinon, il choisit de manière équiprobable parmi les <span class="process-math">\(n - 1\)</span> autres clients.</div></li>
 </ul>
 <div class="para">Enfin, un nouveau client arrive dans la file et se place en dernière position (de telle sorte qu’il y a toujours exactement <span class="process-math">\(n\)</span> clients qui attendent). Pour tout <span class="process-math">\(k \in \llbracket 1, n \rrbracket\text{,}\)</span> on note <span class="process-math">\(T_{k}\)</span> le temps d’attente d’un client qui se trouve en position <span class="process-math">\(k\)</span> dans la file.</div>
 </div></div>
-<article class="task exercise-like" id="ch-exercices-21-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="ch-exercices-21-3-1">Quelle est la loi de <span class="process-math">\(T_{1}\)</span> ? Donner son espérance, sa variance.</div></article><article class="task exercise-like" id="ch-exercices-21-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para" id="ch-exercices-21-4-1">Montrer que, pour tout <span class="process-math">\(k \in \llbracket 1, n \rrbracket\text{,}\)</span> la variable <span class="process-math">\(T_{k}\)</span> est d’espérance finie.</div></article><article class="task exercise-like" id="ch-exercices-21-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<div class="para" id="ch-exercices-21-5-1">Écrire une relation entre <span class="process-math">\(\Es(T_{k})\)</span> et <span class="process-math">\(\Es(T_{k-1})\)</span> pour tout <span class="process-math">\(k \geqslant 2\text{.}\)</span> En déduire une expression de <span class="process-math">\(\Es(T_{k})\)</span> en fonction de <span class="process-math">\(k\)</span> et <span class="process-math">\(n\text{.}\)</span> On pourra considérer la suite <span class="process-math">\(((n + k - 2) \Es(T_{k}))_{1 \leqslant k \leqslant n}\text{.}\)</span>
-</div></article><article class="task exercise-like" id="ch-exercices-21-6"><h3 class="heading"><span class="codenumber">(d)</span></h3>
-<div class="para" id="ch-exercices-21-6-1">Comparer les caractéristiques de cette file d’attente et d’une file d’attente « classique » (premier arrivé, premier servi).</div></article></article></section></div>
+<article class="task exercise-like" id="ch-exercices-22-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="ch-exercices-22-3-1">Quelle est la loi de <span class="process-math">\(T_{1}\)</span> ? Donner son espérance, sa variance.</div></article><article class="task exercise-like" id="ch-exercices-22-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="ch-exercices-22-4-1">Montrer que, pour tout <span class="process-math">\(k \in \llbracket 1, n \rrbracket\text{,}\)</span> la variable <span class="process-math">\(T_{k}\)</span> est d’espérance finie.</div></article><article class="task exercise-like" id="ch-exercices-22-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="ch-exercices-22-5-1">Écrire une relation entre <span class="process-math">\(\Es(T_{k})\)</span> et <span class="process-math">\(\Es(T_{k-1})\)</span> pour tout <span class="process-math">\(k \geqslant 2\text{.}\)</span> En déduire une expression de <span class="process-math">\(\Es(T_{k})\)</span> en fonction de <span class="process-math">\(k\)</span> et <span class="process-math">\(n\text{.}\)</span> On pourra considérer la suite <span class="process-math">\(((n + k - 2) \Es(T_{k}))_{1 \leqslant k \leqslant n}\text{.}\)</span>
+</div></article><article class="task exercise-like" id="ch-exercices-22-6"><h3 class="heading"><span class="codenumber">(d)</span></h3>
+<div class="para" id="ch-exercices-22-6-1">Comparer les caractéristiques de cette file d’attente et d’une file d’attente « classique » (premier arrivé, premier servi).</div></article></article><article class="exercise exercise-like" id="ch-exercices-23"><h2 class="heading"><span class="codenumber">22<span class="period">.</span></span></h2>
+<div class="introduction" id="ch-exercices-23-1"><div class="para logical" id="ch-exercices-23-1-1">
+<div class="para">Soit <span class="process-math">\((X_n)_{n \geq 1}\)</span> une suite de variables aléatoires réelles discrètes, toutes de même loi, et <span class="process-math">\(N\)</span> une variable aléatoire à valeurs dans <span class="process-math">\(\mathbb{N}\text{.}\)</span> On suppose que <span class="process-math">\(N\)</span> et les variables <span class="process-math">\(X_n\text{,}\)</span> pour <span class="process-math">\(n \in \mathbb{N}^*\text{,}\)</span> forment une suite de variables aléatoires indépendantes. On pose :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\forall n \in \mathbb{N}^*, \quad S_n = \sum_{k=1}^n X_k \quad \text{et} \quad S_0 = 0.
+\end{equation*}
+</div>
+</div></div>
+<article class="task exercise-like" id="ch-exercices-23-2"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="ch-exercices-23-2-1-1">Montrer que <span class="process-math">\(S_N\)</span> est une variable aléatoire.</div>
+<div class="solutions"><details id="ch-exercices-23-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="ch-exercices-23-2-2-1">
+<div class="para">On a <span class="process-math">\(S_N(\Omega) \subset \{0\} \cup \bigcup_{n \in \mathbb{N}^*} S_n(\Omega)\text{.}\)</span> Les <span class="process-math">\(S_n(\Omega)\)</span> étant au plus dénombrables, il en est de même de leur union dénombrable, et a fortiori <span class="process-math">\(S_N(\Omega)\)</span> est au plus dénombrable. De plus :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\forall x \in S_N(\Omega), \quad \{S_N = x\} = \bigcup_{n \in \mathbb{N}} \{S_n = x\} \cap \{N = n\},
+\end{equation*}
+</div>
+<div class="para">donc <span class="process-math">\(\{S_N = x\}\text{,}\)</span> union dénombrable d’événements, est un événement et <span class="process-math">\(S_N\)</span> est une variable aléatoire.</div>
+</div></div></details></div></article><article class="task exercise-like" id="ch-exercices-23-3"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="ch-exercices-23-3-1-1">Déterminer la loi de <span class="process-math">\(S_N\text{,}\)</span> lorsque les <span class="process-math">\(X_k\)</span> suivent la loi de Bernoulli de paramètre <span class="process-math">\(p\)</span> et <span class="process-math">\(N\)</span> la loi de Poisson de paramètre <span class="process-math">\(\lambda\text{.}\)</span>
+</div>
+<div class="solutions"><details id="ch-exercices-23-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="ch-exercices-23-3-2-1">
+<div class="para">On a <span class="process-math">\(S_N(\Omega) = \mathbb{N}\)</span> et d’après la formule des probabilités totales, pour tout <span class="process-math">\(k \in \mathbb{N}\)</span> :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(S_N = k) = \sum_{n=0}^{+\infty} \mathbb{P}(S_N = k \mid N = n) \mathbb{P}(N = n).
+\end{equation*}
+</div>
+<div class="para">On remarque que :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(S_N = k \mid N = n) = \mathbb{P}(S_n = k \mid N = n) = \mathbb{P}(S_n = k),
+\end{equation*}
+</div>
+<div class="para">la dernière égalité résultant de l’indépendance des variables <span class="process-math">\(X_n\)</span> par rapport à <span class="process-math">\(N\text{.}\)</span> Pour <span class="process-math">\(n \geq 1\text{,}\)</span> <span class="process-math">\(S_n\)</span> est une somme de <span class="process-math">\(n\)</span> variables de Bernoulli, indépendantes, de même paramètre <span class="process-math">\(p\)</span> ; elle suit donc la loi binomiale de paramètre <span class="process-math">\((n, p)\text{.}\)</span> On a donc :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(S_n = k) = 
+\begin{cases} 
+\binom{n}{k} p^k (1 - p)^{n - k}  \amp   \text{si } k \leq n \\
+0  \amp   \text{si } k \gt n.
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">On remarque que cette formule reste vérifiée si <span class="process-math">\(n = 0\text{,}\)</span> car alors <span class="process-math">\(S_n\)</span> prend la valeur 0, avec la probabilité 1. On en déduit :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(S_N = k) = \sum_{n=k}^{+\infty} \binom{n}{k} p^k (1 - p)^{n - k} e^{-\lambda} \frac{\lambda^n}{n!}.
+\end{equation*}
+</div>
+<div class="para">En simplifiant, on obtient :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(S_N = k) = e^{-\lambda p} \frac{(\lambda p)^k}{k!}.
+\end{equation*}
+</div>
+<div class="para">La variable aléatoire <span class="process-math">\(S_N\)</span> suit donc la loi de Poisson de paramètre <span class="process-math">\(\lambda p\text{.}\)</span>
+</div>
+</div></div></details></div></article><article class="task exercise-like" id="ch-exercices-23-4"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="ch-exercices-23-4-1-1">Déterminer la loi de <span class="process-math">\(S_N\)</span> lorsque les <span class="process-math">\(X_k\)</span> suivent la loi géométrique de paramètre <span class="process-math">\(p\)</span> et <span class="process-math">\(N\)</span> la loi géométrique de paramètre <span class="process-math">\(p'\text{.}\)</span>
+</div>
+<div class="solutions"><details id="ch-exercices-23-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="ch-exercices-23-4-2-1">
+<div class="para">On procède comme dans la question précédente. On a <span class="process-math">\(S_N(\Omega) = \mathbb{N}^*\)</span> et, pour tout <span class="process-math">\(n \in \mathbb{N}^*\)</span> :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(S_N = k \mid N = n) = \mathbb{P}(S_n = k \mid N = n) = \mathbb{P}(S_n = k).
+\end{equation*}
+</div>
+<div class="para">Comme les variables <span class="process-math">\(X_k\)</span> sont à valeurs dans <span class="process-math">\(\mathbb{N}^*\text{,}\)</span> il est clair que <span class="process-math">\(\mathbb{P}(S_n = k) = 0\)</span> si <span class="process-math">\(k \lt  n\text{.}\)</span> Supposons <span class="process-math">\(k \geq n\text{.}\)</span> On peut alors écrire :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\{S_n = k\} = \bigcup_{(i_1, i_2, \ldots, i_n) \in J_k} \{X_1 = i_1\} \cap \{X_2 = i_2\} \cap \ldots \cap \{X_n = i_n\},
+\end{equation*}
+</div>
+<div class="para">où <span class="process-math">\(J_k\)</span> est l’ensemble des <span class="process-math">\(n\)</span>-listes d’entiers strictement positifs <span class="process-math">\((i_1, i_2, \ldots, i_n)\)</span> tels que <span class="process-math">\(i_1 + i_2 + \cdots + i_n = k\text{.}\)</span> Le cardinal de <span class="process-math">\(J_k\)</span> est égal au nombre de <span class="process-math">\((n-1)\)</span>-listes <span class="process-math">\((j_1, j_2, \ldots, j_{n-1})\)</span> d’entiers tels que <span class="process-math">\(1 \leq j_1 \lt  j_2 \lt  \ldots \lt  j_{n-1} \leq k - 1\text{,}\)</span> car à <span class="process-math">\((i_1, i_2, \ldots, i_n)\text{,}\)</span> on peut associer bijectivement :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(j_1, j_2, \ldots, j_{n-1}) = (i_1, i_1 + i_2, \ldots, i_1 + i_2 + \cdots + i_{n-1}).
+\end{equation*}
+</div>
+<div class="para">On a donc <span class="process-math">\(\text{card}(J_k) = \binom{k-1}{n-1}\text{.}\)</span> D’autre part, pour <span class="process-math">\((i_1, i_2, \ldots, i_n) \in J_k\text{,}\)</span> on a, par indépendance des variables aléatoires <span class="process-math">\(X_i\)</span> :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(\{X_1 = i_1\} \cap \{X_2 = i_2\} \cap \ldots \cap \{X_n = i_n\}) = \prod_{j=1}^n \mathbb{P}(X_j = i_j) = \prod_{j=1}^n p(1 - p)^{i_j - 1} = p^n (1 - p)^{k - n}.
+\end{equation*}
+</div>
+<div class="para">On obtient ainsi <span class="process-math">\(\mathbb{P}(S_n = k) = \binom{k-1}{n-1} p^n (1 - p)^{k - n}\text{.}\)</span> On en déduit, pour <span class="process-math">\(k \in \mathbb{N}^*\)</span> :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(S_N = k) = \sum_{n=1}^{+\infty} \mathbb{P}(S_N = k \mid N = n) \mathbb{P}(N = n) = \sum_{n=1}^k \binom{k-1}{n-1} p^n (1 - p)^{k - n} p' (1 - p')^{n - 1}.
+\end{equation*}
+</div>
+<div class="para">En simplifiant, on obtient :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P}(S_N = k) = p p' (1 - p p')^{k - 1}.
+\end{equation*}
+</div>
+<div class="para">La variable <span class="process-math">\(S_N\)</span> suit donc la loi géométrique de paramètre <span class="process-math">\(p p'\text{.}\)</span>
+</div>
+</div></div></details></div></article></article><article class="exercise exercise-like" id="ch-exercices-24"><h2 class="heading"><span class="codenumber">23<span class="period">.</span></span></h2>
+<div class="introduction" id="ch-exercices-24-1"><div class="para" id="ch-exercices-24-1-1">On considère une suite d’épreuves de Bernoulli indépendantes. À chaque épreuve, la probabilité de succès est <span class="process-math">\(p \in ]0,1[\text{.}\)</span> On se donne un entier <span class="process-math">\(r\)</span> strictement positif. Pour <span class="process-math">\(n \in \mathbb{N}^*\text{,}\)</span> on note <span class="process-math">\(\Pi_n\)</span> la probabilité qu’au cours des <span class="process-math">\(n\)</span> premières épreuves, on ait obtenu <span class="process-math">\(r\)</span> succès consécutifs (au moins une fois).</div></div>
+<article class="task exercise-like" id="ch-exercices-24-2"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<ol class="lower-alpha lower-alpha-level-1" id="ch-exercices-24-2-1-1">
+<li id="ch-exercices-24-2-1-1-1"><div class="para" id="p-derived-ch-exercices-24-2-1-1-1">Calculer <span class="process-math">\(\Pi_0\text{,}\)</span> <span class="process-math">\(\Pi_1\text{,}\)</span> ..., <span class="process-math">\(\Pi_r\text{.}\)</span>
+</div></li>
+<li id="ch-exercices-24-2-1-1-2"><div class="para" id="p-derived-ch-exercices-24-2-1-1-2">Montrer que, pour <span class="process-math">\(n \geq r\text{,}\)</span> on a <span class="process-math">\(\Pi_{n+1} = \Pi_n + (1 - \Pi_{n-r}) p^r (1 - p)\text{.}\)</span>
+</div></li>
+<li id="ch-exercices-24-2-1-1-3"><div class="para" id="p-derived-ch-exercices-24-2-1-1-3">Montrer que la suite <span class="process-math">\((\Pi_n)_{n \in \mathbb{N}}\)</span> est convergente. Calculer sa limite.</div></li>
+</ol>
+<div class="solutions"><details id="ch-exercices-24-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="ch-exercices-24-2-2-1"><ol class="lower-alpha lower-alpha-level-1" id="ch-exercices-24-2-2-1-1">
+<li id="ch-exercices-24-2-2-1-1-1"><div class="para" id="p-derived-ch-exercices-24-2-2-1-1-1">On a <span class="process-math">\(\Pi_0 = \Pi_1 = \ldots = \Pi_{r-1} = 0\)</span> et <span class="process-math">\(\Pi_r = p^r\text{.}\)</span>
+</div></li>
+<li id="ch-exercices-24-2-2-1-1-2"><div class="para" id="p-derived-ch-exercices-24-2-2-1-1-2">Pour <span class="process-math">\(n \geq 1\text{,}\)</span> on note <span class="process-math">\(S_n\)</span> l’événement « la <span class="process-math">\(n\)</span>-ième épreuve est un succès » et <span class="process-math">\(A_n\)</span> l’événement « au cours de <span class="process-math">\(n\)</span> premiers tirages, on a obtenus <span class="process-math">\(r\)</span> succès consécutifs ». On a clairement <span class="process-math">\(A_n \subset A_{n+1}\)</span> et donc <span class="process-math">\(\Pi_{n+1} - \Pi_n = \mathbb{P}(A_{n+1} \setminus A_n)\text{.}\)</span> L’événement <span class="process-math">\(A_{n+1} \setminus A_n\)</span> est réalisé si on obtient <span class="process-math">\(r\)</span> succès consécutifs pour la première fois entre le <span class="process-math">\((n-r+2)\)</span>-ième et le <span class="process-math">\((n+1)\)</span>-ième tirage, ce qui impose que la <span class="process-math">\((n-r+1)\)</span>-ième épreuve soit un échec et qu’on n’ait pas avant obtenu <span class="process-math">\(r\)</span> succès consécutifs. On a donc :<div class="displaymath process-math">
+\begin{equation*}
+A_{n+1} \setminus A_n = A_{n-r} \cap S_{n-r+1} \cap S_{n-r+2} \cap \cdots \cap S_{n+1}
+\end{equation*}
+</div>et par indépendance des épreuves :<div class="displaymath process-math">
+\begin{equation*}
+\Pi_{n+1} - \Pi_n = (1 - \Pi_{n-r}) (1 - p) p^r.
+\end{equation*}
+</div>
+</div></li>
+<li id="ch-exercices-24-2-2-1-1-3"><div class="para" id="p-derived-ch-exercices-24-2-2-1-1-3">La suite <span class="process-math">\((\Pi_n)_n\)</span> est croissante et majorée par 1 donc convergente. On note <span class="process-math">\(L\)</span> sa limite. Par passage à la limite dans la relation précédente, on obtient <span class="process-math">\(L - L = (1 - L)(1 - p)p^r\text{,}\)</span> et donc <span class="process-math">\(L = 1\text{,}\)</span> puisque <span class="process-math">\(p \in [0,1]\text{.}\)</span>
+</div></li>
+</ol></div></div></details></div></article><article class="task exercise-like" id="ch-exercices-24-3"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<ol class="lower-alpha lower-alpha-level-1" id="ch-exercices-24-3-1-1">
+<li id="ch-exercices-24-3-1-1-1"><div class="para" id="p-derived-ch-exercices-24-3-1-1-1">Déduire de la question 1 que l’on peut définir une variable aléatoire <span class="process-math">\(T\)</span> égale au temps d’attente de <span class="process-math">\(r\)</span> succès consécutifs. On définira <span class="process-math">\(\{T = k\}\)</span> comme l’événement « on a obtenu des succès aux épreuves de rang <span class="process-math">\(k-r+1\text{,}\)</span> <span class="process-math">\(k-r+2\text{,}\)</span> ..., <span class="process-math">\(k\)</span> sans jamais avoir obtenu <span class="process-math">\(r\)</span> succès consécutifs auparavant ».</div></li>
+<li id="ch-exercices-24-3-1-1-2"><div class="para" id="p-derived-ch-exercices-24-3-1-1-2">Montrer en utilisant le résultat de l’exercice 18 de la page 911 que :<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{E}(T) = \frac{1 - p^r}{(1 - p)p^r}.
+\end{equation*}
+</div>
+</div></li>
+</ol>
+<div class="solutions"><details id="ch-exercices-24-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="lower-alpha lower-alpha-level-1" id="ch-exercices-24-3-2-1">
+<li id="ch-exercices-24-3-2-1-1"><div class="para" id="p-derived-ch-exercices-24-3-2-1-1">Comme la suite <span class="process-math">\((A_n)\)</span> est croissante, on a :<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{P} \left( \bigcup_{n \in \mathbb{N}^*} A_n \right) = \lim_{n \to +\infty} \Pi_n = 1.
+\end{equation*}
+</div>On obtient de manière presque sûre une suite de <span class="process-math">\(r\)</span> succès consécutifs au bout d’un nombre fini d’épreuves. Sur un ensemble de probabilité 1, on peut définir l’application <span class="process-math">\(T\text{.}\)</span> On a, par définition <span class="process-math">\(\{T = k\} = A_{k+1} \setminus A_k\text{,}\)</span> donc <span class="process-math">\(\{T = k\}\)</span> est un événement et <span class="process-math">\(T\)</span> une variable aléatoire à valeurs dans <span class="process-math">\(\mathbb{N}^*\text{.}\)</span>
+</div></li>
+<li id="ch-exercices-24-3-2-1-2"><div class="para" id="p-derived-ch-exercices-24-3-2-1-2">Pour tout <span class="process-math">\(k \in \mathbb{N}\text{,}\)</span> on a <span class="process-math">\(\{T \gt k\} = A_k\)</span> et donc <span class="process-math">\(\mathbb{P}(T \gt k) = 1 - \Pi_k\text{.}\)</span> D’après la question 1, on a pour tout <span class="process-math">\(k \geq 0\)</span> :<div class="displaymath process-math">
+\begin{equation*}
+1 - \Pi_k = \frac{\Pi_{k+r+1} - \Pi_{k+r}}{(1 - p)p^r}.
+\end{equation*}
+</div>D’après l’exercice 18 de la page 911, on en déduit :<div class="displaymath process-math">
+\begin{equation*}
+\mathbb{E}(T) = \sum_{k=0}^{+\infty} \frac{\Pi_{k+r+1} - \Pi_{k+r}}{(1 - p)p^r} = \frac{\lim_{n \to +\infty} \Pi_n - \Pi_r}{(1 - p)p^r} = \frac{1 - p^r}{(1 - p)p^r}.
+\end{equation*}
+</div>
+</div></li>
+</ol></div></details></div></article></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-fctgen.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>

@@ -14,7 +14,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#def-tribu",
   "type": "Définition",
-  "number": "1",
+  "number": "1.1",
   "title": "",
   "body": "  On appelle tribu de tout ensemble de parties de tel que :   ;  si alors ;  si est une suite d'éléments de alors ;  Si est une tribu de alors le couple est dit un espace probabilisable. Tout élément de est dit un événement de l'espace .   "
 },
@@ -23,7 +23,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#subsec-tribu-3",
   "type": "Remarque",
-  "number": "2",
+  "number": "1.2",
   "title": "",
   "body": " Si est une tribu de alors    ;    si est une suite d'éléments de alors .     "
 },
@@ -32,7 +32,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#subsec-tribu-4",
   "type": "Exemple",
-  "number": "3",
+  "number": "1.3",
   "title": "",
   "body": "     est une tribu de . C'est la plus petite tribu de .     est une tribu de . C'est la plus grande tribu de .    Si est une partie de alors est une tribu de . C'est la plus petite tribu de contenant .     "
 },
@@ -41,7 +41,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#subsec-tribu-5",
   "type": "Proposition",
-  "number": "4",
+  "number": "1.4",
   "title": "",
   "body": "    Si est une famille de tribus de alors est une tribu de .    Soit un ensemble de parties de . L'intersubsection de toutes les tribus de contenant est une tribu de . Elle est appelée la tribu engendrée par . On la notera .     "
 },
@@ -50,7 +50,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#def-tborel",
   "type": "Définition",
-  "number": "5",
+  "number": "1.5",
   "title": "",
   "body": "  La tribu engendrée par l'ensemble des segments de est appelée la tribu de Borel de . On la note .   "
 },
@@ -59,7 +59,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#subsec-tribu-7",
   "type": "Remarque",
-  "number": "6",
+  "number": "1.6",
   "title": "",
   "body": "    Soient et deux ensembles de parties de . Si alors .    Tout intervalle de peut être écrit comme la réunion d'une suite de segments. La tribu de Borel de contient donc tous les intervalles de . Comme tout ouvert de est une union au plus dénombrable d'intervalles ouverts, la tribu de Borel de contient tous les ouverts de . Elle contient donc aussi tous les fermés de .    En général si est un espace vectoriel normé de dimension finie alors la tribu de Borel de , notée est par définition la tribu engendrée par les boules fermées de . Elle contient alors tous les ouverts et tous les fermés de et est de ce fait indépendante de la norme choisie sur .     "
 },
@@ -68,7 +68,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#prop-sigmatrib",
   "type": "Proposition",
-  "number": "7",
+  "number": "1.7",
   "title": "",
   "body": "  Soit un ensemble au plus dénombrable de parties de qui forment une partition de . Alors     Posons et montrons que est une tribu de .   Comme alors .    Si alors .    Soit est une suite d'éléments de et posons pour tout , alors .    est donc bien une tribu de . Elle contient et toute tribu qui contient tous les ensembles contient tous les éléments de . C'est donc la plus petite tribu de contenant . Soit .   "
 },
@@ -77,7 +77,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#prop-tribdisc",
   "type": "Corollaire",
-  "number": "8",
+  "number": "1.8",
   "title": "",
   "body": "  Si l'ensemble est au plus dénombrable alors Autrement dit la seule tribu de qui contient tous les singletons de est .   "
 },
@@ -86,7 +86,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#subsec-tribu-10",
   "type": "Remarque",
-  "number": "9",
+  "number": "1.9",
   "title": "",
   "body": " Si est infini non dénombrable alors la tribu engendrée par les singletons de est définie par la condition En particulier toute tribu de qui contient tous les singletons de contient et donc contient toutes la parties dénombrables de .  C'est le cas par exemple de la tribu de Borel de tout espace vectoriel normé de dimension finie (les singletons sont des boules fermées).  "
 },
@@ -95,7 +95,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#subsec-tribu-11",
   "type": "Proposition",
-  "number": "10",
+  "number": "1.10",
   "title": "(tribu induite).",
   "body": " (tribu induite)   Soit une tribu de . Pour toute élément de , l'ensemble est une tribu de . On l'appelle la tribu induite par sur .   "
 },
@@ -104,7 +104,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#subsec-probabilite-2",
   "type": "Notation",
-  "number": "11",
+  "number": "1.11",
   "title": "",
   "body": " Dans toute cette subsection, désignera un espace probabilisable.  "
 },
@@ -113,7 +113,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#def-probabilite",
   "type": "Définition",
-  "number": "12",
+  "number": "1.12",
   "title": "",
   "body": "  On appelle probabilité de l'espace toute application telle que :    ;    si est une suite d'éléments de deux à deux disjoints alors .   Si est un probabilité de alors le triplet est dit un espace probabilisé.   "
 },
@@ -131,7 +131,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#subsec-probabilite-5",
   "type": "Remarque",
-  "number": "13",
+  "number": "1.13",
   "title": "",
   "body": " Dans la définition précédente, on a utilisé la notation pour désigner la somme de la série que celle-ci soit convergente ou non avec la convention que la somme d'une série divergente à termes positifs est . Ce qui pose évidemment un problème de consistence puisque est sensé être dans l'intervalle .  En fait avec les deux axiomes de la définition, la famille est toujours sommable et sa somme est dans . Voilà comment le justifier :   En posant pour tout , le deuxième axiome aboutit à .    Si sont des événements deux à deux disjoints en posant pour tout , le deuxième axiome fournit .    Soit une suite d'éléments de deux à deux disjoints. On a alors pour tout  La série à termes réels positifs est donc convergente et sa somme est dans .     "
 },
@@ -140,7 +140,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#prop-",
   "type": "Proposition",
-  "number": "14",
+  "number": "1.14",
   "title": "",
   "body": "  Soit une probabilité sur . Alors :    ;     pour tout ;    Si alors et pour tout ;     pour tout ;     pour toute suite d'éléments de .     si est une famille au plus dénombrable d'éléments deux à deux disjoints de .       Les propriétés 1, 2 et 3 sont des conséquences immédiates des axiomes de la définition de probabilité et de la remarque précédente.   Soit une suite d'éléments de et posons et pour tout . Les sont deux à deux disjoints et avec pour tout . On a donc .    Soit une famille au plus dénombrable d'éléments de deux à deux disjoints. Si est fini alors c'est une conséquance de la remarque précédente. Si est infini alors il existe une bijection entre et et il suffit de poser pour tout pour conclure grâce au théorème de permutation des termes pour les familles sommables.      "
 },
@@ -149,7 +149,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#thm-contmono",
   "type": "Théorème",
-  "number": "15",
+  "number": "1.15",
   "title": "(de continuité monotone).",
   "body": " (de continuité monotone)      Soit une suite croissante d'éléments de . Alors .    Soit une suite décroissante d'éléments de . Alors .          On pose et pour tout . Les événements sont deux à deux disjoints et . On a donc     On suppose que est décroissante. Alors est croissante et on peut ainsi écrire       "
 },
@@ -158,7 +158,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#cor-contmono",
   "type": "Corollaire",
-  "number": "16",
+  "number": "1.16",
   "title": "",
   "body": "  Soit une suite quelconque d'éléments de . Alors            Pour le premier point on pose pour tout .La suite et croissante et . On applique alors la formule des probabilites continues.  Pour le second on pose . La suite est décroissante et on peut appliquer le théorème de continuité monotone sachant que .   "
 },
@@ -167,7 +167,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#def-sce",
   "type": "Définition",
-  "number": "17",
+  "number": "1.17",
   "title": "",
   "body": "  On appelle système complet d'événements (SCE) de toute famille au plus dénombrables d'éléments qui forme une partition de .   "
 },
@@ -176,7 +176,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#subsec-probabilite-10",
   "type": "Exemple",
-  "number": "18",
+  "number": "1.18",
   "title": "(exemples courants de SCE).",
   "body": " (exemples courants de SCE)      Pour tout événement , est un SCE de .    Si est au plus dénombrable, alors est un SCE de .    SCE généré par une variable aléatoire discrète (important)  si est une application définie sur telle que soit au plus dénombrable et pour tout alors est un SCE de .      "
 },
@@ -185,7 +185,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#prop-probatotale",
   "type": "Théorème",
-  "number": "19",
+  "number": "1.19",
   "title": "(Formule des probabilités totales).",
   "body": " (Formule des probabilités totales)   Soit un SCE de . Alors pour tout , on a    "
 },
@@ -194,7 +194,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#subsec-probabilite-12",
   "type": "Remarque",
-  "number": "20",
+  "number": "1.20",
   "title": "",
   "body": "    Ce résultat reste valable si les événements sont deux à deux disjoints, sans former une partition de , à condition que     Cette formule est extrêmement utile. Elle stipule que si on sait calculer les probabilités des événements d'un SCE alors on peut calculer la probabilité de n'importe quel événement.     "
 },
@@ -203,7 +203,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#subsec-probabilite-13",
   "type": "Exemple",
-  "number": "21",
+  "number": "1.21",
   "title": "(exemples génériques d’utilisation de la formule des probabilités totales).",
   "body": " (exemples génériques d'utilisation de la formule des probabilités totales)     si on fixe un événement alors     Si sont des événements quelconques alors     Le théorème suivant donne une application importante de la formule des probabilités totales.     "
 },
@@ -212,7 +212,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#thm-probadisc",
   "type": "Théorème",
-  "number": "22",
+  "number": "1.22",
   "title": "",
   "body": "  On suppose que est au plus dénombrable et on le munit de la tribu .   Soit une probabilité de . Pour tout , on a  est entièrement détérminée par les probabilités des singletons .    Soit une famille de nombres réels positifs de somme . Alors il existe une unique probabilité sur telle que       "
 },
@@ -221,7 +221,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#subsec-probabilite-15",
   "type": "Remarque",
-  "number": "23",
+  "number": "1.23",
   "title": "",
   "body": " Si est au plus dénombrable alors pour toute famille sommable de nombre réels positifs de somme , on peut définir une probabilté sur en posant Cette remarque peut avoir des applications analytiques intéressantes même dans des cas où la probabilité ne correspond pas réellement à une expérience aléatoire.  "
 },
@@ -230,7 +230,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#prop-probcond",
   "type": "Proposition",
-  "number": "24",
+  "number": "1.24",
   "title": "",
   "body": "  On considère un événemnt de probabilité non nulle. L'application définie sur par est une probabilité de . La probabilité est aussi notée et on l'appelle probailité de sachant .    On a bien et pour toute suite d'éléments de deux à deux disjoints, on a     Justification de la définition  la probabilité de « sachant » est la probabilité de réalisation d'un résultat favorable à quand on ne retient que les résultats favorables à . C'est une approximation du rapport des fréquences de réalisation des événements et dans une série d'expériences. . D'où la définition    "
 },
@@ -239,7 +239,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#subsec-probabilite-17",
   "type": "Remarque",
-  "number": "25",
+  "number": "1.25",
   "title": "",
   "body": "    Si alors par convention, pour tout , . Ce choix s'explique par le fait que tout se passe comme si l'événement n'avait pas eu lieu.  Avec cette convention on peut toujours écrire     Sachant que est une probabilité on peut lui appliquer toutes propriétés vues précédemment. Par exemple      "
 },
@@ -248,7 +248,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#subsec-probabilite-18",
   "type": "Mise en garde",
-  "number": "26",
+  "number": "1.26",
   "title": "",
   "body": " On parle de «probabilité de sachant », jamais de «l'événement» qui n'a pas de sens en théorie des probabilités.  "
 },
@@ -257,7 +257,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#thm-probatotale2",
   "type": "Théorème",
-  "number": "27",
+  "number": "1.27",
   "title": "",
   "body": "  Soit un SCE de . Alors    "
 },
@@ -266,7 +266,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#prop-bayes",
   "type": "Proposition",
-  "number": "28",
+  "number": "1.28",
   "title": "(Formules de Bayes).",
   "body": " (Formules de Bayes)      Soient et deux événements de probabilités non nulles. Alors     Soit un SCE de et un événement de probabilité non nulle. Alors pour tout , on a       "
 },
@@ -275,7 +275,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#subsec-probabilite-21",
   "type": "Exemple",
-  "number": "29",
+  "number": "1.29",
   "title": "(générique d’utilisation de la formule de Bayes).",
   "body": " (générique d'utilisation de la formule de Bayes)  Une chaine de production industrielle contient machines identiques mais avec des taux de production de pièces défectueuses différents. Le taux pour la machine numéro est .  On prélève une pièce au hasard parmi un lot de pièces produite par la chaîne et on constate qu'elle est défectueuse. Quelle est la probabilité que cette pièce provienne de la machine numéro ?   Si on note l'événement «la pièce est défectueuse» et l'événement «la pièce provient de la machine numéro » alors on cherche . Celle-ci est donnée par la formule de Bayes : car et pour tout .   "
 },
@@ -284,7 +284,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#subsec-independance-2",
   "type": "Notation",
-  "number": "30",
+  "number": "1.30",
   "title": "",
   "body": " Dans tout la suite, désignera un espace probabilisé.  "
 },
@@ -293,7 +293,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#def-independance",
   "type": "Définition",
-  "number": "31",
+  "number": "1.31",
   "title": "",
   "body": "     Deux événements et de sont dits indépendants si .    Une famille d'événements de est dite mutuellement indépendante (MI) si pour toute partie finie de ,       "
 },
@@ -311,7 +311,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#subsec-independance-5",
   "type": "Remarque",
-  "number": "32",
+  "number": "1.32",
   "title": "",
   "body": "    Si ou alors tout événement est indépendant de .    deux événements incompatibles et ne peuvent être indépendants que si ou .    Si est une famille MI alors est MI pour toute partie de . En particulier les événements sont deux à deux indépendants.    Soit est une famille d'évéments MI. Si on lui ajoute des événements presques sûrs ou négligeable alors les événements de la nouvelle famille sont MI.    Dans un SCE les événements ne peuvent être deux à deux indépendants, et a fortiori MI, que s'il existe tel que .     "
 },
@@ -320,7 +320,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#subsec-independance-6",
   "type": "Proposition",
-  "number": "33",
+  "number": "1.33",
   "title": "",
   "body": "  Si et sont des événements indépendants alors et sont indépendants, et sont indépendants et et sont indépendants.   "
 },
@@ -329,7 +329,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#thm-",
   "type": "Théorème",
-  "number": "34",
+  "number": "1.34",
   "title": "",
   "body": "  Soit une famille MI d'événements de .   Soit une partie de . On pose si et si . Alors la famille est MI (en particulier est MI).    Lemme des coalitions  Soit une famille de parties deux à deux disjointes de . On pose pour tout , . Alors la famille est MI.      "
 },
@@ -338,7 +338,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#prop-forcomlement",
   "type": "Proposition",
-  "number": "35",
+  "number": "1.35",
   "title": "(Formule des compléments).",
   "body": " (Formule des compléments)   Soient des événements de . Alors     On écrit et on raisonne par récurrnece en appliquant l'hypothèse de récurrence avec la probailité    "
 },
@@ -347,7 +347,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#subsec-modelisation-4",
   "type": "Exemple",
-  "number": "36",
+  "number": "1.36",
   "title": "(signification de certains événements courants).",
   "body": " (signification de certains événements courants)  Soit une suite quelconque d'événements.    est l'événement «au moins un des événements se réalise» ;     est l'événement «tous les événements se réalisent» ;     est l'événement «les événements se réalisent tous à partir d'un certain rang pour pour au moins un indice ». La probabilité de cet événement est      est l'événement «l'événement se réalise pour une infinité d'indices ». La probabilité de cet événement est      "
 },
@@ -356,7 +356,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#subsec-modelisation-6",
   "type": "Remarque",
-  "number": "37",
+  "number": "1.37",
   "title": "Cas où l’univers est au plus dénombrable.",
   "body": " Cas où l'univers est au plus dénombrable  Dans la pratique si l'ensemble qui contient les résultats de l'expérience est au plus plus dénombrable alors on le munit de la tribu de telle sorte que tout ensemble formé de résultats possibles de l'expérience soit un événement. Ce choix de tribu n'est pas adéquat lorsque l'ensemble des résultats est non dénombrable car cela pose des difficultés insurmontables pour définir une probabilité sur .  "
 },
@@ -365,7 +365,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#subsec-modelisation-7",
   "type": "Exemple",
-  "number": "38",
+  "number": "1.38",
   "title": "Lancer un dé.",
   "body": " Lancer un dé  On lance un dé à 6 faces. On peut modéliser cette expérience par et . On peut définir une probabilité sur en posant pour tout .  "
 },
@@ -374,7 +374,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#subsec-modelisation-8",
   "type": "Exemple",
-  "number": "39",
+  "number": "1.39",
   "title": "Lancer deux dés.",
   "body": " Lancer deux dés  On lance deux dés à 6 faces. On peut modéliser cette expérience par et . On peut définir une probabilité sur en posant pour tout .  Si on s'intéresse à l'événement : «la somme des résultats est paire», on peut créer un espace spécifique sous la forme et y adjoindre la probabilité adéquate ou bien on peut rester dans l'univers et définir la variable aléatoire sur en posant pour tout . On peut alors exprimer l'événement par   "
 },
@@ -383,7 +383,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-generalites.html#subsec-modelisation-9",
   "type": "Exemple",
-  "number": "40",
+  "number": "1.40",
   "title": "Suite de lancers d’une pièce de monnaie.",
   "body": " Suite de lancers d'une pièce de monnaie  On lance indéfiniment une piece de monnaie. Si on ne s'intéresse qu'au numéro du premier lancer qui donne «face» alors peut modéliser cette expérience par et . On peut définir une probabilité sur en posant pour tout .  Mais dans ce cas les événements «obtenir trois face successivement au moins une fois» ou «obtenir face une infinité de fois» ne peuvent être exprimés dans .  On peut alors se placer dans l'espace beaucoup plus vaste . Le résultat de chaque séquence infinie de lancers est modélisé par une suite de zéros et de uns. C'est un ensemble non dénombrable et y définir une tribu sur laquelle on doit ensuite définir une probabilité est non aisé. L'approche peut être la suivante : on identifie une famille d'événements élémentaires avec lesquels on peut construire d'autre événements plus complexes et qui couvrent nos besoins et on n'aura qu'à se placer dans la tribu engendrée par ces événements élémentaires.  Par exemple, on peut considérer pour tout l'événement : «le lancer donne face», ou encore On peut alors exprimer   pour tout  en particulier est l'événement «ne jamais obtenir face»    l'événement «le premier face apparaît au lancer» par     l'événement «obtenir face une infinité de fois» par .    l'événement «obtenir trois faces successivement une infinité de fois» par      "
 },
@@ -428,7 +428,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-varalea.html#def-varalea",
   "type": "Définition",
-  "number": "41",
+  "number": "1.41",
   "title": "",
   "body": "  On appelle variable aléatoire de dans toute application telle que c'est à dire que l'image réciproque par de tout événement est un événement.  Soit dans la suite une variable aléatoire de dans .   est dite discrète si l'ensemble est au plus dénombrable et . Ce qui équivaut à   X est dite réelle si .   "
 },
@@ -446,7 +446,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-varalea.html#subsec-varalea-5",
   "type": "Remarque",
-  "number": "42",
+  "number": "1.42",
   "title": "",
   "body": "   Sauf précision du contraire, un univers au plus dénombrable sera systématiquement muni de la tribu .    Si est au plus dénombrable ( et muni de la tribu ) alors toute application définie sur est une variable aléatoire quelque soit la tribu considérée dans l'espace d'arrivée.    Soit une application quelconque définie de dans . L'ensemble est une tribu de et est une variable aléatoire de dans .  Si est au plus dénombrable et , on voit qu'une application quelconque de dans peut être considérée comme une variable aléatoire avec très peu de contraintes. Il suffit de se placer du côté de dans une tribu qui contient .  Si sont des applications définies sur telles que soit au plus dénombrable pour tout alors on peut poser :        de telle sorte que les applications soient toutes des variables aléatoires discrètes de dans .  Ses observations restent valides pour une famille dénombrable d'applications définies sur telle que soit au plus dénombrable pour tout . Notamment pour une suite de telles applications.  C'est ainsi qu'il est toujours possible de considérer un modèle dans lequel on peut combiner entre les résultats d'un nombre fini ou dénombrable d'expériences aléatoires si chacune a au plus un ensemble au plus dénombrable de résultats.    "
 },
@@ -455,7 +455,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-varalea.html#prop-compvar",
   "type": "Proposition",
-  "number": "43",
+  "number": "1.43",
   "title": "",
   "body": "    La composée de deux variables aléatoires et est une variable aléatoire. De plus si est discrète alors est discrète.    Si pour tout , est une variable aléatoire de dans un espace probabilisable alors l'application définie par est une variable aléatoire de dans . De plus si sont discrètes alors est discrète.    Soit maintenant une variable aléatoire discrète de dans . Alors pour toute application définie sur l'application est une VAD. On la note    On généralise de la façon suivante : si sont des VAD definies sur alors pour toute application définie sur on définit la variable aléatoire discrète par      "
 },
@@ -464,7 +464,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-varalea.html#subsec-varalea-7",
   "type": "Définition",
-  "number": "44",
+  "number": "1.44",
   "title": "",
   "body": "   étant donné des variables aléatoires discrètes de dans , on note  pour tout    pour tous    pour tout ,   pour tous        Une variable aléatoire discrète est dite presque partout constante s'il existe tel que . Elle est en particulier dite presque partout nulle si .    "
 },
@@ -473,7 +473,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-varalea.html#subsec-varalea-8",
   "type": "Remarque",
-  "number": "45",
+  "number": "1.45",
   "title": "",
   "body": " Vu la tolérance de l'image réciproque par une application envers les opérations sur les ensembles, les notations précédentes donnent                        "
 },
@@ -482,7 +482,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-varalea.html#subsec-varalea-9",
   "type": "Exemple",
-  "number": "46",
+  "number": "1.46",
   "title": "d’utilisation de ces notations.",
   "body": " d'utilisation de ces notations    Si et sont des VAD à valeurs dans alors pour tout , et puisque ces événements sont deux à deux disjoints alors     Si est une VAD à valeurs dans alors et particulier      . Par exemple, si alors     "
 },
@@ -491,7 +491,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-varalea.html#subsec-varalea-10",
   "type": "Théorème",
-  "number": "47",
+  "number": "1.47",
   "title": "",
   "body": "  Soit une variables aléatoire discrète de dans .    est un système complet d'événements de ;    Pour tout ,    On appelle loi de la variable le couple . L'application est dite fonction des masses de la variable .   La loi d'une VADR est ainsi le couple formé de l'ensemble des valeurs qu'elle peut prendre et de la famille (au plus dénombrable) des probabilités pour que chacune de ces valeurs se réalise. La propriété 2 signifie que les probabilités des événements sont déterminées par la loi de .    "
 },
@@ -500,7 +500,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-varalea.html#subsec-varalea-11",
   "type": "Notation",
-  "number": "48",
+  "number": "1.48",
   "title": "",
   "body": " Si et sont des VAD qui suivent la même loi alors on écrit .  "
 },
@@ -509,7 +509,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-varalea.html#cor-loiX",
   "type": "Corollaire",
-  "number": "49",
+  "number": "1.49",
   "title": "",
   "body": "  Soit une variable aléatoire discrète de dans . L'application est une probabilité de .    "
 },
@@ -518,7 +518,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-varalea.html#def-loicouple",
   "type": "Définition",
-  "number": "50",
+  "number": "1.50",
   "title": "",
   "body": "  Soient deux VAD et définies sur . La loi du couple est par définition la loi de la variable . Elle est assimilée au couple .  En outre les lois des variables et sont appelées les lois marginales du couple .   "
 },
@@ -527,7 +527,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-varalea.html#subsec-varalea-14",
   "type": "Remarque",
-  "number": "51",
+  "number": "1.51",
   "title": "",
   "body": " Avec on a on n'a donc pas nécessairement mais si alors   si alors et en particulier ;    si alors et donc .   C'est pour des raisons de simplification que la loi de couple est donc définie avec .  "
 },
@@ -536,7 +536,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-varalea.html#prop-loicouple",
   "type": "Proposition",
-  "number": "52",
+  "number": "1.52",
   "title": "",
   "body": "  Soient deux VAD et définies sur .            Ce qui signifie que les lois marginales du couple sont données par sa loi de couple.   "
 },
@@ -545,7 +545,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-varalea.html#def-varind",
   "type": "Définition",
-  "number": "53",
+  "number": "1.53",
   "title": "",
   "body": "  Une famille de VAD définies sur (pas nécessairement à valeurs dans le même espace) est dite mutuellement indépendante (MI) si    "
 },
@@ -554,7 +554,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-varalea.html#subsec-indvar-3",
   "type": "Remarque",
-  "number": "54",
+  "number": "1.54",
   "title": "",
   "body": " Si est une famille MI de VAD alors pour toute partie de la famille est MI.  "
 },
@@ -563,7 +563,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-varalea.html#prop-varind",
   "type": "Proposition",
-  "number": "55",
+  "number": "1.55",
   "title": "",
   "body": "  Des variables aléatoires discrètes définies sur sont mutuellement indépendantes si et seulement si    "
 },
@@ -572,7 +572,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-varalea.html#subsec-indvar-5",
   "type": "Remarque",
-  "number": "56",
+  "number": "1.56",
   "title": "",
   "body": "   Cette dernière proposition simplifie considérablement la définition de l'indépendance mutuelle d'un nombre fini de VAD.    Elle implique aussi qu'une famille infinie de VAD est MI si et seulement si toutes ses sous-familles finies sont MI.    Une suite de VAD est MI si et seulement pour tout les variables sont MI.    "
 },
@@ -581,7 +581,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-varalea.html#prop-partind",
   "type": "Proposition",
-  "number": "57",
+  "number": "1.57",
   "title": "",
   "body": "  Soit une famille de VAD mutuellement indépendantes et toutes définies sur .  Soit pour tout , une partie de . Alors les événements sont mutuellement indépendants.   "
 },
@@ -590,7 +590,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-varalea.html#thm-coalition",
   "type": "Théorème",
-  "number": "58",
+  "number": "1.58",
   "title": "",
   "body": "  Soit une famille de VAD mutuellement indépendantes et toutes définies sur .    Si pour tout , est une application définie sur alors les variables sont mutuellement indépendantes.    Lemme des coalitions  Soit une famille de parties finies deux à deux disjointes de . Si pour tout , est une application définie sur alors les variables sont mutuellement indépendantes.     "
 },
@@ -599,7 +599,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-varalea.html#subsec-indvar-8",
   "type": "Remarque",
-  "number": "59",
+  "number": "1.59",
   "title": "",
   "body": "   Si est une VAD presque partout constante de alors toute autre VAD définie sur est indépendante de .   car pour tout , on a soit soit . Donc l'événement est indépendant de tou autre événement de .     Soient une VAD et une fonction définie sur . À moins que ou ne soit presque partout constante, les variables et ne peuvent être indépendantes.   On suppose que et ne sont pas presque partout constantes. Il existe alors tel que . Comme alors . Ensuite puisque est non presque partout constante alors et il existe donc tel que et . Ainsi  et ne sont donc pas indépendantes.      Exemples d'utilisations du lemme des coalitions  Soient des VAD définies sur .   Si sont MI alors et sont MI.    Réciproquement si et sont MI alors tout ce qu'on peut dire c'est que est indépendante de pour tout .    Si la variable est elle même un vecteur de la forme et et sont indépndantes alors et sont indépendantes pour tous .      Ce sont des conséquences du lemme des coalitions en utilisant respectivement les applications :    ;     ;     et         "
 },
@@ -671,7 +671,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-espvaralea.html#def-esperance",
   "type": "Définition",
-  "number": "61",
+  "number": "1.61",
   "title": "",
   "body": "  Soit une variable aléatoire discrète réelle définie sur .  On dit que est sommable, ou que admet une espérance, si la famille est sommable. On appelle alors espérance de le réel On notera l'ensemble des VADR sommables définies sur    "
 },
@@ -680,7 +680,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-espvaralea.html#subsubsec-defprop-3",
   "type": "Remarque",
-  "number": "62",
+  "number": "1.62",
   "title": "",
   "body": "   Quand elle définie, est le barycentre de la famille de points pondérés . Pour cette raison on l'appelle aussi valeur moyenne de .    Dans le cas d'une VADR à valeurs positives ou nulles, si n'est pas sommable alors on pose par convention  est alors sommable si et seulement si .    En conséquence, pour une VADR quelconque     La définition a un inconvénient : la somme utilisée est indexée par un ensemble qui dépend de . Ce qui pose un problème lorsqu'on combine entre plusieurs variables aléatoire. Comme lorsque on s'intéresse à par exemple.  La formule de transfert énoncée ci-après résout ce problème.    La définition de dépend seulement de la loi de . Dans ce sens deux variables qui ont la même loi ont la même espérance. Nous parlerons souvent de l'espérance d'une loi de probabilité pour désigner l'espérance des variables qui suivent cette loi.    La définition se limite aux variables aléatoires discrète réelles , mais elle est tout à fait valable sans aucune modification pour les variables aléatoires discrètes à valeurs complexes . La notion de base utilisée étant celle de familles sommables et celle-ci a été étudiée dans le cadre des familles de nombres réels ou complexes.    "
 },
@@ -698,7 +698,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-espvaralea.html#prop-casdenom",
   "type": "Proposition",
-  "number": "63",
+  "number": "1.63",
   "title": "",
   "body": "  On suppose que est au plus dénombrable. Une VADR définie sur est sommable si et seulement si la famille est sommable et dans ce cas     La famille d'événemnts est une partition de et pour tout on a Donc selon le théorème de sommation par paquets et dans ce cas    "
 },
@@ -707,7 +707,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-espvaralea.html#subsubsec-defprop-6",
   "type": "Remarque",
-  "number": "64",
+  "number": "1.64",
   "title": "",
   "body": " Apparement ce dernier résultat résout le problème de l'ecriture de en fonction de l'ensemble (qui dépend de ). L'intérêt est toutefois relatif car dans la pratique on ne contrôle pas l'univers lui même et il n'est pas nécessairement au plus dénombrable.  "
 },
@@ -716,7 +716,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-espvaralea.html#thm-transfert",
   "type": "Théorème",
-  "number": "65",
+  "number": "1.65",
   "title": "(formule de transfert).",
   "body": " (formule de transfert)   Soit une VAD définie sur (possiblement à valeurs vectorielles). Soit une application définie sur .  La variable est sommable si et seulement si la famille est sommable et dans ce cas     On pose et on imite la démonstration de la proposition précédente en observant cette fois que est une partition de . Selon le théorème de sommation par paquets, est sommable si et seulement si Or pour tout  Ce qui ramène l'équivalence à juste la deuxième condition, elle même équivalente à la sommabilité de la variable . D'où l'équivalence énoncée dans le théorème et la validité de la formule : par sommation par paquets.   "
 },
@@ -725,7 +725,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-espvaralea.html#cor-transfert",
   "type": "Corollaire",
-  "number": "66",
+  "number": "1.66",
   "title": "",
   "body": "  Soient et deux VADR. Soit une application définie sur . La variable est sommable si et seulement si la famille est sommable est dans ce cas     Il suffit d'appliquer la formule de transfert au couple .   "
 },
@@ -734,7 +734,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-espvaralea.html#subsubsec-defprop-9",
   "type": "Remarque",
-  "number": "67",
+  "number": "1.67",
   "title": "",
   "body": "   La formule de transfert permet donc de combiner les résultats de deux variables et en utilisant la loi conjointe du couple . Ce qui résout le problème de la dépendance de l'expression de de l'ensemble .  Par exemple la variable est sommable si et seulement si la famille est sommable et dans ce cas Noter qu'en considérant les application et , alors selon ce même résultat, les variables et sont respectivement sommable si et seulement si les familles et sont sommables et dans ce cas Expressions qui utilisent notablement le même ensemble des indices pour les deux sommes.    "
 },
@@ -743,7 +743,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-espvaralea.html#prop-proprietes",
   "type": "Proposition",
-  "number": "68",
+  "number": "1.68",
   "title": "",
   "body": "  Toutes les variables aléatoires introduites dans la suite sont supposées définies sur l'espace .    Espérance d'une variable presque partout constante  Une VADR presque partout constante de valeur est sommable et .    Linéarité de l'espérance  Si et sont deux VADR sommables de alors pour tout , est sommable et Ce qui signifie que est un -ev et que est une forme linéaire de .    Positivité de l'espérance  Si est une VADR positive alors . De plus si et seulement si est presque partout nulle sur .    Croissance et domination  Soient et deux VADR.   Si et sont sommables et alors .    Si et est sommable alors est sommable et        Effet de l'indépendance  Si et sont deux VADR indépendantes sommables alors est sommable et .    Inégalité de Cauchy-Schwarz  Soient et deux VADR. Si et sont sommables alors est sommable et on a avec égalité si et seulement si est presque partout nulle ou s'il existe une constante telle que presque partout sur (ie )     "
 },
@@ -752,7 +752,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-espvaralea.html#subsubsec-defprop-11",
   "type": "Remarque",
-  "number": "69",
+  "number": "1.69",
   "title": "",
   "body": "   toute VADR bornée est sommable. De plus     Si sont des VADR sommables alors et sont sommables.   La sommabilité de et découle de la linéarité de l'espérance et des relation      "
 },
@@ -770,7 +770,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-espvaralea.html#subsubsec-exemple-esperance-2",
   "type": "Liste",
-  "number": "70",
+  "number": "1.70",
   "title": "Espérances des lois usuelles",
   "body": " Espérances des lois usuelles    désignera une VADR.     Loi uniforme   Si alors où sont les résultats possibles de l'expérience.     Loi de Bernouilli   Si alors .     Loi binomiale   Si alors .     Loi géométrique   Si alors .     Loi de Poisson   Si alors .     "
 },
@@ -824,7 +824,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-espvaralea.html#def-carre-sommable",
   "type": "Définition",
-  "number": "71",
+  "number": "1.71",
   "title": "",
   "body": "  Une VADR est dite de carré sommable si est sommable.  On notera l'ensemble des VADR de carrés sommables définies sur .   "
 },
@@ -833,7 +833,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-espvaralea.html#prop-ltwo",
   "type": "Proposition",
-  "number": "72",
+  "number": "1.72",
   "title": "",
   "body": "   est un -espace vectoriel et le produit de deux VADR de carrés sommables est une variable sommable.    Découle du fait que si alors et donc par domination. Ensuite pour tout  et donc, par domination, . Sachant que la variable nulle est dans , ceci prouve que est un sous-espace vectoriel de .   "
 },
@@ -842,7 +842,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-espvaralea.html#def-varcovar",
   "type": "Définition",
-  "number": "73",
+  "number": "1.73",
   "title": "",
   "body": "    Soit . La variable est sommable et son espérance est appelée variance de . On la note      Soient . La variable est sommable et son espérance est appelée covariance des variables et . On la note .        est la moyenne «quadratique» de . Elle mésure la moyenne de l'écart que peut prendre avec sa moyenne .   mésure le degré de corélation entre et , c'est à dire à quels points les résultats obtenus par et par s'influencent les uns les autres. On notera par exemple que si et sont indépendantes (aucune corélation) alors et sont indépendantes et donc    "
 },
@@ -851,7 +851,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-espvaralea.html#subsubsec-varcovar-5",
   "type": "Remarque",
-  "number": "74",
+  "number": "1.74",
   "title": "",
   "body": "   Noter que si alors .        "
 },
@@ -860,7 +860,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-espvaralea.html#prop-var-identite",
   "type": "Proposition",
-  "number": "75",
+  "number": "1.75",
   "title": "",
   "body": "  Soient     avec égalité si et seulement si est presque partout constante.              Si et sont indépendantes alors .      "
 },
@@ -869,7 +869,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-espvaralea.html#thm-varcovar",
   "type": "Théorème",
-  "number": "76",
+  "number": "1.76",
   "title": "",
   "body": "   est une forme bilinéaire symétrique positive de . L'inégalité de Cauchy-Schwarz pour cette forme s'écrit : avec égalité si et seulement si est presque partout constante ou s'il existe des réels et tels que presque partout.   "
 },
@@ -878,7 +878,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-espvaralea.html#prop-varcovar",
   "type": "Proposition",
-  "number": "77",
+  "number": "1.77",
   "title": "",
   "body": "  Soient des variables aleátoires discrètes de carrés sommables. Si sont deux à deux indépendantes alors en particulier    "
 },
@@ -887,7 +887,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-espvaralea.html#def-ecarttype-covariance",
   "type": "Définition",
-  "number": "78",
+  "number": "1.78",
   "title": "",
   "body": "  Soiente et des variables aléatoires de carrés sommables.   On appelle écart-type de le réel .    On suppose que et ne sont pas presque partout constantes. On appelle coefficient de corrélation de et le réel       "
 },
@@ -896,7 +896,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-espvaralea.html#subsubsec-varcovar-10",
   "type": "Remarque",
-  "number": "79",
+  "number": "1.79",
   "title": "",
   "body": "    est une semi-norme de . Pour tout , si et seulement si est presque partout constante.    Si on dit que les variables aléatoires et sont non corrélées . C'est le cas par exemple si elles sont indépendantes.  La non corrélation est une sorte «d'orthogonalité» pour la forme bilinéaire symétrique .    Si et ne sont pas presque partout constantes, selon l'inégalité de Cauchy-Schwarz, on a avec égalité si et seulement s'il existe des réels et tels que presque partout avec si et si . On dit que et sont linéairement corrélées (positivément ou négativement selon le signe de ).  Plus est voisin de plus les variables et sont «positivement» corrélées. Plus il est voisin de plus elles sont «négativement» corrélées.    Une VADR est dite centrée si . Elle est dite centrée réduite si elle est centrée et .  Pour toute VADR non partout constante, la VADR est centrée réduite.      "
 },
@@ -914,7 +914,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-espvaralea.html#list-var",
   "type": "Liste",
-  "number": "80",
+  "number": "1.80",
   "title": "Variances des lois usuelles.",
   "body": " Variances des lois usuelles.   On considère une VADR .     Loi uniforme  Si à valeurs dans alors .  En général si suit une loi uniforme à valeurs dans alors     Loi de Bernouilli  Si alors     Loi binomiale  Si alors     Loi géometrique  Si alors     Loi de Poisson  Si alors .    "
 },
@@ -950,7 +950,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-fctgen.html#def-fctgen",
   "type": "Définition",
-  "number": "82",
+  "number": "1.82",
   "title": "Fonction génératrice.",
   "body": " Fonction génératrice  La fonction génératrice d'une variable aléatoire à valeurs dans est définie par On notera le rayon de convergence de la série entière   "
 },
@@ -959,7 +959,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-fctgen.html#subsec-defprop-3",
   "type": "Remarque",
-  "number": "83",
+  "number": "1.83",
   "title": "",
   "body": " Soit une variable aléatoire à valeurs dans .    Puisque la série est convergente de somme alors et .    La loi de est entièrement déterminée par sa fonction génératrice , dans le sens où si et sont des VAD à valeurs dans alors Noter aussi que dans ce cas et ont les mêmes moments, en particulier la même espérance.    Si est fini alors est polynomiale de degré .    Si alors admet des moments à tout ordre et pour tout     Si alors est infiniment dérivable en et pour tout  La série est donc convergente ce qui signifie par théorème de transfert que la variable est sommable et que . Comme est une combinaison linéaire de variables de la forme alors est sommable et s'exprime en fonction des dérivées pour .     "
 },
@@ -968,7 +968,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-fctgen.html#subsec-defprop-4",
   "type": "Proposition",
-  "number": "84",
+  "number": "1.84",
   "title": "",
   "body": "  Soient et deux variables aléatoires à valeurs dans . Si et sont indépendantes alors .   "
 },
@@ -977,7 +977,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-fctgen.html#subsec-defprop-5",
   "type": "Corollaire",
-  "number": "85",
+  "number": "1.85",
   "title": "",
   "body": "  Si sont des variables aléatoires mutuellement indépendantes à valeurs dans alors    "
 },
@@ -986,7 +986,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-fctgen.html#subsec-defprop-6",
   "type": "Théorème",
-  "number": "86",
+  "number": "1.86",
   "title": "",
   "body": "  Soit une variable aléatoire à valeurs dans .    est sommable si et seulement si est dérivable en et dans ce cas .     est de carré sommable si et seulement si est deux fois dérivable en et dans ce cas .      "
 },
@@ -995,7 +995,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-fctgen.html#subsec-generatrices-usuelles-2",
   "type": "Liste",
-  "number": "87",
+  "number": "1.87",
   "title": "",
   "body": "  Loi uniforme  Si à valeurs dans alors .   Loi de Bernouilli  Si alors    Loi binomiale  Si alors .   Loi géométrique  Si alors .   Loi de Poisson  Si alors .    "
 },
@@ -1013,7 +1013,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-fctgen.html#subsec-generatrice-3",
   "type": "Exemple",
-  "number": "88",
+  "number": "1.88",
   "title": "Fonction génératrice des coefficients binomiaux.",
   "body": "Fonction génératrice des coefficients binomiaux  On sait que pour tout réels  La fonction est donc la fonction génératrice des coefficients binomiaux .  Comme application, on peut écrire pour tous , et en identifiant les coefficients des développements en séries de Taylor des deux membres de cette égalité on obtient C'est la formule de Vandermonde.  Dans le même ordre d'idée on sait que pour tout entier  donc en identifiant les développements des deux côtés dans l'égalité suivante on obtient pour tout    "
 },
@@ -1022,7 +1022,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-fctgen.html#subsec-generatrice-4",
   "type": "Exemple",
-  "number": "89",
+  "number": "1.89",
   "title": "Somme de variables de Poisson MI.",
   "body": " Somme de variables de Poisson MI  Soient des variables aléatoires MI suivant des lois de Poissons de paramètre respectifs . On note . On veut déterminer la loi de .  On a pour tout  On en déduit que suit la loi de poisson où .  Ce résultat s'interprète par le fait que le nombre de clients servi par unité de temps dans une file d'attente qui comporte guichets indépendants est une variable aléatoire suivant une loi de Poisson de paramètre .  "
 },
@@ -1031,7 +1031,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-fctgen.html#subsec-generatrice-5",
   "type": "Exemple",
-  "number": "90",
+  "number": "1.90",
   "title": "Une formule d’inversion.",
   "body": "Une formule d'inversion  Soit une VAD à valeurs dans . On suppose que . Alors est développable en série de taylor en , ie où désigne la variable aléatoire définie par Grâce à la convergence absolue de la série à droite dans l'égalité précédente pour voisin de , on peut appliquer la formule de Fubini pour transformer l'expression de  et par identification de ce développement avec celui par défaut de on obtient Théoriquement, ces formules permettent donc de calculer la loi de connaissant les moyennes de toutes les variables .Par exemple   Noter que si est fini alors la variable et nulle pour tout supérieur à et donc que qu'on peut lier aux relations obtenues par formule de transfert   "
 },
@@ -1066,190 +1066,217 @@ var ptx_lunr_docs = [
   "id": "ch-exercices",
   "level": "1",
   "url": "ch-exercices.html",
-  "type": "Chapitre",
+  "type": "Exercices",
   "number": "2",
-  "title": "Exercices : Probabilités discrètes",
-  "body": " Exercices : Probabilités discrètes   Une caractérisation de la loi de Poisson  On considère une variable aléatoire discrète sur l'espace probabilisé telle que et pour tout . Si la variable aléatoire prend la valeur , on procède à une succession de épreuves de Bernoulli indépendantes de paramètre . On note et les variables aléatoires représentant respectivement le nombre de succès et d'échecs dans ces épreuves.  Montrer que si suit une loi de Poisson de paramètre , les variables et suivent aussi des lois de Poisson dont on déterminera les paramètres. Montrer que les variables et sont indépendantes. Montrer réciproquement que si et sont indépendantes, alors suit une loi de Poisson. Pour cela, on montrera :   qu'il existe deux suites et telles que :     que les suites et sont géométriques.    Lancer de pièce jusqu'au premier pile  On lance une pièce de monnaie jusqu'à l'obtention du premier pile, la probabilité d'obtenir pile étant . Soit la variable aléatoire représentant le nombre de lancers nécessaires. Si , on relance ensuite fois la pièce et on appelle la variable aléatoire représentant le nombre de piles obtenu.  Déterminer la loi de , celle du couple , puis la loi de . Montrer que a même loi que le produit de deux variables indépendantes et telles que suive une loi de Bernoulli et une loi géométrique de même paramètre. En déduire l'espérance et la variance de .  Loi sur les nombres premiers  Soit l'ensemble des nombres premiers. Soit une variable aléatoire à valeurs dans dont la loi est définie par :   Justifier qu'on définit bien ainsi la loi d'une variable aléatoire. Pour tout , on considère : « divise ». Montrer que est une famille d'événements indépendants. En déduire une preuve de :  Montrer que la probabilité qu'aucun carré différent de 1 ne divise vaut .  Taux de panne  Soit une variable aléatoire discrète à valeurs dans vérifiant :  représente le moment où un mécanisme tombe en panne. C'est à dire le numéro de l'instance de son cycle de fonctionnement où il tombe en panne. En principe, sous l'effet de l'usure, plus la durée de son fonctionnement est grande plus la probabilité que le mécanisme tombe en panne augmente.  que On appelle taux de panne associé à la suite réelle définie par :  est la probabilité pour que le mécanisme tombe en panne à l'instant sachant qu'il a fonctionné jusqu'à cet instant.   Exprimer en fonction des .   Éviter de diviser par . Exprimer comme un produit de facteurs .       On a donc . Ce qui donne On en déduit que Ce qui donne par télescopage La relation signifie que donc finalement   Caractérisation du taux de panne     Montrer que pour tout et que la série de terme général diverge.    Réciproquement, soit une suite à valeur dans telle que la série de terme général diverge. Montrer qu'il existe une variable aléatoire dont le taux de panne est la suite .      On rappelle que pour une suite de réels positifs sommable et de somme , il existe une variable aléatoire telle que pour tout .     Soit et supposons que . Alors , ou encore . Ce qui implique que contredisant l'hypothèse faite dans l'énoncé. Alors .  Ensuite est le reste de la série convergente donc il converge vers . Ce qui implique que La série est nécessairement divergente car dans le cas contraire convergerait vers et on aurait donc ce qui impliquerait que la série est convergente.    Soit une série divergente à termes dans et posons pour tout  Avec ces relations on a On peut ensuite écrire Puisque la série de réels positif est divergente positive sa suite des sommes partielles tend vers et on a donc . Par suite . Puisque alors la série est convergente de somme .  Il existe donc une VADR tel que pour tout .     Montrer que la variable suit une loi géométrique si, et seulement si, son taux de panne est constant.   On suppose que suit une loi géométrique de paramètre . Alors pour tout on a . Donc Par suite . Donc le taux de panne est constant. Réciproquement, on suppose que le taux de panne est constant de valeur . Alors pour tout on a . Donc suit une loi géométrique de paramètre .  Noter que cela signifie que le taux de panne est constant si et seulement si les événements «le mécanisme tombe en panne à l'instant » sont mutuellement indépendants et ont tous la même probabilité. Il n'y a aucun effet d'usure.   Maximums et minimums provisoires  Soit . On désigne par l'ensemble des permutations de . On munit de la probabilité uniforme. Pour et , on dit que est un maximum (resp. minimum) provisoire de si : (resp. ). On désigne par (resp. ) les variables aléatoires représentant le nombre de maximums (resp. minimums) provisoires des permutations de .  Montrer que les variables et ont même loi. Déterminer la loi de , son espérance et sa variance. Déterminer la loi du couple et sa covariance. Pour , on note la fonction génératrice de .   Pour , on note la variable indicatrice de l'événement « est un maximum ». Montrer que les variables sont indépendantes.    Exprimer en fonction de . En déduire .    En déduire , , .    Déterminer et (sous forme de sommes) et un équivalent de et de quand tend vers .    Formule du crible  Soit des événements d'un espace probabilisé .  Montrer que . En déduire la formule du crible :  Soient et une suite de variables indépendantes d'un espace probabilisé suivant toutes la loi uniforme sur . On note la variable aléatoire égale au nombre de tirages nécessaires pour obtenir tous les numéros entre 1 et au moins une fois (et à si on n'obtient jamais les numéros). Pour et , on note l'événement : « au bout de tirages, le numéro n'est pas encore apparu ».   Calculer où sont des indices distincts compris entre 1 et .    En déduire que : Calculer . Interpréter.    Montrer que .    Montrer que . En déduire un équivalent de quand tend vers .    Variables aléatoires uniformes et Poisson  Soient un entier et une suite de variables aléatoires indépendantes et de même loi uniforme sur . Pour tout , on définit :   Quelle est la loi de pour et ? Soit et avec . Calculer la covariance des variables aléatoires et . Sont-elles indépendantes ? Soit et une variable aléatoire suivant une loi de Poisson de paramètre , indépendante des variables . On pose :    Déterminer, en fonction de et , la loi de pour tout .    Déterminer la loi conjointe de .    Centrale 2015  Soit un espace probabilisé et une suite d'événements. On suppose que , c'est-à-dire que la série converge.  On note la fonction indicatrice d'un ensemble . Soit (on convient que si la série diverge). Prouver que est une variable aléatoire discrète. Soit . Prouver que est un événement et que . Prouver que est d'espérance finie.  Marche aléatoire dans  Soit une suite de variables aléatoires, sur le même espace probabilisé , indépendantes et de même loi définie par : où . On pose et, pour tout , . La suite est appelée marche aléatoire dans .  Déterminer pour tout . On note la somme de la série entière . Montrer que :  Pour tout entier naturel non nul , on note l'événement « le mobile retourne pour la première fois à l'origine au bout de déplacements », c'est-à-dire : On pose pour tout et .   Montrer que, pour tout entier naturel non nul, on a :     En déduire que, pour tout entier naturel non nul , on a :     Loi faible des grands nombres dans  Soit une suite de variables aléatoires réelles discrètes, deux à deux indépendantes, de même loi, possédant une espérance finie . On pose, pour tout , .  Soit .   Pour , on définit par : Montrer que la variable aléatoire est d'espérance finie et que l'on peut choisir tel que .    On pose . Montrer que :     Modèle de Galton-Watson  On observe des virus qui se reproduisent tous selon la même loi avant de mourir : un virus donne naissance en une journée à virus, où est une variable aléatoire à valeurs dans . Pour tout , on note . On suppose et . On note la fonction génératrice de . On part au jour zéro de virus. Au premier jour, on a donc virus, où suit la loi de ; chacun de ces virus évolue alors indépendamment des autres virus et se reproduit selon la même loi avant de mourir : cela conduit à avoir virus au deuxième jour ; et le processus continue de la sorte. On note .  Calculer , . Montrer que la suite est convergente. Montrer que pour tout entier , on a . Que peut-on dire de la limite de ? Discuter selon la valeur de . Interpréter le résultat.  Somme aléatoire de variables aléatoires  Soit une suite de variables aléatoires réelles discrètes, toutes de même loi, et une variable aléatoire à valeurs dans . On suppose que et les variables pour forment une suite de variables aléatoires indépendantes. On pose :   Montrer que est une variable aléatoire. Déterminer la loi de lorsque les suivent la loi de Bernoulli de paramètre et la loi de Poisson de paramètre . Déterminer la loi de lorsque les suivent la loi géométrique de paramètre et la loi géométrique de paramètre . On suppose que les variables aléatoires sont à valeurs dans .   Montrer que sur .    Montrer que, si et sont d'espérance finie, alors est d'espérance finie et vérifie la première formule de Wald :     Montrer que, si et possèdent un moment d'ordre 2, alors possède aussi un moment d'ordre 2 et vérifie la seconde formule de Wald :     Succès consécutifs  On considère une suite d'épreuves de Bernoulli indépendantes. À chaque épreuve, la probabilité de succès est . On se donne un entier strictement positif. Pour , on note la probabilité qu'au cours des premières épreuves, on ait obtenu succès consécutifs (au moins une fois).  Calculer , , ..., . Montrer que, pour , on a . Montrer que la suite est convergente. Calculer sa limite. Déduire de la question 1 que l'on peut définir une variable aléatoire égale au temps d'attente de succès consécutifs. On définira comme l'événement « on a obtenu des succès aux épreuves de rang , , ..., sans jamais avoir obtenu succès consécutifs auparavant ». Montrer que :   Marche aléatoire dans : premier retour à l'origine  Soit une suite de variables aléatoires, sur le même espace probabilisé , indépendantes et de même loi définie par : où . On pose et, pour tout , . La suite est appelée marche aléatoire dans .  Déterminer pour tout . On note la somme de la série entière . Montrer que :  Pour tout entier naturel non nul , on note l'événement « le mobile retourne pour la première fois à l'origine au bout de déplacements », c'est-à-dire : On pose pour tout et .   Montrer que, pour tout entier naturel non nul, on a :     En déduire que, pour tout entier naturel non nul , on a :     Inégalité de Kolmogorov  Soit des variables aléatoires réelles discrètes de l'espace probabilisé , indépendantes, ayant un moment d'ordre 2, centrées, ainsi que . On pose, pour tout :   Montrer que, pour , les variables et sont indépendantes. En déduire que :  On pose . Montrer que . En déduire l'inégalité de Kolmogorov :   Inégalité de Le Cam  L'objet de l'exercice est d'étudier l'approximation de la loi binomiale par la loi de Poisson. Toutes les variables aléatoires considérées sont définies sur le même espace probabilisé et sont à valeurs dans .  Soit et deux telles variables aléatoires. Pour tout , on pose et . On définit la distance entre et par :    Montrer que pour toute partie de , on a :     Démontrer la formule :     En déduire :     Convergence presque sûre  Soit une suite de variables aléatoires réelles et une variable aléatoire réelle définies sur . On pose : Pour tout , on pose : On dit que la suite converge presque sûrement vers si .  Montrer que l'on a . On suppose que : Montrer que la suite converge presque sûrement vers . Montrer que si la série de terme général converge pour tout , alors la suite converge presque sûrement vers .  Fonction génératrice des moments  Soit une variable aléatoire discrète, pas presque sûrement constante, sur l'espace probabilisé . On pose, pour , (la fonction est appelée fonction génératrice des moments de la variable aléatoire ). On suppose qu'il existe un intervalle contenant 0 tel que pour tout .  Soit deux réels tels que . On considère tel que . Soit . Montrer qu'il existe tel que : En déduire que est d'espérance finie pour tout . Montrer que est de classe sur et vérifie : En déduire, pour tout , une expression du moment d'ordre de . On note l'espérance de .  Théorème de Weierstrass  Soit une fonction continue de dans . Soit . On considère une suite de variables de Bernoulli de paramètre , indépendantes, sur le même espace probabilisé. Pour , on pose .  Montrer que :  Montrer que :   En déduire que la suite de fonctions polynomiales définie par converge uniformément vers sur .   File d'attente  Soit un entier supérieur ou égal à 2. On considère une file d'attente avec un guichet et clients qui attendent. Chaque minute, un guichet se libère. Le guichetier choisit alors le client qu'il appelle selon le processus aléatoire suivant :  avec probabilité 2, il appelle le client en première position dans la file,  sinon, il choisit de manière équiprobable parmi les autres clients.  Enfin, un nouveau client arrive dans la file et se place en dernière position (de telle sorte qu'il y a toujours exactement clients qui attendent). Pour tout , on note le temps d'attente d'un client qui se trouve en position dans la file.  Quelle est la loi de ? Donner son espérance, sa variance. Montrer que, pour tout , la variable est d'espérance finie. Écrire une relation entre et pour tout . En déduire une expression de en fonction de et . On pourra considérer la suite . Comparer les caractéristiques de cette file d'attente et d'une file d'attente « classique » (premier arrivé, premier servi).   "
+  "title": "Exercices",
+  "body": " Exercices  Caractérisation de la loi géometrique décalée  On considère et deux variables aléatoires sur , à valeurs dans , indépendantes, de même loi. On pose et .  On suppose que pour tout dans , , où et .  Déterminer la loi conjointe de .  Déterminer les lois marginales de et . Vérifier que et sont indépendantes.      On a et .  Si , alors on a : et donc, par indépendance de et :     Si , alors on a : et donc, par indépendance de et :      Dans tous les cas, on trouve .     Pour , on a :   Pour , on a :    On vérifie que et sont indépendantes car :      On suppose que les variables et sont indépendantes et que pour tout . Montrer qu'il existe , tel que, pour tout ,    Comme précédemment, on a : Par indépendance de et d'une part, de et d'autre part, on en déduit : par hypothèse. On a en particulier, pour tout :  En divisant les égalités, on obtient : Ce rapport est indépendant de et strictement positif. On le note . La suite est géométrique de raison . Pour tout , on a . La série converge et a pour somme 1 donc et . En posant , on a le résultat voulu.   Une caractérisation de la loi de Poisson  On considère une variable aléatoire discrète sur l'espace probabilisé telle que et pour tout . Si la variable aléatoire prend la valeur , on procède à une succession de épreuves de Bernoulli indépendantes de paramètre . On note et les variables aléatoires représentant respectivement le nombre de succès et d'échecs dans ces épreuves.  Montrer que si suit une loi de Poisson de paramètre , les variables et suivent aussi des lois de Poisson dont on déterminera les paramètres. Montrer que les variables et sont indépendantes. Montrer réciproquement que si et sont indépendantes, alors suit une loi de Poisson. Pour cela, on montrera :   qu'il existe deux suites et telles que :     que les suites et sont géométriques.    Lancer de pièce jusqu'au premier pile  On lance une pièce de monnaie jusqu'à l'obtention du premier pile, la probabilité d'obtenir pile étant . Soit la variable aléatoire représentant le nombre de lancers nécessaires. Si , on relance ensuite fois la pièce et on appelle la variable aléatoire représentant le nombre de piles obtenu.  Déterminer la loi de , celle du couple , puis la loi de . Montrer que a même loi que le produit de deux variables indépendantes et telles que suive une loi de Bernoulli et une loi géométrique de même paramètre. En déduire l'espérance et la variance de .  Loi sur les nombres premiers  Soit l'ensemble des nombres premiers. Soit une variable aléatoire à valeurs dans dont la loi est définie par :   Justifier qu'on définit bien ainsi la loi d'une variable aléatoire. Pour tout , on considère : « divise ». Montrer que est une famille d'événements indépendants. En déduire une preuve de :  Montrer que la probabilité qu'aucun carré différent de 1 ne divise vaut .  Taux de panne  Soit une variable aléatoire discrète à valeurs dans vérifiant :  représente le moment où un mécanisme tombe en panne. C'est à dire le numéro de l'instance de son cycle de fonctionnement où il tombe en panne. En principe, sous l'effet de l'usure, plus la durée de son fonctionnement est grande plus la probabilité que le mécanisme tombe en panne augmente.  que On appelle taux de panne associé à la suite réelle définie par :  est la probabilité pour que le mécanisme tombe en panne à l'instant sachant qu'il a fonctionné jusqu'à cet instant.   Exprimer en fonction des .   Éviter de diviser par . Exprimer comme un produit de facteurs .       On a donc . Ce qui donne On en déduit que Ce qui donne par télescopage La relation signifie que donc finalement   Caractérisation du taux de panne     Montrer que pour tout et que la série de terme général diverge.    Réciproquement, soit une suite à valeur dans telle que la série de terme général diverge. Montrer qu'il existe une variable aléatoire dont le taux de panne est la suite .      On rappelle que pour une suite de réels positifs sommable et de somme , il existe une variable aléatoire telle que pour tout .     Soit et supposons que . Alors , ou encore . Ce qui implique que contredisant l'hypothèse faite dans l'énoncé. Alors .  Ensuite est le reste de la série convergente donc il converge vers . Ce qui implique que La série est nécessairement divergente car dans le cas contraire convergerait vers et on aurait donc ce qui impliquerait que la série est convergente.    Soit une série divergente à termes dans et posons pour tout  Avec ces relations on a On peut ensuite écrire Puisque la série de réels positif est divergente positive sa suite des sommes partielles tend vers et on a donc . Par suite . Puisque alors la série est convergente de somme .  Il existe donc une VADR tel que pour tout .     Montrer que la variable suit une loi géométrique si, et seulement si, son taux de panne est constant.   On suppose que suit une loi géométrique de paramètre . Alors pour tout on a . Donc Par suite . Donc le taux de panne est constant. Réciproquement, on suppose que le taux de panne est constant de valeur . Alors pour tout on a . Donc suit une loi géométrique de paramètre .  Noter que cela signifie que le taux de panne est constant si et seulement si les événements «le mécanisme tombe en panne à l'instant » sont mutuellement indépendants et ont tous la même probabilité. Il n'y a aucun effet d'usure.   Maximums et minimums provisoires  Soit . On désigne par l'ensemble des permutations de . On munit de la probabilité uniforme. Pour et , on dit que est un maximum provisoire (resp. minimum provisoire ) de si : On désigne par (resp. ) les variables aléatoires représentant le nombre de maximums (resp. minimums) provisoires des permutations de .   Montrer que les variables et ont même loi.   On observe qu'en , il y a toujours un maximum et un minimum provisoire, et donc que et sont à valeurs dans . L'application qui à la permutation associe la permutation est clairement bijective. Pour , est un maximum provisoire de si, et seulement si, est un minimum provisoire de . En effet : ce qui équivaut à : On en déduit que, pour tout , Comme est bijective, on a , et donc , car est muni de la probabilité uniforme.   Déterminer la loi de , son espérance et sa variance.     La permutation est dans si, et seulement si, . On en déduit .  On a . On en déduit .  Enfin, .  On obtient :    Déterminer la loi du couple et sa covariance.   Pour , on a si . En effet, sauf pour , ne peut pas être à la fois un maximum provisoire et un minimum provisoire. On obtient : On trouve :    Formule du crible  Soit des événements d'un espace probabilisé .  Montrer que . En déduire la formule du crible :  Soient et une suite de variables indépendantes d'un espace probabilisé suivant toutes la loi uniforme sur . On note la variable aléatoire égale au nombre de tirages nécessaires pour obtenir tous les numéros entre 1 et au moins une fois (et à si on n'obtient jamais les numéros). Pour et , on note l'événement : « au bout de tirages, le numéro n'est pas encore apparu ».   Calculer où sont des indices distincts compris entre 1 et .    En déduire que : Calculer . Interpréter.    Montrer que .    Montrer que . En déduire un équivalent de quand tend vers .    Variables aléatoires uniformes et Poisson  Soient un entier et une suite de variables aléatoires indépendantes et de même loi uniforme sur . Pour tout , on définit :   Quelle est la loi de pour et ? Soit et avec . Calculer la covariance des variables aléatoires et . Sont-elles indépendantes ? Soit et une variable aléatoire suivant une loi de Poisson de paramètre , indépendante des variables . On pose :    Déterminer, en fonction de et , la loi de pour tout .    Déterminer la loi conjointe de .    Centrale 2015  Soit un espace probabilisé et une suite d'événements. On suppose que , c'est-à-dire que la série converge.  On note la fonction indicatrice d'un ensemble . Soit (on convient que si la série diverge). Prouver que est une variable aléatoire discrète. Soit . Prouver que est un événement et que . Prouver que est d'espérance finie.  Marche aléatoire dans  Soit une suite de variables aléatoires, sur le même espace probabilisé , indépendantes et de même loi définie par : où . On pose et, pour tout , . La suite est appelée marche aléatoire dans .  Déterminer pour tout . On note la somme de la série entière . Montrer que :  Pour tout entier naturel non nul , on note l'événement « le mobile retourne pour la première fois à l'origine au bout de déplacements », c'est-à-dire : On pose pour tout et .   Montrer que, pour tout entier naturel non nul, on a :     En déduire que, pour tout entier naturel non nul , on a :     Loi faible des grands nombres dans  Soit une suite de variables aléatoires réelles discrètes, deux à deux indépendantes, de même loi, possédant une espérance finie . On pose, pour tout , .  Soit .   Pour , on définit par : Montrer que la variable aléatoire est d'espérance finie et que l'on peut choisir tel que .    On pose . Montrer que :     Modèle de Galton-Watson  On observe des virus qui se reproduisent tous selon la même loi avant de mourir : un virus donne naissance en une journée à virus, où est une variable aléatoire à valeurs dans . Pour tout , on note . On suppose et . On note la fonction génératrice de . On part au jour zéro de virus. Au premier jour, on a donc virus, où suit la loi de ; chacun de ces virus évolue alors indépendamment des autres virus et se reproduit selon la même loi avant de mourir : cela conduit à avoir virus au deuxième jour ; et le processus continue de la sorte. On note .  Calculer , . Montrer que la suite est convergente. Montrer que pour tout entier , on a . Que peut-on dire de la limite de ? Discuter selon la valeur de . Interpréter le résultat.  Somme aléatoire de variables aléatoires  Soit une suite de variables aléatoires réelles discrètes, toutes de même loi, et une variable aléatoire à valeurs dans . On suppose que et les variables pour forment une suite de variables aléatoires indépendantes. On pose :   Montrer que est une variable aléatoire. Déterminer la loi de lorsque les suivent la loi de Bernoulli de paramètre et la loi de Poisson de paramètre . Déterminer la loi de lorsque les suivent la loi géométrique de paramètre et la loi géométrique de paramètre . On suppose que les variables aléatoires sont à valeurs dans .   Montrer que sur .    Montrer que, si et sont d'espérance finie, alors est d'espérance finie et vérifie la première formule de Wald :     Montrer que, si et possèdent un moment d'ordre 2, alors possède aussi un moment d'ordre 2 et vérifie la seconde formule de Wald :     Succès consécutifs  On considère une suite d'épreuves de Bernoulli indépendantes. À chaque épreuve, la probabilité de succès est . On se donne un entier strictement positif. Pour , on note la probabilité qu'au cours des premières épreuves, on ait obtenu succès consécutifs (au moins une fois).  Calculer , , ..., . Montrer que, pour , on a . Montrer que la suite est convergente. Calculer sa limite. Déduire de la question 1 que l'on peut définir une variable aléatoire égale au temps d'attente de succès consécutifs. On définira comme l'événement « on a obtenu des succès aux épreuves de rang , , ..., sans jamais avoir obtenu succès consécutifs auparavant ». Montrer que :   Marche aléatoire dans : premier retour à l'origine  Soit une suite de variables aléatoires, sur le même espace probabilisé , indépendantes et de même loi définie par : où . On pose et, pour tout , . La suite est appelée marche aléatoire dans .  Déterminer pour tout . On note la somme de la série entière . Montrer que :  Pour tout entier naturel non nul , on note l'événement « le mobile retourne pour la première fois à l'origine au bout de déplacements », c'est-à-dire : On pose pour tout et .   Montrer que, pour tout entier naturel non nul, on a :     En déduire que, pour tout entier naturel non nul , on a :     Inégalité de Kolmogorov  Soit des variables aléatoires réelles discrètes de l'espace probabilisé , indépendantes, ayant un moment d'ordre 2, centrées, ainsi que . On pose, pour tout :   Montrer que, pour , les variables et sont indépendantes. En déduire que :  On pose . Montrer que . En déduire l'inégalité de Kolmogorov :   Inégalité de Le Cam  L'objet de l'exercice est d'étudier l'approximation de la loi binomiale par la loi de Poisson. Toutes les variables aléatoires considérées sont définies sur le même espace probabilisé et sont à valeurs dans .  Soit et deux telles variables aléatoires. Pour tout , on pose et . On définit la distance entre et par :    Montrer que pour toute partie de , on a :     Démontrer la formule :     En déduire :     Convergence presque sûre  Soit une suite de variables aléatoires réelles et une variable aléatoire réelle définies sur . On pose : On dit que la suite converge presque sûrement vers si .   Montrer que l'on a , où :    On a : En d'autres termes, est l'ensemble des pour lesquels la suite converge vers . On peut réécrire comme : Par continuité décroissante de la probabilité, on a :    On suppose que : Montrer que la suite converge presque sûrement vers .   Par hypothèse, pour tout , on a : Cela signifie que, pour tout , l'ensemble des pour lesquels pour une infinité de est de probabilité nulle. Par conséquent, pour presque tout , la suite converge vers , c'est-à-dire que .   Montrer que si la série de terme général converge pour tout , alors la suite converge presque sûrement vers .   Si la série de terme général converge pour tout , alors, d'après le lemme de Borel-Cantelli, on a : En effet, le lemme de Borel-Cantelli affirme que si , alors . Appliqué à , cela donne : Par conséquent, la suite converge presque sûrement vers .   Fonction génératrice des moments  Soit une variable aléatoire discrète, pas presque sûrement constante, sur l'espace probabilisé . On pose, pour , (la fonction est appelée fonction génératrice des moments de la variable aléatoire ). On suppose qu'il existe un intervalle contenant 0 tel que pour tout .   Soit deux réels tels que . On considère tel que . Soit . Montrer qu'il existe tel que : En déduire que est d'espérance finie pour tout .    Montrer que est de classe sur et vérifie : En déduire, pour tout , une expression du moment d'ordre de . On note l'espérance de .    Montrer que la fonction est strictement convexe.   La fonction est strictement convexe car sa dérivée seconde est strictement positive. En effet, on a : car par l'inégalité de Cauchy-Schwarz.   Montrer que les inégalités de Chernov suivantes sont vérifiées :  où .   Les inégalités de Chernov sont obtenues en utilisant la convexité de . Pour , on a : En prenant le supremum sur , on obtient : De même, pour , on a : En prenant le supremum sur , on obtient :    On considère une suite de variables aléatoires indépendantes suivant la même loi que . On pose, pour tout , .  Montrer que, pour tout , on a :    Montrer que, pour tout , on a :   En utilisant le résultat de l'exercice 16.25, montrer que la suite converge presque sûrement vers .       Pour , on a : où . De même, pour , on a :   Pour , on a : En appliquant les inégalités de Chernov, on obtient :   D'après l'exercice 16.25, si la série de terme général converge pour tout , alors la suite converge presque sûrement vers . En appliquant ce résultat à , on obtient que converge presque sûrement vers .     Théorème de Weierstrass  Soit une fonction continue de dans . Soit . On considère une suite de variables de Bernoulli de paramètre , indépendantes, sur le même espace probabilisé. Pour , on pose .  Montrer que :  Montrer que :   En déduire que la suite de fonctions polynomiales définie par converge uniformément vers sur .   File d'attente  Soit un entier supérieur ou égal à 2. On considère une file d'attente avec un guichet et clients qui attendent. Chaque minute, un guichet se libère. Le guichetier choisit alors le client qu'il appelle selon le processus aléatoire suivant :  avec probabilité 2, il appelle le client en première position dans la file,  sinon, il choisit de manière équiprobable parmi les autres clients.  Enfin, un nouveau client arrive dans la file et se place en dernière position (de telle sorte qu'il y a toujours exactement clients qui attendent). Pour tout , on note le temps d'attente d'un client qui se trouve en position dans la file.  Quelle est la loi de ? Donner son espérance, sa variance. Montrer que, pour tout , la variable est d'espérance finie. Écrire une relation entre et pour tout . En déduire une expression de en fonction de et . On pourra considérer la suite . Comparer les caractéristiques de cette file d'attente et d'une file d'attente « classique » (premier arrivé, premier servi).   Soit une suite de variables aléatoires réelles discrètes, toutes de même loi, et une variable aléatoire à valeurs dans . On suppose que et les variables , pour , forment une suite de variables aléatoires indépendantes. On pose :    Montrer que est une variable aléatoire.   On a . Les étant au plus dénombrables, il en est de même de leur union dénombrable, et a fortiori est au plus dénombrable. De plus : donc , union dénombrable d'événements, est un événement et est une variable aléatoire.   Déterminer la loi de , lorsque les suivent la loi de Bernoulli de paramètre et la loi de Poisson de paramètre .   On a et d'après la formule des probabilités totales, pour tout : On remarque que : la dernière égalité résultant de l'indépendance des variables par rapport à . Pour , est une somme de variables de Bernoulli, indépendantes, de même paramètre ; elle suit donc la loi binomiale de paramètre . On a donc : On remarque que cette formule reste vérifiée si , car alors prend la valeur 0, avec la probabilité 1. On en déduit : En simplifiant, on obtient : La variable aléatoire suit donc la loi de Poisson de paramètre .   Déterminer la loi de lorsque les suivent la loi géométrique de paramètre et la loi géométrique de paramètre .   On procède comme dans la question précédente. On a et, pour tout : Comme les variables sont à valeurs dans , il est clair que si . Supposons . On peut alors écrire : où est l'ensemble des -listes d'entiers strictement positifs tels que . Le cardinal de est égal au nombre de -listes d'entiers tels que , car à , on peut associer bijectivement : On a donc . D'autre part, pour , on a, par indépendance des variables aléatoires : On obtient ainsi . On en déduit, pour : En simplifiant, on obtient : La variable suit donc la loi géométrique de paramètre .    On considère une suite d'épreuves de Bernoulli indépendantes. À chaque épreuve, la probabilité de succès est . On se donne un entier strictement positif. Pour , on note la probabilité qu'au cours des premières épreuves, on ait obtenu succès consécutifs (au moins une fois).    Calculer , , ..., .  Montrer que, pour , on a .  Montrer que la suite est convergente. Calculer sa limite.      On a et .  Pour , on note l'événement « la -ième épreuve est un succès » et l'événement « au cours de premiers tirages, on a obtenus succès consécutifs ». On a clairement et donc . L'événement est réalisé si on obtient succès consécutifs pour la première fois entre le -ième et le -ième tirage, ce qui impose que la -ième épreuve soit un échec et qu'on n'ait pas avant obtenu succès consécutifs. On a donc : et par indépendance des épreuves :   La suite est croissante et majorée par 1 donc convergente. On note sa limite. Par passage à la limite dans la relation précédente, on obtient , et donc , puisque .      Déduire de la question 1 que l'on peut définir une variable aléatoire égale au temps d'attente de succès consécutifs. On définira comme l'événement « on a obtenu des succès aux épreuves de rang , , ..., sans jamais avoir obtenu succès consécutifs auparavant ».  Montrer en utilisant le résultat de l'exercice 18 de la page 911 que :      Comme la suite est croissante, on a : On obtient de manière presque sûre une suite de succès consécutifs au bout d'un nombre fini d'épreuves. Sur un ensemble de probabilité 1, on peut définir l'application . On a, par définition , donc est un événement et une variable aléatoire à valeurs dans .  Pour tout , on a et donc . D'après la question 1, on a pour tout : D'après l'exercice 18 de la page 911, on en déduit :     "
 },
 {
   "id": "ch-exercices-2",
   "level": "2",
   "url": "ch-exercices.html#ch-exercices-2",
   "type": "Exercice",
-  "number": "91",
-  "title": "Une caractérisation de la loi de Poisson.",
-  "body": "Une caractérisation de la loi de Poisson  On considère une variable aléatoire discrète sur l'espace probabilisé telle que et pour tout . Si la variable aléatoire prend la valeur , on procède à une succession de épreuves de Bernoulli indépendantes de paramètre . On note et les variables aléatoires représentant respectivement le nombre de succès et d'échecs dans ces épreuves.  Montrer que si suit une loi de Poisson de paramètre , les variables et suivent aussi des lois de Poisson dont on déterminera les paramètres. Montrer que les variables et sont indépendantes. Montrer réciproquement que si et sont indépendantes, alors suit une loi de Poisson. Pour cela, on montrera :   qu'il existe deux suites et telles que :     que les suites et sont géométriques.   "
+  "number": "2.1",
+  "title": "Caractérisation de la loi géometrique décalée.",
+  "body": "Caractérisation de la loi géometrique décalée  On considère et deux variables aléatoires sur , à valeurs dans , indépendantes, de même loi. On pose et .  On suppose que pour tout dans , , où et .  Déterminer la loi conjointe de .  Déterminer les lois marginales de et . Vérifier que et sont indépendantes.      On a et .  Si , alors on a : et donc, par indépendance de et :     Si , alors on a : et donc, par indépendance de et :      Dans tous les cas, on trouve .     Pour , on a :   Pour , on a :    On vérifie que et sont indépendantes car :      On suppose que les variables et sont indépendantes et que pour tout . Montrer qu'il existe , tel que, pour tout ,    Comme précédemment, on a : Par indépendance de et d'une part, de et d'autre part, on en déduit : par hypothèse. On a en particulier, pour tout :  En divisant les égalités, on obtient : Ce rapport est indépendant de et strictement positif. On le note . La suite est géométrique de raison . Pour tout , on a . La série converge et a pour somme 1 donc et . En posant , on a le résultat voulu.  "
 },
 {
   "id": "ch-exercices-3",
   "level": "2",
   "url": "ch-exercices.html#ch-exercices-3",
   "type": "Exercice",
-  "number": "92",
-  "title": "Lancer de pièce jusqu’au premier pile.",
-  "body": "Lancer de pièce jusqu'au premier pile  On lance une pièce de monnaie jusqu'à l'obtention du premier pile, la probabilité d'obtenir pile étant . Soit la variable aléatoire représentant le nombre de lancers nécessaires. Si , on relance ensuite fois la pièce et on appelle la variable aléatoire représentant le nombre de piles obtenu.  Déterminer la loi de , celle du couple , puis la loi de . Montrer que a même loi que le produit de deux variables indépendantes et telles que suive une loi de Bernoulli et une loi géométrique de même paramètre. En déduire l'espérance et la variance de . "
+  "number": "2.2",
+  "title": "Une caractérisation de la loi de Poisson.",
+  "body": "Une caractérisation de la loi de Poisson  On considère une variable aléatoire discrète sur l'espace probabilisé telle que et pour tout . Si la variable aléatoire prend la valeur , on procède à une succession de épreuves de Bernoulli indépendantes de paramètre . On note et les variables aléatoires représentant respectivement le nombre de succès et d'échecs dans ces épreuves.  Montrer que si suit une loi de Poisson de paramètre , les variables et suivent aussi des lois de Poisson dont on déterminera les paramètres. Montrer que les variables et sont indépendantes. Montrer réciproquement que si et sont indépendantes, alors suit une loi de Poisson. Pour cela, on montrera :   qu'il existe deux suites et telles que :     que les suites et sont géométriques.   "
 },
 {
   "id": "ch-exercices-4",
   "level": "2",
   "url": "ch-exercices.html#ch-exercices-4",
   "type": "Exercice",
-  "number": "93",
-  "title": "Loi sur les nombres premiers.",
-  "body": "Loi sur les nombres premiers  Soit l'ensemble des nombres premiers. Soit une variable aléatoire à valeurs dans dont la loi est définie par :   Justifier qu'on définit bien ainsi la loi d'une variable aléatoire. Pour tout , on considère : « divise ». Montrer que est une famille d'événements indépendants. En déduire une preuve de :  Montrer que la probabilité qu'aucun carré différent de 1 ne divise vaut . "
+  "number": "2.3",
+  "title": "Lancer de pièce jusqu’au premier pile.",
+  "body": "Lancer de pièce jusqu'au premier pile  On lance une pièce de monnaie jusqu'à l'obtention du premier pile, la probabilité d'obtenir pile étant . Soit la variable aléatoire représentant le nombre de lancers nécessaires. Si , on relance ensuite fois la pièce et on appelle la variable aléatoire représentant le nombre de piles obtenu.  Déterminer la loi de , celle du couple , puis la loi de . Montrer que a même loi que le produit de deux variables indépendantes et telles que suive une loi de Bernoulli et une loi géométrique de même paramètre. En déduire l'espérance et la variance de . "
 },
 {
   "id": "ch-exercices-5",
   "level": "2",
   "url": "ch-exercices.html#ch-exercices-5",
   "type": "Exercice",
-  "number": "94",
-  "title": "Taux de panne.",
-  "body": "Taux de panne  Soit une variable aléatoire discrète à valeurs dans vérifiant :  représente le moment où un mécanisme tombe en panne. C'est à dire le numéro de l'instance de son cycle de fonctionnement où il tombe en panne. En principe, sous l'effet de l'usure, plus la durée de son fonctionnement est grande plus la probabilité que le mécanisme tombe en panne augmente.  que On appelle taux de panne associé à la suite réelle définie par :  est la probabilité pour que le mécanisme tombe en panne à l'instant sachant qu'il a fonctionné jusqu'à cet instant.   Exprimer en fonction des .   Éviter de diviser par . Exprimer comme un produit de facteurs .       On a donc . Ce qui donne On en déduit que Ce qui donne par télescopage La relation signifie que donc finalement   Caractérisation du taux de panne     Montrer que pour tout et que la série de terme général diverge.    Réciproquement, soit une suite à valeur dans telle que la série de terme général diverge. Montrer qu'il existe une variable aléatoire dont le taux de panne est la suite .      On rappelle que pour une suite de réels positifs sommable et de somme , il existe une variable aléatoire telle que pour tout .     Soit et supposons que . Alors , ou encore . Ce qui implique que contredisant l'hypothèse faite dans l'énoncé. Alors .  Ensuite est le reste de la série convergente donc il converge vers . Ce qui implique que La série est nécessairement divergente car dans le cas contraire convergerait vers et on aurait donc ce qui impliquerait que la série est convergente.    Soit une série divergente à termes dans et posons pour tout  Avec ces relations on a On peut ensuite écrire Puisque la série de réels positif est divergente positive sa suite des sommes partielles tend vers et on a donc . Par suite . Puisque alors la série est convergente de somme .  Il existe donc une VADR tel que pour tout .     Montrer que la variable suit une loi géométrique si, et seulement si, son taux de panne est constant.   On suppose que suit une loi géométrique de paramètre . Alors pour tout on a . Donc Par suite . Donc le taux de panne est constant. Réciproquement, on suppose que le taux de panne est constant de valeur . Alors pour tout on a . Donc suit une loi géométrique de paramètre .  Noter que cela signifie que le taux de panne est constant si et seulement si les événements «le mécanisme tombe en panne à l'instant » sont mutuellement indépendants et ont tous la même probabilité. Il n'y a aucun effet d'usure.  "
+  "number": "2.4",
+  "title": "Loi sur les nombres premiers.",
+  "body": "Loi sur les nombres premiers  Soit l'ensemble des nombres premiers. Soit une variable aléatoire à valeurs dans dont la loi est définie par :   Justifier qu'on définit bien ainsi la loi d'une variable aléatoire. Pour tout , on considère : « divise ». Montrer que est une famille d'événements indépendants. En déduire une preuve de :  Montrer que la probabilité qu'aucun carré différent de 1 ne divise vaut . "
 },
 {
   "id": "ch-exercices-6",
   "level": "2",
   "url": "ch-exercices.html#ch-exercices-6",
   "type": "Exercice",
-  "number": "95",
-  "title": "Maximums et minimums provisoires.",
-  "body": "Maximums et minimums provisoires  Soit . On désigne par l'ensemble des permutations de . On munit de la probabilité uniforme. Pour et , on dit que est un maximum (resp. minimum) provisoire de si : (resp. ). On désigne par (resp. ) les variables aléatoires représentant le nombre de maximums (resp. minimums) provisoires des permutations de .  Montrer que les variables et ont même loi. Déterminer la loi de , son espérance et sa variance. Déterminer la loi du couple et sa covariance. Pour , on note la fonction génératrice de .   Pour , on note la variable indicatrice de l'événement « est un maximum ». Montrer que les variables sont indépendantes.    Exprimer en fonction de . En déduire .    En déduire , , .    Déterminer et (sous forme de sommes) et un équivalent de et de quand tend vers .   "
+  "number": "2.5",
+  "title": "Taux de panne.",
+  "body": "Taux de panne  Soit une variable aléatoire discrète à valeurs dans vérifiant :  représente le moment où un mécanisme tombe en panne. C'est à dire le numéro de l'instance de son cycle de fonctionnement où il tombe en panne. En principe, sous l'effet de l'usure, plus la durée de son fonctionnement est grande plus la probabilité que le mécanisme tombe en panne augmente.  que On appelle taux de panne associé à la suite réelle définie par :  est la probabilité pour que le mécanisme tombe en panne à l'instant sachant qu'il a fonctionné jusqu'à cet instant.   Exprimer en fonction des .   Éviter de diviser par . Exprimer comme un produit de facteurs .       On a donc . Ce qui donne On en déduit que Ce qui donne par télescopage La relation signifie que donc finalement   Caractérisation du taux de panne     Montrer que pour tout et que la série de terme général diverge.    Réciproquement, soit une suite à valeur dans telle que la série de terme général diverge. Montrer qu'il existe une variable aléatoire dont le taux de panne est la suite .      On rappelle que pour une suite de réels positifs sommable et de somme , il existe une variable aléatoire telle que pour tout .     Soit et supposons que . Alors , ou encore . Ce qui implique que contredisant l'hypothèse faite dans l'énoncé. Alors .  Ensuite est le reste de la série convergente donc il converge vers . Ce qui implique que La série est nécessairement divergente car dans le cas contraire convergerait vers et on aurait donc ce qui impliquerait que la série est convergente.    Soit une série divergente à termes dans et posons pour tout  Avec ces relations on a On peut ensuite écrire Puisque la série de réels positif est divergente positive sa suite des sommes partielles tend vers et on a donc . Par suite . Puisque alors la série est convergente de somme .  Il existe donc une VADR tel que pour tout .     Montrer que la variable suit une loi géométrique si, et seulement si, son taux de panne est constant.   On suppose que suit une loi géométrique de paramètre . Alors pour tout on a . Donc Par suite . Donc le taux de panne est constant. Réciproquement, on suppose que le taux de panne est constant de valeur . Alors pour tout on a . Donc suit une loi géométrique de paramètre .  Noter que cela signifie que le taux de panne est constant si et seulement si les événements «le mécanisme tombe en panne à l'instant » sont mutuellement indépendants et ont tous la même probabilité. Il n'y a aucun effet d'usure.  "
 },
 {
   "id": "ch-exercices-7",
   "level": "2",
   "url": "ch-exercices.html#ch-exercices-7",
   "type": "Exercice",
-  "number": "96",
-  "title": "Formule du crible.",
-  "body": "Formule du crible  Soit des événements d'un espace probabilisé .  Montrer que . En déduire la formule du crible :  Soient et une suite de variables indépendantes d'un espace probabilisé suivant toutes la loi uniforme sur . On note la variable aléatoire égale au nombre de tirages nécessaires pour obtenir tous les numéros entre 1 et au moins une fois (et à si on n'obtient jamais les numéros). Pour et , on note l'événement : « au bout de tirages, le numéro n'est pas encore apparu ».   Calculer où sont des indices distincts compris entre 1 et .    En déduire que : Calculer . Interpréter.    Montrer que .    Montrer que . En déduire un équivalent de quand tend vers .   "
+  "number": "2.6",
+  "title": "Maximums et minimums provisoires.",
+  "body": "Maximums et minimums provisoires  Soit . On désigne par l'ensemble des permutations de . On munit de la probabilité uniforme. Pour et , on dit que est un maximum provisoire (resp. minimum provisoire ) de si : On désigne par (resp. ) les variables aléatoires représentant le nombre de maximums (resp. minimums) provisoires des permutations de .   Montrer que les variables et ont même loi.   On observe qu'en , il y a toujours un maximum et un minimum provisoire, et donc que et sont à valeurs dans . L'application qui à la permutation associe la permutation est clairement bijective. Pour , est un maximum provisoire de si, et seulement si, est un minimum provisoire de . En effet : ce qui équivaut à : On en déduit que, pour tout , Comme est bijective, on a , et donc , car est muni de la probabilité uniforme.   Déterminer la loi de , son espérance et sa variance.     La permutation est dans si, et seulement si, . On en déduit .  On a . On en déduit .  Enfin, .  On obtient :    Déterminer la loi du couple et sa covariance.   Pour , on a si . En effet, sauf pour , ne peut pas être à la fois un maximum provisoire et un minimum provisoire. On obtient : On trouve :   "
 },
 {
   "id": "ch-exercices-8",
   "level": "2",
   "url": "ch-exercices.html#ch-exercices-8",
   "type": "Exercice",
-  "number": "97",
-  "title": "Variables aléatoires uniformes et Poisson.",
-  "body": "Variables aléatoires uniformes et Poisson  Soient un entier et une suite de variables aléatoires indépendantes et de même loi uniforme sur . Pour tout , on définit :   Quelle est la loi de pour et ? Soit et avec . Calculer la covariance des variables aléatoires et . Sont-elles indépendantes ? Soit et une variable aléatoire suivant une loi de Poisson de paramètre , indépendante des variables . On pose :    Déterminer, en fonction de et , la loi de pour tout .    Déterminer la loi conjointe de .   "
+  "number": "2.7",
+  "title": "Formule du crible.",
+  "body": "Formule du crible  Soit des événements d'un espace probabilisé .  Montrer que . En déduire la formule du crible :  Soient et une suite de variables indépendantes d'un espace probabilisé suivant toutes la loi uniforme sur . On note la variable aléatoire égale au nombre de tirages nécessaires pour obtenir tous les numéros entre 1 et au moins une fois (et à si on n'obtient jamais les numéros). Pour et , on note l'événement : « au bout de tirages, le numéro n'est pas encore apparu ».   Calculer où sont des indices distincts compris entre 1 et .    En déduire que : Calculer . Interpréter.    Montrer que .    Montrer que . En déduire un équivalent de quand tend vers .   "
 },
 {
   "id": "ch-exercices-9",
   "level": "2",
   "url": "ch-exercices.html#ch-exercices-9",
   "type": "Exercice",
-  "number": "98",
-  "title": "Centrale 2015.",
-  "body": "Centrale 2015  Soit un espace probabilisé et une suite d'événements. On suppose que , c'est-à-dire que la série converge.  On note la fonction indicatrice d'un ensemble . Soit (on convient que si la série diverge). Prouver que est une variable aléatoire discrète. Soit . Prouver que est un événement et que . Prouver que est d'espérance finie. "
+  "number": "2.8",
+  "title": "Variables aléatoires uniformes et Poisson.",
+  "body": "Variables aléatoires uniformes et Poisson  Soient un entier et une suite de variables aléatoires indépendantes et de même loi uniforme sur . Pour tout , on définit :   Quelle est la loi de pour et ? Soit et avec . Calculer la covariance des variables aléatoires et . Sont-elles indépendantes ? Soit et une variable aléatoire suivant une loi de Poisson de paramètre , indépendante des variables . On pose :    Déterminer, en fonction de et , la loi de pour tout .    Déterminer la loi conjointe de .   "
 },
 {
   "id": "ch-exercices-10",
   "level": "2",
   "url": "ch-exercices.html#ch-exercices-10",
   "type": "Exercice",
-  "number": "99",
-  "title": "Marche aléatoire dans <span class=\"process-math\">\\(\\mathbb{Z}\\)<\/span>.",
-  "body": "Marche aléatoire dans  Soit une suite de variables aléatoires, sur le même espace probabilisé , indépendantes et de même loi définie par : où . On pose et, pour tout , . La suite est appelée marche aléatoire dans .  Déterminer pour tout . On note la somme de la série entière . Montrer que :  Pour tout entier naturel non nul , on note l'événement « le mobile retourne pour la première fois à l'origine au bout de déplacements », c'est-à-dire : On pose pour tout et .   Montrer que, pour tout entier naturel non nul, on a :     En déduire que, pour tout entier naturel non nul , on a :    "
+  "number": "2.9",
+  "title": "Centrale 2015.",
+  "body": "Centrale 2015  Soit un espace probabilisé et une suite d'événements. On suppose que , c'est-à-dire que la série converge.  On note la fonction indicatrice d'un ensemble . Soit (on convient que si la série diverge). Prouver que est une variable aléatoire discrète. Soit . Prouver que est un événement et que . Prouver que est d'espérance finie. "
 },
 {
   "id": "ch-exercices-11",
   "level": "2",
   "url": "ch-exercices.html#ch-exercices-11",
   "type": "Exercice",
-  "number": "100",
-  "title": "Loi faible des grands nombres dans <span class=\"process-math\">\\(L_{1}\\)<\/span>.",
-  "body": "Loi faible des grands nombres dans  Soit une suite de variables aléatoires réelles discrètes, deux à deux indépendantes, de même loi, possédant une espérance finie . On pose, pour tout , .  Soit .   Pour , on définit par : Montrer que la variable aléatoire est d'espérance finie et que l'on peut choisir tel que .    On pose . Montrer que :    "
+  "number": "2.10",
+  "title": "Marche aléatoire dans <span class=\"process-math\">\\(\\mathbb{Z}\\)<\/span>.",
+  "body": "Marche aléatoire dans  Soit une suite de variables aléatoires, sur le même espace probabilisé , indépendantes et de même loi définie par : où . On pose et, pour tout , . La suite est appelée marche aléatoire dans .  Déterminer pour tout . On note la somme de la série entière . Montrer que :  Pour tout entier naturel non nul , on note l'événement « le mobile retourne pour la première fois à l'origine au bout de déplacements », c'est-à-dire : On pose pour tout et .   Montrer que, pour tout entier naturel non nul, on a :     En déduire que, pour tout entier naturel non nul , on a :    "
 },
 {
   "id": "ch-exercices-12",
   "level": "2",
   "url": "ch-exercices.html#ch-exercices-12",
   "type": "Exercice",
-  "number": "101",
-  "title": "Modèle de Galton-Watson.",
-  "body": "Modèle de Galton-Watson  On observe des virus qui se reproduisent tous selon la même loi avant de mourir : un virus donne naissance en une journée à virus, où est une variable aléatoire à valeurs dans . Pour tout , on note . On suppose et . On note la fonction génératrice de . On part au jour zéro de virus. Au premier jour, on a donc virus, où suit la loi de ; chacun de ces virus évolue alors indépendamment des autres virus et se reproduit selon la même loi avant de mourir : cela conduit à avoir virus au deuxième jour ; et le processus continue de la sorte. On note .  Calculer , . Montrer que la suite est convergente. Montrer que pour tout entier , on a . Que peut-on dire de la limite de ? Discuter selon la valeur de . Interpréter le résultat. "
+  "number": "2.11",
+  "title": "Loi faible des grands nombres dans <span class=\"process-math\">\\(L_{1}\\)<\/span>.",
+  "body": "Loi faible des grands nombres dans  Soit une suite de variables aléatoires réelles discrètes, deux à deux indépendantes, de même loi, possédant une espérance finie . On pose, pour tout , .  Soit .   Pour , on définit par : Montrer que la variable aléatoire est d'espérance finie et que l'on peut choisir tel que .    On pose . Montrer que :    "
 },
 {
   "id": "ch-exercices-13",
   "level": "2",
   "url": "ch-exercices.html#ch-exercices-13",
   "type": "Exercice",
-  "number": "102",
-  "title": "Somme aléatoire de variables aléatoires.",
-  "body": "Somme aléatoire de variables aléatoires  Soit une suite de variables aléatoires réelles discrètes, toutes de même loi, et une variable aléatoire à valeurs dans . On suppose que et les variables pour forment une suite de variables aléatoires indépendantes. On pose :   Montrer que est une variable aléatoire. Déterminer la loi de lorsque les suivent la loi de Bernoulli de paramètre et la loi de Poisson de paramètre . Déterminer la loi de lorsque les suivent la loi géométrique de paramètre et la loi géométrique de paramètre . On suppose que les variables aléatoires sont à valeurs dans .   Montrer que sur .    Montrer que, si et sont d'espérance finie, alors est d'espérance finie et vérifie la première formule de Wald :     Montrer que, si et possèdent un moment d'ordre 2, alors possède aussi un moment d'ordre 2 et vérifie la seconde formule de Wald :    "
+  "number": "2.12",
+  "title": "Modèle de Galton-Watson.",
+  "body": "Modèle de Galton-Watson  On observe des virus qui se reproduisent tous selon la même loi avant de mourir : un virus donne naissance en une journée à virus, où est une variable aléatoire à valeurs dans . Pour tout , on note . On suppose et . On note la fonction génératrice de . On part au jour zéro de virus. Au premier jour, on a donc virus, où suit la loi de ; chacun de ces virus évolue alors indépendamment des autres virus et se reproduit selon la même loi avant de mourir : cela conduit à avoir virus au deuxième jour ; et le processus continue de la sorte. On note .  Calculer , . Montrer que la suite est convergente. Montrer que pour tout entier , on a . Que peut-on dire de la limite de ? Discuter selon la valeur de . Interpréter le résultat. "
 },
 {
   "id": "ch-exercices-14",
   "level": "2",
   "url": "ch-exercices.html#ch-exercices-14",
   "type": "Exercice",
-  "number": "103",
-  "title": "Succès consécutifs.",
-  "body": "Succès consécutifs  On considère une suite d'épreuves de Bernoulli indépendantes. À chaque épreuve, la probabilité de succès est . On se donne un entier strictement positif. Pour , on note la probabilité qu'au cours des premières épreuves, on ait obtenu succès consécutifs (au moins une fois).  Calculer , , ..., . Montrer que, pour , on a . Montrer que la suite est convergente. Calculer sa limite. Déduire de la question 1 que l'on peut définir une variable aléatoire égale au temps d'attente de succès consécutifs. On définira comme l'événement « on a obtenu des succès aux épreuves de rang , , ..., sans jamais avoir obtenu succès consécutifs auparavant ». Montrer que :  "
+  "number": "2.13",
+  "title": "Somme aléatoire de variables aléatoires.",
+  "body": "Somme aléatoire de variables aléatoires  Soit une suite de variables aléatoires réelles discrètes, toutes de même loi, et une variable aléatoire à valeurs dans . On suppose que et les variables pour forment une suite de variables aléatoires indépendantes. On pose :   Montrer que est une variable aléatoire. Déterminer la loi de lorsque les suivent la loi de Bernoulli de paramètre et la loi de Poisson de paramètre . Déterminer la loi de lorsque les suivent la loi géométrique de paramètre et la loi géométrique de paramètre . On suppose que les variables aléatoires sont à valeurs dans .   Montrer que sur .    Montrer que, si et sont d'espérance finie, alors est d'espérance finie et vérifie la première formule de Wald :     Montrer que, si et possèdent un moment d'ordre 2, alors possède aussi un moment d'ordre 2 et vérifie la seconde formule de Wald :    "
 },
 {
   "id": "ch-exercices-15",
   "level": "2",
   "url": "ch-exercices.html#ch-exercices-15",
   "type": "Exercice",
-  "number": "104",
-  "title": "Marche aléatoire dans <span class=\"process-math\">\\(\\mathbb{Z}\\)<\/span> : premier retour à l’origine.",
-  "body": "Marche aléatoire dans : premier retour à l'origine  Soit une suite de variables aléatoires, sur le même espace probabilisé , indépendantes et de même loi définie par : où . On pose et, pour tout , . La suite est appelée marche aléatoire dans .  Déterminer pour tout . On note la somme de la série entière . Montrer que :  Pour tout entier naturel non nul , on note l'événement « le mobile retourne pour la première fois à l'origine au bout de déplacements », c'est-à-dire : On pose pour tout et .   Montrer que, pour tout entier naturel non nul, on a :     En déduire que, pour tout entier naturel non nul , on a :    "
+  "number": "2.14",
+  "title": "Succès consécutifs.",
+  "body": "Succès consécutifs  On considère une suite d'épreuves de Bernoulli indépendantes. À chaque épreuve, la probabilité de succès est . On se donne un entier strictement positif. Pour , on note la probabilité qu'au cours des premières épreuves, on ait obtenu succès consécutifs (au moins une fois).  Calculer , , ..., . Montrer que, pour , on a . Montrer que la suite est convergente. Calculer sa limite. Déduire de la question 1 que l'on peut définir une variable aléatoire égale au temps d'attente de succès consécutifs. On définira comme l'événement « on a obtenu des succès aux épreuves de rang , , ..., sans jamais avoir obtenu succès consécutifs auparavant ». Montrer que :  "
 },
 {
   "id": "ch-exercices-16",
   "level": "2",
   "url": "ch-exercices.html#ch-exercices-16",
   "type": "Exercice",
-  "number": "105",
-  "title": "Inégalité de Kolmogorov.",
-  "body": "Inégalité de Kolmogorov  Soit des variables aléatoires réelles discrètes de l'espace probabilisé , indépendantes, ayant un moment d'ordre 2, centrées, ainsi que . On pose, pour tout :   Montrer que, pour , les variables et sont indépendantes. En déduire que :  On pose . Montrer que . En déduire l'inégalité de Kolmogorov :  "
+  "number": "2.15",
+  "title": "Marche aléatoire dans <span class=\"process-math\">\\(\\mathbb{Z}\\)<\/span> : premier retour à l’origine.",
+  "body": "Marche aléatoire dans : premier retour à l'origine  Soit une suite de variables aléatoires, sur le même espace probabilisé , indépendantes et de même loi définie par : où . On pose et, pour tout , . La suite est appelée marche aléatoire dans .  Déterminer pour tout . On note la somme de la série entière . Montrer que :  Pour tout entier naturel non nul , on note l'événement « le mobile retourne pour la première fois à l'origine au bout de déplacements », c'est-à-dire : On pose pour tout et .   Montrer que, pour tout entier naturel non nul, on a :     En déduire que, pour tout entier naturel non nul , on a :    "
 },
 {
   "id": "ch-exercices-17",
   "level": "2",
   "url": "ch-exercices.html#ch-exercices-17",
   "type": "Exercice",
-  "number": "106",
-  "title": "Inégalité de Le Cam.",
-  "body": "Inégalité de Le Cam  L'objet de l'exercice est d'étudier l'approximation de la loi binomiale par la loi de Poisson. Toutes les variables aléatoires considérées sont définies sur le même espace probabilisé et sont à valeurs dans .  Soit et deux telles variables aléatoires. Pour tout , on pose et . On définit la distance entre et par :    Montrer que pour toute partie de , on a :     Démontrer la formule :     En déduire :    "
+  "number": "2.16",
+  "title": "Inégalité de Kolmogorov.",
+  "body": "Inégalité de Kolmogorov  Soit des variables aléatoires réelles discrètes de l'espace probabilisé , indépendantes, ayant un moment d'ordre 2, centrées, ainsi que . On pose, pour tout :   Montrer que, pour , les variables et sont indépendantes. En déduire que :  On pose . Montrer que . En déduire l'inégalité de Kolmogorov :  "
 },
 {
   "id": "ch-exercices-18",
   "level": "2",
   "url": "ch-exercices.html#ch-exercices-18",
   "type": "Exercice",
-  "number": "107",
-  "title": "Convergence presque sûre.",
-  "body": "Convergence presque sûre  Soit une suite de variables aléatoires réelles et une variable aléatoire réelle définies sur . On pose : Pour tout , on pose : On dit que la suite converge presque sûrement vers si .  Montrer que l'on a . On suppose que : Montrer que la suite converge presque sûrement vers . Montrer que si la série de terme général converge pour tout , alors la suite converge presque sûrement vers . "
+  "number": "2.17",
+  "title": "Inégalité de Le Cam.",
+  "body": "Inégalité de Le Cam  L'objet de l'exercice est d'étudier l'approximation de la loi binomiale par la loi de Poisson. Toutes les variables aléatoires considérées sont définies sur le même espace probabilisé et sont à valeurs dans .  Soit et deux telles variables aléatoires. Pour tout , on pose et . On définit la distance entre et par :    Montrer que pour toute partie de , on a :     Démontrer la formule :     En déduire :    "
 },
 {
   "id": "ch-exercices-19",
   "level": "2",
   "url": "ch-exercices.html#ch-exercices-19",
   "type": "Exercice",
-  "number": "108",
-  "title": "Fonction génératrice des moments.",
-  "body": "Fonction génératrice des moments  Soit une variable aléatoire discrète, pas presque sûrement constante, sur l'espace probabilisé . On pose, pour , (la fonction est appelée fonction génératrice des moments de la variable aléatoire ). On suppose qu'il existe un intervalle contenant 0 tel que pour tout .  Soit deux réels tels que . On considère tel que . Soit . Montrer qu'il existe tel que : En déduire que est d'espérance finie pour tout . Montrer que est de classe sur et vérifie : En déduire, pour tout , une expression du moment d'ordre de . On note l'espérance de . "
+  "number": "2.18",
+  "title": "Convergence presque sûre.",
+  "body": "Convergence presque sûre  Soit une suite de variables aléatoires réelles et une variable aléatoire réelle définies sur . On pose : On dit que la suite converge presque sûrement vers si .   Montrer que l'on a , où :    On a : En d'autres termes, est l'ensemble des pour lesquels la suite converge vers . On peut réécrire comme : Par continuité décroissante de la probabilité, on a :    On suppose que : Montrer que la suite converge presque sûrement vers .   Par hypothèse, pour tout , on a : Cela signifie que, pour tout , l'ensemble des pour lesquels pour une infinité de est de probabilité nulle. Par conséquent, pour presque tout , la suite converge vers , c'est-à-dire que .   Montrer que si la série de terme général converge pour tout , alors la suite converge presque sûrement vers .   Si la série de terme général converge pour tout , alors, d'après le lemme de Borel-Cantelli, on a : En effet, le lemme de Borel-Cantelli affirme que si , alors . Appliqué à , cela donne : Par conséquent, la suite converge presque sûrement vers .  "
 },
 {
   "id": "ch-exercices-20",
   "level": "2",
   "url": "ch-exercices.html#ch-exercices-20",
   "type": "Exercice",
-  "number": "109",
-  "title": "Théorème de Weierstrass.",
-  "body": "Théorème de Weierstrass  Soit une fonction continue de dans . Soit . On considère une suite de variables de Bernoulli de paramètre , indépendantes, sur le même espace probabilisé. Pour , on pose .  Montrer que :  Montrer que :   En déduire que la suite de fonctions polynomiales définie par converge uniformément vers sur .  "
+  "number": "2.19",
+  "title": "Fonction génératrice des moments.",
+  "body": "Fonction génératrice des moments  Soit une variable aléatoire discrète, pas presque sûrement constante, sur l'espace probabilisé . On pose, pour , (la fonction est appelée fonction génératrice des moments de la variable aléatoire ). On suppose qu'il existe un intervalle contenant 0 tel que pour tout .   Soit deux réels tels que . On considère tel que . Soit . Montrer qu'il existe tel que : En déduire que est d'espérance finie pour tout .    Montrer que est de classe sur et vérifie : En déduire, pour tout , une expression du moment d'ordre de . On note l'espérance de .    Montrer que la fonction est strictement convexe.   La fonction est strictement convexe car sa dérivée seconde est strictement positive. En effet, on a : car par l'inégalité de Cauchy-Schwarz.   Montrer que les inégalités de Chernov suivantes sont vérifiées :  où .   Les inégalités de Chernov sont obtenues en utilisant la convexité de . Pour , on a : En prenant le supremum sur , on obtient : De même, pour , on a : En prenant le supremum sur , on obtient :    On considère une suite de variables aléatoires indépendantes suivant la même loi que . On pose, pour tout , .  Montrer que, pour tout , on a :    Montrer que, pour tout , on a :   En utilisant le résultat de l'exercice 16.25, montrer que la suite converge presque sûrement vers .       Pour , on a : où . De même, pour , on a :   Pour , on a : En appliquant les inégalités de Chernov, on obtient :   D'après l'exercice 16.25, si la série de terme général converge pour tout , alors la suite converge presque sûrement vers . En appliquant ce résultat à , on obtient que converge presque sûrement vers .    "
 },
 {
   "id": "ch-exercices-21",
   "level": "2",
   "url": "ch-exercices.html#ch-exercices-21",
   "type": "Exercice",
-  "number": "110",
+  "number": "2.20",
+  "title": "Théorème de Weierstrass.",
+  "body": "Théorème de Weierstrass  Soit une fonction continue de dans . Soit . On considère une suite de variables de Bernoulli de paramètre , indépendantes, sur le même espace probabilisé. Pour , on pose .  Montrer que :  Montrer que :   En déduire que la suite de fonctions polynomiales définie par converge uniformément vers sur .  "
+},
+{
+  "id": "ch-exercices-22",
+  "level": "2",
+  "url": "ch-exercices.html#ch-exercices-22",
+  "type": "Exercice",
+  "number": "2.21",
   "title": "File d’attente.",
   "body": "File d'attente  Soit un entier supérieur ou égal à 2. On considère une file d'attente avec un guichet et clients qui attendent. Chaque minute, un guichet se libère. Le guichetier choisit alors le client qu'il appelle selon le processus aléatoire suivant :  avec probabilité 2, il appelle le client en première position dans la file,  sinon, il choisit de manière équiprobable parmi les autres clients.  Enfin, un nouveau client arrive dans la file et se place en dernière position (de telle sorte qu'il y a toujours exactement clients qui attendent). Pour tout , on note le temps d'attente d'un client qui se trouve en position dans la file.  Quelle est la loi de ? Donner son espérance, sa variance. Montrer que, pour tout , la variable est d'espérance finie. Écrire une relation entre et pour tout . En déduire une expression de en fonction de et . On pourra considérer la suite . Comparer les caractéristiques de cette file d'attente et d'une file d'attente « classique » (premier arrivé, premier servi). "
+},
+{
+  "id": "ch-exercices-23",
+  "level": "2",
+  "url": "ch-exercices.html#ch-exercices-23",
+  "type": "Exercice",
+  "number": "2.22",
+  "title": "",
+  "body": " Soit une suite de variables aléatoires réelles discrètes, toutes de même loi, et une variable aléatoire à valeurs dans . On suppose que et les variables , pour , forment une suite de variables aléatoires indépendantes. On pose :    Montrer que est une variable aléatoire.   On a . Les étant au plus dénombrables, il en est de même de leur union dénombrable, et a fortiori est au plus dénombrable. De plus : donc , union dénombrable d'événements, est un événement et est une variable aléatoire.   Déterminer la loi de , lorsque les suivent la loi de Bernoulli de paramètre et la loi de Poisson de paramètre .   On a et d'après la formule des probabilités totales, pour tout : On remarque que : la dernière égalité résultant de l'indépendance des variables par rapport à . Pour , est une somme de variables de Bernoulli, indépendantes, de même paramètre ; elle suit donc la loi binomiale de paramètre . On a donc : On remarque que cette formule reste vérifiée si , car alors prend la valeur 0, avec la probabilité 1. On en déduit : En simplifiant, on obtient : La variable aléatoire suit donc la loi de Poisson de paramètre .   Déterminer la loi de lorsque les suivent la loi géométrique de paramètre et la loi géométrique de paramètre .   On procède comme dans la question précédente. On a et, pour tout : Comme les variables sont à valeurs dans , il est clair que si . Supposons . On peut alors écrire : où est l'ensemble des -listes d'entiers strictement positifs tels que . Le cardinal de est égal au nombre de -listes d'entiers tels que , car à , on peut associer bijectivement : On a donc . D'autre part, pour , on a, par indépendance des variables aléatoires : On obtient ainsi . On en déduit, pour : En simplifiant, on obtient : La variable suit donc la loi géométrique de paramètre .  "
+},
+{
+  "id": "ch-exercices-24",
+  "level": "2",
+  "url": "ch-exercices.html#ch-exercices-24",
+  "type": "Exercice",
+  "number": "2.23",
+  "title": "",
+  "body": " On considère une suite d'épreuves de Bernoulli indépendantes. À chaque épreuve, la probabilité de succès est . On se donne un entier strictement positif. Pour , on note la probabilité qu'au cours des premières épreuves, on ait obtenu succès consécutifs (au moins une fois).    Calculer , , ..., .  Montrer que, pour , on a .  Montrer que la suite est convergente. Calculer sa limite.      On a et .  Pour , on note l'événement « la -ième épreuve est un succès » et l'événement « au cours de premiers tirages, on a obtenus succès consécutifs ». On a clairement et donc . L'événement est réalisé si on obtient succès consécutifs pour la première fois entre le -ième et le -ième tirage, ce qui impose que la -ième épreuve soit un échec et qu'on n'ait pas avant obtenu succès consécutifs. On a donc : et par indépendance des épreuves :   La suite est croissante et majorée par 1 donc convergente. On note sa limite. Par passage à la limite dans la relation précédente, on obtient , et donc , puisque .      Déduire de la question 1 que l'on peut définir une variable aléatoire égale au temps d'attente de succès consécutifs. On définira comme l'événement « on a obtenu des succès aux épreuves de rang , , ..., sans jamais avoir obtenu succès consécutifs auparavant ».  Montrer en utilisant le résultat de l'exercice 18 de la page 911 que :      Comme la suite est croissante, on a : On obtient de manière presque sûre une suite de succès consécutifs au bout d'un nombre fini d'épreuves. Sur un ensemble de probabilité 1, on peut définir l'application . On a, par définition , donc est un événement et une variable aléatoire à valeurs dans .  Pour tout , on a et donc . D'après la question 1, on a pour tout : D'après l'exercice 18 de la page 911, on en déduit :    "
 }
 ]
 
