@@ -4,13 +4,121 @@
 
 
 
-<chapter xml:id="ch-exercices" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Exercices : Probabilités discrètes</title>
+<exercises xml:id="ch-exercices">
+    <title>Exercices</title>
     
 
 
 
-<!-- <exercises xml:id="exercices-varaldis" xmlns:xi="http://www.w3.org/2001/XInclude"> -->
+<exercise><title>Caractérisation de la loi géometrique décalée</title>
+
+
+    <introduction>
+    <p>
+        On considère <m> X </m> et <m> Y </m> deux variables aléatoires sur <m> (\Omega, \mathcal{A}, \mathbb{P}) </m>, à valeurs dans <m> \mathbb{N} </m>, indépendantes, de même loi. On pose <m> D = X - Y </m> et <m> I = \min(X, Y) </m>.
+    </p>
+    </introduction>
+
+    <task>
+        <statement>
+            On suppose que pour tout <m> k </m> dans <m> \mathbb{N} </m>, <m> \mathbb{P}(X = k) = pq^k </m>, où <m> p \in [0, 1[ </m> et <m> q = 1 - p </m>.
+            <ol>
+                <li>Déterminer la loi conjointe de <m> (D, I) </m>.</li>
+                <li>Déterminer les lois marginales de <m> D </m> et <m> I </m>. Vérifier que <m> D </m> et <m> I </m> sont indépendantes.</li>
+            </ol>
+        </statement>
+        <solution>
+            <ol>
+                <li>
+                    <p>
+                    On a <m> D(\Omega) = \mathbb{Z} </m> et <m> I(\Omega) = \mathbb{N} </m>.
+                    <ul>
+                        <li><p>Si <m> k \geq 0 </m>, alors on a :
+                            <me>
+                            \{D = k\} \cap \{I = \ell\} = \{X - Y = k\} \cap \{Y = \ell\} = \{X = k + \ell\} \cap \{Y = \ell\}
+                            </me>
+                            et donc, par indépendance de <m> X </m> et <m> Y </m> :
+                            <me>
+                            \mathbb{P}(\{D = k\} \cap \{I = \ell\}) = \mathbb{P}(\{X = k + \ell\} \cap \{Y = \ell\}) = pq^{k + \ell} pq^\ell = p^2 q^{k + 2\ell}.
+                            </me>
+                            </p>
+                        </li>
+                        <li>
+                            <p> Si <m> k \lt 0 </m>, alors on a :
+                            <me>
+                            \{D = k\} \cap \{I = \ell\} = \{X - Y = k\} \cap \{X = \ell\} = \{X = \ell\} \cap \{Y = -k + \ell\}
+                            </me>
+                            et donc, par indépendance de <m> X </m> et <m> Y </m> :
+                            <me>
+                            \mathbb{P}(\{D = k\} \cap \{I = \ell\}) = \mathbb{P}(\{X = \ell\} \cap \{Y = -k + \ell\}) = pq^\ell pq^{-k + \ell} = p^2 q^{-k + 2\ell}.
+                            </me>
+                            </p>
+                        </li>
+                    </ul>
+                    </p>
+                    <p>
+                    Dans tous les cas, on trouve <m> \mathbb{P}(\{D = k\} \cap \{I = \ell\}) = p^2 q^{|k| + 2\ell} </m>.
+                    </p>
+                </li>
+                <li>
+                    <ul>
+                        <li>Pour <m> k \in \mathbb{Z} </m>, on a :
+                            <me>
+                            \mathbb{P}(D = k) = \sum_{\ell=0}^{+\infty} \mathbb{P}(\{D = k\} \cap \{I = \ell\}) = \sum_{\ell=0}^{+\infty} p^2 q^{|k| + 2\ell} = \frac{p^2 q^{|k|}}{1 - q^2} = \frac{p q^{|k|}}{1 + q}.
+                            </me>
+                        </li>
+                        <li>Pour <m> \ell \in \mathbb{N} </m>, on a :
+                            <me>
+                            \mathbb{P}(I = \ell) = \sum_{k=-\infty}^{+\infty} \mathbb{P}(\{D = k\} \cap \{I = \ell\}) = \sum_{k=-\infty}^{+\infty} p^2 q^{|k| + 2\ell} = p^2 q^{2\ell} \left( \frac{2}{1 - q} - 1 \right) = p q^{2\ell} (1 + q).
+                            </me>
+                        </li>
+                    </ul>
+                    <p>
+                    On vérifie que <m> D </m> et <m> I </m> sont indépendantes car :
+                    <me>
+                    \mathbb{P}(\{D = k\} \cap \{I = \ell\}) = \mathbb{P}(D = k) \mathbb{P}(I = \ell).
+                    </me>
+                    </p>
+                </li>
+            </ol>
+        </solution>
+    </task>
+
+    <task>
+        <statement>
+            <p>
+            On suppose que les variables <m> D </m> et <m> I </m> sont indépendantes et que <m> \mathbb{P}(X = n) \neq 0 </m> pour tout <m> n \in \mathbb{N} </m>. Montrer qu'il existe <m> p \in [0, 1[ </m>, tel que, pour tout <m> k \in \mathbb{N} </m>,
+            <me>
+            \mathbb{P}(X = k) = p q^k.
+            </me>
+            </p>
+        </statement>
+        <solution>
+            <p>
+            Comme précédemment, on a :
+            <me>
+            \forall k \in \mathbb{N}, \quad \{D = k\} \cap \{I = \ell\} = \{X = k + \ell\} \cap \{Y = \ell\}.
+            </me>
+            Par indépendance de <m> X </m> et <m> Y </m> d'une part, de <m> D </m> et <m> I </m> d'autre part, on en déduit :
+            <me>
+            \mathbb{P}(D = k) \mathbb{P}(I = \ell) = \mathbb{P}(X = k + \ell) \mathbb{P}(Y = \ell) = \mathbb{P}(X = k + \ell) \mathbb{P}(X = \ell) \neq 0,
+            </me>
+            par hypothèse. On a en particulier, pour tout <m> k \in \mathbb{N} </m> :
+            <me>
+            \mathbb{P}(D = k) \mathbb{P}(I = 0) = \mathbb{P}(X = k) \mathbb{P}(X = 0),
+            </me>
+            <me>
+            \mathbb{P}(D = k) \mathbb{P}(I = 1) = \mathbb{P}(X = k + 1) \mathbb{P}(X = 1).
+            </me>
+            En divisant les égalités, on obtient :
+            <me>
+            \frac{\mathbb{P}(X = k + 1)}{\mathbb{P}(X = k)} = \frac{\mathbb{P}(I = 1) \mathbb{P}(X = 0)}{\mathbb{P}(I = 0) \mathbb{P}(X = 1)}.
+            </me>
+            Ce rapport est indépendant de <m> k </m> et strictement positif. On le note <m> q </m>. La suite <m> (\mathbb{P}(X = k)) </m> est géométrique de raison <m> q </m>. Pour tout <m> k \in \mathbb{N} </m>, on a <m> \mathbb{P}(X = k) = \mathbb{P}(X = 0) q^k </m>. La série <m> \sum \mathbb{P}(X = k) </m> converge et a pour somme 1 donc <m> q \lt 1 </m> et <m> \mathbb{P}(X = 0) = 1 - q </m>. En posant <m> p = 1 - q </m>, on a le résultat voulu.
+            </p>
+        </solution>
+    </task>
+</exercise>
 
     <exercise>
         <title>Une caractérisation de la loi de Poisson</title>
@@ -305,60 +413,100 @@
     </exercise>
 
 
-    <exercise>
+   <exercise>
     <title>Maximums et minimums provisoires</title>
     <introduction>
         <p>
-            Soit <m>n \in \N^{*}</m>. On désigne par <m>\Omega</m> l'ensemble des permutations de <m>\llbracket 1, n \rrbracket</m>. On munit <m>\Omega</m> de la probabilité uniforme. Pour <m>\sigma \in \Omega</m> et <m>i \in \llbracket 1, n \rrbracket</m>, on dit que <m>\sigma(i)</m> est un maximum (resp. minimum) provisoire de <m>\sigma</m> si :
+            Soit <m>n \in \mathbb{N}^*</m>. On désigne par <m>\Omega</m> l'ensemble des permutations de <m>[1, n]</m>. On munit <m>\Omega</m> de la probabilité uniforme. Pour <m>\sigma \in \Omega</m> et <m>i \in [1, n]</m>, on dit que <m>\sigma(i)</m> est un <em>maximum provisoire</em> (resp. <em>minimum provisoire</em>) de <m>\sigma</m> si :
             <me>
-                \sigma(i) = \max (\sigma(1), \sigma(2), \ldots, \sigma(i))
+                \sigma(i) = \max(\sigma(1), \sigma(2), \ldots, \sigma(i)) \quad \text{(resp. } \sigma(i) = \min(\sigma(1), \sigma(2), \ldots, \sigma(i))\text{)}.
             </me>
-            (resp. <m>\sigma(i) = \min (\sigma(1), \sigma(2), \ldots, \sigma(i))</m>).
-            On désigne par <m>X_{n}</m> (resp. <m>Y_{n}</m>) les variables aléatoires représentant le nombre de maximums (resp. minimums) provisoires des permutations de <m>\llbracket 1, n \rrbracket</m>.
+            On désigne par <m>X_n</m> (resp. <m>Y_n</m>) les variables aléatoires représentant le nombre de maximums (resp. minimums) provisoires des permutations de <m>[1, n]</m>.
         </p>
-        </introduction>
-        <task>
+    </introduction>
+
+    <task>
+        <statement>
             <p>
-                Montrer que les variables <m>X_{n}</m> et <m>Y_{n}</m> ont même loi.
+                Montrer que les variables <m>X_n</m> et <m>Y_n</m> ont même loi.
             </p>
-        </task>
-        <task>
+        </statement>
+        <solution>
             <p>
-                Déterminer la loi de <m>X_{3}</m>, son espérance et sa variance.
+                On observe qu'en <m>1</m>, il y a toujours un maximum et un minimum provisoire, et donc que <m>X_n</m> et <m>Y_n</m> sont à valeurs dans <m>[1, n]</m>.
+                L'application <m>f : \Omega \to \Omega</m> qui à la permutation <m>\sigma</m> associe la permutation <m>\sigma' : k \mapsto n + 1 - \sigma(k)</m> est clairement bijective. Pour <m>i \in [1, n]</m>, <m>\sigma(i)</m> est un maximum provisoire de <m>\sigma</m> si, et seulement si, <m>\sigma'(i)</m> est un minimum provisoire de <m>\sigma</m>. En effet :
+                <me>
+                    \sigma(i) = \max(\sigma(1), \ldots, \sigma(i)) \quad \text{équivaut à} \quad n + 1 - \sigma'(i) = \max(n + 1 - \sigma'(1), \ldots, n + 1 - \sigma'(i)),
+                </me>
+                ce qui équivaut à :
+                <me>
+                    \sigma'(i) = \min(\sigma'(1), \ldots, \sigma'(i)).
+                </me>
+                On en déduit que, pour tout <m>k \in [1, n]</m>,
+                <me>
+                    \sigma \in \{X_n = k\} \quad \text{si et seulement si} \quad \sigma' \in \{Y_n = k\}.
+                </me>
+                Comme <m>f</m> est bijective, on a <m>\text{card}(\{X_n = k\}) = \text{card}(\{Y_n = k\})</m>, et donc <m>\mathbb{P}(X_n = k) = \mathbb{P}(Y_n = k)</m>, car <m>\Omega</m> est muni de la probabilité uniforme.
             </p>
-        </task>
-        <task>
+        </solution>
+    </task>
+
+    <task>
+        <statement>
             <p>
-                Déterminer la loi du couple <m>(X_{3}, Y_{3})</m> et sa covariance.
+                Déterminer la loi de <m>X_3</m>, son espérance et sa variance.
             </p>
-        </task>
-        <task>
+        </statement>
+        <solution>
             <p>
-                Pour <m>n \in \N^{*}</m>, on note <m>g_{n}</m> la fonction génératrice de <m>X_{n}</m>.
+                <ul>
+                    <li>
+                        La permutation <m>\sigma</m> est dans <m>\{X_3 = 1\}</m> si, et seulement si, <m>\sigma(1) = 3</m>. On en déduit <m>\mathbb{P}(X_3 = 1) = \frac{1}{3}</m>.
+                    </li>
+                    <li>
+                        On a <m>\{X_3 = 3\} = \{\text{Id}_{[1,3]}\}</m>. On en déduit <m>\mathbb{P}(X_3 = 3) = \frac{1}{6}</m>.
+                    </li>
+                    <li>
+                        Enfin, <m>\mathbb{P}(X_3 = 2) = 1 - \frac{1}{3} - \frac{1}{6} = \frac{1}{2}</m>.
+                    </li>
+                </ul>
+                On obtient :
+                <me>
+                    \mathbb{E}(X_3) = \frac{11}{6} \quad \text{et} \quad \mathbb{V}(X_3) = \frac{17}{36}.
+                </me>
             </p>
-            <ol marker="1.">
-                <li>
-                    <p>
-                        Pour <m>1 \leqslant k \leqslant n</m>, on note <m>Z_{k}</m> la variable indicatrice de l'événement « <m>\sigma(k)</m> est un maximum ». Montrer que les variables <m>Z_{1}, Z_{2}, \ldots, Z_{n}</m> sont indépendantes.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Exprimer <m>X_{n}</m> en fonction de <m>Z_{1}, Z_{2}, \ldots, Z_{n}</m>. En déduire <m>g_{n}</m>.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        En déduire <m>\Pr(X_{n}=1)</m>, <m>\Pr(X_{n}=2)</m>, <m>\Pr(X_{n}=n)</m>.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Déterminer <m>\Es(X_{n})</m> et <m>\Va(X_{n})</m> (sous forme de sommes) et un équivalent de <m>\Es(X_{n})</m> et de <m>\Va(X_{n})</m> quand <m>n</m> tend vers <m>+\infty</m>.
-                    </p>
-                </li>
-            </ol>
-        </task>
+        </solution>
+    </task>
+
+    <task>
+        <statement>
+            <p>
+                Déterminer la loi du couple <m>(X_3, Y_3)</m> et sa covariance.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Pour <m>(k, \ell) \in [1, 3]^2</m>, on a <m>\mathbb{P}(X_3 = k, Y_3 = \ell) = 0</m> si <m>k + \ell \geq 4</m>. En effet, sauf pour <m>i = 1</m>, <m>\sigma(i)</m> ne peut pas être à la fois un maximum provisoire et un minimum provisoire. On obtient :
+                <me>
+                    \begin{array}{|c|c|c|c|}
+                        \hline
+                        X  \amp   Y  \amp   1  \amp   2  \amp   3 \\
+                        \hline
+                        1  \amp   0  \amp   \frac{1}{6}  \amp   \frac{1}{6} \\
+                        \hline
+                        2  \amp   \frac{1}{6}  \amp   \frac{1}{3}  \amp   0 \\
+                        \hline
+                        3  \amp   \frac{1}{6}  \amp   0  \amp   0 \\
+                        \hline
+                    \end{array}
+                </me>
+                On trouve :
+                <me>
+                    \mathbb{E}(X_3 Y_3) = 3 \quad \text{et} \quad \text{Cov}(X_3, Y_3) = -\frac{13}{36}.
+                </me>
+            </p>
+        </solution>
+    </task>
 </exercise>
 
 
@@ -834,36 +982,82 @@
     <title>Convergence presque sûre</title>
     <introduction>
         <p>
-            Soit <m>(X_{n})_{n \in \N}</m> une suite de variables aléatoires réelles et <m>X</m> une variable aléatoire réelle définies sur <m>(\Omega, \mathcal{A}, \Pr)</m>. On pose :
+            Soit <m>(X_n)_{n \in \mathbb{N}}</m> une suite de variables aléatoires réelles et <m>X</m> une variable aléatoire réelle définies sur <m>(\Omega, \mathcal{A}, \mathbb{P})</m>. On pose :
             <me>
-                B = \left\{\omega \in \Omega \mid \lim_{n \rightarrow +\infty} X_{n}(\omega) = X(\omega)\right\}.
+                B = \left\{ \omega \in \Omega \mid \lim_{n \to +\infty} X_n(\omega) = X(\omega) \right\}.
             </me>
-            Pour tout <m>k \in \N^{*}</m>, on pose :
-            <me>
-                C_{k} = \bigcup_{n \in \N} \bigcap_{p \geqslant n} \left(\left|X_{p} - X\right| \leqslant \frac{1}{k}\right).
-            </me>
-            On dit que la suite <m>(X_{n})_{n \in \N}</m> converge presque sûrement vers <m>X</m> si <m>\Pr(B) = 1</m>.
+            On dit que la suite <m>(X_n)_{n \in \mathbb{N}}</m> converge presque sûrement vers <m>X</m> si <m>\mathbb{P}(B) = 1</m>.
         </p>
     </introduction>
-        <task>
+
+    <task>
+        <statement>
             <p>
-                Montrer que l'on a <m>\Pr(B) = \lim_{k \rightarrow +\infty} \Pr(C_{k})</m>.
+                Montrer que l'on a <m>\mathbb{P}(B) = \lim_{k \to +\infty} \mathbb{P}(C_k)</m>, où :
+                <me>
+                    C_k = \bigcap_{n \in \mathbb{N}} \bigcup_{p \geq n} \left\{ |X_p - X| \leq \frac{1}{k} \right\}.
+                </me>
             </p>
-        </task>
-        <task>
+        </statement>
+        <solution>
+            <p>
+                On a :
+                <me>
+                    B = \left\{ \omega \in \Omega \mid \forall k \in \mathbb{N}^*, \exists n \in \mathbb{N}, \forall p \geq n, |X_p(\omega) - X(\omega)| \leq \frac{1}{k} \right\}.
+                </me>
+                En d'autres termes, <m>B</m> est l'ensemble des <m>\omega \in \Omega</m> pour lesquels la suite <m>(X_n(\omega))</m> converge vers <m>X(\omega)</m>. On peut réécrire <m>B</m> comme :
+                <me>
+                    B = \bigcap_{k \in \mathbb{N}^*} \bigcup_{n \in \mathbb{N}} \bigcap_{p \geq n} \left\{ |X_p - X| \leq \frac{1}{k} \right\}.
+                </me>
+                Par continuité décroissante de la probabilité, on a :
+                <me>
+                    \mathbb{P}(B) = \lim_{k \to +\infty} \mathbb{P}\left( \bigcup_{n \in \mathbb{N}} \bigcap_{p \geq n} \left\{ |X_p - X| \leq \frac{1}{k} \right\} \right) = \lim_{k \to +\infty} \mathbb{P}(C_k).
+                </me>
+            </p>
+        </solution>
+    </task>
+
+    <task>
+        <statement>
             <p>
                 On suppose que :
                 <me>
-                    \forall \varepsilon\gt0 \quad \Pr\left(\bigcap_{n \in \N} \bigcup_{p \geqslant n} \left(|X_{p} - X|\gt\varepsilon\right)\right) = 0.
+                    \forall \varepsilon \gt 0, \quad \mathbb{P}\left( \bigcup_{n \in \mathbb{N}} \bigcap_{p \geq n} \left\{ |X_p - X| \gt \varepsilon \right\} \right) = 0.
                 </me>
-                Montrer que la suite <m>(X_{n})_{n \in \N}</m> converge presque sûrement vers <m>X</m>.
+                Montrer que la suite <m>(X_n)_{n \in \mathbb{N}}</m> converge presque sûrement vers <m>X</m>.
             </p>
-        </task>
-        <task>
+        </statement>
+        <solution>
             <p>
-                Montrer que si la série de terme général <m>\Pr(|X_{n} - X|\gt\varepsilon)</m> converge pour tout <m>\varepsilon\gt0</m>, alors la suite <m>(X_{n})_{n \in \N}</m> converge presque sûrement vers <m>X</m>.
+                Par hypothèse, pour tout <m>\varepsilon \gt 0</m>, on a :
+                <me>
+                    \mathbb{P}\left( \bigcup_{n \in \mathbb{N}} \bigcap_{p \geq n} \left\{ |X_p - X| \gt \varepsilon \right\} \right) = 0.
+                </me>
+                Cela signifie que, pour tout <m>\varepsilon \gt 0</m>, l'ensemble des <m>\omega \in \Omega</m> pour lesquels <m>|X_p(\omega) - X(\omega)| \gt \varepsilon</m> pour une infinité de <m>p</m> est de probabilité nulle. Par conséquent, pour presque tout <m>\omega \in \Omega</m>, la suite <m>(X_n(\omega))</m> converge vers <m>X(\omega)</m>, c'est-à-dire que <m>\mathbb{P}(B) = 1</m>.
             </p>
-        </task>
+        </solution>
+    </task>
+
+    <task>
+        <statement>
+            <p>
+                Montrer que si la série de terme général <m>\mathbb{P}(|X_n - X| \gt \varepsilon)</m> converge pour tout <m>\varepsilon \gt 0</m>, alors la suite <m>(X_n)_{n \in \mathbb{N}}</m> converge presque sûrement vers <m>X</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Si la série de terme général <m>\mathbb{P}(|X_n - X| \gt \varepsilon)</m> converge pour tout <m>\varepsilon \gt 0</m>, alors, d'après le lemme de Borel-Cantelli, on a :
+                <me>
+                    \mathbb{P}\left( \bigcup_{n \in \mathbb{N}} \bigcap_{p \geq n} \left\{ |X_p - X| \gt \varepsilon \right\} \right) = 0.
+                </me>
+                En effet, le lemme de Borel-Cantelli affirme que si <m>\sum_{n=1}^{+\infty} \mathbb{P}(A_n) \lt +\infty</m>, alors <m>\mathbb{P}\left( \limsup_{n \to +\infty} A_n \right) = 0</m>. Appliqué à <m>A_n = \{ |X_n - X| \gt \varepsilon \}</m>, cela donne :
+                <me>
+                    \mathbb{P}\left( \bigcup_{n \in \mathbb{N}} \bigcap_{p \geq n} \left\{ |X_p - X| \gt \varepsilon \right\} \right) = 0.
+                </me>
+                Par conséquent, la suite <m>(X_n)_{n \in \mathbb{N}}</m> converge presque sûrement vers <m>X</m>.
+            </p>
+        </solution>
+    </task>
 </exercise>
 
 
@@ -875,15 +1069,16 @@
         </p>
     </introduction>
         <task>
-            <p>
+            <ol>
+            <li><p>
                 Soit <m>a \lt b</m> deux réels tels que <m>[a, b] \subset ]\alpha, \beta[</m>. On considère <m>\delta\gt0</m> tel que <m>[a - \delta, b + \delta] \subset ]\alpha, \beta[</m>. Soit <m>k \in \N</m>. Montrer qu'il existe <m>C\gt0</m> tel que :
                 <me>
                     \forall t \in [a, b] \quad \forall u \in \R \quad |u|^{k} e^{t u} \leqslant C \left(e^{(a - \delta) u} + e^{(b + \delta) u}\right).
                 </me>
                 En déduire que <m>X^{k} e^{t X}</m> est d'espérance finie pour tout <m>t \in ]\alpha, \beta[</m>.
             </p>
-        </task>
-        <task>
+            </li>
+            <li>
             <p>
                 Montrer que <m>L_{X}</m> est de classe <m>\mathcal{C}^{\infty}</m> sur <m>]\alpha, \beta[</m> et vérifie :
                 <me>
@@ -891,7 +1086,118 @@
                 </me>
                 En déduire, pour tout <m>k \in \N</m>, une expression du moment d'ordre <m>k</m> de <m>X</m>. On note <m>m</m> l'espérance de <m>X</m>.
             </p>
+        </li>
+        </ol>
         </task>
+
+    <task>
+        <statement>
+            <p>
+                Montrer que la fonction <m>\Psi_X(t) = \ln L_X(t)</m> est strictement convexe.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                La fonction <m>\Psi_X(t) = \ln L_X(t)</m> est strictement convexe car sa dérivée seconde est strictement positive. En effet, on a :
+                <me>
+                    \Psi_X''(t) = \frac{L_X''(t) L_X(t) - (L_X'(t))^2}{L_X(t)^2} \gt 0,
+                </me>
+                car <m>L_X''(t) L_X(t) - (L_X'(t))^2 = \mathbb{E}(X^2 e^{tX}) \mathbb{E}(e^{tX}) - (\mathbb{E}(X e^{tX}))^2 \gt 0</m> par l'inégalité de Cauchy-Schwarz.
+            </p>
+        </solution>
+    </task>
+
+    <task>
+        <statement>
+            <p>
+                Montrer que les inégalités de Chernov suivantes sont vérifiées :
+                <me>
+                    \mathbb{P}(X \leq c) \leq e^{-g(c)} \quad \text{si} \quad c \lt m,
+                </me>
+                <me>
+                    \mathbb{P}(X \geq c) \leq e^{-g(c)} \quad \text{si} \quad c \gt m,
+                </me>
+                où <m>g(c) = \sup_{t \in ]\alpha, \beta[} (ct - \Psi_X(t))</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Les inégalités de Chernov sont obtenues en utilisant la convexité de <m>\Psi_X</m>. Pour <m>c \lt m</m>, on a :
+                <me>
+                    \mathbb{P}(X \leq c) = \mathbb{P}(e^{tX} \leq e^{tc}) \leq \frac{\mathbb{E}(e^{tX})}{e^{tc}} = e^{-(ct - \Psi_X(t))}.
+                </me>
+                En prenant le supremum sur <m>t \in ]\alpha, \beta[</m>, on obtient :
+                <me>
+                    \mathbb{P}(X \leq c) \leq e^{-g(c)}.
+                </me>
+                De même, pour <m>c \gt m</m>, on a :
+                <me>
+                    \mathbb{P}(X \geq c) = \mathbb{P}(e^{tX} \geq e^{tc}) \leq \frac{\mathbb{E}(e^{tX})}{e^{tc}} = e^{-(ct - \Psi_X(t))}.
+                </me>
+                En prenant le supremum sur <m>t \in ]\alpha, \beta[</m>, on obtient :
+                <me>
+                    \mathbb{P}(X \geq c) \leq e^{-g(c)}.
+                </me>
+            </p>
+        </solution>
+    </task>
+
+    <task>
+        <statement>
+            <p>
+                On considère une suite <m>(X_n)_{n \geq 1}</m> de variables aléatoires indépendantes suivant la même loi que <m>X</m>. On pose, pour tout <m>n \in \mathbb{N}^*</m>, <m>S_n = \sum_{k=1}^n X_k</m>.
+                <ol>
+                    <li>
+                        Montrer que, pour tout <m>c \in \mathbb{R}</m>, on a :
+                        <me>
+                            \mathbb{P}\left(\frac{S_n}{n} \leq c\right) \leq e^{-n g(c)} \quad \text{si} \quad c \lt m,
+                        </me>
+                        <me>
+                            \mathbb{P}\left(\frac{S_n}{n} \geq c\right) \leq e^{-n g(c)} \quad \text{si} \quad c \gt m.
+                        </me>
+                    </li>
+                    <li>
+                        Montrer que, pour tout <m>\varepsilon \gt 0</m>, on a :
+                        <me>
+                            \mathbb{P}\left(\left|\frac{S_n}{n} - m\right| \geq \varepsilon\right) \leq 2 e^{-n \min(g(m + \varepsilon), g(m - \varepsilon))}.
+                        </me>
+                    </li>
+                    <li>
+                        En utilisant le résultat de l'exercice 16.25, montrer que la suite <m>\left(\frac{S_n}{n}\right)</m> converge presque sûrement vers <m>m</m>.
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                <ol>
+                    <li>
+                        Pour <m>c \lt m</m>, on a :
+                        <me>
+                            \mathbb{P}\left(\frac{S_n}{n} \leq c\right) = \mathbb{P}\left(S_n \leq n c\right) \leq e^{-n g(c)},
+                        </me>
+                        où <m>g(c) = \sup_{t \in ]\alpha, \beta[} (ct - \Psi_X(t))</m>. De même, pour <m>c \gt m</m>, on a :
+                        <me>
+                            \mathbb{P}\left(\frac{S_n}{n} \geq c\right) = \mathbb{P}\left(S_n \geq n c\right) \leq e^{-n g(c)}.
+                        </me>
+                    </li>
+                    <li>
+                        Pour <m>\varepsilon \gt 0</m>, on a :
+                        <me>
+                            \mathbb{P}\left(\left|\frac{S_n}{n} - m\right| \geq \varepsilon\right) = \mathbb{P}\left(\frac{S_n}{n} \leq m - \varepsilon\right) + \mathbb{P}\left(\frac{S_n}{n} \geq m + \varepsilon\right).
+                        </me>
+                        En appliquant les inégalités de Chernov, on obtient :
+                        <me>
+                            \mathbb{P}\left(\left|\frac{S_n}{n} - m\right| \geq \varepsilon\right) \leq e^{-n g(m - \varepsilon)} + e^{-n g(m + \varepsilon)} \leq 2 e^{-n \min(g(m + \varepsilon), g(m - \varepsilon))}.
+                        </me>
+                    </li>
+                    <li>
+                        D'après l'exercice 16.25, si la série de terme général <m>\mathbb{P}(|X_n - X| \gt \varepsilon)</m> converge pour tout <m>\varepsilon \gt 0</m>, alors la suite <m>(X_n)</m> converge presque sûrement vers <m>X</m>. En appliquant ce résultat à <m>\left(\frac{S_n}{n}\right)</m>, on obtient que <m>\left(\frac{S_n}{n}\right)</m> converge presque sûrement vers <m>m</m>.
+                    </li>
+                </ol>
+            </p>
+        </solution>
+    </task>
 </exercise>
 
 <exercise>
@@ -973,6 +1279,184 @@
         </task>
 </exercise>
 
+<exercise>
+    <introduction>
+        <p>
+            Soit <m>(X_n)_{n \geq 1}</m> une suite de variables aléatoires réelles discrètes, toutes de même loi, et <m>N</m> une variable aléatoire à valeurs dans <m>\mathbb{N}</m>. On suppose que <m>N</m> et les variables <m>X_n</m>, pour <m>n \in \mathbb{N}^*</m>, forment une suite de variables aléatoires indépendantes. On pose :
+            <me>
+                \forall n \in \mathbb{N}^*, \quad S_n = \sum_{k=1}^n X_k \quad \text{et} \quad S_0 = 0.
+            </me>
+        </p>
+    </introduction>
 
-    <!-- </exercises> -->
-</chapter>
+    <task>
+        <statement>
+            <p>
+                Montrer que <m>S_N</m> est une variable aléatoire.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                On a <m>S_N(\Omega) \subset \{0\} \cup \bigcup_{n \in \mathbb{N}^*} S_n(\Omega)</m>. Les <m>S_n(\Omega)</m> étant au plus dénombrables, il en est de même de leur union dénombrable, et a fortiori <m>S_N(\Omega)</m> est au plus dénombrable. De plus :
+                <me>
+                    \forall x \in S_N(\Omega), \quad \{S_N = x\} = \bigcup_{n \in \mathbb{N}} \{S_n = x\} \cap \{N = n\},
+                </me>
+                donc <m>\{S_N = x\}</m>, union dénombrable d'événements, est un événement et <m>S_N</m> est une variable aléatoire.
+            </p>
+        </solution>
+    </task>
+
+    <task>
+        <statement>
+            <p>
+                Déterminer la loi de <m>S_N</m>, lorsque les <m>X_k</m> suivent la loi de Bernoulli de paramètre <m>p</m> et <m>N</m> la loi de Poisson de paramètre <m>\lambda</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                On a <m>S_N(\Omega) = \mathbb{N}</m> et d'après la formule des probabilités totales, pour tout <m>k \in \mathbb{N}</m> :
+                <me>
+                    \mathbb{P}(S_N = k) = \sum_{n=0}^{+\infty} \mathbb{P}(S_N = k \mid N = n) \mathbb{P}(N = n).
+                </me>
+                On remarque que :
+                <me>
+                    \mathbb{P}(S_N = k \mid N = n) = \mathbb{P}(S_n = k \mid N = n) = \mathbb{P}(S_n = k),
+                </me>
+                la dernière égalité résultant de l'indépendance des variables <m>X_n</m> par rapport à <m>N</m>. Pour <m>n \geq 1</m>, <m>S_n</m> est une somme de <m>n</m> variables de Bernoulli, indépendantes, de même paramètre <m>p</m> ; elle suit donc la loi binomiale de paramètre <m>(n, p)</m>. On a donc :
+                <me>
+                    \mathbb{P}(S_n = k) = 
+                    \begin{cases} 
+                        \binom{n}{k} p^k (1 - p)^{n - k}  \amp   \text{si } k \leq n \\
+                        0  \amp   \text{si } k \gt n.
+                    \end{cases}
+                </me>
+                On remarque que cette formule reste vérifiée si <m>n = 0</m>, car alors <m>S_n</m> prend la valeur 0, avec la probabilité 1. On en déduit :
+                <me>
+                    \mathbb{P}(S_N = k) = \sum_{n=k}^{+\infty} \binom{n}{k} p^k (1 - p)^{n - k} e^{-\lambda} \frac{\lambda^n}{n!}.
+                </me>
+                En simplifiant, on obtient :
+                <me>
+                    \mathbb{P}(S_N = k) = e^{-\lambda p} \frac{(\lambda p)^k}{k!}.
+                </me>
+                La variable aléatoire <m>S_N</m> suit donc la loi de Poisson de paramètre <m>\lambda p</m>.
+            </p>
+        </solution>
+    </task>
+
+    <task>
+        <statement>
+            <p>
+                Déterminer la loi de <m>S_N</m> lorsque les <m>X_k</m> suivent la loi géométrique de paramètre <m>p</m> et <m>N</m> la loi géométrique de paramètre <m>p'</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                On procède comme dans la question précédente. On a <m>S_N(\Omega) = \mathbb{N}^*</m> et, pour tout <m>n \in \mathbb{N}^*</m> :
+                <me>
+                    \mathbb{P}(S_N = k \mid N = n) = \mathbb{P}(S_n = k \mid N = n) = \mathbb{P}(S_n = k).
+                </me>
+                Comme les variables <m>X_k</m> sont à valeurs dans <m>\mathbb{N}^*</m>, il est clair que <m>\mathbb{P}(S_n = k) = 0</m> si <m>k \lt  n</m>. Supposons <m>k \geq n</m>. On peut alors écrire :
+                <me>
+                    \{S_n = k\} = \bigcup_{(i_1, i_2, \ldots, i_n) \in J_k} \{X_1 = i_1\} \cap \{X_2 = i_2\} \cap \ldots \cap \{X_n = i_n\},
+                </me>
+                où <m>J_k</m> est l'ensemble des <m>n</m>-listes d'entiers strictement positifs <m>(i_1, i_2, \ldots, i_n)</m> tels que <m>i_1 + i_2 + \cdots + i_n = k</m>. Le cardinal de <m>J_k</m> est égal au nombre de <m>(n-1)</m>-listes <m>(j_1, j_2, \ldots, j_{n-1})</m> d'entiers tels que <m>1 \leq j_1 \lt  j_2 \lt  \ldots \lt  j_{n-1} \leq k - 1</m>, car à <m>(i_1, i_2, \ldots, i_n)</m>, on peut associer bijectivement :
+                <me>
+                    (j_1, j_2, \ldots, j_{n-1}) = (i_1, i_1 + i_2, \ldots, i_1 + i_2 + \cdots + i_{n-1}).
+                </me>
+                On a donc <m>\text{card}(J_k) = \binom{k-1}{n-1}</m>.
+                D'autre part, pour <m>(i_1, i_2, \ldots, i_n) \in J_k</m>, on a, par indépendance des variables aléatoires <m>X_i</m> :
+                <me>
+                    \mathbb{P}(\{X_1 = i_1\} \cap \{X_2 = i_2\} \cap \ldots \cap \{X_n = i_n\}) = \prod_{j=1}^n \mathbb{P}(X_j = i_j) = \prod_{j=1}^n p(1 - p)^{i_j - 1} = p^n (1 - p)^{k - n}.
+                </me>
+                On obtient ainsi <m>\mathbb{P}(S_n = k) = \binom{k-1}{n-1} p^n (1 - p)^{k - n}</m>. On en déduit, pour <m>k \in \mathbb{N}^*</m> :
+                <me>
+                    \mathbb{P}(S_N = k) = \sum_{n=1}^{+\infty} \mathbb{P}(S_N = k \mid N = n) \mathbb{P}(N = n) = \sum_{n=1}^k \binom{k-1}{n-1} p^n (1 - p)^{k - n} p' (1 - p')^{n - 1}.
+                </me>
+                En simplifiant, on obtient :
+                <me>
+                    \mathbb{P}(S_N = k) = p p' (1 - p p')^{k - 1}.
+                </me>
+                La variable <m>S_N</m> suit donc la loi géométrique de paramètre <m>p p'</m>.
+            </p>
+        </solution>
+    </task>
+</exercise>
+
+<exercise>
+    <introduction>
+    <p>
+        On considère une suite d'épreuves de Bernoulli indépendantes. À chaque épreuve, la probabilité de succès est <m>p \in ]0,1[</m>. On se donne un entier <m>r</m> strictement positif. Pour <m>n \in \mathbb{N}^*</m>, on note <m>\Pi_n</m> la probabilité qu'au cours des <m>n</m> premières épreuves, on ait obtenu <m>r</m> succès consécutifs (au moins une fois).
+        </p>
+    </introduction>
+
+    <task>
+        <statement>
+            <ol>
+                <li>Calculer <m>\Pi_0</m>, <m>\Pi_1</m>, ..., <m>\Pi_r</m>.</li>
+                <li>Montrer que, pour <m>n \geq r</m>, on a <m>\Pi_{n+1} = \Pi_n + (1 - \Pi_{n-r}) p^r (1 - p)</m>.</li>
+                <li>Montrer que la suite <m>(\Pi_n)_{n \in \mathbb{N}}</m> est convergente. Calculer sa limite.</li>
+            </ol>
+        </statement>
+        <solution>
+            <p>
+            <ol>
+                <li>
+                    On a <m>\Pi_0 = \Pi_1 = \ldots = \Pi_{r-1} = 0</m> et <m>\Pi_r = p^r</m>.
+                </li>
+                <li>
+                    Pour <m>n \geq 1</m>, on note <m>S_n</m> l'événement « la <m>n</m>-ième épreuve est un succès » et <m>A_n</m> l'événement « au cours de <m>n</m> premiers tirages, on a obtenus <m>r</m> succès consécutifs ». On a clairement <m>A_n \subset A_{n+1}</m> et donc <m>\Pi_{n+1} - \Pi_n = \mathbb{P}(A_{n+1} \setminus A_n)</m>. L'événement <m>A_{n+1} \setminus A_n</m> est réalisé si on obtient <m>r</m> succès consécutifs pour la première fois entre le <m>(n-r+2)</m>-ième et le <m>(n+1)</m>-ième tirage, ce qui impose que la <m>(n-r+1)</m>-ième épreuve soit un échec et qu'on n'ait pas avant obtenu <m>r</m> succès consécutifs. On a donc :
+                    <me>
+                        A_{n+1} \setminus A_n = A_{n-r} \cap S_{n-r+1} \cap S_{n-r+2} \cap \cdots \cap S_{n+1}
+                    </me>
+                    et par indépendance des épreuves :
+                    <me>
+                        \Pi_{n+1} - \Pi_n = (1 - \Pi_{n-r}) (1 - p) p^r.
+                    </me>
+                </li>
+                <li>
+                    La suite <m>(\Pi_n)_n</m> est croissante et majorée par 1 donc convergente. On note <m>L</m> sa limite. Par passage à la limite dans la relation précédente, on obtient <m>L - L = (1 - L)(1 - p)p^r</m>, et donc <m>L = 1</m>, puisque <m>p \in [0,1]</m>.
+                </li>
+            </ol>
+        </p>
+        </solution>
+
+    </task>
+
+    <task>
+        <statement>
+            <ol>
+                <li>Déduire de la question 1 que l'on peut définir une variable aléatoire <m>T</m> égale au temps d'attente de <m>r</m> succès consécutifs. On définira <m>\{T = k\}</m> comme l'événement « on a obtenu des succès aux épreuves de rang <m>k-r+1</m>, <m>k-r+2</m>, ..., <m>k</m> sans jamais avoir obtenu <m>r</m> succès consécutifs auparavant ».</li>
+                <li>Montrer en utilisant le résultat de l'exercice 18 de la page 911 que :
+                    <me>
+                        \mathbb{E}(T) = \frac{1 - p^r}{(1 - p)p^r}.
+                    </me>
+                </li>
+            </ol>
+        </statement>
+        <solution>
+            <ol>
+                <li>
+                    Comme la suite <m>(A_n)</m> est croissante, on a :
+                    <me>
+                        \mathbb{P} \left( \bigcup_{n \in \mathbb{N}^*} A_n \right) = \lim_{n \to +\infty} \Pi_n = 1.
+                    </me>
+                    On obtient de manière presque sûre une suite de <m>r</m> succès consécutifs au bout d'un nombre fini d'épreuves. Sur un ensemble de probabilité 1, on peut définir l'application <m>T</m>.
+                    On a, par définition <m>\{T = k\} = A_{k+1} \setminus A_k</m>, donc <m>\{T = k\}</m> est un événement et <m>T</m> une variable aléatoire à valeurs dans <m>\mathbb{N}^*</m>.
+                </li>
+                <li>
+                    Pour tout <m>k \in \mathbb{N}</m>, on a <m>\{T \gt k\} = A_k</m> et donc <m>\mathbb{P}(T \gt k) = 1 - \Pi_k</m>. D'après la question 1, on a pour tout <m>k \geq 0</m> :
+                    <me>
+                        1 - \Pi_k = \frac{\Pi_{k+r+1} - \Pi_{k+r}}{(1 - p)p^r}.
+                    </me>
+                    D'après l'exercice 18 de la page 911, on en déduit :
+                    <me>
+                        \mathbb{E}(T) = \sum_{k=0}^{+\infty} \frac{\Pi_{k+r+1} - \Pi_{k+r}}{(1 - p)p^r} = \frac{\lim_{n \to +\infty} \Pi_n - \Pi_r}{(1 - p)p^r} = \frac{1 - p^r}{(1 - p)p^r}.
+                    </me>
+                </li>
+            </ol>
+        </solution>
+    </task>
+</exercise>
+
+
+ </exercises>

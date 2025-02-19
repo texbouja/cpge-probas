@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<chapter xml:id="ch-probabiltes-discretes" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <title>Probabilité discrètes</title>
+
+      <objectives>
+        <title>objectifs d'apprentissage</title>
+
+        <introduction>
+          <p>
+            À la fin de ce chapitre, vous devriez être capable de :
+          </p>
+        </introduction>
+
+        <ul>
+          <li>
+            <p>
+              construire un modèle mathématique qui décrit une expérience aléatoire ;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              exprimer un événement dans l'espace construit et calculer sa probabilité ;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              utiliser des variables aléatoires pour modéliser les résultats d'une expérience aléatoire ;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              utiliser le langage des probabilités pour traiter des problèmes dans d'autres sections du programme
+            </p>
+          </li>
+        </ul>
+      </objectives>
+
+      <xi:include href="./sec-generalites.ptx" />
+      <xi:include href="./sec-variables_aleatoires.ptx" />
+      <xi:include href="./sec-esperance_et_moments.ptx" />
+      <xi:include href="./sec-fonctions_generatrices.ptx" />
+    </chapter>
