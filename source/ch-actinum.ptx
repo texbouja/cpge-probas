@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-actinum">
+    <title>Activités numériques</title>
+
+    <section xml:id="sec-expgraph">
+        <title>Exploration graphique</title>
+
+        <activity>
+            <title>Exploration de la loi binomiale</title>
+
+            <introduction>
+                <p>
+                    Dans cette activité, vous allez explorer comment les paramètres <m> n </m> (nombre d'essais) et <m> p </m> (probabilité de succès) influencent la forme de la distribution binomiale.
+                    Vous pourrez choisir différentes valeurs de <m> n </m> et <m> p </m> et observer l'histogramme correspondant.
+                </p>
+            </introduction>
+
+
+            <task>
+                <statement>
+                    <p>
+                        Utilisez les curseurs ci-dessous pour choisir les valeurs de <m> n </m> et <m> p </m>, puis observez comment l'histogramme de la loi binomiale évolue.
+                    </p>
+                    <sage>
+                    <input>
+@interact
+def binomial_histogram(n=slider(1, 50, 1, default=10, label="n"),
+                p=slider(0.01, 1, 0.01, default=0.5, label="p")):
+    P = [binomial(n, k) * p^k * (1 - p)^(n - k) for k in range(n + 1)]
+    # Création de l'histogramme
+    g = bar_chart(P, width=0.5, axes_labels=[r"$k$", r"$P(X = k)$"])
+    # Ajuste la taille de l'affichage si nécessaire avec figsize
+    show(g, figsize=5)  
+                    </input>
+                    <output>
+                    <!-- L'histogramme sera affiché ici -->
+                    </output>
+                    </sage>
+                </statement>
+
+                <solution>
+                    <p>
+                        En modifiant les valeurs de <m> n </m> et <m> p </m>, vous pouvez observer comment la forme de la distribution binomiale change :
+                        <ul>
+                            <li>
+                                Si <m> p = 0.5 </m>, la distribution est symétrique.
+                            </li>
+
+                            <li>
+                                Si <m> p \lt 0.5 </m>, la distribution est décalée vers la gauche.
+                            </li>
+
+                            <li>
+                                Si <m> p \gt 0.5 </m>, la distribution est décalée vers la droite.
+                            </li>
+
+                            <li>
+                                Plus <m> n </m> est grand, plus la distribution ressemble à une courbe en cloche (approximation normale).
+                            </li>
+                        </ul>
+                    </p>
+                </solution>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        Expliquer théoriquement vos observations
+                    </p>
+                </statement>
+            </task>
+        </activity>
+
+        <activity>
+            <title>Comportement asymptotique d'une loi binomiale</title>
+
+            <task>
+                <statement>
+                    <p>
+                        Visualiser l'approximation de la loi binomiale <m>B(n, p)</m> par la loi de Poisson <m>P(np)</m> lorsque <m>n</m> est grand.
+                    </p>
+
+                    <p>
+                        Ce graphique affiche en bleu l'histogramme de la loi binomiale <m>B(n, p)</m> et en rouge la courbe de la loi de Poisson <m>P(np)</m>.
+                        Il permet de visualiser comment la distribution binomiale se rapproche de la distribution de Poisson lorsque <m>n</m> devient grand.
+                    </p>
+                    <sage>
+                    <input>
+@interact
+def binomial_vs_poisson(n=slider(50, 100, 1, default=50, label="n"),
+                        p=slider(0.01, 0.99, 0.01, default=0.5, label="p")):
+    lambda_ = n * p  # Paramètre de la loi de Poisson
+    P_binom = [binomial(n, k) * p^k * (1 - p)^(n - k) for k in range(n + 1)]
+    P_poisson = [exp(-lambda_) * lambda_^k / factorial(k) for k in range(n + 1)]
+    # Histogramme pour la loi binomiale
+    g_binom = bar_chart(P_binom, width=0.5, color='blue', legend_label="Binomial B(n, p)")
+    # Graphique pour la loi de Poisson (points reliés par une ligne)
+    g_poisson = list_plot(P_poisson, plotjoined=True, color='red', marker="o", legend_label="Poisson P(np)")
+    # Affichage combiné
+    show(g_binom + g_poisson, figsize=4, axes_labels=[r"$k$", r"$P(X = k)$"])
+                    </input>
+                    <output>
+                    </output>
+                    </sage>
+                </statement>
+
+                <solution>
+                    <p>
+                        Lorsque <m>n</m> est grand et <m>p</m> est petit, la distribution binomiale <m>B(n, p)</m> devient similaire à la distribution de Poisson <m>P(np)</m>.
+                        Cette visualisation interactive permet d'observer cette convergence.
+                    </p>
+                </solution>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        Expliquer théoriquement vos observations
+                    </p>
+                </statement>
+            </task>
+        </activity>
+    </section>
+</chapter>

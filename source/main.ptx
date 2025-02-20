@@ -12,6 +12,7 @@
     
 
     <xi:include href="./ch-cours.ptx"/>
+    <xi:include href="./ch-actinum.ptx" />
     <xi:include href="./ch-exercices.ptx" />
     <!-- Include backmatter -->
     <!-- <xi:include href="./backmatter.ptx" /> -->

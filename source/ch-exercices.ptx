@@ -683,39 +683,120 @@
 
 
 <exercise>
-    <title>Loi faible des grands nombres dans <m>L_{1}</m></title>
+    <title>Loi faible des grands nombres dans <m> L^1 </m></title>
     <introduction>
         <p>
-            Soit <m>(X_{n})_{n \geqslant 1}</m> une suite de variables aléatoires réelles discrètes, deux à deux indépendantes, de même loi, possédant une espérance finie <m>m</m>. On pose, pour tout <m>n \in \N^{*}</m>, <m>Y_{n} = \frac{1}{n} (X_{1} + \cdots + X_{n})</m>.
+            Soit <m>(X_n)_{n \geq 1}</m> une suite de variables aléatoires réelles discrètes, deux à deux indépendantes, de même loi, possédant une espérance finie <m>m</m>. On pose, pour tout <m>n \in \mathbb{N}^*</m>, <m>Y_n = \frac{X_1 + \cdots + X_n}{n}</m>.
         </p>
-        </introduction>
-        <task>
+    </introduction>
+
+    <task>
+        <statement>
             <p>
-                Soit <m>\varepsilon \gt 0</m>.
+                Dans les deux premières questions, on suppose <m>m = 0</m>.
+                <ol>
+                    <li>
+                        Soit <m>\varepsilon \gt 0</m>.
+                        <ol>
+                            <li>
+                                Pour <m>c \gt 0</m>, on définit <m>g : \mathbb{R} \to \mathbb{R}</m> par :
+                                <me>
+                                    g(x) = 
+                                    \begin{cases} 
+                                        x \amp \text{si } |x| \leq c \\
+                                        0 \amp \text{sinon}.
+                                    \end{cases}
+                                </me>
+                                Montrer que la variable aléatoire <m>g(X_1)</m> est d'espérance finie et que l'on peut choisir <m>c</m> tel que <m>\mathbb{E}(|g(X_1) - X_1|) \leq \frac{\varepsilon}{2}</m>.
+                            </li>
+                            <li>
+                                On pose <m>a = \mathbb{E}(g(X_1))</m>. Montrer que :
+                                <me>
+                                    \mathbb{E}(|g(X_1) - X_1 - a|) \leq \varepsilon.
+                                </me>
+                            </li>
+                            <li>
+                                On pose, pour tout <m>n \in \mathbb{N}^*</m>, <m>U_n = g(X_n) - a</m> et <m>Y_n' = \frac{U_1 + \cdots + U_n}{n}</m>. Justifier que les variables <m>U_n</m> admettent un moment d'ordre 2. Montrer que <m>\lim_{n \to +\infty} \mathbb{V}(Y_n') = 0</m>. En déduire que <m>\lim_{n \to +\infty} \mathbb{E}(|Y_n|) = 0</m>.
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        Montrer que, pour tout <m>\varepsilon \gt 0</m>, on a :
+                        <me>
+                            \lim_{n \to +\infty} \mathbb{P}(|Y_n| \geq \varepsilon) = 0.
+                        </me>
+                    </li>
+                </ol>
             </p>
-            <ol marker="1.">
-                <li>
-                    <p>
-                        Pour <m>c\gt0</m>, on définit <m>g: \R \rightarrow \R</m> par :
+        </statement>
+        <solution>
+            <p>
+                <ol>
+                    <li>
+                        <ol>
+                            <li>
+                                La fonction <m>g</m> est bornée par <m>c</m>, donc <m>g(X_1)</m> est d'espérance finie. De plus, on a :
+                                <me>
+                                    \mathbb{E}(|g(X_1) - X_1|) = \mathbb{E}(|X_1| \mathbf{1}_{\{|X_1| \gt c\}}).
+                                </me>
+                                Comme <m>\mathbb{E}(|X_1|) \lt +\infty</m>, on peut choisir <m>c</m> suffisamment grand pour que <m>\mathbb{E}(|X_1| \mathbf{1}_{\{|X_1| \gt c\}}) \leq \frac{\varepsilon}{2}</m>.
+                            </li>
+                            <li>
+                                On a :
+                                <me>
+                                    \mathbb{E}(|g(X_1) - X_1 - a|) \leq \mathbb{E}(|g(X_1) - X_1|) + |a|.
+                                </me>
+                                Comme <m>a = \mathbb{E}(g(X_1))</m> et <m>|a| \leq \mathbb{E}(|g(X_1)|) \leq c</m>, on peut choisir <m>c</m> suffisamment grand pour que <m>\mathbb{E}(|g(X_1) - X_1 - a|) \leq \varepsilon</m>.
+                            </li>
+                            <li>
+                                Les variables <m>U_n</m> sont centrées et admettent un moment d'ordre 2 car <m>g(X_n)</m> est bornée et <m>X_n</m> a une espérance finie. On a :
+                                <me>
+                                    \mathbb{V}(Y_n') = \frac{\mathbb{V}(U_1)}{n} \to 0 \quad \text{quand} \quad n \to +\infty.
+                                </me>
+                                Par l'inégalité de Markov, on a :
+                                <me>
+                                    \mathbb{E}(|Y_n|) \leq \mathbb{E}(|Y_n'|) + \mathbb{E}(|Y_n - Y_n'|) \leq \sqrt{\mathbb{V}(Y_n')} + \mathbb{E}(|Y_n - Y_n'|).
+                                </me>
+                                Comme <m>\mathbb{E}(|Y_n - Y_n'|) \leq \mathbb{E}(|g(X_1) - X_1 - a|) \leq \varepsilon</m>, on obtient :
+                                <me>
+                                    \lim_{n \to +\infty} \mathbb{E}(|Y_n|) = 0.
+                                </me>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        Pour tout <m>\varepsilon \gt 0</m>, on a :
                         <me>
-                            g(x) = \begin{cases}
-                            x \amp \text{si } |x| \leqslant c, \\
-                            0 \amp \text{sinon.}
-                            \end{cases}
+                            \mathbb{P}(|Y_n| \geq \varepsilon) \leq \frac{\mathbb{E}(|Y_n|)}{\varepsilon} \to 0 \quad \text{quand} \quad n \to +\infty.
                         </me>
-                        Montrer que la variable aléatoire <m>g(X_{1})</m> est d'espérance finie et que l'on peut choisir <m>c</m> tel que <m>\Es(|g(X_{1}) - X_{1}|) \leqslant \frac{\varepsilon}{2}</m>.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        On pose <m>a = \Es(g(X_{1}))</m>. Montrer que :
-                        <me>
-                            \Es(|g(X_{1}) - X_{1} - a|) \leqslant \varepsilon.
-                        </me>
-                    </p>
-                </li>
-            </ol>
-        </task>
+                    </li>
+                </ol>
+            </p>
+        </solution>
+    </task>
+
+    <task>
+        <statement>
+            <p>
+                On ne suppose plus <m>m = 0</m>. Montrer que l'on a :
+                <me>
+                    \forall \varepsilon \gt 0, \quad \lim_{n \to +\infty} \mathbb{P}(|Y_n - m| \geq \varepsilon) = 0.
+                </me>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                On pose <m>Z_n = Y_n - m</m>. Alors <m>Z_n</m> est la moyenne des variables <m>X_n - m</m>, qui sont centrées. D'après la question précédente, on a :
+                <me>
+                    \lim_{n \to +\infty} \mathbb{P}(|Z_n| \geq \varepsilon) = 0.
+                </me>
+                Par conséquent :
+                <me>
+                    \lim_{n \to +\infty} \mathbb{P}(|Y_n - m| \geq \varepsilon) = 0.
+                </me>
+            </p>
+        </solution>
+    </task>
 </exercise>
 
 
@@ -1457,6 +1538,8 @@
         </solution>
     </task>
 </exercise>
+
+
 
 
  </exercises>
