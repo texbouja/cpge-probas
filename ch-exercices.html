@@ -13,7 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Probabilités discrètes">
-<script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   "tex": {
@@ -40,7 +40,24 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
   "chtml": {
     "scale": 0.98,
@@ -123,7 +140,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-fctgen.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="up-button button" href="proba-disc.html" title="Haut"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Haut</span></a><span class="next-button button disabled"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-expgraph.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="up-button button" href="proba-disc.html" title="Haut"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Haut</span></a><span class="next-button button disabled"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{mathtools}\require{empheq}\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
@@ -207,10 +224,14 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul>
 </li>
-<li class="toc-item toc-exercises active"><div class="toc-title-box"><a href="ch-exercices.html" class="internal"><span class="codenumber">2</span> <span class="title">Exercices</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-actinum.html" class="internal"><span class="codenumber">2</span> <span class="title">Activités numériques</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-expgraph.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Exploration graphique</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises active"><div class="toc-title-box"><a href="ch-exercices.html" class="internal"><span class="codenumber">3</span> <span class="title">Exercices</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="exercises" id="ch-exercices"><h2 class="heading hide-type">
-<span class="type">Exercices</span><span class="space"> </span><span class="codenumber">2</span><span class="space"> </span><span class="title">Exercices</span>
+<span class="type">Exercices</span><span class="space"> </span><span class="codenumber">3</span><span class="space"> </span><span class="title">Exercices</span>
 </h2>
 <article class="exercise exercise-like" id="ch-exercices-2"><h2 class="heading">
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Caractérisation de la loi géometrique décalée.</span>
@@ -412,7 +433,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">On a <span class="process-math">\((X=n)\subset (X\geqslant n)\)</span> donc <span class="process-math">\(\Pr(X=n)=\Pr(X=n,X\geq n)\text{.}\)</span> Ce qui donne</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-tauxpanne.html" id="eq-tauxpanne">
 \begin{equation}
-x_n=\Pr(X=n\mid X\geq n)=\frac{\Pr(X=n)}{\Pr(X\geq n)}\tag{2.3}
+x_n=\Pr(X=n\mid X\geq n)=\frac{\Pr(X=n)}{\Pr(X\geq n)}\tag{3.1}
 \end{equation}
 </div>
 <div class="para">On en déduit que</div>
@@ -427,10 +448,10 @@ x_n=\Pr(X=n\mid X\geq n)=\frac{\Pr(X=n)}{\Pr(X\geq n)}\tag{2.3}
 \prod_{k=1}^{n-1}(1-x_k)=\frac{\Pr(X\geq n)}{\Pr(X\geq 1)}=\Pr(X\geq n)
 \end{equation*}
 </div>
-<div class="para">La relation <a href="ch-exercices.html#eq-tauxpanne" class="xref" data-knowl="./knowl/xref/eq-tauxpanne.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Équation 2.3">(2.3)</a> signifie que <span class="process-math">\(p_n=x_n\Pr(X\geq n)\)</span> donc finalement</div>
+<div class="para">La relation <a href="ch-exercices.html#eq-tauxpanne" class="xref" data-knowl="./knowl/xref/eq-tauxpanne.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Équation 3.1">(3.1)</a> signifie que <span class="process-math">\(p_n=x_n\Pr(X\geq n)\)</span> donc finalement</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-tauxpanne.html" id="eqn-pnexpr">
 \begin{equation}
-p_n=x_n\prod_{k=1}^{n-1}(1-x_k)\tag{2.4}
+p_n=x_n\prod_{k=1}^{n-1}(1-x_k)\tag{3.2}
 \end{equation}
 </div>
 </div></div></details>
@@ -708,7 +729,7 @@ u_{n} = \sum_{k=0}^{n} u_{n - k} v_{k}.
 </div>
 </div></li>
 </ol></article></article><article class="exercise exercise-like" id="ch-exercices-12"><h2 class="heading">
-<span class="codenumber">11<span class="period">.</span></span><span class="space"> </span><span class="title">Loi faible des grands nombres dans \( L^1 \).</span>
+<span class="codenumber">11<span class="period">.</span></span><span class="space"> </span><span class="title">Loi faible des grands nombres dans <span class="process-math">\(L^1 \)</span>.</span>
 </h2>
 <div class="introduction" id="ch-exercices-12-2"><div class="para" id="ch-exercices-12-2-1">Soit <span class="process-math">\((X_n)_{n \geq 1}\)</span> une suite de variables aléatoires réelles discrètes, deux à deux indépendantes, de même loi, possédant une espérance finie <span class="process-math">\(m\text{.}\)</span> On pose, pour tout <span class="process-math">\(n \in \mathbb{N}^*\text{,}\)</span> <span class="process-math">\(Y_n = \frac{X_1 + \cdots + X_n}{n}\text{.}\)</span>
 </div></div>
@@ -1399,7 +1420,7 @@ A_{n+1} \setminus A_n = A_{n-r} \cap S_{n-r+1} \cap S_{n-r+2} \cap \cdots \cap S
 </div></li>
 </ol></div></details></div></article></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-fctgen.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+<a class="previous-button button" href="sec-expgraph.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
