@@ -35,19 +35,18 @@
           X est dite réelle si <m>\Omega'\subset \R</m>.
         </p>
       </statement>
-      
     </definition>
     <explanation>
-      <p>
-        Dans la pratique une variable aléatoire est utilisée pour représenter le résultat d'une expérience aléatoire.
-        Souvent l'univers <m>\Omega</m> et la tribu <m>\mathscr T</m> ne sont pas précisés.
-        Les résultats et les événements de l'expérience sont  dans <m>\Omega'</m> et dans <m>\mathscr T'</m>.
-      </p>
+    <p>
+      Dans la pratique une variable aléatoire est utilisée pour représenter le résultat d'une expérience aléatoire.
+      Souvent l'univers <m>\Omega</m> et la tribu <m>\mathscr T</m> ne sont pas précisés.
+      Les résultats et les événements de l'expérience sont  dans <m>\Omega'</m> et dans <m>\mathscr T'</m>.
+    </p>
 
-      <p>
-        La question est comment choisir <m>(\Omega',\mathscr T')</m> et de quelle tribu munir <m>\Omega</m> pour que le résultat de l'expérience soit une variable aléatoire ? Les remarques suivantes donnent des éléments de réponse.
-      </p>
-      </explanation>
+    <p>
+      La question est comment choisir <m>(\Omega',\mathscr T')</m> et de quelle tribu munir <m>\Omega</m> pour que le résultat de l'expérience soit une variable aléatoire ? Les remarques suivantes donnent des éléments de réponse.
+    </p>
+    </explanation>
 
     <remark>
       <ol>
@@ -280,7 +279,7 @@
             </li>
           </ol>
           On appelle loi de la variable <m>X</m> le couple <m>\bigl(X,(\Pr(X=x))_{x\in X(\Omega)}\bigr)</m>.
-          L'application <m>x\longmapsto P(X=x)</m> est dite fonction des masses de la variable <m>X</m>.
+          L'application <m>x\longmapsto \Pr(X=x)</m> est dite fonction des masses de la variable <m>X</m>.
         </p>
         <explanation>
         <p>
@@ -290,9 +289,10 @@
         </explanation>
       </statement>
     </theorem>
-    
+
     <note>
-      <p> Si <m>X</m> et <m>Y</m> sont des VAD qui suivent la même loi alors on écrit <m>X\sim Y</m>.
+      <p>
+        Si <m>X</m> et <m>Y</m> sont des VAD qui suivent la même loi alors on écrit <m>X\sim Y</m>.
       </p>
     </note>
 
@@ -378,6 +378,7 @@
       </statement>
     </proposition>
   </subsection>
+
 
   <subsection xml:id="subsec-indvar">
     <title>Indépendance des variables aléatoires discrètes</title>
@@ -577,6 +578,7 @@
     </remark>
   </subsection>
 
+
   <subsection xml:id="subsec-loiusuelles">
     <title>Lois usuelles</title>
 
@@ -654,6 +656,252 @@
       </li>
     </ol>
   </subsection>
+
+
+  <subsection xml:id="subsec-fonction-repartition">
+    <title>Fonction de répartition (programme marocain)</title>
+
+    <introduction>
+        <p>
+          On suppose que <m>\R</m> est muni de sa tribu de Borel <m>\mathscr B(\R)</m>. Dans la suite toutes les variables alétoires réelles considérées sont supposées à valeurs dans l'espace probabilisable <m>(\R,\mathscr B(\R))</m>.  
+        </p>
+      </introduction>
+
+      <insight>
+        <p>
+          Si <m>X</m> est une VAR on a vu que l'application <m>\Pr_X</m> définie par 
+          <me>
+            \forall B\in\mathscr B(\R),\;
+            \Pr_X(B)=\Pr(X\in B)
+          </me>
+          est une probabilité de l'espace <m>(\R,\mathscr B(\R))</m>. La probailité <m>\Pr_X</m> est appelée loi de <m>X</m> 
+        </p>
+      </insight>
+
+      <remark>
+        <p>
+          Pour une variable aléatoire discrète <m>X</m> on a plutôt défini la loi de <m>X</m> comme étant le couple <m>(X(\Omega),(\Pr(X=x))_{x\in X(\Omega)}</m> sachant que la famille  <m>(\Pr(X=x))_{x\in X(\Omega)}</m> détermine de façon unique la probabilité <m>\Pr_X</m>. 
+        </p>
+        <p>
+          Il s'agira dans la suite de fournir un moyen pour caractériser la loi d'une variable aléatoire réelle qui n'est pas discrète.
+        </p>
+      </remark>
+
+    <definition xml:id="def-fonction-repartition">
+      <statement>
+        <p>
+          Soit <m>X</m> une <term>variable aléatoire réelle</term> définie sur un espace probabilisé <m>(\Omega, \mathcal{F}, P)</m>.
+          La <em>fonction de répartition</em> de <m>X</m>, notée <m>F_X</m>, est la fonction définie par :
+        </p>
+        <me>
+          F_X(x) = \Pr(X \leq x), \quad \forall x \in \mathbb{R}.
+        </me>
+      </statement>
+    </definition>
+
+
+    <proposition>
+      <title>Propriétés caractéristiques d'une fonction de répartition</title>
+
+      
+
+      <statement>
+        <p>
+          Soit <m>X</m> une VAR.
+          La fonction de répartition <m>F_X</m> possède les propriétés suivantes :
+        </p>
+
+        <ol>
+          <li>
+            <m>F_X</m> est <em>croissante</em> ;
+          </li>
+
+          <li>
+            <m>F_X</m> est <em>bornée</em> : <m>0 \leq F_X(x) \leq 1</m> pour tout <m>x \in \mathbb{R}</m>.
+          </li>
+
+          <li>
+            pour tout <m>x \in \mathbb{R}</m>, <m>F_X(x^+) = F_X(x)</m> ie <m>F_X</m> est continue à droite en tout point.
+          </li>
+
+          <li>
+            <m>\lim\limits_{x \to -\infty} F_X(x) = 0</m> et <m>\lim\limits_{x \to +\infty} F_X(x) = 1</m>.
+          </li>
+        </ol>
+      </statement>
+
+
+      <proof>
+        <p>
+          <ol>
+            <li>
+              <p>
+                Découle de <m>(X\leq x)\subset (X\leq y)</m> si <m>x\leq y</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Conséquence de la définition <m>F_X(x)=\Pr(X\leq x)</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                La fonction <m>F_X</m> étant croissante elle admet une limite à droite (et à gauche) en <m>x </m>.
+                On peut écrire
+                <me>
+                  (X\gt x )=\bigcap_{n\in\N^*}\left(X\gt x +\frac1n\right)
+                </me>
+                La suite d'événements <m>(X\gt x +1/n)_n</m> est decroissante donc par continuité monotone
+                <me>
+                  \Pr(X\gt x)=\lim\Pr\left(X\gt x+\frac1n\right)
+                </me>
+                soit <m>1-F_X(x )=1-\lim F_X(x+1/n)</m> et donc <m>F_X(x )=F_X(x^+)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>F_X</m> étant monotone bornée, elle admet des limites (finies) en <m>+\infty</m> et en <m>-\infty</m>. On peut donc écrire
+                <md>
+                  <mrow>\lim_{+\infty}F_X \amp= \lim F_X(n) </mrow>
+                  <mrow> \amp= \lim\Pr(X\in]-\infty,n]) </mrow>
+                  <mrow> \amp=\Pr\left(X\in\bigcup_{n\in\N}]-\infty,n]\right) </mrow>
+                  <mrow> \amp= \Pr(X\in\R)=1 </mrow>
+                </md>
+                et de même <m>\lim_{-\infty}F_X=\lim\Pr(X\leq -n)=\Pr(X\in\emptyset)=0</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </proof>
+    </proposition>
+
+    <corollary xml:id="cor-">
+      <statement>
+        <p>
+          Soit <m>X</m> une VAR.
+          Alors pour tout <m>x\in\R</m>, 
+          <me> \Pr(X = x) = F_X(x) - F_X(x^-)</me>
+        </p>
+
+        <p>
+          En particulier <m>F_X</m> est continue en <m>x</m> si et seulement si <m>\Pr(X=x)=0</m>.
+        </p>
+      </statement>
+
+
+      <proof>
+        <p>
+          <m>\Pr(X=x)=\Pr(X\leq x)-\Pr(X\lt x)</m> et de la même façon que dans la propriété précédente <m>\Pr(X\lt x)=\lim\Pr(X\leq x-1/n)=F_X(x^-)</m>.
+        </p>
+      </proof>
+    </corollary>
+
+    <remark>
+      <ol>
+        <li>
+          <p>
+            L'ensemble <m>D_X</m> des points de discontinuité de <m>F_X</m> est au plus dénombrable.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Si <m>X</m> est une VAR alors <m>D_X\subset X(\Omega)</m>
+          </p>
+        </li>
+
+        
+      </ol>
+    </remark>
+
+    <proposition xml:id="prop-loirepart">
+      <statement>
+          <p>
+            Soit <m>X</m> une VAR. 
+            La fonction <m>F_X</m> permet d'exprimer la probabilité de tous les événements de la forme <m>(X\in I)</m> où <m>I</m> est un intervalle quelconque de <m>\R</m>. Pour deux réels <m>a,b\in\R</m> tels que <m>a\lt b\lt </m> on a:
+            <md>
+              <mrow>\Pr(X\leq a) \amp:=F_X(a) </mrow>
+              <mrow>\Pr(X\lt a)\amp= F_X(a^-)</mrow>
+              <mrow>\Pr(X\gt a)\amp=1-F_X(a)</mrow>
+              <mrow>\Pr(X\geq a)\amp=1-F_X(a^-)</mrow>
+              <mrow>\Pr(a\leq X\leq b)\amp=F_X(b)-F_X(a^-)</mrow>
+              <mrow>\Pr(a\lt X\leq b)\amp=F_X(b)-F_X(a)</mrow>,
+              <mrow>\Pr(a\leq X\lt b)\amp=F_X(b^-)-F_X(a)</mrow>
+              <mrow>\Pr(a\lt X\lt b)\amp=F_X(b^-)-F_X(a^-)</mrow>
+            </md>
+          </p>
+      </statement>
+    </proposition>
+
+    <remark>
+      <p>
+        On a vu que <m>\mathscr B(\R)</m> est la tribu de <m>\R</m> engendrée par tous les intervalles de <m>\R</m>. La proposition précédente suggère donc que la fonction de répartition  <m>F_X</m> caractérise de façon unique sa loi <m>\Pr_X</m>. On admet le théorème suivant qui confirme cette idée. 
+      </p>
+    </remark>
+
+    <theorem xml:id="thm-caractloi">
+      <statement>
+        <p>
+          Deux VAR ont la même loi si et seulement si elles ont la même fonction de répartition.
+        </p>
+      </statement>
+    </theorem>
+    
+    <example><title>Fonction de répartition d'une VADR</title>
+    <p>
+      Soit <m>X</m> une VADR. Alors la fonction de répartition de <m>X</m> est donnée par 
+      <me>
+        \forall t\in\R,\;
+        F_X(t)=\sum_{\substack{x\in X(\Omega) \\ x\leq t}}\Pr(X=x)
+      </me>
+    </p>
+    <p> Dans le cas où on peut ordonner les valeurs prises par <m>X</m> en une suite strictement croissante <m>x_0\lt x_1\lt\cdots\lt x_n\lt\ldots</m> alors <m>F_X</m> est constante sur chaque intervalle <m>[x_n,x_{n+1}[</m> et on a 
+    <me>
+      F_X(t)=\begin{cases}
+        0 \amp\text{si } t\lt x_0 \\
+        \ds\sum_{k=0}^{n_t} P(X=x_k)\amp\text{sinon} 
+        \end{cases}
+    </me>
+    où <m>n_t</m> est l'unique entier <m>n</m> tel que <m>x_n\leq t\lt x_{n+1}</m>. Rappelons que réciproquemnt la loi de <m>X</m> peut être exprimée en fonction de <m>F_X</m> par 
+          <me>
+            \forall n\in\N^*,\; \Pr(X=x_n)=F_X(x_n)-F(x_n^-)=F_X(x_n)-F_X(x_{n-1})
+          </me>
+    </p>
+    
+
+    </example>
+
+    <example>
+      <title>Loi uniforme sur un segment</title>
+
+      <statement>
+        <p>
+          On dit qu'une VAR <m>U</m> suit une loi uniforme sur un segment non trivial <m>[a,b]</m> de <m>\R</m> et on écrit <m>U\sim\mathscr U([a,b])</m> si
+          <me>
+            \text{pour tout intervall } I \text{ de } \R,\;\Pr(U\in I)=\ds\frac{\ell(I\cap[a,b])}{b-a}
+          </me>
+          où <m>\ell(I\cap[a,b])</m> est la longueur de l'intervalle <m>I\cap[a,b]</m>.
+        </p>
+
+        <p>
+          La fonction de répartition de <m>U</m> est définie par
+          <me>
+            F_U(t)=\begin{cases} 0 \amp\text{si } t\lt a \\
+            \ds\frac{t-a}{b-a} \amp\text{si } a\leq t\lt b \\ 
+            1 \amp\text{si }t\geq b \end{cases}
+          </me>
+          Elle est continue sur <m>\R</m> et en particulier <m>\Pr(U=t)=0</m> pour tout <m>t\in\R</m>. 
+          
+        </p>
+      </statement>
+    
+      
+    </example>
+  </subsection>
+
 
   <subsection xml:id="subsec-loi-activite">
     <title>Activités</title>
@@ -775,10 +1023,6 @@
       </answer>
     </activity>
 
-    
-
-    
-
     <activity>
       <title>Comportement asymptotique d'une loi binomiale</title>
 
@@ -829,7 +1073,7 @@
           Dans cette activité, nous allons explorer la propriété d'absence de mémoire des variables aléatoires discrètes.
           Une variable aléatoire discrète <m>T</m> à valeurs entières positives (<m>k = 1, 2, 3, \ldots</m>) est dite <em>sans mémoire</em> si elle satisfait la propriété suivante pour tous entiers <m>s, t \geq 0</m> :
           <me>
-            P(T \gt s + t \mid T \gt s) = P(T \gt t).
+            \Pr(T \gt s + t \mid T \gt s) = \Pr(T \gt t).
           </me>
           Nous allons montrer que la distribution géométrique est la seule distribution discrète sans mémoire.
         </p>
@@ -847,7 +1091,7 @@
 
         <solution>
           <p>
-            Pour montrer que <m>T</m> est sans mémoire, calculons <m>P(T \gt s + t \mid T \gt s)</m>.
+            Pour montrer que <m>T</m> est sans mémoire, calculons <m>\Pr(T \gt s + t \mid T \gt s)</m>.
           </p>
 
           <p>
@@ -856,7 +1100,7 @@
                 <p>
                   La fonction de survie de <m>T</m> est :
                   <me>
-                    P(T \gt k) = (1 - p)^k.
+                    \Pr(T \gt k) = (1 - p)^k.
                   </me>
                 </p>
               </li>
@@ -865,7 +1109,7 @@
                 <p>
                   Par définition de la probabilité conditionnelle, on a :
                   <me>
-                    P(T \gt s + t \mid T \gt s) = \frac{P(T \gt s + t)}{P(T \gt s)}.
+                    \Pr(T \gt s + t \mid T \gt s) = \frac{\Pr(T \gt s + t)}{\Pr(T \gt s)}.
                   </me>
                 </p>
               </li>
@@ -874,17 +1118,17 @@
                 <p>
                   En utilisant la fonction de survie, cela devient :
                   <me>
-                    P(T \gt s + t \mid T \gt s) = \frac{(1 - p)^{s + t}}{(1 - p)^s} = (1 - p)^t.
+                    \Pr(T \gt s + t \mid T \gt s) = \frac{(1 - p)^{s + t}}{(1 - p)^s} = (1 - p)^t.
                   </me>
                 </p>
               </li>
 
               <li>
                 <p>
-                  Or, <m>P(T \gt t) = (1 - p)^t</m>.
+                  Or, <m>\Pr(T \gt t) = (1 - p)^t</m>.
                   On a donc bien :
                   <me>
-                    P(T \gt s + t \mid T \gt s) = P(T \gt t).
+                    \Pr(T \gt s + t \mid T \gt s) = \Pr(T \gt t).
                   </me>
                 </p>
               </li>
@@ -909,7 +1153,7 @@
 
         <solution>
           <p>
-            Pour montrer que <m>T</m> suit une distribution géométrique, nous allons analyser sa fonction de survie <m>q_k = P(T \gt k)</m>.
+            Pour montrer que <m>T</m> suit une distribution géométrique, nous allons analyser sa fonction de survie <m>q_k = \Pr(T \gt k)</m>.
           </p>
 
           <p>
@@ -918,13 +1162,13 @@
                 <p>
                   <em>Propriété d'absence de mémoire :</em> La propriété d'absence de mémoire s'écrit :
                   <me>
-                    P(T \gt s + t \mid T \gt s) = P(T \gt t).
+                    \Pr(T \gt s + t \mid T \gt s) = \Pr(T \gt t).
                   </me>
                   En utilisant la définition de la probabilité conditionnelle, cela devient :
                   <me>
-                    \frac{P(T \gt s + t)}{P(T \gt s)} = P(T \gt t).
+                    \frac{\Pr(T \gt s + t)}{\Pr(T \gt s)} = \Pr(T \gt t).
                   </me>
-                  Notons <m>q_k = P(T \gt k)</m>.
+                  Notons <m>q_k = \Pr(T \gt k)</m>.
                   Alors, la propriété devient :
                   <me>
                     q_{s + t} = q_s \cdot q_t.
@@ -954,7 +1198,7 @@
                   </me>
                   La fonction de masse de <m>T</m> est donnée par :
                   <me>
-                    P(T = k) = q_{k-1} - q_k = (1 - p)^{k-1} - (1 - p)^k = (1 - p)^{k-1} p.
+                    \Pr(T = k) = q_{k-1} - q_k = (1 - p)^{k-1} - (1 - p)^k = (1 - p)^{k-1} p.
                   </me>
                   Cela correspond exactement à la distribution géométrique de paramètre <m>p</m>.
                 </p>
@@ -1080,223 +1324,226 @@
             Expliciter <m>C_n(a, b)</m> et exprimer la loi de <m>X_n</m> en fonction de ces nombres.
             <figure xml:id="chemin-marche">
               <image source="images/chemin-marche-1.svg"/>
-            </figure>
-          </p>
-        </statement>
+              </figure>
+            </p>
+          </statement>
 
-        <solution>
-          <p>
-            Chaque chemin peut être représenté par un mot unique de longueur <m>n</m> formé des motifs <c>/</c> (avancer) et <c>\</c> (reculer).
-            Si <m>r</m> désigne le nombre de motifs <c>/</c> et <m>s</m> celui des motifs <c>\</c>, alors :
-            <me>
-              r + s = n \quad \text{et} \quad r - s = b - a.
-            </me>
-            On en déduit que <m>2r = n + b - a</m>, ce qui implique qu'un chemin entre <m>(0, a)</m> et <m>(n, b)</m> n'est possible que si <m>n</m> est de même parité que <m>b - a</m>.
-            Dans ce cas, <m>r = \frac{n + b - a}{2}</m>.
-          </p>
+          <solution>
+            <p>
+              Chaque chemin peut être représenté par un mot unique de longueur <m>n</m> formé des motifs <c>/</c> (avancer) et <c>\</c> (reculer).
+              Si <m>r</m> désigne le nombre de motifs <c>/</c> et <m>s</m> celui des motifs <c>\</c>, alors :
+              <me>
+                r + s = n \quad \text{et} \quad r - s = b - a.
+              </me>
+              On en déduit que <m>2r = n + b - a</m>, ce qui implique qu'un chemin entre <m>(0, a)</m> et <m>(n, b)</m> n'est possible que si <m>n</m> est de même parité que <m>b - a</m>.
+              Dans ce cas, <m>r = \frac{n + b - a}{2}</m>.
+            </p>
 
-          <p>
-            Le nombre de ces chemins est donc :
-            <me>
-              C_n(a, b) = \begin{cases} \displaystyle \binom{n}{\frac{n + b - a}{2}} \amp \text{si } n + b - a \text{ est pair}, \\ 0 \amp \text{sinon}.
-              \end{cases}
-            </me>
-            On notera que :
-            <ul>
-              <li>
-                <p>
-                  puisque <m>\frac{n+b-a}2+\frac{n-b+a}2=n</m> alors  <m>C_n(a,b)=C_n(-a,-b)</m> signifiant que le nombre de parcours entre <m>(0,a)</m> et <m>(n,b)</m> est le même que celui entre <m>(0,-a)</m> et <m>(n,-b)</m>, chaque chemin de <m>(0,-a)</m> à <m>(n,-b)</m> étant le symétrique par rapport à l'axe <m>Ox</m> d'un chemin de <m>(0,a)</m> à <m>(n,b)</m>
-                </p>
-              </li>
+            <p>
+              Le nombre de ces chemins est donc :
+              <me>
+                C_n(a, b) = \begin{cases} \displaystyle \binom{n}{\frac{n + b - a}{2}} \amp \text{si } n + b - a \text{ est pair}, \\ 0 \amp \text{sinon}.
+                \end{cases}
+              </me>
+              On notera que :
+              <ul>
+                <li>
+                  <p>
+                    puisque <m>\frac{n+b-a}2+\frac{n-b+a}2=n</m> alors  <m>C_n(a,b)=C_n(-a,-b)</m> signifiant que le nombre de parcours entre <m>(0,a)</m> et <m>(n,b)</m> est le même que celui entre <m>(0,-a)</m> et <m>(n,-b)</m>, chaque chemin de <m>(0,-a)</m> à <m>(n,-b)</m> étant le symétrique par rapport à l'axe <m>Ox</m> d'un chemin de <m>(0,a)</m> à <m>(n,b)</m>
+                  </p>
+                </li>
 
-              <li>
-                <p>
-                  <m>C_n(a,b)=C_n(b,a)</m> signifiant que le nombre de parcours entre <m>(0,a)</m> et <m>(n,b)</m> est le même que celui entre <m>(0,b)</m> et <m>(n,a)</m> ou que chaque chemin de <m>(0,b)</m> à <m>(n,a)</m> revient à parcourir à l'envers un chemin de <m>(0,a)</m> à <m>(n,b)</m>.
-                </p>
-              </li>
-              <li>
-                <p>
-                  pour tout <m>c\in\Z</m>, <m>C_n(a+c,b+c)=C_n(a,b)</m>, et en particulier <m>C_n(a,b)=C_n(0,b-a)</m>,  confirmant qu'un parcours entre <m>(0,a+c)</m> et <m>(n,b+c)</m> s'obtient par décalage du temps d'un chemin de <m>(0,a)</m> à <m>(n,b)</m>.
-                </p>
-              </li>
-            </ul>
-          </p>
+                <li>
+                  <p>
+                    <m>C_n(a,b)=C_n(b,a)</m> signifiant que le nombre de parcours entre <m>(0,a)</m> et <m>(n,b)</m> est le même que celui entre <m>(0,b)</m> et <m>(n,a)</m> ou que chaque chemin de <m>(0,b)</m> à <m>(n,a)</m> revient à parcourir à l'envers un chemin de <m>(0,a)</m> à <m>(n,b)</m>.
+                  </p>
+                </li>
 
-          <p>
-            La loi de <m>X_n</m> peut alors s'exprimer comme :
-            <me>
-              \forall k \in X_n(\Omega), \; \Pr(X_n = k) = C_n(a, k) p^{\frac{n + k - a}{2}} q^{\frac{n - k + a}{2}}.
-            </me>
-          </p>
-        </solution>
-      </task>
-      <!-- Question 3 -->
-      <task>
-        <title>Principe de réflexion</title>
+                <li>
+                  <p>
+                    pour tout <m>c\in\Z</m>, <m>C_n(a+c,b+c)=C_n(a,b)</m>, et en particulier <m>C_n(a,b)=C_n(0,b-a)</m>,  confirmant qu'un parcours entre <m>(0,a+c)</m> et <m>(n,b+c)</m> s'obtient par décalage du temps d'un chemin de <m>(0,a)</m> à <m>(n,b)</m>.
+                  </p>
+                </li>
+              </ul>
+            </p>
 
-        <statement>
-          <p>
-            On suppose que <m>a, b > 0</m> et on note <m>C_n^0(a, b)</m> le nombre de parcours entre <m>(0, a)</m> et <m>(n, b)</m> qui passent au moins une fois par un point de la forme <m>(k, 0)</m>.
-            Justifier que <m>C_n^0(a, b) = C_n(-a, b)</m>.
-          </p>
-        </statement>
+            <p>
+              La loi de <m>X_n</m> peut alors s'exprimer comme :
+              <me>
+                \forall k \in X_n(\Omega), \; \Pr(X_n = k) = C_n(a, k) p^{\frac{n + k - a}{2}} q^{\frac{n - k + a}{2}}.
+              </me>
+            </p>
+          </solution>
+        </task>
+        <!-- Question 3 -->
+        <task>
+          <title>Principe de réflexion</title>
 
-        <solution>
-          <p>
-            Pour chaque chemin <m>\mathcal{C}</m> allant de <m>(0, a)</m> vers <m>(n, b)</m> et touchant au moins une fois l'axe <m>Ox</m>, il existe un unique chemin <m>\mathcal{C}'</m> allant de <m>(0, -a)</m> vers <m>(n, b)</m> qui est symétrique par rapport à l'axe <m>Ox</m> entre les instants <m>0</m> et <m>k</m>, où <m>k</m> est le premier instant où <m>\mathcal{C}</m> touche l'axe <m>Ox</m>.
-            Réciproquement, chaque chemin <m>\mathcal{C}'</m> de <m>(0, -a)</m> vers <m>(n, b)</m> doit toucher l'axe <m>Ox</m> au moins une fois et est le symétrique d'un chemin <m>\mathcal{C}</m> de <m>(0, a)</m> vers <m>(n, b)</m>.
-            Voir la <xref ref="chemin-marche"/> pour une illustration des chemins <m>\mathcal C</m> et <m>\mathcal C'</m>.
-          </p>
+          <statement>
+            <p>
+              On suppose que <m>a, b > 0</m> et on note <m>C_n^0(a, b)</m> le nombre de parcours entre <m>(0, a)</m> et <m>(n, b)</m> qui passent au moins une fois par un point de la forme <m>(k, 0)</m>.
+              Justifier que <m>C_n^0(a, b) = C_n(-a, b)</m>.
+            </p>
+          </statement>
 
-          <p>
-            Cette correspondance établit une bijection entre l'ensemble des chemins <m>\mathcal{C}</m> et celui des chemins <m>\mathcal{C}'</m>.
-            Ainsi :
-            <me>
-              C_n^0(a, b) = C_n(-a, b).
-            </me>
-          </p>
-        </solution>
-      </task>
-      <!-- Question 4 -->
-      <task>
-        <title>Théorème du scrutin</title>
+          <solution>
+            <p>
+              Pour chaque chemin <m>\mathcal{C}</m> allant de <m>(0, a)</m> vers <m>(n, b)</m> et touchant au moins une fois l'axe <m>Ox</m>, il existe un unique chemin <m>\mathcal{C}'</m> allant de <m>(0, -a)</m> vers <m>(n, b)</m> qui est symétrique par rapport à l'axe <m>Ox</m> entre les instants <m>0</m> et <m>k</m>, où <m>k</m> est le premier instant où <m>\mathcal{C}</m> touche l'axe <m>Ox</m>.
+              Réciproquement, chaque chemin <m>\mathcal{C}'</m> de <m>(0, -a)</m> vers <m>(n, b)</m> doit toucher l'axe <m>Ox</m> au moins une fois et est le symétrique d'un chemin <m>\mathcal{C}</m> de <m>(0, a)</m> vers <m>(n, b)</m>.
+              Voir la <xref ref="chemin-marche"/> pour une illustration des chemins <m>\mathcal C</m> et <m>\mathcal C'</m>.
+            </p>
 
-        <statement>
-          <p>
-            On suppose que <m>a=0</m> et <m>b\gt 0</m>.
-            Montrer que le nombre de parcours de <m>(0, 0)</m> vers <m>(n, b)</m> qui ne reviennent jamais sur l'origine est <m>\frac{b}{n} C_n(0, b)</m> et en déduire que lorsque <m>X_0=0</m> alors
-            <me>
-              \Pr(X_1X_2\cdots X_n\ne0, X_n=b)=\frac bn\Pr(X_n=b)
-            </me>
-          </p>
-        </statement>
+            <p>
+              Cette correspondance établit une bijection entre l'ensemble des chemins <m>\mathcal{C}</m> et celui des chemins <m>\mathcal{C}'</m>.
+              Ainsi :
+              <me>
+                C_n^0(a, b) = C_n(-a, b).
+              </me>
+            </p>
+          </solution>
+        </task>
+        <!-- Question 4 -->
+        <task>
+          <title>Théorème du scrutin</title>
 
-        <solution>
-          <p>
-            Un chemin partant de <m>(0, 0)</m> vers <m>(n, b)</m> sans revenir sur l'axe <m>Ox</m> est entièrement déterminé par sa portion allant de <m>(1, 1)</m> vers <m>(n, b)</m> et qui ne touche jamais l'axe <m>Ox</m>.
-            Si <m>n + b</m> est pair, en posant <m>r = \frac{n + b}{2}</m>, leur nombre est donné par :
-            <md>
-              <mrow>  U_n(b):=C_{n-1}(1,b)-C_{n-1}^0(1,b) \amp= C_{n-1}(1,b)-C_{n-1}(-1,b) </mrow>
-              <mrow> \amp=\binom{n-1}{\frac{n+b-2}2}-\binom{n-1}{\frac{n+b}2}  </mrow>
-              <mrow> \amp= \binom {n-1}{r-1}-\binom{n-1}{r} </mrow>
-              <mrow> \amp=\binom{n}{r}\left(\frac rn-\frac{n-r}{n}\right)  </mrow>
-              <mrow> \amp=\frac{2r-n}{n}\binom{n}{r} </mrow>
-            </md>
-            Soit au final :
-            <me>
-              U_n(b) = \frac{b}{n} C_n(0, b).
-            </me>
-            Si on note <m>u_n(b):=\Pr(X_1X_2\cdots X_n\ne0,X_n=b)</m>, la probabilité pour qu'en partant du point <m>(0,0)</m> on atteigne le point <m>(n,b)</m> sans jamais revenir à l'origine alors
-            <me>
-              u_n(b)=U_n(b)p^{\frac{n+b}2}q^{\frac{n-b}2}=\frac bn\Pr(X_n=b)
-            </me>
-            Noter que cela implique que :
-            <me>
-              \sum_{k=1}^nu_n(k)=\frac1n\sum_{k=0}^nk\Pr(X_n=k)=\frac1n\Es(X_n)
-            </me>
-            <m>\sum_{k=1}^nu_n(k)</m> est la probabilité de ne pas revenir à l'origine entre les instants <m>0</m> et <m>n</m>.
-          </p>
-        </solution>
-      </task>
-      <!-- Question 5 -->
-      <task>
-        <title>Parcours sans retour vers l'origine</title>
+          <statement>
+            <p>
+              On suppose que <m>a=0</m> et <m>b\gt 0</m>.
+              Montrer que le nombre de parcours de <m>(0, 0)</m> vers <m>(n, b)</m> qui ne reviennent jamais sur l'origine est <m>\frac{b}{n} C_n(0, b)</m> et en déduire que lorsque <m>X_0=0</m> alors
+              <me>
+                \Pr(X_1X_2\cdots X_n\ne0, X_n=b)=\frac bn\Pr(X_n=b)
+              </me>
+            </p>
+          </statement>
 
-        <statement>
-          <p>
-            En déduire la probabilité <m>f_n</m> pour qu'on retourne pour la première fois à l'origine à l'instant <m>2n</m> sachant qu'on était sur l'origine à l'instant <m>0</m>.
-          </p>
-        </statement>
+          <solution>
+            <p>
+              Un chemin partant de <m>(0, 0)</m> vers <m>(n, b)</m> sans revenir sur l'axe <m>Ox</m> est entièrement déterminé par sa portion allant de <m>(1, 1)</m> vers <m>(n, b)</m> et qui ne touche jamais l'axe <m>Ox</m>.
+              Si <m>n + b</m> est pair, en posant <m>r = \frac{n + b}{2}</m>, leur nombre est donné par :
+              <md>
+                <mrow>  U_n(b):=C_{n-1}(1,b)-C_{n-1}^0(1,b) \amp= C_{n-1}(1,b)-C_{n-1}(-1,b) </mrow>
+                <mrow> \amp=\binom{n-1}{\frac{n+b-2}2}-\binom{n-1}{\frac{n+b}2}  </mrow>
+                <mrow> \amp= \binom {n-1}{r-1}-\binom{n-1}{r} </mrow>
+                <mrow> \amp=\binom{n}{r}\left(\frac rn-\frac{n-r}{n}\right)  </mrow>
+                <mrow> \amp=\frac{2r-n}{n}\binom{n}{r} </mrow>
+              </md>
+              Soit au final :
+              <me>
+                U_n(b) = \frac{b}{n} C_n(0, b).
+              </me>
+              Si on note <m>u_n(b):=\Pr(X_1X_2\cdots X_n\ne0,X_n=b)</m>, la probabilité pour qu'en partant du point <m>(0,0)</m> on atteigne le point <m>(n,b)</m> sans jamais revenir à l'origine alors
+              <me>
+                u_n(b)=U_n(b)p^{\frac{n+b}2}q^{\frac{n-b}2}=\frac bn\Pr(X_n=b)
+              </me>
+              Noter que cela implique que :
+              <me>
+                \sum_{k=1}^nu_n(k)=\frac1n\sum_{k=0}^nk\Pr(X_n=k)=\frac1n\Es(X_n)
+              </me>
+              <m>\sum_{k=1}^nu_n(k)</m> est la probabilité de ne pas revenir à l'origine entre les instants <m>0</m> et <m>n</m>.
+            </p>
+          </solution>
+        </task>
+        <!-- Question 5 -->
+        <task>
+          <title>Parcours sans retour vers l'origine</title>
 
-        <solution>
-          <p>
-            Notons <m>F_n</m> le nombre de ces chemins.
-            Ce nombre est celui des chemins qui vont de <m>(0, 0)</m> à <m>(2n - 1, 1)</m> ou de <m>(0, 0)</m> à <m>(2n - 1, -1)</m> sans revenir sur l'axe <m>Ox</m>.
-            Par symétrie, le nombre de parcours dans la deuxième catégorie est le même que celui dans la première.
-            Ainsi :
-            <me>
-              F_n = 2 U_{2n-1}(1) = \frac{2}{2n - 1} C_{2n-1}(0, 1) = \frac{2}{2n - 1} \binom{2n - 1}{n}.
-            </me>
-            En utilisant l'identité <m>\binom{2n - 1}{n} = \frac{1}{2} \binom{2n}{n}</m>, on obtient :
-            <me>
-              F_n = \frac{1}{2n - 1} \binom{2n}{n}.
-            </me>
-            Par suite :
-            <me>
-              f_n=F_n(pq)^n=\frac{1}{2n - 1} \binom{2n}{n}(pq)^n
-            </me>
-          </p>
-        </solution>
-      </task>
-      <!-- Question 6 -->
-      <task>
-        <title>Loi du premier retour à l'origine</title>
+          <statement>
+            <p>
+              En déduire la probabilité <m>f_n</m> pour qu'on retourne pour la première fois à l'origine à l'instant <m>2n</m> sachant qu'on était sur l'origine à l'instant <m>0</m>.
+            </p>
+          </statement>
 
-        <statement>
-          <p>
-            On suppose que <m>a = 0</m> et on note <m>N</m> le numéro du premier pas pour lequel l'objet revient sur l'origine.
-            Quelle est la loi de <m>N</m> ?
-          </p>
-        </statement>
+          <solution>
+            <p>
+              Notons <m>F_n</m> le nombre de ces chemins.
+              Ce nombre est celui des chemins qui vont de <m>(0, 0)</m> à <m>(2n - 1, 1)</m> ou de <m>(0, 0)</m> à <m>(2n - 1, -1)</m> sans revenir sur l'axe <m>Ox</m>.
+              Par symétrie, le nombre de parcours dans la deuxième catégorie est le même que celui dans la première.
+              Ainsi :
+              <me>
+                F_n = 2 U_{2n-1}(1) = \frac{2}{2n - 1} C_{2n-1}(0, 1) = \frac{2}{2n - 1} \binom{2n - 1}{n}.
+              </me>
+              En utilisant l'identité <m>\binom{2n - 1}{n} = \frac{1}{2} \binom{2n}{n}</m>, on obtient :
+              <me>
+                F_n = \frac{1}{2n - 1} \binom{2n}{n}.
+              </me>
+              Par suite :
+              <me>
+                f_n=F_n(pq)^n=\frac{1}{2n - 1} \binom{2n}{n}(pq)^n
+              </me>
+            </p>
+          </solution>
+        </task>
+        <!-- Question 6 -->
+        <task>
+          <title>Loi du premier retour à l'origine</title>
 
-        <solution>
-          <p>
-            <m>N</m> est le temps d'attente du premier retour à l'origine. Il peut être infini si l'objet ne revient jamais à l'origine. Ainsi, <m>N(\Omega) = \N^* \cup \{\infty\}</m>.
-          </p>
+          <statement>
+            <p>
+              On suppose que <m>a = 0</m> et on note <m>N</m> le numéro du premier pas pour lequel l'objet revient sur l'origine.
+              Quelle est la loi de <m>N</m> ?
+            </p>
+          </statement>
 
-          <p>
-            Pour <m>n \in \N</m>, l'événement <m>(N=2n+1)</m> est impossible.
-          </p>
+          <solution>
+            <p>
+              <m>N</m> est le temps d'attente du premier retour à l'origine. Il peut être infini si l'objet ne revient jamais à l'origine. Ainsi, <m>N(\Omega) = \N^* \cup \{\infty\}</m>.
+            </p>
 
-          <p>
-            Pour <m>n \in \N^*</m>, <m>\Pr(N=2n)=f_n</m> donc selon la question précédente
-            <me>
-              \Pr(N=2n)=\frac{1}{2n-1}\binom{2n}{n}p^nq^n
-            </me>.
-          </p>
+            <p>
+              Pour <m>n \in \N</m>, l'événement <m>(N=2n+1)</m> est impossible.
+            </p>
 
-          <p>
-            La probabilité que <m>N = \infty</m> est donnée par :
-            <me>
-              \Pr(N = \infty) = 1 - \sum_{n=1}^\infty \Pr(N = 2n) = \sqrt{1 - 4pq}.
-            </me>
-            Cette probabilité est nulle si et seulement si <m>p = q = \frac{1}{2}</m>. Elle vaut pratiquement <m>1</m> si <m>p</m> est voisin de <m>0</m> ou de <m>1</m>. Ce qui signife qu'on est presque sûr de revenir à l'origine si les pas sont équiprobables, est presque sûr de ne jamais y revenir si la probabilité d'avancer ou de reculer est presque nulle. 
-          </p>
+            <p>
+              Pour <m>n \in \N^*</m>, <m>\Pr(N=2n)=f_n</m> donc selon la question précédente
+              <me>
+                \Pr(N=2n)=\frac{1}{2n-1}\binom{2n}{n}p^nq^n
+              </me>.
+            </p>
 
-          <p>
-            Voici dans le détail le calcul de <m>\Pr(N=\infty)</m>:
-            <ul>
-              <li>
-                <p>
-                  Rappelons le DSE suivant :
-                  <me>
-                    \forall t\in]-1,1[,\; \frac{1}{\sqrt{1-t^2}}=\sum_{n=0}^\infty \frac{\binom{2n}n}{2^{2n}} t^{2n}
-                  </me>
-                </p>
-              </li>
+            <p>
+              La probabilité que <m>N = \infty</m> est donnée par :
+              <me>
+                \Pr(N = \infty) = 1 - \sum_{n=1}^\infty \Pr(N = 2n) = \sqrt{1 - 4pq}.
+              </me>
+              Cette probabilité est nulle si et seulement si <m>p = q = \frac{1}{2}</m>.
+              Elle vaut pratiquement <m>1</m> si <m>p</m> est voisin de <m>0</m> ou de <m>1</m>.
+              Ce qui signife qu'on est presque sûr de revenir à l'origine si les pas sont équiprobables, est presque sûr de ne jamais y revenir si la probabilité d'avancer ou de reculer est presque nulle.
+            </p>
 
-              <li>
-                <p>
-                  Posons <m>x=2\sqrt{pq}</m>.
-                  On a <m>pq=p(1-p)\leqslant 1/4</m> avec égalité si et seulement si <m>p=q=1/2</m>.
-                  D'où <m>x\in[0,1]</m>.
-                  <md>
-                    <mrow>\Pr(N=\infty) \amp=1-\sum_{n=1}^\infty\binom{2n}n  \frac{(pq)^n}{2n-1}  </mrow>
-                    <mrow> \amp= 1-\sum_{n=1}^\infty\frac{\binom{2n}n}{2^{2n}} \frac{x^{2n}}{2n-1}   </mrow>
-                    <mrow> \amp= 1-x\int_0^x \sum_{n=1}^\infty \frac{\binom{2n}n}{2^{2n}} t^{2n-2} dt  </mrow>
-                    <mrow> \amp= 1-x\int_0^x \left(\frac1{\sqrt{1-t^2}}-1\right) \frac{dt}{t^2}  </mrow>
-                    <mrow> \amp \overset{t=x/u}= 1-\int_1^\infty \left(\frac{1}{\sqrt{1-x^2/u^2}}-1\right)du   </mrow>
-                    <mrow> \amp=1-\lim_{U\to+\infty}\int_1^U\left(\frac u{\sqrt{u^2-x^2}}-1\right)du </mrow>
-                    <mrow> \amp= 1-\lim_{U\to\infty}\left(\sqrt{U^2-x^2}-U\right)+\left(\sqrt{1-x^2}-1\right)   </mrow>
-                    <mrow> \amp= \sqrt{1-x^2}-\lim_{U\to\infty}U\left(\sqrt{1-x^2/U^2}-1\right) </mrow>
-                    <mrow> \amp= \sqrt{1-x^2}   </mrow>
-                  </md>
-                </p>
-              </li>
-            </ul>
-          </p>
-        </solution>
-      </task>
-    </activity>
-  </subsection>
-</section>
+            <p>
+              Voici dans le détail le calcul de <m>\Pr(N=\infty)</m>:
+              <ul>
+                <li>
+                  <p>
+                    Rappelons le DSE suivant :
+                    <me>
+                      \forall t\in]-1,1[,\; \frac{1}{\sqrt{1-t^2}}=\sum_{n=0}^\infty \frac{\binom{2n}n}{2^{2n}} t^{2n}
+                    </me>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Posons <m>x=2\sqrt{pq}</m>.
+                    On a <m>pq=p(1-p)\leqslant 1/4</m> avec égalité si et seulement si <m>p=q=1/2</m>.
+                    D'où <m>x\in[0,1]</m>.
+                    <md>
+                      <mrow>\Pr(N=\infty) \amp=1-\sum_{n=1}^\infty\binom{2n}n  \frac{(pq)^n}{2n-1}  </mrow>
+                      <mrow> \amp= 1-\sum_{n=1}^\infty\frac{\binom{2n}n}{2^{2n}} \frac{x^{2n}}{2n-1}   </mrow>
+                      <mrow> \amp= 1-x\int_0^x \sum_{n=1}^\infty \frac{\binom{2n}n}{2^{2n}} t^{2n-2} dt  </mrow>
+                      <mrow> \amp= 1-x\int_0^x \left(\frac1{\sqrt{1-t^2}}-1\right) \frac{dt}{t^2}  </mrow>
+                      <mrow> \amp \overset{t=x/u}= 1-\int_1^\infty \left(\frac{1}{\sqrt{1-x^2/u^2}}-1\right)du   </mrow>
+                      <mrow> \amp=1-\lim_{U\to+\infty}\int_1^U\left(\frac u{\sqrt{u^2-x^2}}-1\right)du </mrow>
+                      <mrow> \amp= 1-\lim_{U\to\infty}\left(\sqrt{U^2-x^2}-U\right)+\left(\sqrt{1-x^2}-1\right)   </mrow>
+                      <mrow> \amp= \sqrt{1-x^2}-\lim_{U\to\infty}U\left(\sqrt{1-x^2/U^2}-1\right) </mrow>
+                      <mrow> \amp= \sqrt{1-x^2}   </mrow>
+                    </md>
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </solution>
+        </task>
+      </activity>
+    </subsection>
+  </section>

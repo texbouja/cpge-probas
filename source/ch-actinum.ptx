@@ -20,7 +20,7 @@
             <task>
                 <statement>
                     <p>
-                        Utilisez les curseurs ci-dessous pour choisir les valeurs de <m> n </m> et <m> p </m>, puis observez comment l'histogramme de la loi binomiale évolue.
+                        Utiliser les curseurs ci-dessous pour choisir les valeurs de <m> n </m> et <m> p </m>, puis observer comment l'histogramme de la loi binomiale évolue.
                     </p>
                     <sage>
                     <input>
@@ -41,7 +41,7 @@ def binomial_histogram(n=slider(1, 50, 1, default=10, label="n"),
 
                 <solution>
                     <p>
-                        En modifiant les valeurs de <m> n </m> et <m> p </m>, vous pouvez observer comment la forme de la distribution binomiale change :
+                        En modifiant les valeurs de <m> n </m> et <m> p </m>, observer comment la forme de la distribution binomiale change :
                         <ul>
                             <li>
                                 Si <m> p = 0.5 </m>, la distribution est symétrique.
@@ -62,6 +62,8 @@ def binomial_histogram(n=slider(1, 50, 1, default=10, label="n"),
                     </p>
                 </solution>
             </task>
+
+
             <task>
                 <statement>
                     <p>
@@ -111,12 +113,284 @@ def binomial_vs_poisson(n=slider(50, 100, 1, default=50, label="n"),
                     </p>
                 </solution>
             </task>
+
+
             <task>
                 <statement>
                     <p>
                         Expliquer théoriquement vos observations
                     </p>
                 </statement>
+            </task>
+        </activity>
+    </section>
+
+    <section xml:id="sec-principeinversion">
+        <title>Principe d'inversion et simulation de variables aléatoires discrètes</title>
+
+        <introduction>
+            <p>
+                Dans cette activité, nous allons étudier le <em>principe d'inversion</em>, une méthode mathématique pour simuler des variables aléatoires discrètes à partir d'une variable uniforme <m> U \sim \mathcal{U}([0,1]) </m>.
+                Nous appliquerons ce principe à des lois discrètes usuelles (Bernoulli, binomiale, géométrique et Poisson) et implémenterons des simulations en Python/Sage.
+            </p>
+        </introduction>
+
+        <theorem>
+            <title>Principe d'inversion (énoncé mathématique)</title>
+
+            <statement>
+                <title>Principe de l'inversion d'une loi</title>
+
+                <p>
+                    Soit <m> X </m> une <em>variable aléatoire discrète réelle</em>.
+                    La fonction de répartition <m> F_X </m> de <m> X </m> est définie par (voir <xref ref="subsec-fonction-repartition"/>) :
+                    <me>
+                        F_X(t) = P(X\leq t)=\sum_{\substack{x\in X(\Omega) \\ x\leq t}} P(X=x)
+                    </me>                
+                On pose pour tout <m>u\in[0,1]</m>
+                    <me>
+                        G(u)=\inf\{t\in\R\mid F_X(t)\geq u\}
+                    </me>
+                    <m>G</m> est appelé inverse généralisé de la fonction <m>F_X</m>.
+                </p>
+
+                <p>
+                    Si <m> U \sim \mathcal{U}([0,1]) </m>, alors la variable aléatoire <m>Y=G(U)</m> 
+                    suit la même loi que <m> X </m>.
+                    <!-- Plus concrétement
+                    <me>
+                        \forall\omega\in\Omega,\; Y(\omega) = x_i \Longleftrightarrow  U(\omega) \in [F_X(x_{i-1}), F_X(x_i)[,
+                    </me>
+                    avec <m> F_X(x_0) = 0 </m>.
+                    -->
+                </p>
+            </statement>
+
+
+            <proof>
+                <p>
+                    Montrons d'abords que pour tous <m>u\in [0,1]</m> et <m>t\in\R</m>
+                    <men xml:id="eq-equivbase">
+                        F_X(t)\geq u \Longleftrightarrow t\geq G(u)
+                    </men>
+                    Soient <m>u\in[0,1]</m> et <m>t\in\R</m>.
+                </p>
+
+                <p>
+                    Si <m>F_X(t)\geq u</m> alors par définition de <m>G(u)</m>, <m>G(u)\leq  t</m>.
+                </p>
+
+                <p>
+                    Réciproquement, supposons que <m>G(u)\leq t</m>.
+                    <ul>
+                        <li>
+                            <p>
+                                Si <m>G(u)\lt t</m> alors par caractérisation de la borne inférieure il existe <m>s\in\R</m> tel que <m>s\leq t</m> et <m>F_X(s)\geq u</m> et par croissante de <m>F_X</m> on a donc <m>u\leq F_X(s)\leq F_X(t)</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Si <m>G(u)=t</m>, soit <m>t=\inf\{s\in\R\mid F_X(s)\geq u\}</m>, il existe une suite décroissante <m>(s_n)_n</m> qui converge vers <m>t</m> et  telle que <m>F_X(s_n)\geq u</m> pour tout <m>n</m>. Par continuité à droite de <m>F_X</m> en <m>t</m>, la suite <m>(F_X(s_n))_n</m> converge vers <m>F_X(t)</m> et donc <m>F_X(t)\geqslant u</m>.
+                            </p>
+                        </li>
+                    </ul> 
+                Maintenant que <xref ref="eq-equivbase"/> est acquise, on en déduit que pour tout <m>t\in\R</m>
+                <me>
+                    F_Y(t)=\Pr(G(U)\leq t)=\Pr(U\leq F_X(t))=F_U\bigl(F_X(t)\bigr)
+                </me>
+                mais comme <m>U\sim\mathscr U([0,1])</m> alors 
+                <m>F_U(u)=u</m> pour tout <m>u\in[0,1]</m> et ainsi 
+                <me>
+                    F_Y(t)=F_X(t)
+                </me>
+                Alors <m>Y</m> suit la même loi que <m>X</m>.
+                
+                
+                </p>
+            </proof>
+        </theorem>
+
+        <remark>
+            <p>
+                Si <m>X</m> est une VADR dont l'ensemble des valeurs s'organise en unse suite strictement croissant <m>(x_n)_n</m> alors pour tout <m>n\in\N</m>,
+                <me>
+                    (G(U)=x_n)=(x_n\leq U\lt x_{n+1}) 
+                </me>
+                C'est cette observation qui permet de simuler <m>X</m>. Il suffit pour cela de lancer une instance de <m>U</m> et de décider de la valeurs prise par <m>X_n</m> selon la position du résultat obtenu par <m>U</m>.  
+                
+            </p>
+        </remark>
+
+        <activity><title>Simulation des lois discrètes usuelles</title>
+        
+            <introduction>
+                <p>
+                    Les objectifs de cette activité sont :
+                    <ul>
+                        <li>
+                            Comprendre le principe d'inversion et son fondement mathématique.
+                        </li>
+
+                        <li>
+                            Appliquer ce principe pour simuler des variables aléatoires discrètes.
+                        </li>
+
+                        <li>
+                            Implémenter des simulations en Python/Sage pour les lois Bernoulli, binomiale, géométrique et Poisson.
+                        </li>
+                    </ul>
+                </p>
+            </introduction>
+
+            <task>
+                <title>Simulation de la loi de Bernoulli</title>
+            <statement>
+                <p>
+                    <ol>
+                        <li>
+                            Écrire un programme Python/Sage pour simuler une variable de Bernoulli en utilisant le principe d'inversion.
+                        </li>
+
+                        <li>
+                            Générer 1000 simulations et vérifier que la proportion de <m> 1 </m> est proche de <m> p </m>.
+                        </li>
+                    </ol>
+                </p>
+                </statement>
+                <solution>
+                <p>
+                    <strong>Code Python/Sage :</strong> 
+            <sage><input> 
+            from random import random 
+            def x_bernoulli(p): 
+                U = random() 
+                return 1 if U &lt; p else 0 
+            # Exemple d'utilisation 
+            p = 0.3 
+            simulations = [x_bernoulli(p) for _ in range(1000)] 
+            proportion = sum(simulations)/len(simulations)*1. 
+            print(f"Proportion de succès : {proportion}") 
+            </input> 
+            <output></output>
+            </sage>
+                </p>            
+            </solution>
+
+            </task>
+
+
+            <task>
+                <title>Simulation de la loi binomiale</title>
+                <statement>
+                <p>
+                    <ol>
+                        <li>
+                            Écrire un programme Python/Sage pour simuler une variable binomiale en la variable de Bernouilli écrite dans le code précédent. 
+                        </li>
+
+                        <li>
+                            Générer 1000 simulations et comparer la distribution obtenue à la loi théorique.
+                        </li>
+                    </ol>
+                </p>
+                </statement>
+                <solution>
+                <p>
+                    <strong>Code Python/Sage :</strong> 
+            <sage><input> 
+            def x_binomiale(n, p): 
+                return sum(x_bernoulli(p) for _ in range(n)) 
+            # Exemple d'utilisation 
+            n, p = 10, 0.5 
+            simulations = [x_binomiale(n, p) for _ in range(10)] 
+            print(simulations) 
+            </input> 
+            <output> </output>
+            </sage>
+                </p>
+                </solution>
+            </task>
+
+
+            <task>
+                <title>Simulation de la loi géométrique</title>
+
+                <statement>
+                
+                <p>
+                    <ol>
+                        <li>
+                            <p>
+                                Simplifier le problème d'inversion d'une loi géométrique.
+                            </p>
+                        </li>
+                        <li>
+                            Écrire un programme Python/Sage pour la simuler.
+                        </li>
+
+                        <li>
+                            Générer 1000 simulations et vérifier que la moyenne est proche de <m> \frac{1}{p} </m>.
+                        </li>
+                    </ol>
+                </p>
+                </statement>
+
+            <solution>
+                <p>
+            <sage><input> 
+            from math import log 
+            def x_geometrique(p): 
+                U = random() 
+                return int(log(1 - U) / log(1 - p)) + 1 
+            # Exemple d'utilisation 
+            p = 0.2 
+            simulations = [x_geometrique(p) for _ in range(1000)]
+            moyenne = sum(simulations) / len(simulations)*1.
+            print(f"Moyenne empirique : {moyenne}")
+            print(f"Moyenne théorique : {1/p}") 
+            </input> 
+            <output> </output>
+            </sage>
+                </p>
+                </solution>
+            </task>
+
+
+            <task>
+                <title>Simulation de la loi de Poisson</title>
+            <statement>
+                <p>
+                    <ol>
+                        <li>
+                            Écrire un programme Python/Sage pour simuler une variable de Poisson en utilisant le principe d'inversion.
+                        </li>
+
+                        <li>
+                            Générer 1000 simulations et la comparer graphiquement avec la distribution théorique.
+                        </li>
+                    </ol>
+                </p>
+                </statement>
+            <solution>
+                <p>
+            <sage><input> 
+            from math import exp 
+            def poisson(lambd): 
+                U = random() 
+                k, F = 0, exp(-lambd) 
+                while U &gt; F: 
+                    k += 1 
+                    F += exp(-lambd) * (lambd ** k)/factorial(k) 
+                    return k 
+            # Exemple d'utilisation 
+            lambd = 3 
+            simulations = [poisson(lambd) for _ in range(1000)]
+            print(simulations) 
+            </input> 
+            <output> </output>
+            </sage>
+                </p>
+                </solution>
             </task>
         </activity>
     </section>

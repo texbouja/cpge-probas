@@ -4,7 +4,7 @@
 
 
 
-<exercises xml:id="ch-exercices">
+<chapter xml:id="ch-exercices">
     <title>Exercices</title>
     
 
@@ -683,7 +683,8 @@
 
 
 <exercise>
-    <title>Loi faible des grands nombres dans <m> L^1 </m></title>
+    <title>Loi faible des grands nombres dans <m>L^1</m></title>
+    <p> </p>
     <introduction>
         <p>
             Soit <m>(X_n)_{n \geq 1}</m> une suite de variables aléatoires réelles discrètes, deux à deux indépendantes, de même loi, possédant une espérance finie <m>m</m>. On pose, pour tout <m>n \in \mathbb{N}^*</m>, <m>Y_n = \frac{X_1 + \cdots + X_n}{n}</m>.
@@ -696,7 +697,7 @@
                 Dans les deux premières questions, on suppose <m>m = 0</m>.
                 <ol>
                     <li>
-                        Soit <m>\varepsilon \gt 0</m>.
+                        <p>Soit <m>\varepsilon \gt 0</m>.
                         <ol>
                             <li>
                                 Pour <m>c \gt 0</m>, on définit <m>g : \mathbb{R} \to \mathbb{R}</m> par :
@@ -718,7 +719,7 @@
                             <li>
                                 On pose, pour tout <m>n \in \mathbb{N}^*</m>, <m>U_n = g(X_n) - a</m> et <m>Y_n' = \frac{U_1 + \cdots + U_n}{n}</m>. Justifier que les variables <m>U_n</m> admettent un moment d'ordre 2. Montrer que <m>\lim_{n \to +\infty} \mathbb{V}(Y_n') = 0</m>. En déduire que <m>\lim_{n \to +\infty} \mathbb{E}(|Y_n|) = 0</m>.
                             </li>
-                        </ol>
+                        </ol></p>
                     </li>
                     <li>
                         Montrer que, pour tout <m>\varepsilon \gt 0</m>, on a :
@@ -1542,4 +1543,4 @@
 
 
 
- </exercises>
+ </chapter>
