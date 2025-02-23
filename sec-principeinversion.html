@@ -476,15 +476,53 @@ print(f"Proportion de succès : {proportion}")
 <span class="codenumber">(b)</span><span class="space"> </span><span class="title">Simulation de la loi binomiale.</span>
 </h4>
 <div class="para logical" id="sec-principeinversion-7-4-2-1"><ol class="decimal" id="sec-principeinversion-7-4-2-1-1">
-<li id="sec-principeinversion-7-4-2-1-1-1"><div class="para" id="p-derived-sec-principeinversion-7-4-2-1-1-1">Écrire un programme Python pour simuler une variable binomiale en la variable de Bernouilli écrite dans le code précédent.</div></li>
-<li id="sec-principeinversion-7-4-2-1-1-2"><div class="para" id="p-derived-sec-principeinversion-7-4-2-1-1-2">Générer 1000 simulations et comparer la distribution obtenue à la loi théorique.</div></li>
+<li id="sec-principeinversion-7-4-2-1-1-1"><div class="para" id="p-derived-sec-principeinversion-7-4-2-1-1-1">Écrire un programme Python pour simuler une variable binomiale en fonction la variable de Bernouilli écrite dans le code précédent.</div></li>
+<li id="sec-principeinversion-7-4-2-1-1-2"><div class="para" id="p-derived-sec-principeinversion-7-4-2-1-1-2">Générer 1000 simulations et comparer graphiquement la distribution obtenue avec la loi théorique.</div></li>
 </ol></div>
-<div class="solutions"><details id="sec-principeinversion-7-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="sec-principeinversion-7-4-3-1">Code Python : <div id="sec-principeinversion-7-4-3-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">def x_binomiale(n, p): 
-    return sum(x_bernoulli(p) for _ in range(n)) 
-# Exemple d'utilisation 
-n, p = 10, 0.5 
-simulations = [x_binomiale(n, p) for _ in range(10)] 
-print(simulations)
+<div class="solutions"><details id="sec-principeinversion-7-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="sec-principeinversion-7-4-3-1">Code Python : <div id="sec-principeinversion-7-4-3-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage"># Importer les bibliothèques nécessaires
+import matplotlib.pyplot as plt
+import math
+
+# Définir la fonction x_bernouilli (si elle n'est pas déjà définie)
+def x_bernouilli(p):
+    """Simule une variable de Bernoulli."""
+    return 1 if random() < p else 0
+
+# Fonction pour simuler une loi binomiale
+def x_binomiale(n, p):
+    """Simule une seule valeur de X suivant une loi binomiale(n, p) en sommant n variables de Bernoulli."""
+    return sum(x_bernouilli(p) for _ in range(n))
+
+# Fonction pour afficher l'histogramme en fonction de n et p
+def afficher_histogramme_binomiale(n_binomiale, p_binomiale):
+    N = 1000  # Nombre d'instances simulées
+    simulations = [x_binomiale(n_binomiale, p_binomiale) for _ in range(N)]
+    
+    # Tracer l'histogramme des résultats
+    plt.figure(figsize=(8, 5))
+    bins = range(0, n_binomiale + 2)
+    plt.hist(simulations, bins=bins, density=True, edgecolor='black', alpha=0.7, color='blue', label="Simulation")
+
+    # Ajout des probabilités théoriques
+    k_vals = range(0, n_binomiale + 1)
+    binom_theorique = [math.comb(n_binomiale, k) * p_binomiale**k * (1 - p_binomiale)**(n_binomiale - k) for k in k_vals]
+    plt.scatter(k_vals, binom_theorique, color='red', zorder=3, label="Probabilités théoriques")
+
+    # Mise en forme
+    plt.xlabel("Valeur de X")
+    plt.ylabel("Fréquence observée")
+    plt.title(f"Histogramme des valeurs simulées de X ~ Binomiale({n_binomiale}, {p_binomiale})")
+    plt.xticks(k_vals)  # Pour aligner les ticks avec les valeurs entières
+    plt.legend()
+    plt.grid(True, linestyle="--", alpha=0.6)
+
+    # Affichage
+    plt.show()
+
+# Utilisation de zone de saisie dans SageMath avec @interact
+@interact
+def afficher_histogramme(n_binomiale=10, p_binomiale=0.3):
+    afficher_histogramme_binomiale(n_binomiale, p_binomiale)
 </script></div>
 </div></div></details></div></article><article class="task exercise-like" id="sec-principeinversion-7-5"><h4 class="heading">
 <span class="codenumber">(c)</span><span class="space"> </span><span class="title">Simulation de la loi géométrique.</span>
@@ -512,18 +550,52 @@ print(f"Moyenne théorique : {1/p}")
 <li id="sec-principeinversion-7-6-2-1-1-1"><div class="para" id="p-derived-sec-principeinversion-7-6-2-1-1-1">Écrire un programme Python pour simuler une variable de Poisson en utilisant le principe d’inversion.</div></li>
 <li id="sec-principeinversion-7-6-2-1-1-2"><div class="para" id="p-derived-sec-principeinversion-7-6-2-1-1-2">Générer 1000 simulations et la comparer graphiquement avec la distribution théorique.</div></li>
 </ol></div>
-<div class="solutions"><details id="sec-principeinversion-7-6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="sec-principeinversion-7-6-3-1"><div id="sec-principeinversion-7-6-3-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">from math import exp 
-def poisson(lambd): 
-    U = random() 
-    k, F = 0, exp(-lambd) 
-    while U > F: 
-        k += 1 
-        F += exp(-lambd) * (lambd ** k)/factorial(k) 
-        return k 
-# Exemple d'utilisation 
-lambd = 3 
-simulations = [poisson(lambd) for _ in range(1000)]
-print(simulations)
+<div class="solutions"><details id="sec-principeinversion-7-6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="sec-principeinversion-7-6-3-1"><div id="sec-principeinversion-7-6-3-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">import random
+import numpy as np
+import matplotlib.pyplot as plt
+import math
+
+def x_poisson(lmbda):
+    """Simule une seule valeur de X suivant une loi de Poisson(λ) avec la méthode d'inversion."""
+    U = random.random()  # Génère un nombre uniforme entre 0 et 1
+    F = 0  # Cumul de la fonction de répartition
+    k = 0  # Variable à retourner
+
+    # Calcul de la fonction de répartition jusqu'à ce qu'on dépasse U
+    while F < U:
+        P_k = (math.exp(-lmbda) * lmbda**k) / math.factorial(k)  # P(X = k)
+        F += P_k  # Mise à jour de la somme cumulative
+        if F >= U:
+            return k  # Retourne la valeur simulée
+        k += 1  # Passe à l'entier suivant
+
+# Paramètre λ de la loi de Poisson
+lambda_poisson = 4  # Tu peux modifier cette valeur
+
+# Simulation de 1000 instances
+N = 1000
+simulations = [x_poisson(lambda_poisson) for _ in range(N)]
+
+# Tracer l'histogramme des résultats
+plt.figure(figsize=(6, 5))
+plt.hist(simulations, bins=np.arange(min(simulations), max(simulations) + 1) - 0.5,
+         density=True, edgecolor='black', alpha=0.7, color='blue', label="Simulation")
+
+# Ajout des probabilités théoriques
+k_vals = np.arange(0, max(simulations) + 1)
+poisson_theorique = [(math.exp(-lambda_poisson) * lambda_poisson**k) / math.factorial(k) for k in k_vals]
+plt.scatter(k_vals, poisson_theorique, color='red', zorder=3, label="Probabilités théoriques")
+
+# Mise en forme
+plt.xlabel("Valeur de X")
+plt.ylabel("Fréquence observée")
+plt.title(f"Histogramme des valeurs simulées de X ~ Poisson({lambda_poisson})")
+plt.xticks(k_vals)  # Pour aligner les ticks avec les valeurs entières
+plt.legend()
+plt.grid(True, linestyle="--", alpha=0.6)
+
+# Affichage
+plt.show()
 </script></div></div></div></details></div></article></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-expgraph.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-exercices.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
