@@ -153,6 +153,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\PP}{\mathbb P}
 \newcommand{\ES}{\mathbb E}
 \newcommand{\VA}{\mathbb V}
+\newcommand\bbone{\mathbb 1}
 \newcommand\Cov{\operatorname{Cov}}
 \newcommand\card{\operatorname{Card}}
 \newcommand\qtext[1]{\quad\text{#1}\quad}
@@ -184,16 +185,18 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-varalea.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Variables aléatoires discrètes</span></a></div>
+<div class="toc-title-box"><a href="sec-varalea.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Variables aléatoires</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-varalea" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Variables aléatoires</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-indvar" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Indépendance des variables aléatoires discrètes</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-loiusuelles" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Lois usuelles</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-loi-activite" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Activités</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-loivaralea" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Loi d’une variable aléatoire discrète</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-indvar" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Indépendance des variables aléatoires discrètes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-loiusuelles" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Lois discrusueètes usuelles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-fonction-repartition" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Loi d’une variable aléatoire réelle : fonction de répartition </span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-loi-activite" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Activités</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-espvaralea.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Espérance et moment d’une variable aléatoire discrète</span></a></div>
+<div class="toc-title-box"><a href="sec-espvaralea.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Espérance et moments d’une variable aléatoire discrète</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="sec-espvaralea.html#subsec-esperance" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Espérance d’une variable aléatoire discrète</span></a></div>
@@ -204,13 +207,14 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="sec-espvaralea.html#subsec-varcovar" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Variance, covariance</span></a></div>
+<div class="toc-title-box"><a href="sec-espvaralea.html#subsec-varcovar" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Variance et covariance</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-espvaralea.html#subsubsec-varcovar" class="internal"><span class="title">Propriétés et définition</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-espvaralea.html#subsubsec-varcovar" class="internal"><span class="title">Définition et propriétés</span></a></div></li>
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-espvaralea.html#subsubsec-exemples-varcovar" class="internal"><span class="title">Exemples usuels</span></a></div></li>
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-espvaralea.html#subsubsec-activites-varcovar" class="internal"><span class="title">Activités</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-espvaralea.html#subsec-moment" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Moments d’ordre supérieurs</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -226,9 +230,19 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-actinum.html" class="internal"><span class="codenumber">2</span> <span class="title">Activités numériques</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-expgraph.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Exploration graphique</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-expgraph.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Exploration graphique</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-principeinversion.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Principe d’inversion et simulation de variables aléatoires discrètes</span></a></div></li>
+</ul>
 </li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-exercices.html" class="internal"><span class="codenumber">3</span> <span class="title">Exercices</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-exercices.html" class="internal"><span class="codenumber">3</span> <span class="title">Exercices</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Sommaire</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notations</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-probabiltes-discretes"><h2 class="heading">
 <span class="type">Chapitre</span><span class="space"> </span><span class="codenumber">1</span><span class="space"> </span><span class="title">Probabilité discrètes</span>
@@ -244,8 +258,8 @@ eBookConfig.enable_chatcodes =  false;
 <li id="ch-probabiltes-discretes-2-3-4"><div class="para" id="ch-probabiltes-discretes-2-3-4-1">utiliser le langage des probabilités pour traiter des problèmes dans d’autres sections du programme</div></li>
 </ul></article><nav class="summary-links"><ul>
 <li><a href="sec-generalites.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Espaces de probabilité</span></a></li>
-<li><a href="sec-varalea.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Variables aléatoires discrètes</span></a></li>
-<li><a href="sec-espvaralea.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Espérance et moment d’une variable aléatoire discrète</span></a></li>
+<li><a href="sec-varalea.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Variables aléatoires</span></a></li>
+<li><a href="sec-espvaralea.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Espérance et moments d’une variable aléatoire discrète</span></a></li>
 <li><a href="sec-fctgen.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Fonctions génératrices</span></a></li>
 </ul></nav></section></div>
 <div class="ptx-content-footer">

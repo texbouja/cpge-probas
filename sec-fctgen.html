@@ -153,6 +153,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\PP}{\mathbb P}
 \newcommand{\ES}{\mathbb E}
 \newcommand{\VA}{\mathbb V}
+\newcommand\bbone{\mathbb 1}
 \newcommand\Cov{\operatorname{Cov}}
 \newcommand\card{\operatorname{Card}}
 \newcommand\qtext[1]{\quad\text{#1}\quad}
@@ -184,16 +185,18 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-varalea.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Variables aléatoires discrètes</span></a></div>
+<div class="toc-title-box"><a href="sec-varalea.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Variables aléatoires</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-varalea" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Variables aléatoires</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-indvar" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Indépendance des variables aléatoires discrètes</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-loiusuelles" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Lois usuelles</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-loi-activite" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Activités</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-loivaralea" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Loi d’une variable aléatoire discrète</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-indvar" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Indépendance des variables aléatoires discrètes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-loiusuelles" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Lois discrusueètes usuelles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-fonction-repartition" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Loi d’une variable aléatoire réelle : fonction de répartition </span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-loi-activite" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Activités</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-espvaralea.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Espérance et moment d’une variable aléatoire discrète</span></a></div>
+<div class="toc-title-box"><a href="sec-espvaralea.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Espérance et moments d’une variable aléatoire discrète</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="sec-espvaralea.html#subsec-esperance" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Espérance d’une variable aléatoire discrète</span></a></div>
@@ -204,13 +207,14 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="sec-espvaralea.html#subsec-varcovar" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Variance, covariance</span></a></div>
+<div class="toc-title-box"><a href="sec-espvaralea.html#subsec-varcovar" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Variance et covariance</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-espvaralea.html#subsubsec-varcovar" class="internal"><span class="title">Propriétés et définition</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-espvaralea.html#subsubsec-varcovar" class="internal"><span class="title">Définition et propriétés</span></a></div></li>
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-espvaralea.html#subsubsec-exemples-varcovar" class="internal"><span class="title">Exemples usuels</span></a></div></li>
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-espvaralea.html#subsubsec-activites-varcovar" class="internal"><span class="title">Activités</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-espvaralea.html#subsec-moment" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Moments d’ordre supérieurs</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section contains-active">
@@ -226,9 +230,19 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-actinum.html" class="internal"><span class="codenumber">2</span> <span class="title">Activités numériques</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-expgraph.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Exploration graphique</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-expgraph.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Exploration graphique</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-principeinversion.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Principe d’inversion et simulation de variables aléatoires discrètes</span></a></div></li>
+</ul>
 </li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-exercices.html" class="internal"><span class="codenumber">3</span> <span class="title">Exercices</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-exercices.html" class="internal"><span class="codenumber">3</span> <span class="title">Exercices</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Sommaire</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notations</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-fctgen"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">1.4</span><span class="space"> </span><span class="title">Fonctions génératrices</span>
@@ -237,9 +251,9 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">1.4.1</span><span class="space"> </span><span class="title">Définition et propriétés</span>
 </h3>
 <article class="definition definition-like" id="def-fctgen"><h4 class="heading">
-<span class="type">Définition</span><span class="space"> </span><span class="codenumber">1.82</span><span class="period">.</span><span class="space"> </span><span class="title">Fonction génératrice.</span>
+<span class="type">Définition</span><span class="space"> </span><span class="codenumber">1.96</span><span class="period">.</span><span class="space"> </span><span class="title">Fonction génératrice.</span>
 </h4>
-<div class="para logical" id="def-fctgen-2">
+<div class="para logical" id="def-fctgen-3">
 <div class="para">La fonction génératrice d’une variable aléatoire <span class="process-math">\(X\)</span> à valeurs dans <span class="process-math">\(\N\)</span> est définie par</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -249,7 +263,7 @@ G_X(t) = \mathbb E\left(t^X\right)=\sum_{n=0}^{\infty}\mathbb \Pr(X=n) t^n.
 <div class="para">On notera <span class="process-math">\(R_X\)</span> le rayon de convergence de la série entière <span class="process-math">\(\sum \Pr(X=n)t^n\)</span>
 </div>
 </div></article><article class="remark remark-like" id="subsec-defprop-3"><h4 class="heading">
-<span class="type">Remarque</span><span class="space"> </span><span class="codenumber">1.83</span><span class="period">.</span>
+<span class="type">Remarque</span><span class="space"> </span><span class="codenumber">1.97</span><span class="period">.</span>
 </h4>
 <div class="para" id="subsec-defprop-3-1">Soit <span class="process-math">\(X\)</span> une variable aléatoire à valeurs dans <span class="process-math">\(\N\text{.}\)</span>
 </div>
@@ -271,11 +285,12 @@ X\sim Y\Longleftrightarrow G_X=G_Y
 <div class="para logical" id="subsec-defprop-3-2-4-1">
 <div class="para">Si <span class="process-math">\(R_X\gt 1\)</span> alors <span class="process-math">\(X\)</span> admet des moments à tout ordre et pour tout <span class="process-math">\(k\in\N^*\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theo-momfact.html">
 \begin{equation*}
 \Es\bigl(X(X-1)\cdots(X-k+1)\bigr)=G_X^{(k)}(1)
 \end{equation*}
 </div>
+<div class="para">Noter donc que l’hypothèse <span class="process-math">\(R_X\gt 1\)</span> simplifie considérablement la justificiation du <a href="sec-fctgen.html#theo-momfact" class="xref" data-knowl="./knowl/xref/theo-momfact.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Théorème 1.102: des moments factoriels">Théorème 1.102</a> enoncé ci-dessus.</div>
 </div>
 <details id="subsec-defprop-3-2-4-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Explication<span class="period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para logical" id="subsec-defprop-3-2-4-2-1">
 <div class="para">Si <span class="process-math">\(R_X\gt 1\)</span> alors <span class="process-math">\(G_X\)</span> est infiniment dérivable en <span class="process-math">\(1\)</span> et pour tout <span class="process-math">\(k\in\N^*\)</span>
@@ -295,28 +310,39 @@ G_X^{(k)}(1)=\sum_{n\geqslant k}n(n-1)\cdots(n-k+1)\Pr(X=n)
 </div>
 </div></article></details>
 </li>
-</ol></article><article class="proposition theorem-like" id="subsec-defprop-4"><h4 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.84</span><span class="period">.</span>
+</ol></article><article class="lemma theorem-like" id="lem-abel"><h4 class="heading">
+<span class="type">Lemme</span><span class="space"> </span><span class="codenumber">1.98</span><span class="period">.</span><span class="space"> </span><span class="title">(du à Abel).</span>
 </h4>
-<div class="para" id="subsec-defprop-4-1-1">Soient <span class="process-math">\(X\)</span> et <span class="process-math">\(Y\)</span> deux variables aléatoires à valeurs dans <span class="process-math">\(\N\text{.}\)</span> Si <span class="process-math">\(X\)</span> et <span class="process-math">\(Y\)</span> sont indépendantes alors <span class="process-math">\(G_{X+Y}=G_XG_Y\text{.}\)</span>
-</div></article><article class="corollary theorem-like" id="subsec-defprop-5"><h4 class="heading">
-<span class="type">Corollaire</span><span class="space"> </span><span class="codenumber">1.85</span><span class="period">.</span>
+<div class="para logical" id="lem-abel-2-1">
+<div class="para">Soit <span class="process-math">\(\sum a_n t^n\)</span> une série entière à coefficients réels positifs qu’on suppose de rayon de convergence <span class="process-math">\(1\text{.}\)</span> On note <span class="process-math">\(g\)</span> sa somme. Alors pour tout <span class="process-math">\(p\in\N^*\)</span> <span class="process-math">\(g\)</span> est <span class="process-math">\(p\)</span>-fois dérivable en <span class="process-math">\(1\)</span> si et seulement si la série <span class="process-math">\(\sum n^pa_n\)</span> converge et dans ce cas</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\forall k\in\iic{1,p},\;
+g^{(k)}(1)=\sum_{n=k}^{+\infty} n(n-1)\cdots(n-k+1)a_n
+\end{equation*}
+</div>
+</div></article><article class="theorem theorem-like" id="subsec-defprop-5"><h4 class="heading">
+<span class="type">Théorème</span><span class="space"> </span><span class="codenumber">1.99</span><span class="period">.</span><span class="space"> </span><span class="title">Fonction génératrice de la somme de deux variables indépendantes.</span>
 </h4>
-<div class="para logical" id="subsec-defprop-5-1-1">
+<div class="para" id="subsec-defprop-5-2-1">Soient <span class="process-math">\(X\)</span> et <span class="process-math">\(Y\)</span> deux variables aléatoires à valeurs dans <span class="process-math">\(\N\text{.}\)</span> Si <span class="process-math">\(X\)</span> et <span class="process-math">\(Y\)</span> sont indépendantes alors <span class="process-math">\(G_{X+Y}=G_XG_Y\text{.}\)</span>
+</div></article><article class="corollary theorem-like" id="subsec-defprop-6"><h4 class="heading">
+<span class="type">Corollaire</span><span class="space"> </span><span class="codenumber">1.100</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="subsec-defprop-6-1-1">
 <div class="para">Si <span class="process-math">\(X_1,X_2,\ldots,X_k\)</span> sont des variables aléatoires mutuellement indépendantes à valeurs dans <span class="process-math">\(\N\)</span> alors</div>
 <div class="displaymath process-math">
 \begin{equation*}
 G_{X_1+X_2+\cdots+X_k}=G_{X_1}G_{X_2}\cdots G_{X_k}
 \end{equation*}
 </div>
-</div></article><article class="theorem theorem-like" id="subsec-defprop-6"><h4 class="heading">
-<span class="type">Théorème</span><span class="space"> </span><span class="codenumber">1.86</span><span class="period">.</span>
+</div></article><article class="theorem theorem-like" id="subsec-defprop-7"><h4 class="heading">
+<span class="type">Théorème</span><span class="space"> </span><span class="codenumber">1.101</span><span class="period">.</span><span class="space"> </span><span class="title">Expression de l’espérance et de la variance à l’aide la fonction génératrice.</span>
 </h4>
-<div class="para logical" id="subsec-defprop-6-1-1">
+<div class="para logical" id="subsec-defprop-7-2-1">
 <div class="para">Soit <span class="process-math">\(X\)</span> une variable aléatoire à valeurs dans <span class="process-math">\(\N\text{.}\)</span>
 </div>
-<ol class="decimal" id="subsec-defprop-6-1-1-3">
-<li id="subsec-defprop-6-1-1-3-1"><div class="para logical" id="subsec-defprop-6-1-1-3-1-1">
+<ol class="decimal" id="subsec-defprop-7-2-1-3">
+<li id="subsec-defprop-7-2-1-3-1"><div class="para logical" id="subsec-defprop-7-2-1-3-1-1">
 <div class="para">
 <span class="process-math">\(X\)</span> est sommable si et seulement si <span class="process-math">\(G_X\)</span> est dérivable en <span class="process-math">\(1\)</span> et dans ce cas</div>
 <div class="displaymath process-math">
@@ -325,7 +351,7 @@ G_{X_1+X_2+\cdots+X_k}=G_{X_1}G_{X_2}\cdots G_{X_k}
 \end{equation*}
 </div>
 </div></li>
-<li id="subsec-defprop-6-1-1-3-2"><div class="para logical" id="subsec-defprop-6-1-1-3-2-1">
+<li id="subsec-defprop-7-2-1-3-2"><div class="para logical" id="subsec-defprop-7-2-1-3-2-1">
 <div class="para">
 <span class="process-math">\(X\)</span> est de carré sommable si et seulement si <span class="process-math">\(G_X\)</span> est deux fois dérivable en <span class="process-math">\(1\)</span> et dans ce cas</div>
 <div class="displaymath process-math">
@@ -335,12 +361,25 @@ G_{X_1+X_2+\cdots+X_k}=G_{X_1}G_{X_2}\cdots G_{X_k}
 </div>
 </div></li>
 </ol>
+</div></article><article class="theorem theorem-like" id="theo-momfact"><h4 class="heading">
+<span class="type">Théorème</span><span class="space"> </span><span class="codenumber">1.102</span><span class="period">.</span><span class="space"> </span><span class="title">des moments factoriels.</span>
+</h4>
+<div class="para logical" id="theo-momfact-2-1">
+<div class="para">Soit <span class="process-math">\(X\)</span> une VAD à valeurs dans <span class="process-math">\(\N\text{.}\)</span> Pour tout <span class="process-math">\(p\in\N^*\text{,}\)</span> <span class="process-math">\(X\)</span> est <span class="process-math">\(p\)</span>-sommable si et seulement si <span class="process-math">\(G_X\)</span> est <span class="process-math">\(p\)</span>-fois dérivable en <span class="process-math">\(1\)</span> et dans ce cas</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\forall k\in\iic{1,p},\;
+G_X^{(k)}=\Es\bigl(X(X-1)\cdots(X-k+1)\bigr)
+\end{equation*}
+</div>
+<div class="para">L’espérance <span class="process-math">\(\Es\bigl(X(X-1)\cdots(X-k+1)\bigr)\)</span> est appelée moment factoriel d’ordre <span class="process-math">\(k\)</span> de <span class="process-math">\(X\text{.}\)</span>
+</div>
 </div></article></section><section class="subsection" id="subsec-generatrices-usuelles"><h3 class="heading hide-type">
 <span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">1.4.2</span><span class="space"> </span><span class="title">Fonctions génératrices des lois usuelles</span>
 </h3>
-<figure class="list table-like" id="subsec-generatrices-usuelles-2"><figcaption><span class="type">Liste</span><span class="space"> </span><span class="codenumber">1.87<span class="period">.</span></span><span class="space"> </span></figcaption><div class="named-list-content"><dl class="description-list">
+<figure class="list table-like" id="subsec-generatrices-usuelles-2"><figcaption><span class="type">Liste</span><span class="space"> </span><span class="codenumber">1.103<span class="period">.</span></span><span class="space"> </span></figcaption><div class="named-list-content"><dl class="description-list">
 <dt id="subsec-generatrices-usuelles-2-1-1">Loi uniforme</dt>
-<dd><div class="para" id="subsec-generatrices-usuelles-2-1-1-2">Si <span class="process-math">\(X\sim \mathscr U(n)\)</span> à valeurs dans <span class="process-math">\(\iic{1,n}\)</span> alors <span class="process-math">\(G_X(t)=\ds\frac{1}{n}\frac{t-t^{n+1}}{1-t}\text{.}\)</span>
+<dd><div class="para" id="subsec-generatrices-usuelles-2-1-1-2">Si <span class="process-math">\(X\sim \mathscr U(\iic{1,n})\)</span> à valeurs dans <span class="process-math">\(\iic{1,n}\)</span> alors <span class="process-math">\(G_X(t)=\ds\frac{1}{n}\frac{t-t^{n+1}}{1-t}\text{.}\)</span>
 </div></dd>
 <dt id="subsec-generatrices-usuelles-2-1-2">Loi de Bernouilli</dt>
 <dd><div class="para" id="subsec-generatrices-usuelles-2-1-2-2">Si <span class="process-math">\(X\sim\mathscr B(p)\)</span> alors <span class="process-math">\(G_X(t)=1-p+pt\)</span>
@@ -367,7 +406,7 @@ G_{X_1+X_2+\cdots+X_k}=G_{X_1}G_{X_2}\cdots G_{X_k}
 <div class="para" id="subsec-generatrice-2-4">Si on connaît la fonction génératrice <span class="process-math">\(g\)</span> d’une suite alors on peut retrouver la suite en calculant le développement de Taylor de <span class="process-math">\(g\text{.}\)</span> D’où l’utilité des fonctions génératrices : si une suite est définie par une relation de récurrence alors on traduit, dans certains cas, cette relation en une équation fonctionnelle ou différentielle de la fonction génératrice. Résoudre cette équation nous permet ensuite d’identifier l’expression explicite des termes de la suite.</div>
 <div class="para" id="subsec-generatrice-2-5">La fonction génératrice d’une VAD à valeurs dans <span class="process-math">\(\N\)</span> est ainsi la fonction génératrice de la suite <span class="process-math">\((\Pr(X=n))_n\text{,}\)</span> ie de la loi de <span class="process-math">\(X\text{.}\)</span>
 </div></article><article class="example example-like" id="subsec-generatrice-3"><h4 class="heading">
-<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.88</span><span class="period">.</span><span class="space"> </span><span class="title">Fonction génératrice des coefficients binomiaux.</span>
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.104</span><span class="period">.</span><span class="space"> </span><span class="title">Fonction génératrice des coefficients binomiaux.</span>
 </h4>
 <div class="para logical" id="subsec-generatrice-3-2">
 <div class="para">On sait que pour tout réels <span class="process-math">\(\alpha\)</span>
@@ -410,8 +449,9 @@ G_{X_1+X_2+\cdots+X_k}=G_{X_1}G_{X_2}\cdots G_{X_k}
 \sum_{k=0}^n\frac{\binom{p+k}{p}}{p!}\frac{\binom{q+n-k}{q}}{q!}\amp=\frac{\binom{p+q+n+1}{p+q+1}}{(p+q+1)!} 
 \end{align*}
 </div>
+<div class="para">Cette dernière formule est antagoniste avec la formule de Vandermonde dans le sens où ce sont les indices supérieurs des coefficients binomaux qui changent en fonction de l’indice de sommation.</div>
 </div></article><article class="example example-like" id="subsec-generatrice-4"><h4 class="heading">
-<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.89</span><span class="period">.</span><span class="space"> </span><span class="title">Somme de variables de Poisson MI.</span>
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.105</span><span class="period">.</span><span class="space"> </span><span class="title">Somme de variables de Poisson MI.</span>
 </h4>
 <div class="para" id="subsec-generatrice-4-2">Soient <span class="process-math">\(X_1,X_2,\ldots,X_p\)</span> des variables aléatoires MI suivant des lois de Poissons de paramètre respectifs <span class="process-math">\(\lambda_1,\lambda_2,\ldots,\lambda_k\text{.}\)</span> On note <span class="process-math">\(S=X_1+X_2+\cdots+X_k\text{.}\)</span> On veut déterminer la loi de <span class="process-math">\(S\text{.}\)</span>
 </div>
@@ -428,7 +468,7 @@ G_S(t)=\prod_{i=1}^kG_{X_i}(t)=\exp\bigg((t-1)\sum_{i=1}^k\lambda_i\biggr)
 </div>
 <div class="para" id="subsec-generatrice-4-4">Ce résultat s’interprète par le fait que le nombre de clients servi par unité de temps dans une file d’attente qui comporte <span class="process-math">\(k\)</span> guichets indépendants est une variable aléatoire suivant une loi de Poisson de paramètre <span class="process-math">\(\lambda=\sum_{i=1}^k\lambda_i\text{.}\)</span>
 </div></article><article class="example example-like" id="subsec-generatrice-5"><h4 class="heading">
-<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.90</span><span class="period">.</span><span class="space"> </span><span class="title">Une formule d’inversion.</span>
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.106</span><span class="period">.</span><span class="space"> </span><span class="title">Une formule d’inversion.</span>
 </h4>
 <div class="para logical" id="subsec-generatrice-5-2">
 <div class="para">Soit <span class="process-math">\(X\)</span> une VAD à valeurs dans <span class="process-math">\(\N\text{.}\)</span> On suppose que <span class="process-math">\(R_X\gt 1\text{.}\)</span> Alors <span class="process-math">\(G_X\)</span> est développable en série de taylor en <span class="process-math">\(1\text{,}\)</span> ie</div>
@@ -522,7 +562,7 @@ F_X(t)=\frac{G_X(t)-1}{t-1}
 <span class="codenumber">(c)</span><span class="space"> </span><span class="title">Loi du <span class="process-math">\(\min\)</span>.</span>
 </h5>
 <div class="para logical" id="fonction-generatrice-xsup-5-2-1">
-<div class="para">Soient <span class="process-math">\(X\)</span> et <span class="process-math">\(Y\)</span> deux VAD indépendantes  à valeurs dans <span class="process-math">\(\N\)</span> et soit <span class="process-math">\(Z=\min(X,Y)\text{.}\)</span> Exprimer <span class="process-math">\(\Pr(Z\geq n)\)</span> en fonction de <span class="process-math">\(\Pr(X\geq n)\)</span> et de <span class="process-math">\(\Pr(Y\geq n)\text{.}\)</span> En déduire que pour tout <span class="process-math">\(t\in[0,1[\)</span>
+<div class="para">Soient <span class="process-math">\(X\)</span> et <span class="process-math">\(Y\)</span> deux VAD sommables et indépendantes à valeurs dans <span class="process-math">\(\N\)</span> et soit <span class="process-math">\(Z=\min(X,Y)\text{.}\)</span> Exprimer <span class="process-math">\(\Pr(Z\geq n)\)</span> en fonction de <span class="process-math">\(\Pr(X\geq n)\)</span> et de <span class="process-math">\(\Pr(Y\geq n)\text{.}\)</span> En déduire que pour tout <span class="process-math">\(t\in[0,1[\)</span>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -536,14 +576,57 @@ F_Z(t)=\frac1{2\pi}\int_0^{2\pi}F_X(t^{1/2}e^{i\theta})F_Y(t^{1/2}e^{-i\theta})\
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
-\Pr(Z\geq n)=\Pr(X\geq n,Y\geq n)=\Pr(X\geq n)^2
+\Pr(Z\gt n)=\Pr(X\gt n,Y\gt n)=\Pr(X\gt n)\Pr(Y\gt n)
 \end{equation*}
 </div>
-<div class="para">on en déduit que</div>
-<div class="displaymath process-math" id="fonction-generatrice-xsup-5-3-1-3">
+<div class="para">D’autre part, par produit de Cauchy de deux séries absolument convergentes,  pour un <span class="process-math">\(t\in[0,1[\)</span> fixé et un <span class="process-math">\(\theta\in{}[0,2\pi]\)</span> quelconque</div>
+<div class="displaymath process-math" id="fonction-generatrice-xsup-5-3-1-5">
 \begin{align*}
-\Pr(Z=n)\amp=\Pr(Z\geq n)-\Pr(Z\geq n+1)=\Pr(X\geq n)^2-\Pr(X\geq n+1)^2 
+F_X(t^{1/2}e^{i\theta})F_Y(t^{1/2}e^{-i\theta}) \amp =
+\sum_{n\in\N}
+\sum_{k=0}^n\bigl(\Pr(X\gt k)t^{k/2}e^{ik\theta}\bigr)\bigl(\Pr(Y\gt n-k)t^{(n-k)/2}e^{i(k-n)\theta}\bigr) \\
+\amp=
+\sum_{n\in\N} u_n(\theta)\\
+\text{avec}\quad u_n(\theta)\amp=
+t^{n/2}\sum_{k=0}^n
+\Pr(X\gt k)\Pr(Y\gt n-k)e^{i(2k-n)\theta} 
 \end{align*}
+</div>
+<div class="para">Comme <span class="process-math">\(\bigcup\limits_{k=0}^{n}(X\gt k,Y\gt n-k)\subset (X+Y\gt n)\)</span> alors pour tout <span class="process-math">\(\theta\in[0,2\pi]\)</span>
+</div>
+<div class="displaymath process-math" id="fonction-generatrice-xsup-5-3-1-8">
+\begin{align*}
+\left|u_n(\theta)\right| \amp\leq
+t^{n/2}\sum_{k=0}^n\Pr(X\gt k,Y\gt n-k) \\
+\amp\leq t^{n/2}\Pr(X+Y\gt n)\leq t^{n/2} 
+\end{align*}
+</div>
+<div class="para">Puisque <span class="process-math">\(\sqrt t \lt 1 \text{,}\)</span> la série <span class="process-math">\(\sum t^{n/2}\)</span> est convergente alors la série de fonctions continues <span class="process-math">\(\sum u_n\)</span>  converge normalement sur le ségment <span class="process-math">\([0,2\pi]\text{.}\)</span> On peut donc intégrer terme à terme l’égalité précédente. Ce qui donne.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_0^{2\pi}F_X(t^{1/2}e^{i\theta})F_Y(t^{1/2}e^{-i\theta})\mathrm d\theta =
+\sum_{n\in\N}t^{n/2}
+\sum_{k=0}^n\Pr(X\gt k)\Pr(Y\gt n-k)\int_0^{2\pi}e^{i(2k-n)\theta}\mathrm d\theta
+\end{equation*}
+</div>
+<div class="para">et comme <span class="process-math">\(\int_{0}^{2\pi}e^{ih\theta}\mathrm d\theta=2\delta_{0h}\pi\)</span> pour tout <span class="process-math">\(h\in\Z\)</span> alors <span class="process-math">\(\int_0^{2\pi}e^{i(2k-n)\theta}\mathrm d\theta\)</span> est nulle sauf lorsque <span class="process-math">\(n\)</span> est paire et <span class="process-math">\(k=n/2\text{.}\)</span> Alors</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_0^{2\pi}F_X(t^{1/2}e^{i\theta})F_Y(t^{1/2}e^{-i\theta})\mathrm d\theta =
+2\pi\sum_{n\in\N}t^{n}\Pr(X\gt n)\Pr(Y\gt n)
+\end{equation*}
+</div>
+<div class="para">et finalement</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac1{2\pi}\int_0^{2\pi}F_X(t^{1/2}e^{i\theta})F_Y(t^{1/2}e^{-i\theta})\mathrm d\theta = F_Z(t)
+\end{equation*}
+</div>
+<div class="para">Dans le cas où <span class="process-math">\(X\)</span> et <span class="process-math">\(Y\)</span> suivent la même loi alors <span class="process-math">\(F_Y(t^{1/2}e^{-i\theta})=\overline{F_X(t^{1/2}e^{i\theta})}\)</span> et donc</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F_Z(t)=\frac1{2\pi}\int_0^{2\pi}\bigl|F_X(t^{1/2}e^{i\theta})\bigr|^2\mathrm d\theta
+\end{equation*}
 </div>
 </div></div></details></div></article></article><article class="activity project-like" id="fonction-generatrice-premier-retour"><h6 class="heading">
 <span class="type">Activité</span><span class="codenumber"> 1.22 - </span> <span class="title">Fonction génératrice du premier retour à l’origine.</span>
@@ -558,7 +641,7 @@ F_Z(t)=\frac1{2\pi}\int_0^{2\pi}F_X(t^{1/2}e^{i\theta})F_Y(t^{1/2}e^{-i\theta})\
 F(t) = \sum_{n=1}^{+\infty} \Pr(N = n) t^n \qtext{et} U(t) = \sum_{n=0}^{+\infty} \Pr(X_n = 0) t^n
 \end{equation*}
 </div>
-<div class="para">et de calculer ensuite <span class="process-math">\(F(t)\text{.}\)</span>
+<div class="para">et de calculer ensuite <span class="process-math">\(F(t)\text{.}\)</span> On notera que <span class="process-math">\(F\)</span> n’est pas la fonction génératrice de la variable <span class="process-math">\(N\)</span> puisque celle-ci peut potentiellement prendre la valeur <span class="process-math">\(+\infty\text{.}\)</span>
 </div>
 </div>
 </div>
@@ -591,7 +674,7 @@ U(t) = F(t) U(t) + 1.
 <div class="para">«Intuitivement» : <span class="process-math">\(\Pr(X_n=0\mid N=k)=\Pr(X_{n-k}=0)\)</span> car il s’agit de revenir à l’origine en <span class="process-math">\(n-k\)</span> pas une fois le retour à l’origine s’est produit pour la première fois à l’instant <span class="process-math">\(k\text{.}\)</span> Donc</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-probatota.html" id="eq-probatota">
 \begin{equation}
-\Pr(X_n = 0) = \sum_{k=1}^n  \Pr(N=k)\Pr(X_{n-k}=0).\tag{1.2}
+\Pr(X_n = 0) = \sum_{k=1}^n  \Pr(N=k)\Pr(X_{n-k}=0).\tag{1.3}
 \end{equation}
 </div>
 <div class="para">Plus rigoureusement, on peut écrire</div>
@@ -608,7 +691,7 @@ U(t) = F(t) U(t) + 1.
 \amp= \Pr(N=k)\Pr(X_{n-k}=0) 
 \end{align*}
 </div>
-<div class="para">En multipliant <a href="sec-fctgen.html#eq-probatota" class="xref" data-knowl="./knowl/xref/eq-probatota.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Équation 1.2">(1.2)</a> par <span class="process-math">\(t^n \)</span> et en sommant sur <span class="process-math">\(n \text{,}\)</span> on obtient :</div>
+<div class="para">En multipliant <a href="sec-fctgen.html#eq-probatota" class="xref" data-knowl="./knowl/xref/eq-probatota.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Équation 1.3">(1.3)</a> par <span class="process-math">\(t^n \)</span> et en sommant sur <span class="process-math">\(n \text{,}\)</span> on obtient :</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-probatota.html">
 \begin{equation*}
 U(t) = F(t) U(t) + 1.
@@ -697,11 +780,11 @@ F(t) = \frac{\frac{1}{\sqrt{1-4pqt^2}}-1}{\frac{1}{\sqrt{1-4pqt^2}}} = 1 - \sqrt
 </div></div></details></div></article></article><article class="activity project-like" id="fonction-caracteristique-conversion"><h6 class="heading">
 <span class="type">Activité</span><span class="codenumber"> 1.23 - </span> <span class="title">Fonction caractéristique d’une variable aléatoire à valeurs dans <span class="process-math">\(\Z\)</span>.</span>
 </h6>
-<div class="introduction" id="fonction-caracteristique-conversion-2"><div class="para" id="fonction-caracteristique-conversion-2-1">Dans cette activité, nous étudions la fonction caractéristique d’une variable aléatoire <span class="process-math">\(X \)</span> à valeurs dans <span class="process-math">\(\Z\text{.}\)</span> La fonction caractéristique est un outil puissant en probabilités, permettant de caractériser la loi d’une variable aléatoire et de simplifier certains calculs. Nous allons définir cette fonction, explorer ses propriétés, et l’utiliser pour calculer des moments et des probabilités.</div></div>
-<article class="task exercise-like" id="fonction-caracteristique-conversion-3"><h5 class="heading">
+<div class="introduction" id="fonction-caracteristique-conversion-3"><div class="para" id="fonction-caracteristique-conversion-3-1">Dans cette activité, nous étudions la fonction caractéristique d’une variable aléatoire <span class="process-math">\(X \)</span> à valeurs dans <span class="process-math">\(\Z\text{.}\)</span> La fonction caractéristique est un outil puissant en probabilités, permettant de caractériser la loi d’une variable aléatoire et de simplifier certains calculs. Nous allons définir cette fonction, explorer ses propriétés, et l’utiliser pour calculer des moments et des probabilités.</div></div>
+<article class="task exercise-like" id="fonction-caracteristique-conversion-4"><h5 class="heading">
 <span class="codenumber">(a)</span><span class="space"> </span><span class="title">Définition de la fonction caractéristique.</span>
 </h5>
-<div class="para logical" id="fonction-caracteristique-conversion-3-2-1">
+<div class="para logical" id="fonction-caracteristique-conversion-4-2-1">
 <div class="para">Soit <span class="process-math">\(X \)</span> une variable aléatoire à valeurs dans <span class="process-math">\(\Z\text{.}\)</span> On définit sa fonction caractéristique <span class="process-math">\(\phi_X \)</span> par :</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -710,39 +793,39 @@ F(t) = \frac{\frac{1}{\sqrt{1-4pqt^2}}-1}{\frac{1}{\sqrt{1-4pqt^2}}} = 1 - \sqrt
 </div>
 <div class="para">où <span class="process-math">\(t \in \R \text{.}\)</span>
 </div>
-</div> <div class="para logical" id="fonction-caracteristique-conversion-3-2-2"><ol class="decimal" id="fonction-caracteristique-conversion-3-2-2-1">
-<li id="fonction-caracteristique-conversion-3-2-2-1-1"><div class="para" id="p-derived-fonction-caracteristique-conversion-3-2-2-1-1">Montrer que <span class="process-math">\(\phi_X(t) \)</span> est bien définie pour tout <span class="process-math">\(t \in \R \text{.}\)</span>
+</div> <div class="para logical" id="fonction-caracteristique-conversion-4-2-2"><ol class="decimal" id="fonction-caracteristique-conversion-4-2-2-1">
+<li id="fonction-caracteristique-conversion-4-2-2-1-1"><div class="para" id="p-derived-fonction-caracteristique-conversion-4-2-2-1-1">Montrer que <span class="process-math">\(\phi_X(t) \)</span> est bien définie pour tout <span class="process-math">\(t \in \R \text{.}\)</span>
 </div></li>
-<li id="fonction-caracteristique-conversion-3-2-2-1-2"><div class="para" id="p-derived-fonction-caracteristique-conversion-3-2-2-1-2">Montrer que <span class="process-math">\(\phi_X(t) \)</span> est <span class="process-math">\(2\pi \)</span>-périodique et continue sur <span class="process-math">\(\R\text{.}\)</span>
+<li id="fonction-caracteristique-conversion-4-2-2-1-2"><div class="para" id="p-derived-fonction-caracteristique-conversion-4-2-2-1-2">Montrer que <span class="process-math">\(\phi_X(t) \)</span> est <span class="process-math">\(2\pi \)</span>-périodique et continue sur <span class="process-math">\(\R\text{.}\)</span>
 </div></li>
 </ol></div>
-<div class="solutions"><details id="fonction-caracteristique-conversion-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="fonction-caracteristique-conversion-3-3-1"><ol class="decimal" id="fonction-caracteristique-conversion-3-3-1-1">
-<li id="fonction-caracteristique-conversion-3-3-1-1-1"><div class="para" id="p-derived-fonction-caracteristique-conversion-3-3-1-1-1">La fonction caractéristique <span class="process-math">\(\phi_X(t) \)</span> est bien définie pour tout <span class="process-math">\(t \in \R \text{,}\)</span> car <span class="process-math">\(|e^{itX}|=1\)</span> et donc <span class="process-math">\(e^{itX}\)</span> est sommable.</div></li>
-<li id="fonction-caracteristique-conversion-3-3-1-1-2"><div class="para" id="p-derived-fonction-caracteristique-conversion-3-3-1-1-2">Les fonctions <span class="process-math">\(t\mapsto e^{int} \)</span> sont <span class="process-math">\(2\pi \)</span>-périodiques, donc <span class="process-math">\(\phi_X \)</span> est également <span class="process-math">\(2\pi \)</span>-périodique. En outre, on peut écrire<div class="displaymath process-math">
+<div class="solutions"><details id="fonction-caracteristique-conversion-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="fonction-caracteristique-conversion-4-3-1"><ol class="decimal" id="fonction-caracteristique-conversion-4-3-1-1">
+<li id="fonction-caracteristique-conversion-4-3-1-1-1"><div class="para" id="p-derived-fonction-caracteristique-conversion-4-3-1-1-1">La fonction caractéristique <span class="process-math">\(\phi_X(t) \)</span> est bien définie pour tout <span class="process-math">\(t \in \R \text{,}\)</span> car <span class="process-math">\(|e^{itX}|=1\)</span> et donc <span class="process-math">\(e^{itX}\)</span> est sommable.</div></li>
+<li id="fonction-caracteristique-conversion-4-3-1-1-2"><div class="para" id="p-derived-fonction-caracteristique-conversion-4-3-1-1-2">Les fonctions <span class="process-math">\(t\mapsto e^{int} \)</span> sont <span class="process-math">\(2\pi \)</span>-périodiques, donc <span class="process-math">\(\phi_X \)</span> est également <span class="process-math">\(2\pi \)</span>-périodique. En outre, on peut écrire<div class="displaymath process-math">
 \begin{equation*}
 \phi_X(t)=\sum_{n=0}^{+\infty}\Pr(X=n)e^{int}+\sum_{n=1}^{+\infty}\Pr(X=-n)e^{-int}.
 \end{equation*}
 </div>Les sommes des deux séries dans cette expression sont continues par convergence normale sur <span class="process-math">\(\R\text{.}\)</span> D’où la continuité de <span class="process-math">\(\phi_X \)</span> sur <span class="process-math">\(\R\text{.}\)</span>
 </div></li>
-</ol></div></div></details></div></article><article class="task exercise-like" id="fonction-caracteristique-conversion-4"><h5 class="heading">
+</ol></div></div></details></div></article><article class="task exercise-like" id="fonction-caracteristique-conversion-5"><h5 class="heading">
 <span class="codenumber">(b)</span><span class="space"> </span><span class="title">Exemples de fonctions caractéristiques.</span>
 </h5>
-<div class="para logical" id="fonction-caracteristique-conversion-4-2-1">
+<div class="para logical" id="fonction-caracteristique-conversion-5-2-1">
 <div class="para">Calculer la fonction caractéristique pour les lois suivantes :</div>
-<ol class="decimal" id="fonction-caracteristique-conversion-4-2-1-1">
-<li id="fonction-caracteristique-conversion-4-2-1-1-1"><div class="para" id="p-derived-fonction-caracteristique-conversion-4-2-1-1-1">Si <span class="process-math">\(X \sim \mathcal{B}(n, p) \)</span> (loi binomiale), montrer que :<div class="displaymath process-math">
+<ol class="decimal" id="fonction-caracteristique-conversion-5-2-1-1">
+<li id="fonction-caracteristique-conversion-5-2-1-1-1"><div class="para" id="p-derived-fonction-caracteristique-conversion-5-2-1-1-1">Si <span class="process-math">\(X \sim \mathcal{B}(n, p) \)</span> (loi binomiale), montrer que :<div class="displaymath process-math">
 \begin{equation*}
 \phi_X(t) = \left(1 - p + p e^{it}\right)^n.
 \end{equation*}
 </div>
 </div></li>
-<li id="fonction-caracteristique-conversion-4-2-1-1-2"><div class="para" id="p-derived-fonction-caracteristique-conversion-4-2-1-1-2">Si <span class="process-math">\(X \sim \mathcal{G}(p) \)</span> (loi géométrique), montrer que :<div class="displaymath process-math">
+<li id="fonction-caracteristique-conversion-5-2-1-1-2"><div class="para" id="p-derived-fonction-caracteristique-conversion-5-2-1-1-2">Si <span class="process-math">\(X \sim \mathcal{G}(p) \)</span> (loi géométrique), montrer que :<div class="displaymath process-math">
 \begin{equation*}
 \phi_X(t) = \frac{p e^{it}}{1 - (1 - p) e^{it}}.
 \end{equation*}
 </div>
 </div></li>
-<li id="fonction-caracteristique-conversion-4-2-1-1-3"><div class="para" id="p-derived-fonction-caracteristique-conversion-4-2-1-1-3">Si <span class="process-math">\(X \sim \mathcal{P}(\lambda) \)</span> (loi de Poisson), montrer que :<div class="displaymath process-math">
+<li id="fonction-caracteristique-conversion-5-2-1-1-3"><div class="para" id="p-derived-fonction-caracteristique-conversion-5-2-1-1-3">Si <span class="process-math">\(X \sim \mathcal{P}(\lambda) \)</span> (loi de Poisson), montrer que :<div class="displaymath process-math">
 \begin{equation*}
 \phi_X(t) = e^{\lambda (e^{it} - 1)}.
 \end{equation*}
@@ -750,36 +833,36 @@ F(t) = \frac{\frac{1}{\sqrt{1-4pqt^2}}-1}{\frac{1}{\sqrt{1-4pqt^2}}} = 1 - \sqrt
 </div></li>
 </ol>
 </div>
-<div class="solutions"><details id="fonction-caracteristique-conversion-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="fonction-caracteristique-conversion-4-3-1"><ol class="decimal" id="fonction-caracteristique-conversion-4-3-1-1">
-<li id="fonction-caracteristique-conversion-4-3-1-1-1"><div class="para" id="p-derived-fonction-caracteristique-conversion-4-3-1-1-1">Pour <span class="process-math">\(X \sim \mathcal{B}(n, p) \text{,}\)</span> la fonction caractéristique est :<div class="displaymath process-math">
+<div class="solutions"><details id="fonction-caracteristique-conversion-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="fonction-caracteristique-conversion-5-3-1"><ol class="decimal" id="fonction-caracteristique-conversion-5-3-1-1">
+<li id="fonction-caracteristique-conversion-5-3-1-1-1"><div class="para" id="p-derived-fonction-caracteristique-conversion-5-3-1-1-1">Pour <span class="process-math">\(X \sim \mathcal{B}(n, p) \text{,}\)</span> la fonction caractéristique est :<div class="displaymath process-math">
 \begin{equation*}
 \phi_X(t) = \sum_{k=0}^n \binom{n}{k} p^k (1 - p)^{n - k} e^{itk} = \left(1 - p + p e^{it}\right)^n.
 \end{equation*}
 </div>
 </div></li>
-<li id="fonction-caracteristique-conversion-4-3-1-1-2"><div class="para" id="p-derived-fonction-caracteristique-conversion-4-3-1-1-2">Pour <span class="process-math">\(X \sim \mathcal{G}(p) \text{,}\)</span> la fonction caractéristique est :<div class="displaymath process-math">
+<li id="fonction-caracteristique-conversion-5-3-1-1-2"><div class="para" id="p-derived-fonction-caracteristique-conversion-5-3-1-1-2">Pour <span class="process-math">\(X \sim \mathcal{G}(p) \text{,}\)</span> la fonction caractéristique est :<div class="displaymath process-math">
 \begin{equation*}
 \phi_X(t) = \sum_{k=1}^{+\infty} p (1 - p)^{k - 1} e^{itk} = \frac{p e^{it}}{1 - (1 - p) e^{it}}.
 \end{equation*}
 </div>
 </div></li>
-<li id="fonction-caracteristique-conversion-4-3-1-1-3"><div class="para" id="p-derived-fonction-caracteristique-conversion-4-3-1-1-3">Pour <span class="process-math">\(X \sim \mathcal{P}(\lambda) \text{,}\)</span> la fonction caractéristique est :<div class="displaymath process-math">
+<li id="fonction-caracteristique-conversion-5-3-1-1-3"><div class="para" id="p-derived-fonction-caracteristique-conversion-5-3-1-1-3">Pour <span class="process-math">\(X \sim \mathcal{P}(\lambda) \text{,}\)</span> la fonction caractéristique est :<div class="displaymath process-math">
 \begin{equation*}
 \phi_X(t) = \sum_{k=0}^{+\infty} \frac{\lambda^k e^{-\lambda}}{k!} e^{itk} = e^{\lambda (e^{it} - 1)}.
 \end{equation*}
 </div>
 </div></li>
-</ol></div></div></details></div></article><article class="task exercise-like" id="fonction-caracteristique-conversion-5"><h5 class="heading">
+</ol></div></div></details></div></article><article class="task exercise-like" id="fonction-caracteristique-conversion-6"><h5 class="heading">
 <span class="codenumber">(c)</span><span class="space"> </span><span class="title">Dérivation et moments.</span>
 </h5>
-<div class="para logical" id="fonction-caracteristique-conversion-5-2-1"><ol class="decimal" id="fonction-caracteristique-conversion-5-2-1-1">
-<li id="fonction-caracteristique-conversion-5-2-1-1-1"><div class="para" id="p-derived-fonction-caracteristique-conversion-5-2-1-1-1">Montrer que si <span class="process-math">\(X \)</span> admet un moment d’ordre <span class="process-math">\(p \text{,}\)</span> alors <span class="process-math">\(\phi_X \)</span> est de classe <span class="process-math">\(\mathcal{C}^p \)</span> et :<div class="displaymath process-math">
+<div class="para logical" id="fonction-caracteristique-conversion-6-2-1"><ol class="decimal" id="fonction-caracteristique-conversion-6-2-1-1">
+<li id="fonction-caracteristique-conversion-6-2-1-1-1"><div class="para" id="p-derived-fonction-caracteristique-conversion-6-2-1-1-1">Montrer que si <span class="process-math">\(X \)</span> admet un moment d’ordre <span class="process-math">\(p \text{,}\)</span> alors <span class="process-math">\(\phi_X \)</span> est de classe <span class="process-math">\(\mathcal{C}^p \)</span> et :<div class="displaymath process-math">
 \begin{equation*}
 \phi_X^{(k)}(0) = i^k \Es(X^k) \quad \text{pour tout } k \in \{1, \dots, p\}.
 \end{equation*}
 </div>
 </div></li>
-<li id="fonction-caracteristique-conversion-5-2-1-1-2"><div class="para" id="p-derived-fonction-caracteristique-conversion-5-2-1-1-2">Montrer que si <span class="process-math">\(X\)</span> admet des moments à tout ordre et s’il existe des constantes <span class="process-math">\(c,r\gt 0\)</span> telles que<div class="displaymath process-math">
+<li id="fonction-caracteristique-conversion-6-2-1-1-2"><div class="para" id="p-derived-fonction-caracteristique-conversion-6-2-1-1-2">Montrer que si <span class="process-math">\(X\)</span> admet des moments à tout ordre et s’il existe des constantes <span class="process-math">\(c,r\gt 0\)</span> telles que<div class="displaymath process-math">
 \begin{equation*}
 \forall n\in\N,\; \Es(|X|^n)\leq cr^n
 \end{equation*}
@@ -790,14 +873,14 @@ F(t) = \frac{\frac{1}{\sqrt{1-4pqt^2}}-1}{\frac{1}{\sqrt{1-4pqt^2}}} = 1 - \sqrt
 </div>
 </div></li>
 </ol></div>
-<div class="solutions"><details id="fonction-caracteristique-conversion-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="fonction-caracteristique-conversion-5-3-1"><ol class="decimal" id="fonction-caracteristique-conversion-5-3-1-1">
-<li id="fonction-caracteristique-conversion-5-3-1-1-1"><div class="para" id="p-derived-fonction-caracteristique-conversion-5-3-1-1-1">Si <span class="process-math">\(X \)</span> admet un moment d’ordre <span class="process-math">\(p \text{,}\)</span> alors la série <span class="process-math">\(\sum_{n=-\infty}^{+\infty} n^k \Pr(X = n) \)</span> converge pour tout <span class="process-math">\(k \leq p \text{.}\)</span> Par le théorème de dérivation terme à terme, <span class="process-math">\(\phi_X \)</span> est de classe <span class="process-math">\(\mathcal{C}^p \text{,}\)</span> et :<div class="displaymath process-math">
+<div class="solutions"><details id="fonction-caracteristique-conversion-6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="fonction-caracteristique-conversion-6-3-1"><ol class="decimal" id="fonction-caracteristique-conversion-6-3-1-1">
+<li id="fonction-caracteristique-conversion-6-3-1-1-1"><div class="para" id="p-derived-fonction-caracteristique-conversion-6-3-1-1-1">Si <span class="process-math">\(X \)</span> admet un moment d’ordre <span class="process-math">\(p \text{,}\)</span> alors la série <span class="process-math">\(\sum_{n=-\infty}^{+\infty} n^k \Pr(X = n) \)</span> converge pour tout <span class="process-math">\(k \leq p \text{.}\)</span> Par le théorème de dérivation terme à terme, <span class="process-math">\(\phi_X \)</span> est de classe <span class="process-math">\(\mathcal{C}^p \text{,}\)</span> et :<div class="displaymath process-math">
 \begin{equation*}
 \phi_X^{(k)}(0) = i^k \sum_{n=-\infty}^{+\infty} n^k \Pr(X = n) = i^k \Es(X^k).
 \end{equation*}
 </div>
 </div></li>
-<li id="fonction-caracteristique-conversion-5-3-1-1-2"><div class="para" id="p-derived-fonction-caracteristique-conversion-5-3-1-1-2">Si <span class="process-math">\(X \)</span> admet des moments à tout ordre et que la série génératrice converge, alors par l’inégalité de Taylor-Lagrange appliquée à <span class="process-math">\(e^{iu} \text{,}\)</span> on a :<div class="displaymath process-math">
+<li id="fonction-caracteristique-conversion-6-3-1-1-2"><div class="para" id="p-derived-fonction-caracteristique-conversion-6-3-1-1-2">Si <span class="process-math">\(X \)</span> admet des moments à tout ordre et que la série génératrice converge, alors par l’inégalité de Taylor-Lagrange appliquée à <span class="process-math">\(e^{iu} \text{,}\)</span> on a :<div class="displaymath process-math">
 \begin{equation*}
 \left| e^{int} - \sum_{k=0}^p \frac{i^k n^k}{k!} t^k \right| \leq \frac{|n t|^{p+1}}{(p+1)!}.
 \end{equation*}

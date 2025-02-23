@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr-FR" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="activity project-like"><h6 class="heading">
+<span class="type">Activité</span><span class="codenumber"> 1.23 - </span> <span class="title">Fonction caractéristique d’une variable aléatoire à valeurs dans <span class="process-math">\(\Z\)</span>.</span>
+</h6>
+<div class="introduction"><div class="para">Dans cette activité, nous étudions la fonction caractéristique d’une variable aléatoire <span class="process-math">\(X \)</span> à valeurs dans <span class="process-math">\(\Z\text{.}\)</span> La fonction caractéristique est un outil puissant en probabilités, permettant de caractériser la loi d’une variable aléatoire et de simplifier certains calculs. Nous allons définir cette fonction, explorer ses propriétés, et l’utiliser pour calculer des moments et des probabilités.</div></div>
+<article class="task exercise-like"><h5 class="heading">
+<span class="codenumber">(a)</span><span class="space"> </span><span class="title">Définition de la fonction caractéristique.</span>
+</h5>
+<div class="para logical">
+<div class="para">Soit <span class="process-math">\(X \)</span> une variable aléatoire à valeurs dans <span class="process-math">\(\Z\text{.}\)</span> On définit sa fonction caractéristique <span class="process-math">\(\phi_X \)</span> par :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi_X(t) = \Es\left[e^{itX}\right] = \sum_{n\in\Z} \Pr(X = n) e^{int},
+\end{equation*}
+</div>
+<div class="para">où <span class="process-math">\(t \in \R \text{.}\)</span>
+</div>
+</div> <div class="para logical"><ol class="decimal" id="fonction-caracteristique-conversion-4-2-2-1">
+<li><div class="para">Montrer que <span class="process-math">\(\phi_X(t) \)</span> est bien définie pour tout <span class="process-math">\(t \in \R \text{.}\)</span>
+</div></li>
+<li><div class="para">Montrer que <span class="process-math">\(\phi_X(t) \)</span> est <span class="process-math">\(2\pi \)</span>-périodique et continue sur <span class="process-math">\(\R\text{.}\)</span>
+</div></li>
+</ol></div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical"><ol class="decimal" id="fonction-caracteristique-conversion-4-3-1-1">
+<li><div class="para">La fonction caractéristique <span class="process-math">\(\phi_X(t) \)</span> est bien définie pour tout <span class="process-math">\(t \in \R \text{,}\)</span> car <span class="process-math">\(|e^{itX}|=1\)</span> et donc <span class="process-math">\(e^{itX}\)</span> est sommable.</div></li>
+<li><div class="para">Les fonctions <span class="process-math">\(t\mapsto e^{int} \)</span> sont <span class="process-math">\(2\pi \)</span>-périodiques, donc <span class="process-math">\(\phi_X \)</span> est également <span class="process-math">\(2\pi \)</span>-périodique. En outre, on peut écrire<div class="displaymath process-math">
+\begin{equation*}
+\phi_X(t)=\sum_{n=0}^{+\infty}\Pr(X=n)e^{int}+\sum_{n=1}^{+\infty}\Pr(X=-n)e^{-int}.
+\end{equation*}
+</div>Les sommes des deux séries dans cette expression sont continues par convergence normale sur <span class="process-math">\(\R\text{.}\)</span> D’où la continuité de <span class="process-math">\(\phi_X \)</span> sur <span class="process-math">\(\R\text{.}\)</span>
+</div></li>
+</ol></div></div></details></div></article><article class="task exercise-like"><h5 class="heading">
+<span class="codenumber">(b)</span><span class="space"> </span><span class="title">Exemples de fonctions caractéristiques.</span>
+</h5>
+<div class="para logical">
+<div class="para">Calculer la fonction caractéristique pour les lois suivantes :</div>
+<ol class="decimal" id="fonction-caracteristique-conversion-5-2-1-1">
+<li><div class="para">Si <span class="process-math">\(X \sim \mathcal{B}(n, p) \)</span> (loi binomiale), montrer que :<div class="displaymath process-math">
+\begin{equation*}
+\phi_X(t) = \left(1 - p + p e^{it}\right)^n.
+\end{equation*}
+</div>
+</div></li>
+<li><div class="para">Si <span class="process-math">\(X \sim \mathcal{G}(p) \)</span> (loi géométrique), montrer que :<div class="displaymath process-math">
+\begin{equation*}
+\phi_X(t) = \frac{p e^{it}}{1 - (1 - p) e^{it}}.
+\end{equation*}
+</div>
+</div></li>
+<li><div class="para">Si <span class="process-math">\(X \sim \mathcal{P}(\lambda) \)</span> (loi de Poisson), montrer que :<div class="displaymath process-math">
+\begin{equation*}
+\phi_X(t) = e^{\lambda (e^{it} - 1)}.
+\end{equation*}
+</div>
+</div></li>
+</ol>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical"><ol class="decimal" id="fonction-caracteristique-conversion-5-3-1-1">
+<li><div class="para">Pour <span class="process-math">\(X \sim \mathcal{B}(n, p) \text{,}\)</span> la fonction caractéristique est :<div class="displaymath process-math">
+\begin{equation*}
+\phi_X(t) = \sum_{k=0}^n \binom{n}{k} p^k (1 - p)^{n - k} e^{itk} = \left(1 - p + p e^{it}\right)^n.
+\end{equation*}
+</div>
+</div></li>
+<li><div class="para">Pour <span class="process-math">\(X \sim \mathcal{G}(p) \text{,}\)</span> la fonction caractéristique est :<div class="displaymath process-math">
+\begin{equation*}
+\phi_X(t) = \sum_{k=1}^{+\infty} p (1 - p)^{k - 1} e^{itk} = \frac{p e^{it}}{1 - (1 - p) e^{it}}.
+\end{equation*}
+</div>
+</div></li>
+<li><div class="para">Pour <span class="process-math">\(X \sim \mathcal{P}(\lambda) \text{,}\)</span> la fonction caractéristique est :<div class="displaymath process-math">
+\begin{equation*}
+\phi_X(t) = \sum_{k=0}^{+\infty} \frac{\lambda^k e^{-\lambda}}{k!} e^{itk} = e^{\lambda (e^{it} - 1)}.
+\end{equation*}
+</div>
+</div></li>
+</ol></div></div></details></div></article><article class="task exercise-like"><h5 class="heading">
+<span class="codenumber">(c)</span><span class="space"> </span><span class="title">Dérivation et moments.</span>
+</h5>
+<div class="para logical"><ol class="decimal" id="fonction-caracteristique-conversion-6-2-1-1">
+<li><div class="para">Montrer que si <span class="process-math">\(X \)</span> admet un moment d’ordre <span class="process-math">\(p \text{,}\)</span> alors <span class="process-math">\(\phi_X \)</span> est de classe <span class="process-math">\(\mathcal{C}^p \)</span> et :<div class="displaymath process-math">
+\begin{equation*}
+\phi_X^{(k)}(0) = i^k \Es(X^k) \quad \text{pour tout } k \in \{1, \dots, p\}.
+\end{equation*}
+</div>
+</div></li>
+<li><div class="para">Montrer que si <span class="process-math">\(X\)</span> admet des moments à tout ordre et s’il existe des constantes <span class="process-math">\(c,r\gt 0\)</span> telles que<div class="displaymath process-math">
+\begin{equation*}
+\forall n\in\N,\; \Es(|X|^n)\leq cr^n
+\end{equation*}
+</div>alors <span class="process-math">\(\phi_X\)</span> est développable en série entière sur <span class="process-math">\(\R\)</span> et<div class="displaymath process-math">
+\begin{equation*}
+\phi_X(t)=\sum_{n=0}^{+\infty}\frac{i^n}{n!}\Es(X^n)t^n
+\end{equation*}
+</div>
+</div></li>
+</ol></div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical"><ol class="decimal" id="fonction-caracteristique-conversion-6-3-1-1">
+<li><div class="para">Si <span class="process-math">\(X \)</span> admet un moment d’ordre <span class="process-math">\(p \text{,}\)</span> alors la série <span class="process-math">\(\sum_{n=-\infty}^{+\infty} n^k \Pr(X = n) \)</span> converge pour tout <span class="process-math">\(k \leq p \text{.}\)</span> Par le théorème de dérivation terme à terme, <span class="process-math">\(\phi_X \)</span> est de classe <span class="process-math">\(\mathcal{C}^p \text{,}\)</span> et :<div class="displaymath process-math">
+\begin{equation*}
+\phi_X^{(k)}(0) = i^k \sum_{n=-\infty}^{+\infty} n^k \Pr(X = n) = i^k \Es(X^k).
+\end{equation*}
+</div>
+</div></li>
+<li><div class="para">Si <span class="process-math">\(X \)</span> admet des moments à tout ordre et que la série génératrice converge, alors par l’inégalité de Taylor-Lagrange appliquée à <span class="process-math">\(e^{iu} \text{,}\)</span> on a :<div class="displaymath process-math">
+\begin{equation*}
+\left| e^{int} - \sum_{k=0}^p \frac{i^k n^k}{k!} t^k \right| \leq \frac{|n t|^{p+1}}{(p+1)!}.
+\end{equation*}
+</div>En multipliant par <span class="process-math">\(\Pr(X = n) \)</span> et en sommant sur <span class="process-math">\(\Z \text{,}\)</span> on obtient :<div class="displaymath process-math">
+\begin{equation*}
+\left| \Es(e^{itX}) - \sum_{k=0}^p \frac{i^k}{k!} \Es(X^k) t^k \right| \leq \frac{\Es\left(|X|^{p+1}\right)}{(p+1)!} |t|^{p+1}.
+\end{equation*}
+</div>Ainsi, <span class="process-math">\(\phi_X(t) = \sum_{p=0}^{+\infty} \frac{i^p}{p!} \Es(X^p) t^p \text{.}\)</span>
+</div></li>
+</ol></div></div></details></div></article></article><span class="incontext"><a class="internal" href="sec-fctgen.html#fonction-caracteristique-conversion">Contexte</a></span>
+</body>
+</html>
