@@ -25,7 +25,7 @@
     <definition xml:id="def-tribu">
       <statement>
         <p>
-          On appelle tribu de <m>\Omega</m> tout ensemble <m>\mathscr T</m> de parties de <m>\Omega</m> tel que :
+          On appelle tribu (ou <m>\sigma</m>-algèbre) de <m>\Omega</m> tout ensemble <m>\mathscr T</m> de parties de <m>\Omega</m> tel que :
           <ul>
             <li>
               <m>\Omega \in \mathscr T</m> ;
@@ -91,20 +91,24 @@
 
 
     <proposition>
+      <notation>
+        <usage><m>\sigma(\mathcal A)</m></usage>
+        <description>tribu engéndrée par <m>\mathcal A</m></description>
+      </notation>
       <p>
         <ol>
           <li>
             <p>
-              Si <m>(\mathscr T_i)_{i\in I}</m> est une famille de tribus de <m>\Omega</m> alors <m>\bigcap\limits_{i\in I} \mathscr T_i</m> est une tribu de <m>\Omega</m>.
+              Si <m>(\mathscr T_i)_{i\in I}</m> est une famille quelconque  de tribus de <m>\Omega</m> alors <m>\bigcap\limits_{i\in I} \mathscr T_i</m> est une tribu de <m>\Omega</m>.
             </p>
           </li>
 
           <li>
             <p>
               Soit <m>\mathcal A</m> un ensemble de parties de <m>\Omega</m>.
-              L'intersubsection de toutes les tribus de <m>\Omega</m> contenant <m>\mathcal A</m> est une tribu de <m>\Omega</m>.
+              L'intersection de toutes les tribus de <m>\Omega</m> contenant <m>\mathcal A</m> est une tribu de <m>\Omega</m>.
               Elle est appelée la tribu engendrée par <m>\mathcal A</m>.
-              On la notera <m>\sigma(\mathcal A)</m>.
+              On la note <m>\sigma(\mathcal A)</m>.
             </p>
           </li>
         </ol>
@@ -112,9 +116,14 @@
     </proposition>
 
     <definition xml:id="def-tborel">
+    <title>Tribue de Borel de <m>\R</m></title>
+    <notation>
+      <usage><m>\mathscr B(\R)</m></usage>
+      <description>tribu de Borel de <m>\R</m></description>
+    </notation>
       <statement>
         <p>
-          La tribu engendrée par l'ensemble des segments de <m>\R</m> est appelée la tribu de Borel de <m>\R</m>.
+          La tribu engendrée par l'ensemble des segments de <m>\R</m> est appelée la tribu de Borel de <m>\R</m> et tout élément de cette tribu est dit un borélien de <m>\R</m>
           On la note <m>\mathscr B(\R)</m>.
         </p>
       </statement>
@@ -133,9 +142,10 @@
           <li>
             <p>
               Tout intervalle de <m>\R</m> peut être écrit comme la réunion d'une suite de segments.
-              La tribu de Borel de <m>\R</m> contient donc tous les intervalles de <m>\R</m>.
-              Comme tout ouvert de <m>\R</m> est une union au plus dénombrable d'intervalles ouverts, la tribu de Borel de <m>\R</m> contient tous les ouverts de <m>\R</m>.
-              Elle contient donc aussi tous les fermés de <m>\R</m>.
+              Donc tout intervalle de <m>\R</m> est un borélien.
+            </p></li>
+            <li><p> 
+              Tout ouvert de <m>\R</m> est une réunion au plus dénombrable d'intervalles ouverts<fn>ses composantes connexes par arcs par exemple</fn>. Donc tout ouvert de <m>\R</m> et un borélien et par stabilité d'une tribu par complémentarité, tout fermé de <m>\R</m> est un borélien.
             </p>
           </li>
 
@@ -148,9 +158,12 @@
         </ol>
       </p>
     </remark>
+    <warning>
+              <p> Il n'y a aucun critère gloal qui reste simple permettant de décider si une partie de <m>\R</m> est un borélien. Cela peut même être un problème très compliqué.</p>
+            </warning>
 
 
-    <proposition xml:id="prop-sigmatrib">
+    <proposition xml:id="prop-sigmatrib"><title>Un cas intéressant</title>
       <statement>
         <p>
           Soit <m>\mathcal A=\{A_i\mid i\in I\}</m> un ensemble au plus dénombrable de parties de <m>\Omega</m> qui  <em> forment une partition </em> de <m>\Omega</m>.
@@ -205,8 +218,9 @@
     </corollary>
 
     <remark>
-      <p>
-        Si <m>\Omega</m> est infini non dénombrable alors la tribu <m>\mathscr D(\Omega)</m> engendrée par les  singletons de <m>\Omega</m> est définie par la condition
+    <ol>
+      <li>
+        <p>Si <m>\Omega</m> est infini non dénombrable alors la tribu <m>\mathscr D(\Omega)</m> engendrée par les  singletons de <m>\Omega</m> est définie par la condition
         <me>
           \forall A\in\mathscr P(\Omega),\; A\in\mathscr D(\Omega)\Longleftrightarrow\; \begin{array}{r|l} \amp  A \text{ est au plus dénombrable} \\ \text{ou} \amp A^c \text{ est au plus dénombrable} \end{array}
         </me>
@@ -216,6 +230,14 @@
       <p>
         C'est le cas par exemple de la tribu de Borel de tout espace vectoriel normé de dimension finie (les singletons sont des boules fermées).
       </p>
+      </li>
+      <li>
+        <p>
+          La <xref ref="prop-sigmatrib"/> permet de construire de manière simple une tribu de <m>\Omega</m> en partant d'une famille au plus dénombrable d'événement deux à deux disjoints. Cette tribu est d'autant plus intéressante qu'il est très simple d'y construire une probabilité (voir la remarque <xref ref="rem-progsigmatrib"/>). 
+        </p>
+      </li>
+    </ol>
+        
     </remark>
 
 
@@ -246,6 +268,10 @@
     </note>
 
     <definition xml:id="def-probabilite">
+    <notation>
+      <usage><m>\Pr(A)</m></usage>
+      <description>probabilité de l'événement <m>A</m></description>
+    </notation>
       <statement>
         <p>
           On appelle probabilité de l'espace <m>(\Omega,\mathscr T)</m> toute application <m>\Pr:\mathscr T\to[0,1]</m> telle que :
@@ -538,28 +564,6 @@
       </statement>
     </theorem>
 
-    <remark>
-      <p>
-        <ol>
-          <li>
-            <p>
-              Ce résultat reste valable si les événements <m>B_i</m> sont deux à deux disjoints, sans former une partition de <m>\Omega</m>, à condition que
-              <me>
-                \Pr\Bigl(\bigcup_{i\in I}B_i\Bigr) =1
-              </me>
-            </p>
-          </li>
-
-          <li>
-            <p>
-              Cette formule est extrêmement utile.
-              Elle stipule que si on sait calculer les probabilités des événements d'un SCE alors on peut calculer la probabilité de n'importe quel événement.
-            </p>
-          </li>
-        </ol>
-      </p>
-    </remark>
-
     <example>
       <title>(exemples génériques d'utilisation de la formule des probabilités totales)</title>
 
@@ -583,14 +587,48 @@
             </p>
           </li>
 
+          
+        </ol>
+      </p>
+    </example>
+
+    <remark>
+      <p>
+        <ol>
           <li>
             <p>
-              Le théorème suivant donne une application importante de la formule des probabilités totales.
+              Ce résultat reste valable si les événements <m>B_i</m> sont deux à deux disjoints, sans former une partition de <m>\Omega</m>, à condition que
+              <me>
+                \Pr\Bigl(\bigcup_{i\in I}B_i\Bigr) =1
+              </me>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Cette formule est extrêmement utile.
+              Elle stipule que si on sait calculer les probabilités des événements d'un SCE alors on peut exprimer la probabilité de n'importe quel événement.
+            </p>
+          </li>
+          <li xml:id="rem-progsigmatrib">
+            <p>
+              Reprenons le contexte de la <xref ref="prop-sigmatrib"/> et considérons une famille <m>(p_i)_{i\in I}</m> de nombre réel positifs dont la somme vaut <m>1</m>. Alors on définit complétement une probabilité <m>\Pr</m> sur l'espace <m>(\Omega,\sigma(\mathcal A))</m> en posant 
+              <me>\forall i\in I,\; \Pr(A_i)=p_i</me> 
+              On a alors pour tout <m>A=\cup_{i\in I'}\in\sigma(\mathcal A)</m> 
+              <me>
+                \Pr(A)=\sum_{i\in I'}p_i
+              </me>
+              
+            </p>
+            <p>
+              Le théorème suivant n'est qu'un cas particulier de ce dernier résultat.
             </p>
           </li>
         </ol>
       </p>
-    </example>
+    </remark>
+
+    
 
     <theorem xml:id="thm-probadisc">
       <statement>
@@ -634,6 +672,17 @@
 
 
     <proposition xml:id="prop-probcond">
+      <title>Probabilité conditionnelle</title>
+      <notation>
+        <usage><m>\Pr(A\mid B)</m></usage>
+        <description>probabilité de <m>A</m> sachant <m>B</m></description>
+      </notation>
+      <notation>
+        <usage><m>\Pr_B(A)</m></usage>
+        <description>probabilité de <m>A</m> sachant <m>B</m></description>
+      </notation>
+      
+      
       <statement>
         <p>
           On considère un événemnt <m>B</m> de probabilité non nulle.

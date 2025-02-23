@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-varalea" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Variables aléatoires discrètes</title>
+  <title>Variables aléatoires</title>
 
   <subsection xml:id="subsec-varalea">
     <title>Variables aléatoires</title>
@@ -11,40 +11,65 @@
     </p>
 
     <definition xml:id="def-varalea">
+      <notation>
+        <usage><m>\text{VAD}</m></usage>
+        <description>variable aléatoire discrète</description>
+      </notation>
+      <notation>
+        <usage><m>\text{VAR}</m></usage>
+        <description>variable aléatoire réelle</description>
+      </notation>
+      <notation>
+        <usage><m>\text{VADR}</m></usage>
+        <description>variable aléatoire discrète réelle</description>
+      </notation>
       <statement>
         <p>
-          On appelle variable aléatoire de <m>(\Omega,\mathscr T)</m> dans <m>(\Omega',\mathscr T')</m> toute application <m>X:\Omega\longrightarrow \Omega'</m> telle que
+          On appelle <term>variable aléatoire</term> de <m>(\Omega,\mathscr T)</m> dans <m>(\Omega',\mathscr T')</m> toute application <m>X:\Omega\longrightarrow \Omega'</m> telle que
           <me>
             \forall A'\in\mathscr T',\; X^{-1}(A')\in\mathscr T
           </me>
-          c'est à dire que l'image réciproque par <m>X</m> de tout événement est un événement.
+          c'est à dire que l'image réciproque par <m>X</m> de tout événement est un événement. <m>(\Omega,\mathscr T)</m> est dit espace de travail de <m>X</m> et <m>(\Omega',\mathscr T')</m> son espace des résultats (ou espace des états).
         </p>
 
         <p>
-          Soit dans la suite <m>X</m> une variable aléatoire de <m>(\Omega,\mathscr T)</m> dans <m>(\Omega',\mathscr T')</m>.
-        </p>
-
-        <p>
-          <m>X</m> est dite discrète si l'ensemble <m>X(\Omega)</m> est au plus dénombrable et <m>\mathscr P\bigl(X(\Omega)\bigr)\subset \mathcal T'</m>. Ce qui équivaut à
+          Soit  <m>X</m> une variable aléatoire de <m>(\Omega,\mathscr T)</m> dans <m>(\Omega',\mathscr T')</m>.
+          <ul>
+            <li>
+              <p>
+                 <m>X</m> est dite <term>variable aléatoire discrète (VAD)</term> si l'ensemble <m>X(\Omega)</m> est au plus dénombrable et <m>\mathscr P\bigl(X(\Omega)\bigr)\subset \mathcal T'</m>. Ce qui équivaut à
           <me>
             \forall x\in X(\Omega),\; \{x\}\in \mathscr T'
           </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                 <m>X</m> est dite <term> une variable aléatoire réelle (VAR)</term>  si <m>\Omega'\subset \R</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>X</m> est dite une <term>variable aléatoire discrète réelle (VADR)</term> si elle est discrète et réelle.
+              </p>
+            </li>
+          </ul>
         </p>
 
-        <p>
-          X est dite réelle si <m>\Omega'\subset \R</m>.
-        </p>
       </statement>
     </definition>
     <explanation>
     <p>
       Dans la pratique une variable aléatoire est utilisée pour représenter le résultat d'une expérience aléatoire.
       Souvent l'univers <m>\Omega</m> et la tribu <m>\mathscr T</m> ne sont pas précisés.
-      Les résultats et les événements de l'expérience sont  dans <m>\Omega'</m> et dans <m>\mathscr T'</m>.
+      </p><p>
+      Les résultats et les événements de l'expérience sont  dans <m>\Omega'</m> et dans <m>\mathscr T'</m>. Comme quand on lance un dé, <m>X</m> désiggnera le numéro obtenu. Il sera considéré comme une application définie sur un ensemble non déterminé et ce qui nous interesse c'est l'ensemble des résultats possible de l'expérience, ici <m>\iic{1,6}</m>. 
+      </p><p>
+      Cette approche procure l'avantage de pouvoir combiner entre les résultats de plusieurs expériences aléatoires. Ils seront tous des applications définies sur un même ensemble et on peut ainsi les additionner, les comparer...
     </p>
 
     <p>
-      La question est comment choisir <m>(\Omega',\mathscr T')</m> et de quelle tribu munir <m>\Omega</m> pour que le résultat de l'expérience soit une variable aléatoire ? Les remarques suivantes donnent des éléments de réponse.
+      La question est comment choisir l'espace des états <m>(\Omega',\mathscr T')</m> et de quelle tribu munir <m>\Omega</m> pour que le résultat de l'expérience soit une variable aléatoire ? Les remarques suivantes donnent des éléments de réponse.
     </p>
     </explanation>
 
@@ -147,6 +172,10 @@
     </proposition>
 
     <definition>
+    <notation>
+      <usage><m>(X=x)</m></usage>
+      <description>l'événement <m>X^{-1}(\{x\})</m></description>
+    </notation>
       <ol>
         <li>
           <p>
@@ -261,7 +290,48 @@
       </ul>
     </example>
 
-    <theorem>
+    <proposition xml:id="prop-loivaralea">
+      <title>Loi d'une variable aléatoire</title>
+      <notation>
+        <usage><m>\Pr_X</m></usage>
+        <description>loi de la variable aléatoire <m>X</m></description>
+      </notation>
+      <statement>
+        <p>
+          Soit <m>X</m> une variable aléatoire de <m>(\Omega,\mathscr T)</m> dans <m>(\Omega',\mathscr T') </m>. Alors l'application 
+        <me>
+          \Pr_X:\;\begin{array}[t]{rcl} 
+          \mathscr T' \amp \longrightarrow \amp [0,1] \\
+          A' \amp \longmapsto \amp \Pr(X\in A')
+          \end{array}
+        </me>
+        est une probabilité de <m>(\Omega',\mathscr T')</m>. On l'appelle loi de <m>X</m>. 
+        </p>
+      </statement>
+    </proposition>
+    <insight>
+      <p>
+        Si <m>X</m> et <m>Y</m> sont des variables aléatoires telle que <m>\Pr_X=\Pr_Y</m> alors on dit que <m>X</m> et <m>Y</m> suivent la même loi et on écrit  <m>X\sim Y</m>.
+      </p>
+    </insight>
+    <note>
+      <p>
+        Noter que deux variables aléatoires <m>X</m> et <m>Y</m> peuvent suivre une même loi sans qu'elles soient définies sur un même espace <m>(\Omega,\mathscr T)</m>. Ce qui importe c'est l'espace des résultats.   
+      </p>
+      <p>
+        Précisons : si <m>X_1</m> et <m>X_2</m> sont des variables aléatoires définies respectivement sur des espaces <m>(\Omega_1,\mathscr T_1,\Pr_1)</m> et <m>(\Omega_2,\mathscr T_2,\Pr_2)</m> à valeurs dans un même espace <m>(\Omega',\mathscr T')</m> alors elles suivent la même loi si et seulement si 
+        <me>
+          \forall A'\in\mathscr T',\; \Pr_1(X_1\in A')=\Pr_2(X_2\in A')
+        </me>
+      </p>
+    </note>
+
+    </subsection> 
+    
+    <subsection xml:id="subsec-loivaralea">
+      <title>Loi d'une variable aléatoire discrète</title>
+
+    <theorem xml:id="thm-loivaraleadisc">
       <statement>
         <p>
           Soit <m>X</m> une variables aléatoire discrète de <m>(\Omega,\mathscr T)</m> dans <m>(\Omega',\mathscr T')</m>.
@@ -278,44 +348,60 @@
               </p>
             </li>
           </ol>
-          On appelle loi de la variable <m>X</m> le couple <m>\bigl(X,(\Pr(X=x))_{x\in X(\Omega)}\bigr)</m>.
+          Pour une variable aléatoire <em>discrète</em> <m>X</m>, déterminer la loi de <m>X</m> revient ainsi à déterminer  le couple <m>\bigl(X(\Omega),(\Pr(X=x))_{x\in X(\Omega)}\bigr)</m>.
           L'application <m>x\longmapsto \Pr(X=x)</m> est dite fonction des masses de la variable <m>X</m>.
         </p>
         <explanation>
         <p>
-          La loi d'une VADR est ainsi le couple formé de l'ensemble des valeurs qu'elle peut prendre et de la famille (au plus dénombrable) des probabilités pour que chacune de ces valeurs se réalise.
-          La propriété 2 signifie que les probabilités des événements <m>(X\in A')</m> sont déterminées par la loi de <m>X</m>.
+          La loi d'une VADR est ainsi déterminée par le couple formé de l'ensemble des valeurs qu'elle peut prendre et de la famille (au plus dénombrable) des probabilités pour que chacune de ces valeurs se réalise.
         </p>
         </explanation>
       </statement>
     </theorem>
 
-    <note>
-      <p>
-        Si <m>X</m> et <m>Y</m> sont des VAD qui suivent la même loi alors on écrit <m>X\sim Y</m>.
-      </p>
-    </note>
-
-    <corollary xml:id="cor-loiX">
+    <corollary xml:id="cor-memeloi">
       <statement>
         <p>
-          Soit <m>X</m> une variable aléatoire discrète de <m>(\Omega,\mathscr T)</m> dans <m>(\Omega',\mathscr T')</m>.
-          L'application
-          <me>
-            \Pr_X:\begin{array}[t]{rcl} \mathscr T' \amp \longrightarrow \amp [0,1] \\ A' \amp \longmapsto \amp \Pr(X\in A') \end{array}
-          </me>
-          est une probabilité de <m>(\Omega',\mathscr T')</m>.
+          Soient <m>X</m> et <m>Y</m> deux VAD. Si <m>X</m> et <m>Y</m> suivent la même loi alors pour toute fonction <m>f</m> définie sur <m>X(\Omega)</m>, les variables <m>f(X)</m> et <m>f(Y)</m> suivent la même loi.
         </p>
-        <!--
-        <p>
-          Pour toute famille <m>(A_i')_{i\in I}</m> on a
-          <me>
-            (A_i')_{i\in I} \text{ est MI pour } \Pr_X \Longleftrightarrow \bigl((X\in A'_i)\bigr)_{i\in I} \text{ est MI pour } \Pr
-          </me>
-        </p>
-        -->
       </statement>
+      <proof>
+        <p>
+          Si <m>X\sim Y</m> alors <m>X(\Omega)=Y(\Omega)</m> et donc <m>f(X)(\Omega)=f(Y)(\Omega)</m>. Soit ensuite <m>z\in f(X)(\Omega)</m>, alors
+          <md>
+            <mrow>\Pr(f(X)=z) \amp=\Pr\biggl(\bigcup_{x\in f^{-1}(\{z\})} (X=x)\biggr) </mrow>
+            <mrow> \amp=
+            \sum_{x\in f^{-1}(\{z\})} \Pr(X=x) </mrow>
+            <mrow> \amp=
+             \sum_{x\in f^{-1}(\{z\})} \Pr(Y=x) </mrow>
+             <mrow> \amp=
+             \Pr(f(Y)=z) </mrow>
+          </md>
+          Ainsi <m>f(X)\sim f(Y)</m>
+        </p>
+      </proof>
     </corollary>
+
+    <!-- <proposition xml:id="prop-loipredef">
+      <statement>
+        <p>
+          Soit <m>(p_i)_{i\in I}</m> une famille de nombres réels positifs dont la somme vaut <m>1</m>. Il existe au moins un espace <m>(\Omega,\mathscr T,\Pr)</m> et une VADR <m>X</m> définie sur cet espace dont la loi est déterminée par <m>(p_i)_{i\in I}</m>. 
+          <fn>voir la section «Activités numériques», <xref ref="cor-prininv"/> pour une méthode numérique qui permet de simuler une telle variable aléatoire.</fn> C'est à dire une VADR <m>X</m> telle que <m>X(\Omega)=\{x_i\mid i\in I\}</m> et 
+          <me>
+            \forall i\in I,\; \Pr(X=x_i)=p_i 
+          </me>
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Si <m>I</m> est fini il suffit de poser <m>\Omega=\iic{1,\Card I}</m> 
+        </p>
+      </proof>
+    </proposition> -->
+
+
+    
+      
 
     <definition xml:id="def-loicouple">
       <statement>
@@ -580,19 +666,45 @@
 
 
   <subsection xml:id="subsec-loiusuelles">
-    <title>Lois usuelles</title>
+    <title>Lois discrusueètes usuelles</title>
 
     <p>
       <m>X</m> désignera une VAD définie sur <m>(\Omega,\mathscr T)</m>
     </p>
 
     <ol>
+      <li><title>Loi uniforme finie</title>
+        <notation>
+          <usage><m>\mathscr U(E)</m></usage>
+          <description>loi uniforme sur l'ensemble fini <m>E</m></description>
+        </notation>
+      
+      
+        <p>
+           On dit que <m>X</m> suit une loi uniforme sur un ensemble fini <m>\{x_1,x_2,\ldots,x_n\}</m> et on écrit <m>X\sim\mathscr U(\{x_1,x_2,\ldots,x_n\})</m> si 
+           <me>\begin{cases}
+            X(\Omega)=\{x_1,x_2,\ldots,x_n\} \\ 
+            \forall k\in\iic{1,n},\;\Pr(X=x_k)=1/n 
+            \end{cases}
+           </me>
+           Une telle variable est utilisée pour modéliser les expériences aléatoires qui possèdent un nombre fini de résultats possibles tous équiprobables. On notera que dans ce cas pour toute partie <m>A</m> de <m>X(\Omega)</m> 
+           <me>
+            \Pr(X\in A)=\frac{\card A}n
+           </me>
+           qu'on exprime en disant que la probabilité qu'un événement se réalise est égale au rapport entre le nombre de résultats favorables à l'événement et celui de tous les résultats possibles. 
+            
+        </p>
+      </li>
       <li>
         <title>Loi de Bernouilli</title>
+        <notation>
+          <usage><m>\mathscr B(p)</m></usage>
+          <description>loi de Bernouilli de paramètre <m>p</m></description>
+        </notation>
 
         <p>
           Soit un réel <m>p\in[0,1]</m> On dit que <m>X</m> suit la loi de Bernouilli de paramètre <m>p</m> et on écrit <m>X\sim \mathscr B(p)</m> si <m>X</m> est le résultat d'une expérience aléatoire qui ne possède que deux issues : succès ou échec.
-          La probabilité du sucès étant <m>p</m>.
+          La probabilité du succès étant <m>p</m>.
           <me>
             \begin{cases} X(\Omega)=\{1,0\} \\ \Pr(X=1)=p\text{ et } \Pr(X=0)=1-p \end{cases}
           </me>
@@ -601,6 +713,10 @@
 
       <li>
         <title>Loi binomiale</title>
+        <notation>
+          <usage><m>\mathscr B(n,p)</m></usage>
+          <description>loi binomiale de paramètres <m>n</m> et <m>p</m> </description>
+        </notation>
 
         <p>
           Soit un réel <m>p\in[0,1]</m> et un entier <m>n\in\N^*</m>.
@@ -623,6 +739,10 @@
 
       <li>
         <title>Loi géometrique</title>
+        <notation>
+          <usage><m>\mathscr G(p)</m></usage>
+          <description>loi géométrique de paramètre <m>p</m></description>
+        </notation>
 
         <p>
           Soit un réel <m>p\in]0,1[</m> On dit que <m>X</m> suit la loi géométrique de paramètre <m>p</m> et on écrit <m>X\sim \mathscr G(p)</m> si <m>X</m> est le numéro du premier test qui donne un succès lorsque on répète indéfiniment et de façon indépendante une expérience de Bernouilli de paramètre <m>p</m>.
@@ -644,6 +764,10 @@
 
       <li>
         <title>Loi de Poisson</title>
+        <notation>
+          <usage><m>\mathscr P(\lambda)</m></usage>
+          <description>loi de Poisson de paramètre <m>\lambda</m></description>
+        </notation>
 
         <p>
           Soit un réel <m>\lambda\in\R_+</m>.
@@ -659,11 +783,13 @@
 
 
   <subsection xml:id="subsec-fonction-repartition">
-    <title>Fonction de répartition (programme marocain)</title>
+    <title>Loi d'une variable aléatoire réelle : fonction de répartition <fn>programme marocain</fn></title>
 
     <introduction>
         <p>
-          On suppose que <m>\R</m> est muni de sa tribu de Borel <m>\mathscr B(\R)</m>. Dans la suite toutes les variables alétoires réelles considérées sont supposées à valeurs dans l'espace probabilisable <m>(\R,\mathscr B(\R))</m>.  
+          On suppose que <m>\R</m> est muni de sa tribu de Borel <m>\mathscr B(\R)</m>. Dans la suite toutes les variables alétoires réelles considérées sont supposées à valeurs dans l'espace probabilisable <m>(\R,\mathscr B(\R))</m>. L'espace de travail <m>(\Omega,\mathscr T)</m> est supposé muni d'une probabilité <m>\Pr</m>. 
+        </p>
+        <p> Il s'agit dans cette section de fournir un moyen de caractériser la loi d'une variable aléatoire <em>réelle</em> non nécessairement discrète. Bien que les notions abordées ne soit pas citées dans le programme français des classes MP, elles peuvent s'avérer indispensables pour vos travaux de recherche (pour le TIPE par exemple) et elles sont utiles même dans le cas des variables aléatoire discrètes. Elles font en outre partie du programme marocain.
         </p>
       </introduction>
 
@@ -674,24 +800,15 @@
             \forall B\in\mathscr B(\R),\;
             \Pr_X(B)=\Pr(X\in B)
           </me>
-          est une probabilité de l'espace <m>(\R,\mathscr B(\R))</m>. La probailité <m>\Pr_X</m> est appelée loi de <m>X</m> 
+          est une probabilité de l'espace <m>(\R,\mathscr B(\R))</m> appelée loi de <m>X</m> 
         </p>
       </insight>
-
-      <remark>
-        <p>
-          Pour une variable aléatoire discrète <m>X</m> on a plutôt défini la loi de <m>X</m> comme étant le couple <m>(X(\Omega),(\Pr(X=x))_{x\in X(\Omega)}</m> sachant que la famille  <m>(\Pr(X=x))_{x\in X(\Omega)}</m> détermine de façon unique la probabilité <m>\Pr_X</m>. 
-        </p>
-        <p>
-          Il s'agira dans la suite de fournir un moyen pour caractériser la loi d'une variable aléatoire réelle qui n'est pas discrète.
-        </p>
-      </remark>
 
     <definition xml:id="def-fonction-repartition">
       <statement>
         <p>
-          Soit <m>X</m> une <term>variable aléatoire réelle</term> définie sur un espace probabilisé <m>(\Omega, \mathcal{F}, P)</m>.
-          La <em>fonction de répartition</em> de <m>X</m>, notée <m>F_X</m>, est la fonction définie par :
+          Soit <m>X</m> une <term>variable aléatoire réelle</term> définie sur l'espace probabilisé <m>(\Omega, \mathscr T, \Pr)</m>.
+          La <em>fonction de répartition</em> de <m>X</m>, notée <m>F_X</m>, est la fonction réelle définie par :
         </p>
         <me>
           F_X(x) = \Pr(X \leq x), \quad \forall x \in \mathbb{R}.
@@ -701,10 +818,8 @@
 
 
     <proposition>
-      <title>Propriétés caractéristiques d'une fonction de répartition</title>
-
+      <title>(propriétés caractéristiques d'une fonction de répartition)</title>
       
-
       <statement>
         <p>
           Soit <m>X</m> une VAR.
@@ -778,7 +893,7 @@
       </proof>
     </proposition>
 
-    <corollary xml:id="cor-">
+    <corollary xml:id="cor-loidiscont">
       <statement>
         <p>
           Soit <m>X</m> une VAR.
@@ -801,16 +916,28 @@
 
     <remark>
       <ol>
+        <p>
+          Soit <m>X</m> une VAR.
+        </p>
         <li>
           <p>
             L'ensemble <m>D_X</m> des points de discontinuité de <m>F_X</m> est au plus dénombrable.
           </p>
+          <explanation><p>
+          Soient <m>x,y\in D_X</m>. Sans perdre en généralité supposons que <m>x\lt y</m>. Vu les propriétés des fonctions de répartition on a 
+          <me>F_X(x^-)\lt F_X(x)\leq F_X(y^-)\lt F_X(y)</me>
+          et donc les intervalles ouverts <m>]F_X(x^-),F_X(x)[</m> et <m>]F_X(y^-),F_X(y)[</m> sont non vides et disjoints. Or toute famille d'intervalles ouverts non vides deux à deux disjoints de <m>\R</m> est au plus dénombrable
+          <fn>chacun des intervalles contient un rationnel et donc il existe une bijection entre la famille des intervalles et une partie de <m>\Q</m> </fn>. Donc <m>D_X</m> est au plus dénombrable.
+          </p></explanation>
         </li>
 
         <li>
           <p>
-            Si <m>X</m> est une VAR alors <m>D_X\subset X(\Omega)</m>
+            Si <m>X</m> est une VADR alors <m>D_X</m> est non vide et il est inclu dans <m>X(\Omega)</m>
           </p>
+          <explanation><p>
+            Si <m>x\in D_X</m> alors <m>\Pr(X=x)=F_X(x)-F_X(x^-)\gt 0</m> et donc <m>x\in X(\Omega)</m>. En outre <m>D_X</m> ne peut être vide car il existe au moins un élément <m>x\in X(\Omega)</m> tel que <m>\Pr(X=x)\gt 0</m>.
+          </p></explanation>
         </li>
 
         
@@ -821,7 +948,7 @@
       <statement>
           <p>
             Soit <m>X</m> une VAR. 
-            La fonction <m>F_X</m> permet d'exprimer la probabilité de tous les événements de la forme <m>(X\in I)</m> où <m>I</m> est un intervalle quelconque de <m>\R</m>. Pour deux réels <m>a,b\in\R</m> tels que <m>a\lt b\lt </m> on a:
+            La fonction <m>F_X</m> permet d'exprimer la probabilité de tous les événements de la forme <m>(X\in I)</m> où <m>I</m> est un intervalle quelconque de <m>\R</m>. Pour deux réels <m>a,b\in\R</m> tels que <m>a\lt b</m> on a:
             <md>
               <mrow>\Pr(X\leq a) \amp:=F_X(a) </mrow>
               <mrow>\Pr(X\lt a)\amp= F_X(a^-)</mrow>
@@ -829,8 +956,8 @@
               <mrow>\Pr(X\geq a)\amp=1-F_X(a^-)</mrow>
               <mrow>\Pr(a\leq X\leq b)\amp=F_X(b)-F_X(a^-)</mrow>
               <mrow>\Pr(a\lt X\leq b)\amp=F_X(b)-F_X(a)</mrow>,
-              <mrow>\Pr(a\leq X\lt b)\amp=F_X(b^-)-F_X(a)</mrow>
-              <mrow>\Pr(a\lt X\lt b)\amp=F_X(b^-)-F_X(a^-)</mrow>
+              <mrow>\Pr(a\leq X\lt b)\amp=F_X(b^-)-F_X(a^-)</mrow>
+              <mrow>\Pr(a\lt X\lt b)\amp=F_X(b^-)-F_X(a)</mrow>
             </md>
           </p>
       </statement>
@@ -838,7 +965,7 @@
 
     <remark>
       <p>
-        On a vu que <m>\mathscr B(\R)</m> est la tribu de <m>\R</m> engendrée par tous les intervalles de <m>\R</m>. La proposition précédente suggère donc que la fonction de répartition  <m>F_X</m> caractérise de façon unique sa loi <m>\Pr_X</m>. On admet le théorème suivant qui confirme cette idée. 
+        <m>\mathscr B(\R)</m> est la tribu de <m>\R</m> engendrée par tous les intervalles de <m>\R</m>. La proposition précédente suggère donc que la fonction de répartition  <m>F_X</m> caractérise de façon unique sa loi <m>\Pr_X</m>. On admet le théorème suivant qui confirme cette idée. 
       </p>
     </remark>
 
@@ -850,32 +977,58 @@
       </statement>
     </theorem>
     
-    <example><title>Fonction de répartition d'une VADR</title>
-    <p>
-      Soit <m>X</m> une VADR. Alors la fonction de répartition de <m>X</m> est donnée par 
-      <me>
-        \forall t\in\R,\;
-        F_X(t)=\sum_{\substack{x\in X(\Omega) \\ x\leq t}}\Pr(X=x)
-      </me>
-    </p>
-    <p> Dans le cas où on peut ordonner les valeurs prises par <m>X</m> en une suite strictement croissante <m>x_0\lt x_1\lt\cdots\lt x_n\lt\ldots</m> alors <m>F_X</m> est constante sur chaque intervalle <m>[x_n,x_{n+1}[</m> et on a 
-    <me>
-      F_X(t)=\begin{cases}
-        0 \amp\text{si } t\lt x_0 \\
-        \ds\sum_{k=0}^{n_t} P(X=x_k)\amp\text{sinon} 
-        \end{cases}
-    </me>
-    où <m>n_t</m> est l'unique entier <m>n</m> tel que <m>x_n\leq t\lt x_{n+1}</m>. Rappelons que réciproquemnt la loi de <m>X</m> peut être exprimée en fonction de <m>F_X</m> par 
+    
+
+    <example><title>(cas d'une VADR)</title>
+        
+        
+            <p>
+                Soit <m>X</m> est une VADR dont on connait la loi. On pose <m>X(\Omega)=\{x_n\mid n\in\N\}</m> et pour tout <m>n\in\N</m>, <m>p_n=\Pr(X=x_n)</m>. 
+            </p> 
+            <ul>  
+            <li><p>
+                La fonction de répartition de <m>X</m> est alors donnée par 
+                <me>
+                    F_X(t)=\sum_{\substack{n\in\N\\ x_n\leq t}} p_n=
+                    \sum_{n\in\N}p_n\bbone_{[x_n,+\infty[}(t)
+                </me>
+                Rappelons que réciproquemnt la loi de <m>X</m> peut être exprimée en fonction de <m>F_X</m> par 
           <me>
             \forall n\in\N^*,\; \Pr(X=x_n)=F_X(x_n)-F(x_n^-)=F_X(x_n)-F_X(x_{n-1})
           </me>
-    </p>
-    
+          Le <xref ref="thm-caractloi"/> est donc évident dans le cas d'une VADR.
+            </p></li>
+            <li><p>
+                Dans le cas où on peut organiser les valeurs possibles de <m>X</m> en une <em>suite strictement croissante</em>
+                <fn> ce n'est pas nécessairement le cas, penser au cas où <m>X(\Omega)=\Q</m> par exemple</fn>
+                 <m>(x_n)_n</m> alors pour tout <m>t\in]x_0,\lim x_n[</m>, il existe un unique entier <m>n(t)</m> tel que <m>x_{n(t)}\leq t\lt x_{n(t)+1}</m> et on a dans ce cas 
+                 <me>
+                    F_X(t)=\sum_{k=0}^{n(t)}p_k
+                 </me>
+                Par ailleurs, si <m>t\lt x_0</m> alors <m>F_X(t)=0</m> et si jamais <m>t\geq \lim x_n</m> alors <m>F_X(t)=1</m>. 
+                Résumons :
+                <men xml:id="eq-repdisc">
+                  F_X(t)=\begin{cases}
+                    0 \amp\text{si } t\lt x_0 \\
+                    \sum\limits_{k=0}^n p_k\amp\text{s'il existe } n\in\N\;;\; t\in[x_n,x_{n+1}[\\ 
+                    1 \amp \text{si } \lim x_n\lt+\infty \text{ et }t\geq \lim x_n
+                  \end{cases}
+                </men>
+                
+        </p></li>
+        <li><p>
+            Dans le cas où <m>X</m> prend un nombre fini de valeurs <m>x_0\lt x_1\lt\cdots\lt x_N</m> alors <m>F_X</m> est définie comme dans <xref ref="eq-repdisc"/> en remplaçant <m>\N</m> par <m>\iic{0,N-1}</m> et <m>\lim x_n</m> par <m>x_N</m>.
+            
+        </p></li> 
+        </ul>
+        </example>
 
-    </example>
-
-    <example>
+    <example xml:id="example-U">
       <title>Loi uniforme sur un segment</title>
+      <notation>
+        <usage><m>\mathscr U([a,b])</m></usage>
+        <description>loi uniforme sur le segment <m>[a,b]</m></description>
+      </notation>
 
       <statement>
         <p>
@@ -883,18 +1036,23 @@
           <me>
             \text{pour tout intervall } I \text{ de } \R,\;\Pr(U\in I)=\ds\frac{\ell(I\cap[a,b])}{b-a}
           </me>
-          où <m>\ell(I\cap[a,b])</m> est la longueur de l'intervalle <m>I\cap[a,b]</m>.
+          où <m>\ell(I\cap[a,b])</m> est la longueur de l'intervalle <m>I\cap[a,b]</m>. La variable <m>U</m> est le résultat de l'expérience aléatoire qui consiste en le tirage d'un réel entre <m>a</m> et <m>b</m> de façon équiprobable. La probabilité de tirer un réel entre deux éléments <m>\alpha</m> et <m>\beta</m> de <m>[a,b]</m> vaut <m>|\beta-\alpha|/(b-a)</m>. 
         </p>
 
         <p>
           La fonction de répartition de <m>U</m> est définie par
           <me>
             F_U(t)=\begin{cases} 0 \amp\text{si } t\lt a \\
-            \ds\frac{t-a}{b-a} \amp\text{si } a\leq t\lt b \\ 
-            1 \amp\text{si }t\geq b \end{cases}
+            \ds\frac{t-a}{b-a} \amp\text{si } a\leq t\leq b \\ 
+            1 \amp\text{si }t\gt b \end{cases}
           </me>
-          Elle est continue sur <m>\R</m> et en particulier <m>\Pr(U=t)=0</m> pour tout <m>t\in\R</m>. 
-          
+          Si <m>U\sim \mathscr U([0,1])</m> par exemple alors 
+          <me>
+            F_U(t)=\begin{cases} 0 \amp\text{si } t\lt 0 \\
+            \ds t \amp\text{si } 0\leq t\leq 1 \\ 
+            1 \amp\text{si }t\gt 1 \end{cases}
+          </me>
+          La fonction <m>F_U</m> est continue sur <m>\R</m> et en particulier <m>\Pr(U=t)=0</m> pour tout <m>t\in\R</m>. 
         </p>
       </statement>
     
@@ -908,6 +1066,10 @@
 
     <activity>
       <title>Loi hypergéometrique</title>
+      <notation>
+        <usage><m>\mathscr H(N,n,p)</m></usage>
+        <description>loi hypergéométrique de paramètres <m>N,n,p</m> </description>
+      </notation>
 
       <introduction>
         <p>
@@ -1323,7 +1485,7 @@
             On note <m>C_n(a, b)</m> le nombre de ces lignes qui vont du point <m>(0, a)</m> au point <m>(n, b)</m>.
             Expliciter <m>C_n(a, b)</m> et exprimer la loi de <m>X_n</m> en fonction de ces nombres.
             <figure xml:id="chemin-marche">
-              <image source="images/chemin-marche-1.svg"/>
+              <image source="images/chemin-marche.svg"/>
               </figure>
             </p>
           </statement>

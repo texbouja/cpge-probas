@@ -30,6 +30,7 @@
     \newcommand{\PP}{\mathbb P}
     \newcommand{\ES}{\mathbb E}
     \newcommand{\VA}{\mathbb V}
+    \newcommand\bbone{\mathbb 1}
     \newcommand\Cov{\operatorname{Cov}}
     \newcommand\card{\operatorname{Card}}
     \newcommand\qtext[1]{\quad\text{#1}\quad}

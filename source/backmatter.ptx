@@ -12,12 +12,14 @@
 
   <!-- <solutions divisional="solution"> <title>Selected Solutions</title> </solutions> -->
 
-  <!-- <appendix> <title>List of Symbols</title> <notation-list/> </appendix> -->
+  <appendix> 
+    <title>Notations</title> <notation-list/> 
+  </appendix>
 
   <!-- <index> <title>Index</title> <index-list/> </index> -->
 
   <colophon>
-    <p> Ce cours a été crée avec  <pretext />. </p>
+    <p> Ce cours a été crée avec  <url href="https://pretextbook.org"><pretext />. </url></p>
   </colophon>
 </backmatter>
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-espvaralea" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Espérance et moment d'une variable aléatoire discrète</title>
+    <title>Espérance et moments d'une variable aléatoire discrète</title>
 
     <introduction>
         <p>
@@ -16,6 +16,10 @@
             <title>Définition et propriétés</title>
 
             <definition xml:id="def-esperance">
+            <notation>
+                <usage><m>\Es(X)</m></usage>
+              <description>espérance de la VADR <m>X</m></description>
+            </notation>
                 <statement>
                     <p>
                         Soit <m>X</m> une variable aléatoire discrète réelle définie sur <m>(\Omega,\mathscr T)</m>.
@@ -133,7 +137,7 @@
                 <statement>
                     <p>
                         On suppose que <m>\Omega</m> est au plus dénombrable.
-                        Une VADR <m>X</m> définie sur <m>(\Omega,\mathscr T)</m> est sommable si et seulement si la famille <m>\bigl(X(\omega)\Pr(\{\omega\})\bigr)</m> est sommable et dans ce cas
+                        Une VADR <m>X</m> définie sur <m>(\Omega,\mathscr T)</m> est sommable si et seulement si la famille <m>\bigl(X(\omega)\Pr(\{\omega\})\bigr)_{\omega\in\Omega}</m> est sommable et dans ce cas
                         <me>
                             \Es(X)=\sum_{\omega\in \Omega}X(\omega)\Pr(\{\omega\})
                         </me>
@@ -238,7 +242,7 @@
                             <me>
                                 E(X+Y)=\sum_{(x,y)\in X(\Omega)\times Y(\Omega)}(x+y)\Pr(X=x,Y=y)
                             </me>
-                            Noter qu'en considérant les application <m>f_1:(x,y)\to x</m> et <m>f_2:(x,y)\in y</m>, alors selon ce même résultat, les variables <m>X</m> et <m>Y</m> sont respectivement sommable si et seulement si les familles <m>\bigl(x\Pr(X=x,Y=y)\bigr)_{(x,y)\in X(\Omega)\times Y(\Omega)} </m> et <m>\bigl(y\Pr(X=x,Y=y)\bigr)_{(x,y)\in X(\Omega)\times Y(\Omega)} </m> sont sommables et dans ce cas
+                            Noter qu'en considérant les application <m>f_1:(x,y)\mapsto x</m> et <m>f_2:(x,y)\mapsto y</m>, alors selon ce même résultat, les variables <m>X</m> et <m>Y</m> sont respectivement sommables si et seulement si les familles <m>\bigl(x\Pr(X=x,Y=y)\bigr)_{(x,y)\in X(\Omega)\times Y(\Omega)} </m> et <m>\bigl(y\Pr(X=x,Y=y)\bigr)_{(x,y)\in X(\Omega)\times Y(\Omega)} </m> sont sommables et dans ce cas
                             <md>
                                 <mrow>\Es(X) \amp= \sum_{(x,y)\in X(\Omega)\times Y(\Omega)}x\Pr(X=x,Y=y) </mrow>
                                 <mrow>\Es(Y) \amp= \sum_{(x,y)\in X(\Omega)\times Y(\Omega)}y\Pr(X=x,Y=y) </mrow>
@@ -449,10 +453,12 @@
                 <dl>
                 <li>
                     <title>Loi uniforme</title>
-
                     <statement>
                         <p>
-                            Si <m>X\sim \mathscr U(n)</m> alors <m> \Es(X)=\displaystyle\frac1n\sum_{k=1}^nx_k </m> où <m>x_1,x_2,\ldots,x_n</m> sont les résultats possibles de l'expérience.
+                            Si <m>X\sim \mathscr U(\{x_1,x_2,\ldots,x_n\})</m> alors <m> \Es(X)=\displaystyle\frac1n\sum_{k=1}^nx_k </m>. 
+                        </p>
+                        <p>
+                            En particulier si <m>X\sim \mathscr U(\iic{1,n})</m> alors <m>\Es(X)=(n+1)/2</m>
                         </p>
                     </statement>
                 </li>
@@ -666,10 +672,10 @@
     </subsection>
 
     <subsection xml:id="subsec-varcovar">
-        <title>Variance, covariance</title>
+        <title>Variance et covariance</title>
 
         <subsubsection xml:id="subsubsec-varcovar">
-            <title>Propriétés et définition</title>
+            <title>Définition et propriétés</title>
 
             <definition xml:id="def-carre-sommable">
                 <statement>
@@ -706,6 +712,14 @@
             </proposition>
 
             <definition xml:id="def-varcovar">
+            <notation>
+            <usage><m>\Va(X)</m></usage>
+          <description>variance de la VADR <m>X</m></description>
+        </notation>
+        <notation>
+            <usage><m>\Cov(X,Y)</m></usage>
+          <description>covariance des VADR <m>X</m> et <m>T</m></description>
+        </notation>
                 <statement>
                     <ol>
                         <li>
@@ -823,6 +837,14 @@
             </proposition>
 
             <definition xml:id="def-ecarttype-covariance">
+            <notation>
+                <usage><m>\sigma(X)</m></usage>
+              <description>écart-type de la VADR <m>X</m> </description>
+            </notation>
+            <notation>
+                <usage><m>\rho(X,Y)</m></usage>
+              <description>coefficient de corrélation des VADR <m>X</m> et <m>Y</m> </description>
+            </notation>
                 <statement>
                     <p>
                         Soiente <m>X</m> et <m>Y</m> des variables aléatoires de carrés sommables.
@@ -901,6 +923,10 @@
             </remark>
 
             <exploration><title>Matrice des covariances d'un vecteur aléatoire</title>
+            <notation>
+                <usage><m>\Sigma(X)</m></usage>
+              <description>matrice des covariances du vecteur aléatoire <m>X</m></description>
+            </notation>
                         <p>
                             On considère des VADR <m>X_1,X_2,\ldots,X_n</m>.
                             On appelle matrice des covariances du vecteur <m>X=(X_1,X_2,\ldots,X_n)</m> la matrice carrée <m>\Sigma(X)</m> de taille <m>n\times n</m> dont les coefficients sont <m>\Cov(X_i,X_j)</m>.
@@ -955,7 +981,7 @@
                     <title>Loi uniforme</title>
 
                     <p>
-                        Si <m>X\sim \mathscr U(n)</m> à valeurs dans <m>[\![1,n]\!]</m> alors <m>\Va(X)=\ds \frac{n^2-1}{12}</m>.
+                        Si <m>X\sim \mathscr U(\iic{1,n})</m> à valeurs dans <m>[\![1,n]\!]</m> alors <m>\Va(X)=\ds \frac{n^2-1}{12}</m>.
                     </p>
 
                     <p>
@@ -1656,5 +1682,20 @@
                 </task>
             </activity>
         </subsubsection>
+    </subsection>
+
+<subsection xml:id="subsec-moment">
+        <title>Moments d'ordre supérieurs</title>
+        <definition xml:id="def-moments">
+            <statement>
+                <p>
+                    Soient <m>X</m> une VADR et <m>p\in\N^*</m>. On dit que <m>X</m> est <m>p</m>-sommable si la variable <m>X^p</m> est sommable. L'espéance <m>\Es(X^p)</m> est alors appelée moment d'ordre <m>p</m> de <m>X</m>. 
+                </p>
+                <p>
+                    On notera <m>L^p(\Omega)</m> l'ensemble des VADR <m>p</m>-sommables de <m>(\Omega,\mathscr T,\Pr)</m>.
+                </p>
+            </statement>
+        </definition>
+        
     </subsection>
 </section>

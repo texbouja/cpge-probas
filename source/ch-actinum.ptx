@@ -130,28 +130,36 @@ def binomial_vs_poisson(n=slider(50, 100, 1, default=50, label="n"),
 
         <introduction>
             <p>
-                Dans cette activité, nous allons étudier le <em>principe d'inversion</em>, une méthode mathématique pour simuler des variables aléatoires discrètes à partir d'une variable uniforme <m> U \sim \mathcal{U}([0,1]) </m>.
-                Nous appliquerons ce principe à des lois discrètes usuelles (Bernoulli, binomiale, géométrique et Poisson) et implémenterons des simulations en Python/Sage.
+                Dans cette section, nous allons étudier le <em>principe d'inversion</em>, une méthode mathématique pour simuler des variables aléatoires discrètes à partir d'une variable uniforme <m> U \sim \mathcal{U}([0,1]) </m> ( <xref ref="example-U"/> ).
+                </p>
+                <p>
+                Nous appliquerons ensuite ce principe à des lois discrètes usuelles (Bernoulli, binomiale, géométrique et Poisson) et implémenterons des simulations en Python.
             </p>
         </introduction>
+        <warning>
+            <p>
+                Les résultats énoncés dans cette section ne font pas partie du programme officiel et doivent être taités comme des exercices d'approfondissement.
+            </p>
+        </warning>
 
-        <theorem>
+        <theorem xml:id="thm-prininv">
             <title>Principe d'inversion (énoncé mathématique)</title>
 
             <statement>
                 <title>Principe de l'inversion d'une loi</title>
 
                 <p>
-                    Soit <m> X </m> une <em>variable aléatoire discrète réelle</em>.
+                    Soit <m> X </m> une <em>variable aléatoire réelle</em>.
                     La fonction de répartition <m> F_X </m> de <m> X </m> est définie par (voir <xref ref="subsec-fonction-repartition"/>) :
                     <me>
-                        F_X(t) = P(X\leq t)=\sum_{\substack{x\in X(\Omega) \\ x\leq t}} P(X=x)
+                        F_X(t) = P(X\leq t)
                     </me>                
                 On pose pour tout <m>u\in[0,1]</m>
                     <me>
                         G(u)=\inf\{t\in\R\mid F_X(t)\geq u\}
                     </me>
-                    <m>G</m> est appelé inverse généralisé de la fonction <m>F_X</m>.
+                    <aside><p> si <m>F_X</m> est bijective alors <m>G=F_X^{-1}</m>. Noter que <m>F_X</m> n'est jamais bijective dans le cas d'une variable discrète. </p></aside>
+                    <m>G</m> est appelé inverse généralisé de la fonction <m>F_X</m>
                 </p>
 
                 <p>
@@ -210,17 +218,173 @@ def binomial_vs_poisson(n=slider(50, 100, 1, default=50, label="n"),
             </proof>
         </theorem>
 
-        <remark>
-            <p>
-                Si <m>X</m> est une VADR dont l'ensemble des valeurs s'organise en unse suite strictement croissant <m>(x_n)_n</m> alors pour tout <m>n\in\N</m>,
-                <me>
-                    (G(U)=x_n)=(x_n\leq U\lt x_{n+1}) 
-                </me>
-                C'est cette observation qui permet de simuler <m>X</m>. Il suffit pour cela de lancer une instance de <m>U</m> et de décider de la valeurs prise par <m>X_n</m> selon la position du résultat obtenu par <m>U</m>.  
-                
-            </p>
-        </remark>
+        
 
+        <corollary xml:id="cor-prininv">
+            <title>Cas où les valeurs de <m>X</m> sont des points isolés</title>
+            <statement>
+                <p>
+                    Soit <m>X</m> une VADR dont l'ensemble des valeurs s'organise en une suite strictement croissante <m>(x_n)_{n\in I}</m> avec <m>I=\iic{0,N}</m> si <m>X(\Omega)</m> est fini et <m>I=\N</m> sinon. On pose  pour tout <m>n\in I</m>, 
+                    <me>
+                        p_n=\Pr(X=x_n) \qtext{et} u_n=\sum_{k=0}^np_k
+                    </me>
+                    <aside>
+                        <p>
+                            Si pour un certain <m>n</m> on a <m>p_n=0</m> alors <m>u_n=u_{n-1}</m> et  donc l'evénement <m>(u_{n-1}\lt U\leq u_{n})</m> est vide. La formule reste donc valable dans ce cas. 
+                        </p>
+                    </aside>
+                    Alors <m>\Pr(X=x_0)=\Pr(U\leq u_0)</m> et pour tout <m>n\in I\setminus \{0\}</m> 
+                    <me>
+                        \Pr(X=x_n)=(u_{n-1}\lt U\leq u_n)
+                    </me>
+                </p>
+            </statement>
+            <proof>
+            <p>
+            Pour <m>n=0</m>, <m>\Pr(U\leq u_0)=F_U(p_0)=p_0</m> et 
+              pour tout <m>n\in I\setminus\{0\}</m>
+              <me>
+                \Pr(u_{n-1}\lt U\leq u_n)=F_U(u_n)-F_U(u_{n-1})=u_n-u_{n-1}=p_n
+              </me>
+            </p>
+        </proof>
+        <explanation>
+            <p>
+                Si <m>X</m> prend comme valeurs les termes d'une suite strictement croissantes de nombres réels <m>(x_n)_n</m>, la probabilité pour la valeur <m>x_n</m> se réalise est la même que si on tire un nombre <m>u</m> selon la  loi uniforme <m>\mathscr{U}([0,1])</m> et qu'on cherche ensuite sa position dans la suite préalablement formée <m>u_0,u_1,\ldots,u_n,\ldots</m>. La variable <m>Y</m> qui prend comme valeur l'indice <m>n</m> tel que <m>u_{n-1}\lt u\leq u_n</m> suit la même loi que <m>X</m>.
+            </p>
+            <p>
+               Tous langage de programmation qui se respecte offre au moins une fonction pseudo-aléatoire qui simule le comportement de la loi <m>\mathscr U([0,1])</m>. Trouver la position d'un nombre <m>u</m> tiré selon cette loi dans une une liste croissante préetablie de nombres est un problème de tri. Un tri par insertion est parfaitement adapté à ce problème.  
+            </p>
+            <p>
+                Il peut toutefois être plus rapide de trouver une expression théorique de <m>Y</m> et de l'implémenter directement comme une fonction. 
+            </p>
+        </explanation>
+        </corollary>
+
+        <activity><title>Simulation d'une variable finie</title>
+        <introduction>
+            <p>
+                On veut simuler une variable aléatoire discrète avec le principe d'inversion. Les données sont les suivantes : 
+                les valeurs prises par la variable sont les entiers de 1 à 10 avec la liste des probabilité probabilités respectives 
+                <me>L=(1,0,0.1,0.2,0.25,0.15,0,0.05,0.05)</me> 
+            </p>
+        </introduction>
+        <task>
+            <statement>
+                <p>
+                    Écrire un programme Python qui simule la variable. Visualiser graphiquement le bon fonctionnement du programme avec un échantillon de 1000 valeurs de la variable simulée.
+                    
+                </p><p>    
+                    Toutes les fonctions de la biliothèque <c>Numpy</c> peuvent être utilisée. En particulier 
+                    <ul>
+                        <li>
+                            <p>
+                                <c>np.random.uniform</c> qui génère une variable aléatoire qui suit la loi <m>\mathscr U([a,b])</m> ;
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <c>np.cumsum</c> qui retourne la liste des «sommes cummulées» de la  liste fournie ;
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <c>np.searchsorted</c> qui permet de trouver l'indice d'un élément dans une liste ordonnée ;
+                            </p>
+                        </li>
+                    </ul>
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Deux fonctions de simultions, la première utilise <c>random.uniform</c> de la bibliothèque <c>numpy</c> et la deuxième <c>random</c> de la bibliothèque <m>random</m>.  Vous pouver augmenter la valeur de <c>N</c> pour une meilleure qualité de la simulation.
+                    <sage>
+                        <input>
+import numpy as np
+from random import random 
+import matplotlib.pyplot as plt
+
+# Définition des valeurs et des probabilités
+valeurs = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+probabilités = np.array([0.1, 0, 0.1, 0.2, 0.25, 0.15, 0, 0.05, 0.05, 0.1])
+
+# Calcul de la fonction de répartition cumulative
+F = np.cumsum(probabilités)
+
+# fonction de simulation qui utilise np.random.uniform
+def x_sim():
+    """Simule une seule valeur de X en utilisant la méthode d'inversion."""
+    U = np.random.uniform(0, 1)  # Générer une seule valeur de U
+    X = valeurs[np.searchsorted(F, U)]  # Appliquer la méthode d'inversion
+    return X
+
+# fonction de simulation qui utilise random de la bibliothèque random 
+def y_sim():
+    """Simule une seule valeur de X en utilisant la méthode d'inversion."""
+    U = random()  # Générer une seule valeur de U
+    X = valeurs[np.searchsorted(F, U)]  # Appliquer la méthode d'inversion
+    return X
+
+# Simulation de 1000 instances
+N = 1000
+simulations_x = np.array([x_sim() for _ in range(N)])
+simulations_y = np.array([y_sim() for _ in range(N)])
+
+# Vérifier s'il y a des valeurs de probabilité nulle dans la liste générée
+valeurs_uniques, counts = np.unique(simulations_x, return_counts=True)
+print("Valeurs générées :", valeurs_uniques)
+
+# Tracer l'histogramme des résultats pour x_sim
+plt.figure(figsize=(5, 5))
+plt.hist(simulations_x, bins=np.arange(1, 12) - 0.5, density=True, edgecolor='black', alpha=0.7, color='blue')
+
+# Ajouter les probabilités théoriques sous forme de points rouges
+plt.scatter(valeurs, probabilités, color='red', label="Probabilités théoriques", zorder=3)
+
+# Labels et titre
+plt.xlabel("Valeur de X")
+plt.ylabel("Fréquence observée")
+plt.title("Histogramme des valeurs simulées de x_sim")
+plt.xticks(valeurs)  # Pour bien aligner les ticks avec les valeurs de X
+plt.legend()
+plt.grid(True, linestyle="--", alpha=0.6)
+
+# Affichage
+plt.show()
+
+# Tracer l'histogramme des résultats pour y_sim
+plt.figure(figsize=(5, 5))
+plt.hist(simulations_y, bins=np.arange(1, 12) - 0.5, density=True, edgecolor='black', alpha=0.7, color='blue')
+
+# Ajouter les probabilités théoriques sous forme de points rouges
+plt.scatter(valeurs, probabilités, color='red', label="Probabilités théoriques", zorder=3)
+
+# Labels et titre
+plt.xlabel("Valeur de X")
+plt.ylabel("Fréquence observée")
+plt.title("Histogramme des valeurs simulées de y_sim")
+plt.xticks(valeurs)  # Pour bien aligner les ticks avec les valeurs de X
+plt.legend()
+plt.grid(True, linestyle="--", alpha=0.6)
+
+# Affichage
+plt.show()
+
+                        </input>
+                        <output>
+                            
+                        </output>
+                    </sage>
+                </p>
+            </solution>
+        </task>
+        
+        
+            
+        </activity>
+        
+        
+                
         <activity><title>Simulation des lois discrètes usuelles</title>
         
             <introduction>
@@ -236,7 +400,7 @@ def binomial_vs_poisson(n=slider(50, 100, 1, default=50, label="n"),
                         </li>
 
                         <li>
-                            Implémenter des simulations en Python/Sage pour les lois Bernoulli, binomiale, géométrique et Poisson.
+                            Implémenter des simulations en Python pour les lois Bernoulli, binomiale, géométrique et Poisson.
                         </li>
                     </ul>
                 </p>
@@ -248,7 +412,7 @@ def binomial_vs_poisson(n=slider(50, 100, 1, default=50, label="n"),
                 <p>
                     <ol>
                         <li>
-                            Écrire un programme Python/Sage pour simuler une variable de Bernoulli en utilisant le principe d'inversion.
+                            Écrire un programme Python pour simuler une variable de Bernoulli en utilisant le principe d'inversion.
                         </li>
 
                         <li>
@@ -259,7 +423,7 @@ def binomial_vs_poisson(n=slider(50, 100, 1, default=50, label="n"),
                 </statement>
                 <solution>
                 <p>
-                    <strong>Code Python/Sage :</strong> 
+                    <strong>Code Python :</strong> 
             <sage><input> 
             from random import random 
             def x_bernoulli(p): 
@@ -285,7 +449,7 @@ def binomial_vs_poisson(n=slider(50, 100, 1, default=50, label="n"),
                 <p>
                     <ol>
                         <li>
-                            Écrire un programme Python/Sage pour simuler une variable binomiale en la variable de Bernouilli écrite dans le code précédent. 
+                            Écrire un programme Python pour simuler une variable binomiale en la variable de Bernouilli écrite dans le code précédent. 
                         </li>
 
                         <li>
@@ -296,7 +460,7 @@ def binomial_vs_poisson(n=slider(50, 100, 1, default=50, label="n"),
                 </statement>
                 <solution>
                 <p>
-                    <strong>Code Python/Sage :</strong> 
+                    <strong>Code Python :</strong> 
             <sage><input> 
             def x_binomiale(n, p): 
                 return sum(x_bernoulli(p) for _ in range(n)) 
@@ -325,7 +489,7 @@ def binomial_vs_poisson(n=slider(50, 100, 1, default=50, label="n"),
                             </p>
                         </li>
                         <li>
-                            Écrire un programme Python/Sage pour la simuler.
+                            Écrire un programme Python pour la simuler.
                         </li>
 
                         <li>
@@ -362,7 +526,7 @@ def binomial_vs_poisson(n=slider(50, 100, 1, default=50, label="n"),
                 <p>
                     <ol>
                         <li>
-                            Écrire un programme Python/Sage pour simuler une variable de Poisson en utilisant le principe d'inversion.
+                            Écrire un programme Python pour simuler une variable de Poisson en utilisant le principe d'inversion.
                         </li>
 
                         <li>

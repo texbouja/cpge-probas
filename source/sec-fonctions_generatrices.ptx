@@ -8,6 +8,10 @@
 
         <definition xml:id="def-fctgen">
             <title>Fonction génératrice</title>
+            <notation>
+                <usage><m>G_X</m></usage>
+              <description>fonction génératrice de la VADR <m>X</m></description>
+            </notation>
 
             <p>
                 La fonction génératrice d'une variable aléatoire <m>X</m> à valeurs dans <m>\N</m> est définie par
@@ -49,6 +53,7 @@
                             <me>
                                 \Es\bigl(X(X-1)\cdots(X-k+1)\bigr)=G_X^{(k)}(1)
                             </me>
+                            Noter donc que l'hypothèse <m>R_X\gt 1</m> simplifie considérablement la justificiation du <xref ref="theo-momfact"/> enoncé ci-dessus.
                         </p>
                         <explanation>
                             <p>
@@ -66,15 +71,29 @@
                 </ol>
             </remark>
 
+            <lemma xml:id="lem-abel"><title>(du à Abel)</title>
+                <statement>
+                    <p>
+                        Soit <m>\sum a_n t^n</m> une série entière à coefficients réels positifs qu'on suppose de rayon de convergence <m>1</m>. On note <m>g</m> sa somme. Alors pour tout <m>p\in\N^*</m> <m>g</m> est <m>p</m>-fois dérivable en <m>1</m> si et seulement si la série <m>\sum n^pa_n</m> converge et dans ce cas 
+                        <me>
+                            \forall k\in\iic{1,p},\;
+                            g^{(k)}(1)=\sum_{n=k}^{+\infty} n(n-1)\cdots(n-k+1)a_n
+                        </me>
+                         
+                        
+                    </p>
+                </statement>
+            </lemma>
 
-            <proposition>
+
+            <theorem><title>Fonction génératrice de la somme de deux variables indépendantes</title>
                 <statement>
                     <p>
                         Soient <m>X</m> et <m>Y</m> deux variables aléatoires à valeurs dans <m>\N</m>.
                         Si <m>X</m> et <m>Y</m> sont indépendantes alors <m>G_{X+Y}=G_XG_Y</m>.
                     </p>
             </statement>
-        </proposition>
+            </theorem>
 
         <corollary>
             <statement>
@@ -87,7 +106,9 @@
             </statement>
         </corollary>
 
-        <theorem>
+        <theorem><title>Expression de l'espérance et de la variance à l'aide la fonction génératrice</title>
+        
+        
             <statement>
                 <p>
                     Soit <m>X</m> une variable aléatoire à valeurs dans <m>\N</m>.
@@ -107,6 +128,22 @@
                 </p>
             </statement>
         </theorem>
+
+        <theorem xml:id="theo-momfact">
+            <title>des moments factoriels</title>
+            
+            <statement>
+                <p> Soit <m>X</m> une VAD à valeurs dans <m>\N</m>. Pour tout <m>p\in\N^*</m>, <m>X</m> est <m>p</m>-sommable si et seulement si <m>G_X</m> est <m>p</m>-fois dérivable en <m>1</m> et dans ce cas 
+                <me>
+                    \forall k\in\iic{1,p},\;
+                    G_X^{(k)}=\Es\bigl(X(X-1)\cdots(X-k+1)\bigr)
+                </me>
+                L'espérance <m>\Es\bigl(X(X-1)\cdots(X-k+1)\bigr)</m> est appelée moment factoriel d'ordre <m>k</m> de <m>X</m>.
+                    
+                </p>
+            </statement>
+        </theorem>
+
     </subsection>
 
     <subsection xml:id="subsec-generatrices-usuelles">
@@ -116,7 +153,7 @@
                 <li><title>Loi uniforme</title>
                     
                     <p>
-                        Si <m>X\sim \mathscr U(n)</m> à valeurs dans <m>\iic{1,n}</m> alors 
+                        Si <m>X\sim \mathscr U(\iic{1,n})</m> à valeurs dans <m>\iic{1,n}</m> alors 
                         <m>G_X(t)=\ds\frac{1}{n}\frac{t-t^{n+1}}{1-t}</m>.
                     </p>
                 </li>
@@ -201,7 +238,7 @@
                 <mrow> \sum_{k=0}^n\frac{\binom{p+k}{p}}{p!}\frac{\binom{q+n-k}{q}}{q!}\amp=\frac{\binom{p+q+n+1}{p+q+1}}{(p+q+1)!} 
                 </mrow>                    
                 </md>
-                    
+                Cette dernière formule est antagoniste avec la formule de Vandermonde dans le sens où ce sont les indices supérieurs des coefficients binomaux qui changent en fonction de l'indice de sommation.
                 
                 
                 
@@ -311,7 +348,7 @@
                     
                     <statement>
                         <p>
-                            Soient <m>X</m> et <m>Y</m> deux VAD indépendantes  à valeurs dans <m>\N</m> et soit <m>Z=\min(X,Y)</m>. Exprimer <m>\Pr(Z\geq n)</m> en fonction de <m>\Pr(X\geq n)</m> et de <m>\Pr(Y\geq n)</m>. En déduire que pour tout <m>t\in[0,1[</m>
+                            Soient <m>X</m> et <m>Y</m> deux VAD sommables et indépendantes à valeurs dans <m>\N</m> et soit <m>Z=\min(X,Y)</m>. Exprimer <m>\Pr(Z\geq n)</m> en fonction de <m>\Pr(X\geq n)</m> et de <m>\Pr(Y\geq n)</m>. En déduire que pour tout <m>t\in[0,1[</m>
                             <me>
                                 F_Z(t)=\frac1{2\pi}\int_0^{2\pi}F_X(t^{1/2}e^{i\theta})F_Y(t^{1/2}e^{-i\theta})\mathrm d\theta   
                             </me>
@@ -322,12 +359,52 @@
                     <solution>
                         <p> Pour tout <m>n\in\N</m>
                             <me>
-                                \Pr(Z\geq n)=\Pr(X\geq n,Y\geq n)=\Pr(X\geq n)^2
+                                \Pr(Z\gt n)=\Pr(X\gt n,Y\gt n)=\Pr(X\gt n)\Pr(Y\gt n)
                             </me>
-                        on en déduit que 
+                        D'autre part, par produit de Cauchy de deux séries absolument convergentes,  pour un <m>t\in[0,1[</m> fixé et un <m>\theta\in{}[0,2\pi]</m> quelconque
                         <md>
-                            <mrow> \Pr(Z=n)\amp=\Pr(Z\geq n)-\Pr(Z\geq n+1)=\Pr(X\geq n)^2-\Pr(X\geq n+1)^2 </mrow>
+                        <mrow> F_X(t^{1/2}e^{i\theta})F_Y(t^{1/2}e^{-i\theta}) \amp =
+                            \sum_{n\in\N}
+                            \sum_{k=0}^n\bigl(\Pr(X\gt k)t^{k/2}e^{ik\theta}\bigr)\bigl(\Pr(Y\gt n-k)t^{(n-k)/2}e^{i(k-n)\theta}\bigr) </mrow>
+                            <mrow> \amp=
+                            \sum_{n\in\N} u_n(\theta)
+                             </mrow>
+                             <mrow>
+                             \text{avec}\quad u_n(\theta)\amp=
+                             t^{n/2}\sum_{k=0}^n
+                            \Pr(X\gt k)\Pr(Y\gt n-k)e^{i(2k-n)\theta} </mrow>
                         </md>
+                        Comme <m>\bigcup\limits_{k=0}^{n}(X\gt k,Y\gt n-k)\subset (X+Y\gt n)</m> alors pour tout <m>\theta\in[0,2\pi]</m>
+                        <md> 
+                            <mrow> \left|u_n(\theta)\right| \amp\leq
+                             t^{n/2}\sum_{k=0}^n\Pr(X\gt k,Y\gt n-k) </mrow>
+                             <mrow> \amp\leq t^{n/2}\Pr(X+Y\gt n)\leq t^{n/2} </mrow>
+                            
+                        </md>
+                        Puisque <m>\sqrt t \lt 1 </m>, la série <m>\sum t^{n/2}</m> est convergente alors la série de fonctions continues <m>\sum u_n</m>  converge normalement sur le ségment <m>[0,2\pi]</m>. On peut donc intégrer terme à terme l'égalité précédente. Ce qui donne.  
+                        <me>
+                            \int_0^{2\pi}F_X(t^{1/2}e^{i\theta})F_Y(t^{1/2}e^{-i\theta})\mathrm d\theta =
+                            \sum_{n\in\N}t^{n/2}
+                            \sum_{k=0}^n\Pr(X\gt k)\Pr(Y\gt n-k)\int_0^{2\pi}e^{i(2k-n)\theta}\mathrm d\theta
+                        </me>
+                        et comme <m>\int_{0}^{2\pi}e^{ih\theta}\mathrm d\theta=2\delta_{0h}\pi</m> pour tout <m>h\in\Z</m> alors <m>\int_0^{2\pi}e^{i(2k-n)\theta}\mathrm d\theta</m> est nulle sauf lorsque <m>n</m> est paire et <m>k=n/2</m>. Alors
+                        <me>
+                            \int_0^{2\pi}F_X(t^{1/2}e^{i\theta})F_Y(t^{1/2}e^{-i\theta})\mathrm d\theta =
+                            2\pi\sum_{n\in\N}t^{n}\Pr(X\gt n)\Pr(Y\gt n)
+                        </me>
+                        et finalement 
+                        <me>
+                            \frac1{2\pi}\int_0^{2\pi}F_X(t^{1/2}e^{i\theta})F_Y(t^{1/2}e^{-i\theta})\mathrm d\theta = F_Z(t)
+                        </me>
+                        Dans le cas où <m>X</m> et <m>Y</m> suivent la même loi alors <m>F_Y(t^{1/2}e^{-i\theta})=\overline{F_X(t^{1/2}e^{i\theta})}</m> et donc 
+                        <me>
+                            F_Z(t)=\frac1{2\pi}\int_0^{2\pi}\bigl|F_X(t^{1/2}e^{i\theta})\bigr|^2\mathrm d\theta
+                        </me>
+                        
+                        
+
+                        
+                        
                         
                         
                         
@@ -355,7 +432,7 @@
                     <me>
                         F(t) = \sum_{n=1}^{+\infty} \Pr(N = n) t^n \qtext{et} U(t) = \sum_{n=0}^{+\infty} \Pr(X_n = 0) t^n
                     </me>
-                    et de calculer ensuite <m>F(t)</m>.
+                    et de calculer ensuite <m>F(t)</m>. On notera que <m>F</m> n'est pas la fonction génératrice de la variable <m>N</m> puisque celle-ci peut potentiellement prendre la valeur <m>+\infty</m>.
                 </p>
             </introduction> 
             <!-- Task 1 : Définition des fonctions génératrices -->
@@ -513,6 +590,10 @@
 
         <activity xml:id="fonction-caracteristique-conversion">
             <title>Fonction caractéristique d'une variable aléatoire à valeurs dans <m>\Z</m></title>
+            <notation>
+                <usage><m>\phi_X</m></usage>
+              <description>fonction caractéristique de la VADR <m>X</m></description>
+            </notation>
 
             <introduction>
                 <p>
