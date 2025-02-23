@@ -509,54 +509,113 @@
     </task>
 </exercise>
 
-
 <exercise>
     <title>Formule du crible</title>
-    <introduction>
-        <p>
-            Soit <m>A_{1}, A_{2}, \ldots, A_{n}</m> des événements d'un espace probabilisé <m>(\Omega, \mathcal{A}, \Pr)</m>.
-        </p>
-    </introduction>
-        <task>
+    <task>
+        <statement>
             <p>
-                Montrer que <m>1_{\bigcup_{i=1}^{n} A_{i}} = 1 - \prod_{i=1}^{n} (1 - \mathbf{1}_{A_{i}})</m>. En déduire la formule du crible :
+                Soit <m> A_1, A_2, \ldots, A_n </m> des événements d'un espace probabilisé <m> (\Omega, \mathcal{A}, \mathbb{P}) </m>. Montrer que :
                 <me>
-                    \Pr\Big(\bigcup_{i=1}^{n} A_{i}\Big) = \sum_{k=1}^{n} \bigg((-1)^{k-1} \sum_{I \subset [1, n] \atop \card I = k} \Pr\Big(\bigcap_{i \in I} A_{I}\Big)\bigg).
+                1_{\bigcup_{i=1}^n A_i} = 1 - \prod_{i=1}^n (1 - 1_{A_i}).
+                </me>
+                En déduire la formule du crible :
+                <me>
+                \mathbb{P}\left( \bigcup_{i=1}^n A_i \right) = \sum_{k=1}^n \left( (-1)^{k-1} \sum_{\substack{I \subset [1, n] \\ \text{card } I = k}} \mathbb{P}\left( \bigcap_{i \in I} A_i \right) \right).
                 </me>
             </p>
-        </task>
-        <task>
+        </statement>
+        <solution>
             <p>
-                Soient <m>n \in \N^{*}</m> et <m>(X_{k})_{k \in \N^{*}}</m> une suite de variables indépendantes d'un espace probabilisé <m>(\Omega, \mathcal{A}, \Pr)</m> suivant toutes la loi uniforme sur <m>\llbracket 1, n \rrbracket</m>. On note <m>X</m> la variable aléatoire égale au nombre de tirages nécessaires pour obtenir tous les numéros entre 1 et <m>n</m> au moins une fois (et à <m>+\infty</m> si on n'obtient jamais les <m>n</m> numéros). Pour <m>j \in \llbracket 1, n \rrbracket</m> et <m>m \in \N</m>, on note <m>B_{j, m}</m> l'événement : « au bout de <m>m</m> tirages, le numéro <m>j</m> n'est pas encore apparu ».
+                Pour montrer l'égalité <m> 1_{\bigcup_{i=1}^n A_i} = 1 - \prod_{i=1}^n (1 - 1_{A_i}) </m>, on observe que :
+                <ul>
+                    <li>
+                        Si <m> \omega \in \bigcup_{i=1}^n A_i </m>, alors il existe au moins un <m> i </m> tel que <m> \omega \in A_i </m>, donc <m> 1_{A_i}(\omega) = 1 </m>. Ainsi, <m> \prod_{i=1}^n (1 - 1_{A_i}(\omega)) = 0 </m>, et donc <m> 1 - \prod_{i=1}^n (1 - 1_{A_i}(\omega)) = 1 </m>.
+                    </li>
+                    <li>
+                        Si <m> \omega \notin \bigcup_{i=1}^n A_i </m>, alors <m> \omega \notin A_i </m> pour tout <m> i </m>, donc <m> 1_{A_i}(\omega) = 0 </m>. Ainsi, <m> \prod_{i=1}^n (1 - 1_{A_i}(\omega)) = 1 </m>, et donc <m> 1 - \prod_{i=1}^n (1 - 1_{A_i}(\omega)) = 0 </m>.
+                    </li>
+                </ul>
+                On en déduit que <m> 1_{\bigcup_{i=1}^n A_i} = 1 - \prod_{i=1}^n (1 - 1_{A_i}) </m>.
+
+                Pour obtenir la formule du crible, on utilise l'espérance de cette égalité :
+                <me>
+                \mathbb{P}\left( \bigcup_{i=1}^n A_i \right) = \mathbb{E}\left( 1_{\bigcup_{i=1}^n A_i} \right) = 1 - \mathbb{E}\left( \prod_{i=1}^n (1 - 1_{A_i}) \right).
+                </me>
+                En développant le produit, on obtient :
+                <me>
+                \prod_{i=1}^n (1 - 1_{A_i}) = \sum_{k=0}^n (-1)^k \sum_{\substack{I \subset [1, n] \\ \text{card } I = k}} \prod_{i \in I} 1_{A_i}.
+                </me>
+                En prenant l'espérance, on a :
+                <me>
+                \mathbb{E}\left( \prod_{i=1}^n (1 - 1_{A_i}) \right) = \sum_{k=0}^n (-1)^k \sum_{\substack{I \subset [1, n] \\ \text{card } I = k}} \mathbb{P}\left( \bigcap_{i \in I} A_i \right).
+                </me>
+                En substituant dans l'expression précédente, on obtient la formule du crible :
+                <me>
+                \mathbb{P}\left( \bigcup_{i=1}^n A_i \right) = \sum_{k=1}^n (-1)^{k-1} \sum_{\substack{I \subset [1, n] \\ \text{card } I = k}} \mathbb{P}\left( \bigcap_{i \in I} A_i \right).
+                </me>
             </p>
-            <ol marker="1.">
+        </solution>
+    </task>
+    <task>
+        <statement>
+            <p>
+                Soit <m> n \in \mathbb{N}^* </m> et <m> (X_k)_{k \in \mathbb{N}^*} </m> une suite de variables indépendantes d'un espace probabilisé <m> (\Omega, \mathcal{A}, \mathbb{P}) </m>, suivant toutes la loi uniforme sur <m>[1, n]</m>. On note <m> X </m> la variable aléatoire égale au nombre de tirages nécessaires pour obtenir tous les numéros entre 1 et <m> n </m> au moins une fois (et à <m> +\infty </m> si on n'obtient jamais les <m> n </m> numéros). Pour <m> j \in [1, n] </m> et <m> m \in \mathbb{N} </m>, on note <m> B_{j,m} </m> l'événement : « au bout de <m> m </m> tirages, le numéro <m> j </m> n'est pas encore apparu ».
+            </p>
+            <ol>
                 <li>
-                    <p>
-                        Calculer <m>\Pr(B_{j_{1}, m} \cap B_{j_{2}, m} \cap \cdots \cap B_{j_{k}, m})</m> où <m>j_{1}, j_{2}, \ldots, j_{k}</m> sont des indices distincts compris entre 1 et <m>n</m>.
-                    </p>
+                    Calculer <m> \mathbb{P}(B_{j_1,m} \cap B_{j_2,m} \cap \cdots \cap B_{j_k,m}) </m>, où <m> j_1, j_2, \ldots, j_k </m> sont des indices distincts compris entre 1 et <m> n </m>.
                 </li>
                 <li>
-                    <p>
-                        En déduire que :
-                        <me>
-                            \Pr(X \gt m) = \sum_{k=1}^{n} (-1)^{k-1} \binom{n}{k} \Big(\frac{n - k}{n}\Big)^{m}.
-                        </me>
-                        Calculer <m>\lim_{m \rightarrow +\infty} \Pr(X \gt m)</m>. Interpréter.
-                    </p>
+                    En déduire que <m> \mathbb{P}(X\gt m) = \sum_{k=1}^n (-1)^{k-1} \binom{n}{k} \left( \frac{n - k}{n} \right)^m </m>. Calculer <m> \lim_{m \to +\infty} \mathbb{P}(X\gt m) </m>. Interpréter.
                 </li>
                 <li>
-                    <p>
-                        Montrer que <m>\Es(X) = n \sum_{k=1}^{n} (-1)^{k-1} \frac{\binom{n}{k}}{k}</m>.
-                    </p>
+                    Montrer que <m> \mathbb{E}(X) = n \sum_{k=1}^n (-1)^{k-1} \frac{\binom{n}{k}}{k} </m>, en utilisant l'exercice 18 de la page 911.
                 </li>
                 <li>
-                    <p>
-                        Montrer que <m>\Es(X) = n \left(1 + \frac{1}{2} + \cdots + \frac{1}{n}\right)</m>. En déduire un équivalent de <m>\Es(X)</m> quand <m>n</m> tend vers <m>+\infty</m>.
-                    </p>
+                    Montrer que <m> \mathbb{E}(X) = n \left( 1 + \frac{1}{2} + \cdots + \frac{1}{n} \right) </m>. En déduire un équivalent de <m> \mathbb{E}(X) </m> quand <m> n </m> tend vers <m> +\infty </m>.
                 </li>
             </ol>
-        </task>
+        </statement>
+        <solution>
+            <p>
+                <ol>
+                    <li>
+                        Pour <m> j_1, j_2, \ldots, j_k </m> des indices distincts compris entre 1 et <m> n </m>, on a :
+                        <me>
+                        \mathbb{P}(B_{j_1,m} \cap B_{j_2,m} \cap \cdots \cap B_{j_k,m}) = \left( \frac{n - k}{n} \right)^m.
+                        </me>
+                        En effet, chaque tirage a une probabilité <m> \frac{n - k}{n} </m> de ne pas tomber sur l'un des <m> k </m> numéros <m> j_1, j_2, \ldots, j_k </m>.
+                    </li>
+                    <li>
+                        En appliquant la formule du crible, on a :
+                        <me>
+                        \mathbb{P}(X\gt m) = \mathbb{P}\left( \bigcup_{j=1}^n B_{j,m} \right) = \sum_{k=1}^n (-1)^{k-1} \binom{n}{k} \left( \frac{n - k}{n} \right)^m.
+                        </me>
+                        La limite <m> \lim_{m \to +\infty} \mathbb{P}(X\gt m) = 0 </m> car <m> \left( \frac{n - k}{n} \right)^m </m> tend vers 0 pour tout <m> k \geq 1 </m>. Cela signifie qu'il est presque sûr que tous les numéros seront obtenus en un nombre fini de tirages.
+                    </li>
+                    <li>
+                        En utilisant l'exercice 18 de la page 911, on a :
+                        <me>
+                        \mathbb{E}(X) = \sum_{m=0}^{+\infty} \mathbb{P}(X\gt m) = \sum_{m=0}^{+\infty} \sum_{k=1}^n (-1)^{k-1} \binom{n}{k} \left( \frac{n - k}{n} \right)^m.
+                        </me>
+                        En intervertissant les sommes, on obtient :
+                        <me>
+                        \mathbb{E}(X) = \sum_{k=1}^n (-1)^{k-1} \binom{n}{k} \sum_{m=0}^{+\infty} \left( \frac{n - k}{n} \right)^m = \sum_{k=1}^n (-1)^{k-1} \binom{n}{k} \frac{1}{1 - \frac{n - k}{n}} = n \sum_{k=1}^n (-1)^{k-1} \frac{\binom{n}{k}}{k}.
+                        </me>
+                    </li>
+                    <li>
+                        On a :
+                        <me>
+                        \mathbb{E}(X) = n \sum_{k=1}^n (-1)^{k-1} \frac{\binom{n}{k}}{k} = n \left( 1 + \frac{1}{2} + \cdots + \frac{1}{n} \right).
+                        </me>
+                        Quand <m> n </m> tend vers <m> +\infty </m>, on a <m> \mathbb{E}(X) \sim n \ln n </m>.
+                    </li>
+                </ol>
+            </p>
+        </solution>
+    </task>
 </exercise>
+
 
 
 <exercise>
@@ -602,29 +661,77 @@
 </exercise>
 
 
-<exercise>
+<exercise xml:id="centrale_2015">
     <title>Centrale 2015</title>
-    <introduction>
-        <p>
-            Soit <m>(\Omega, \mathcal{A}, \Pr)</m> un espace probabilisé et <m>(E_{n})_{n \in \N} \in \mathcal{A}^{\N}</m> une suite d'événements. On suppose que <m>\sum_{n=0}^{+\infty} \Pr(E_{n}) \lt +\infty</m>, c'est-à-dire que la série converge.
-        </p>
-    </introduction>
-        <task>
-            <p>
-                On note <m>1_{X}</m> la fonction indicatrice d'un ensemble <m>X</m>. Soit <m>Z = \sum_{n=0}^{+\infty} 1_{E_{n}}</m> (on convient que <m>Z = +\infty</m> si la série diverge). Prouver que <m>Z</m> est une variable aléatoire discrète.
-            </p>
-        </task>
-        <task>
-            <p>
-                Soit <m>F = \{\omega \in \Omega \mid \omega \text{ appartient à un nombre fini de } E_{n}\}</m>. Prouver que <m>F</m> est un événement et que <m>\Pr(F) = 1</m>.
-            </p>
-        </task>
-        <task>
-            <p>
-                Prouver que <m>Z</m> est d'espérance finie.
-            </p>
-        </task>
+    
+    <task>
+        <statement>
+            <p>Soit <m>(\Omega, A, P)</m> un espace probabilisé et <m>(E_n)_{n \in \mathbb{N}}</m> 
+            une suite d’événements.</p>
+            <p>On suppose que la série suivante converge :</p>
+            <me>
+                \sum_{n=0}^{+\infty} P(E_n) \lt +\infty.
+            </me>
+        </statement>
+        <solution>
+            <p>La convergence de cette série joue un rôle essentiel dans l'analyse des probabilités des événements.</p>
+        </solution>
+    </task>
+
+    <task>
+        <statement>
+            <p>On note <m>1_X</m> la fonction indicatrice d’un ensemble <m>X</m>. 
+            Soit <m>Z = \sum_{n=0}^{+\infty} 1_{E_n}</m> (avec la convention <m>Z = +\infty</m> 
+            si la série diverge). Prouver que <m>Z</m> est une variable aléatoire discrète.</p>
+        </statement>
+        <solution>
+            <p>On montre que <m>Z</m> prend ses valeurs dans <m>\mathbb{N} \cup \{+\infty\}</m>, 
+            qui est un ensemble dénombrable. Pour <m>n \in \mathbb{N}</m>, on a :</p>
+            <me>
+                \{Z = n\} = \bigcup_{I \in P_n(\mathbb{N})} 
+                \left( \bigcap_{k \in I} E_k \cap \bigcap_{k \in \mathbb{N} \setminus I} E_k^c \right).
+            </me>
+            <p>Chaque ensemble à l'intérieur de cette union est un événement, donc <m>\{Z = n\}</m> 
+            est un événement. De même, on montre que <m>\{Z = +\infty\}</m> est un événement, donc 
+            <m>Z</m> est bien une variable aléatoire discrète.</p>
+        </solution>
+    </task>
+
+    <task>
+        <statement>
+            <p>Soit <m>F = \{\omega \in \Omega \mid \omega</m> appartient à un nombre fini de 
+            <m>E_n</m> (pour <m>n \in \mathbb{N}</m>)}. Prouver que <m>F</m> est un événement 
+            et que <m>P(F) = 1</m>.</p>
+        </statement>
+        <solution>
+            <p>La série <m>\sum P(E_n)</m> converge, donc d'après le premier lemme de <em>Borel-Cantelli</em>,</p>
+            <me>
+                P\left( \bigcap_{n \in \mathbb{N}} \bigcup_{p \geq n} E_p \right) = 0.
+            </me>
+            <p>Cela signifie que <m>P(Z = +\infty) = 0</m>. Donc, presque sûrement, 
+            <m>\omega</m> appartient à un nombre fini d'événements <m>E_n</m>, ce qui montre que 
+            <m>F</m> est un événement et que <m>P(F) = 1</m>.</p>
+        </solution>
+    </task>
+
+    <task>
+        <statement>
+            <p>Prouver que <m>Z</m> est d'espérance finie.</p>
+        </statement>
+        <solution>
+            <p>On définit <m>Z_n = \sum_{i=0}^{n} 1_{E_i}</m>. Alors :</p>
+            <me>
+                E(Z_n) = \sum_{i=0}^{n} P(E_i).
+            </me>
+            <p>Par passage à la limite, et en utilisant la convergence de la série :</p>
+            <me>
+                E(Z) = \sum_{i=0}^{+\infty} P(E_i).
+            </me>
+            <p>Ainsi, <m>Z</m> est bien d'espérance finie.</p>
+        </solution>
+    </task>
 </exercise>
+
 
 
 
