@@ -295,7 +295,7 @@ eBookConfig.enable_chatcodes =  false;
 <span class="process-math">\(X\)</span> est dite <dfn class="terminology">une variable aléatoire réelle (VAR)</dfn>  si <span class="process-math">\(\Omega'\subset \R\text{.}\)</span>
 </div></li>
 <li id="def-varalea-4-2-4-3"><div class="para" id="def-varalea-4-2-4-3-1">
-<span class="process-math">\(X\)</span> est dite une <dfn class="terminology">variable aléatoire discrète réelle (VADR)</dfn> si elle est discrète et réelle.</div></li>
+<span class="process-math">\(X\)</span> est dite une <dfn class="terminology">variable aléatoire discrète réelle (<abbr class="acronym">VADR</abbr>)</dfn> si elle est discrète et réelle.</div></li>
 </ul>
 </div></article><details id="subsec-varalea-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Explication<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="subsec-varalea-4-1">Dans la pratique une variable aléatoire est utilisée pour représenter le résultat d’une expérience aléatoire. Souvent l’univers <span class="process-math">\(\Omega\)</span> et la tribu <span class="process-math">\(\mathscr T\)</span> ne sont pas précisés.</div>
 <div class="para" id="subsec-varalea-4-2">Les résultats et les événements de l’expérience sont  dans <span class="process-math">\(\Omega'\)</span> et dans <span class="process-math">\(\mathscr T'\text{.}\)</span> Comme quand on lance un dé, <span class="process-math">\(X\)</span> désiggnera le numéro obtenu. Il sera considéré comme une application définie sur un ensemble non déterminé et ce qui nous interesse c’est l’ensemble des résultats possible de l’expérience, ici <span class="process-math">\(\iic{1,6}\text{.}\)</span>
@@ -901,7 +901,7 @@ F_X(x^-)\lt F_X(x)\leq F_X(y^-)\lt F_X(y)
 </div></article></details>
 </li>
 <li id="subsec-fonction-repartition-7-1-3">
-<div class="para" id="subsec-fonction-repartition-7-1-3-1">Si <span class="process-math">\(X\)</span> est une VADR alors <span class="process-math">\(D_X\)</span> est non vide et il est inclu dans <span class="process-math">\(X(\Omega)\)</span>
+<div class="para" id="subsec-fonction-repartition-7-1-3-1">Si <span class="process-math">\(X\)</span> est une <abbr class="acronym">VADR</abbr> alors <span class="process-math">\(D_X\)</span> est non vide et il est inclu dans <span class="process-math">\(X(\Omega)\)</span>
 </div>
 <details id="subsec-fonction-repartition-7-1-3-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Explication<span class="period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para" id="subsec-fonction-repartition-7-1-3-2-1">Si <span class="process-math">\(x\in D_X\)</span> alors <span class="process-math">\(\Pr{X=x}=F_X(x)-F_X(x^-)\gt 0\)</span> et donc <span class="process-math">\(x\in X(\Omega)\text{.}\)</span> En outre <span class="process-math">\(D_X\)</span> ne peut être vide car il existe au moins un élément <span class="process-math">\(x\in X(\Omega)\)</span> tel que <span class="process-math">\(\Pr{X=x}\gt 0\text{.}\)</span>
 </div></article></details>
@@ -931,9 +931,9 @@ F_X(x^-)\lt F_X(x)\leq F_X(y^-)\lt F_X(y)
 <span class="type">Théorème</span><span class="space"> </span><span class="codenumber">1.73</span><span class="period">.</span>
 </h4>
 <div class="para" id="thm-caractloi-1-1">Deux VAR ont la même loi si et seulement si elles ont la même fonction de répartition.</div></article><article class="example example-like" id="subsec-fonction-repartition-11"><h4 class="heading">
-<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.74</span><span class="period">.</span><span class="space"> </span><span class="title">(cas d’une VADR).</span>
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.74</span><span class="period">.</span><span class="space"> </span><span class="title">(cas d’une <abbr class="acronym">VADR</abbr>).</span>
 </h4>
-<div class="para" id="subsec-fonction-repartition-11-2">Soit <span class="process-math">\(X\)</span> est une VADR dont on connait la loi. On pose <span class="process-math">\(X(\Omega)=\{x_n\mid n\in\N\}\)</span> et pour tout <span class="process-math">\(n\in\N\text{,}\)</span> <span class="process-math">\(p_n=\Pr{X=x_n}\text{.}\)</span>
+<div class="para" id="subsec-fonction-repartition-11-2">Soit <span class="process-math">\(X\)</span> est une <abbr class="acronym">VADR</abbr> dont on connait la loi. On pose <span class="process-math">\(X(\Omega)=\{x_n\mid n\in\N\}\)</span> et pour tout <span class="process-math">\(n\in\N\text{,}\)</span> <span class="process-math">\(p_n=\Pr{X=x_n}\text{.}\)</span>
 </div>
 <ul class="disc" id="subsec-fonction-repartition-11-3">
 <li id="subsec-fonction-repartition-11-3-1"><div class="para logical" id="subsec-fonction-repartition-11-3-1-1">
@@ -950,7 +950,7 @@ F_X(t)=\sum_{\substack{n\in\N\\ x_n\leq t}} p_n=
 \forall n\in\N^*,\; \Pr{X=x_n}=F_X(x_n)-F(x_n^-)=F_X(x_n)-F_X(x_{n-1})
 \end{equation*}
 </div>
-<div class="para">Le <a href="sec-varalea.html#thm-caractloi" class="xref" data-knowl="./knowl/xref/thm-caractloi.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Théorème 1.73">Théorème 1.73</a> est donc évident dans le cas d’une VADR.</div>
+<div class="para">Le <a href="sec-varalea.html#thm-caractloi" class="xref" data-knowl="./knowl/xref/thm-caractloi.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Théorème 1.73">Théorème 1.73</a> est donc évident dans le cas d’une <abbr class="acronym">VADR</abbr>.</div>
 </div></li>
 <li id="subsec-fonction-repartition-11-3-2"><div class="para logical" id="subsec-fonction-repartition-11-3-2-1">
 <div class="para">Dans le cas où on peut organiser les valeurs possibles de <span class="process-math">\(X\)</span> en une <em class="emphasis">suite strictement croissante</em> <details class="ptx-footnote" aria-live="polite" id="subsec-fonction-repartition-11-3-2-1-3"><summary class="ptx-footnote__number" title="Note de bas de page 1.4"><sup> 4 </sup></summary><div class="ptx-footnote__contents" id="subsec-fonction-repartition-11-3-2-1-3">ce n’est pas nécessairement le cas, penser au cas où <span class="process-math">\(X(\Omega)=\Q\)</span> par exemple</div></details> <span class="process-math">\((x_n)_n\)</span> alors pour tout <span class="process-math">\(t\in]x_0,\lim x_n[\text{,}\)</span> il existe un unique entier <span class="process-math">\(n(t)\)</span> tel que <span class="process-math">\(x_{n(t)}\leq t\lt x_{n(t)+1}\)</span> et on a dans ce cas</div>
