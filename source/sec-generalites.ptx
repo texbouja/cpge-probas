@@ -269,7 +269,7 @@
 
     <definition xml:id="def-probabilite">
     <notation>
-      <usage><m>\Pr(A)</m></usage>
+      <usage><m>\Pr{A}</m></usage>
       <description>probabilité de l'événement <m>A</m></description>
     </notation>
       <statement>
@@ -278,7 +278,7 @@
           <ul>
             <li>
               <p>
-                <m>\Pr(\Omega)=1</m> ;
+                <m>\Pr{\Omega}=1</m> ;
               </p>
             </li>
 
@@ -286,20 +286,20 @@
               <p>
                 si <m>(A_n)_{n\in\N}</m> est une suite d'éléments de <m>\mathscr T</m> deux à deux disjoints alors
                 <me>
-                  \Pr\left(\bigcup\limits_{n=0}^\infty A_n\right)=\sum\limits_{n=0}^\infty \Pr(A_n)
+                  \Pr{\bigcup\limits_{n=0}^\infty A_n}=\sum\limits_{n=0}^\infty \Pr{A_n}
                 </me>.
               </p>
             </li>
           </ul>
-          Si <m>\Pr</m> est un probabilité de <m>(\Omega,\mathscr T)</m> alors le triplet <m>(\Omega,\mathscr T,\Pr)</m> est dit un espace probabilisé.
+          Si <m>\PP</m> est un probabilité de <m>(\Omega,\mathscr T)</m> alors le triplet <m>(\Omega,\mathscr T,\PP</m> est dit un espace probabilisé.
         </p>
       </statement>
     </definition>
     <explanation>
     <p>
-      Expérimentalement, <m>\Pr(A)</m> est une approximation de la fréquence de réalisation de l'événement <m>A</m> quand on répète l'expérience un grand nombre de fois :
+      Expérimentalement, <m>\Pr{A}</m> est une approximation de la fréquence de réalisation de l'événement <m>A</m> quand on répète l'expérience un grand nombre de fois :
       <me>
-        \Pr(A)\approx\frac{k_N(A)}{N}
+        \Pr{A}\approx\frac{k_N(A)}{N}
       </me>
       <m>k_N(A)</m> étant le nombre de fois où l'événement <m>A</m> se réalise quand on répète l'expérience aléatoire <m>N</m> fois, pour <m>N</m> très grand.
     </p>
@@ -307,17 +307,17 @@
 
     <remark>
       <p>
-        Dans la définition précédente, on a utilisé la notation <m>\sum\limits_{n=0}^\infty \Pr(A_n)</m> pour désigner la somme de la série <m>\sum\limits \Pr(A_n)</m> que celle-ci soit convergente ou non avec la convention que la somme d'une série divergente à termes positifs est <m>+\infty</m>.
-        Ce qui pose évidemment un problème de consistence puisque <m>\Pr(\bigcup\limits_{n\in\N}A_n)</m> est sensé être dans l'intervalle <m>[0,1]</m>.
+        Dans la définition précédente, on a utilisé la notation <m>\sum\limits_{n=0}^\infty \Pr{A_n}</m> pour désigner la somme de la série <m>\sum\limits \Pr{A_n}</m> que celle-ci soit convergente ou non avec la convention que la somme d'une série divergente à termes positifs est <m>+\infty</m>.
+        Ce qui pose évidemment un problème de consistence puisque <m>\Pr{\bigcup\limits_{n\in\N}A_n}</m> est sensé être dans l'intervalle <m>[0,1]</m>.
       </p>
 
       <p>
-        En fait avec les deux axiomes de la définition, la famille <m>(\Pr(A_n))_{n\in\N}</m> est toujours sommable et sa somme est dans <m>[0,1]</m>.
+        En fait avec les deux axiomes de la définition, la famille <m>(\Pr{A_n})_{n\in\N}</m> est toujours sommable et sa somme est dans <m>[0,1]</m>.
         Voilà comment le justifier :
         <ul>
           <li>
             <p>
-              En posant <m>A_n=\emptyset</m> pour tout <m>n\in\N</m>, le deuxième axiome aboutit à <m>\Pr(\emptyset)=0</m>.
+              En posant <m>A_n=\emptyset</m> pour tout <m>n\in\N</m>, le deuxième axiome aboutit à <m>\Pr{\emptyset}=0</m>.
             </p>
           </li>
 
@@ -325,7 +325,7 @@
             <p>
               Si <m>A_0,A_1,\ldots,A_m</m> sont des événements deux à deux disjoints en posant <m>A_n=\emptyset</m> pour tout <m>n\gt m</m>, le deuxième axiome fournit
               <me>
-                \Pr\left(\bigcup\limits_{n=0}^m A_n\right)=\sum\limits_{n=0}^m \Pr(A_n)
+                \Pr{\bigcup\limits_{n=0}^m A_n}=\sum\limits_{n=0}^m \Pr{A_n}
               </me>.
             </p>
           </li>
@@ -335,9 +335,9 @@
               Soit <m>(A_n)_{n\in\N}</m> une suite d'éléments de <m>\mathscr T</m> deux à deux disjoints.
               On a alors pour tout <m>n\in\N</m>
               <me>
-                \sum\limits_{k=0}^n \Pr(A_k)=\Pr\left(\bigcup\limits_{k=0}^n A_n\right)\leqslant 1
+                \sum\limits_{k=0}^n \Pr{A_k}=\Pr{\bigcup\limits_{k=0}^n A_n}\leqslant 1
               </me>
-              La série à termes réels positifs <m>\sum \Pr(A_n)</m> est donc convergente et sa somme est dans <m>[0,1]</m>.
+              La série à termes réels positifs <m>\sum \Pr{A_n}</m> est donc convergente et sa somme est dans <m>[0,1]</m>.
             </p>
           </li>
         </ul>
@@ -348,42 +348,42 @@
     <proposition xml:id="prop-">
       <statement>
         <p>
-          Soit <m>\Pr</m> une probabilité sur <m>(\Omega,\mathscr T)</m>.
+          Soit <m>\PP</m> une probabilité sur <m>(\Omega,\mathscr T)</m>.
           Alors :
           <ol>
             <li>
               <p>
-                <m>\Pr(\emptyset)=0</m> ;
+                <m>\Pr{\emptyset}=0</m> ;
               </p>
             </li>
 
             <li>
               <p>
-                <m>\Pr(A^c)=1-\Pr(A)</m> pour tout <m>A\in\mathscr T</m> ;
+                <m>\Pr{A^c}=1-\Pr{A}</m> pour tout <m>A\in\mathscr T</m> ;
               </p>
             </li>
 
             <li>
               <p>
-                Si <m>A\subset B</m> alors <m>\Pr(A)\leqslant \Pr(B)</m> et <m>\Pr(B\setminus A)=\Pr(B)-\Pr(A)</m> pour tout <m>A,B\in\mathscr T</m> ;
+                Si <m>A\subset B</m> alors <m>\Pr{A}\leqslant \Pr{B}</m> et <m>\Pr{B\setminus A}=\Pr{B}-\Pr{A}</m> pour tout <m>A,B\in\mathscr T</m> ;
               </p>
             </li>
 
             <li>
               <p>
-                <m>\Pr(A\cup B)=\Pr(A)+\Pr(B)-\Pr(A\cap B)</m> pour tout <m>A,B\in\mathscr T</m> ;
+                <m>\Pr{A\cup B}=\Pr{A}+\Pr{B}-\Pr{A\cap B}</m> pour tout <m>A,B\in\mathscr T</m> ;
               </p>
             </li>
 
             <li>
               <p>
-                <m>\Pr\left(\bigcup\limits_{n=0}^\infty A_n\right)\leqslant \sum\limits_{n=0}^\infty \Pr(A_n)</m> pour toute suite <m>(A_n)_{n\in\N}</m> d'éléments de <m>\mathscr T</m>.
+                <m>\Pr{\bigcup\limits_{n=0}^\infty A_n}\leqslant \sum\limits_{n=0}^\infty \Pr{A_n}</m> pour toute suite <m>(A_n)_{n\in\N}</m> d'éléments de <m>\mathscr T</m>.
               </p>
             </li>
 
             <li>
               <p>
-                <m>\Pr\left(\bigcup\limits_{i\in I}^\infty A_i\right)= \sum\limits_{i\in I}^\infty \Pr(A_i)</m> si <m>(A_i)_{i\in I}</m> est une famille au plus dénombrable d'éléments deux à deux disjoints de <m>\mathscr T</m>.
+                <m>\Pr{\bigcup\limits_{i\in I}^\infty A_i}= \sum\limits_{i\in I}^\infty \Pr{A_i}</m> si <m>(A_i)_{i\in I}</m> est une famille au plus dénombrable d'éléments deux à deux disjoints de <m>\mathscr T</m>.
               </p>
             </li>
           </ol>
@@ -401,7 +401,7 @@
                 Les <m>(B_n)_{n\in\N}</m> sont deux à deux disjoints et <m>\bigcup\limits_{n=0}^\infty A_n=\bigcup\limits_{n=0}^\infty B_n</m> avec <m>B_n\subset A_n</m> pour tout <m>n\in\N</m>.
                 On a donc
                 <me>
-                  \Pr\left(\bigcup\limits_{n=0}^\infty A_n\right)=\sum\limits_{n=0}^\infty \Pr(B_n)\leqslant \sum\limits_{n=0}^\infty \Pr(A_n)
+                  \Pr{\bigcup\limits_{n=0}^\infty A_n}=\sum\limits_{n=0}^\infty \Pr{B_n}\leqslant \sum\limits_{n=0}^\infty \Pr{A_n}
                 </me>.
               </p>
             </li>
@@ -429,7 +429,7 @@
                 Soit <m>(A_n)_{n\in\N}</m> une suite croissante d'éléments de <m>\mathscr T</m>.
                 Alors
                 <me>
-                  \Pr\left(\bigcup\limits_{n=0}^\infty A_n\right)=\lim\limits_{n\to\infty} \Pr(A_n)
+                  \Pr{\bigcup\limits_{n=0}^\infty A_n}=\lim\limits_{n\to\infty} \Pr{A_n}
                 </me>.
               </p>
             </li>
@@ -439,7 +439,7 @@
                 Soit <m>(A_n)_{n\in\N}</m> une suite décroissante d'éléments de <m>\mathscr T</m>.
                 Alors
                 <me>
-                  \Pr\left(\bigcap\limits_{n=0}^\infty A_n\right)=\lim\limits_{n\to\infty} \Pr(A_n)
+                  \Pr{\bigcap\limits_{n=0}^\infty A_n}=\lim\limits_{n\to\infty} \Pr{A_n}
                 </me>.
               </p>
             </li>
@@ -457,10 +457,10 @@
                 Les événements <m>B_n</m> sont deux à deux disjoints et <m>\bigcup\limits_{n=0}^\infty A_n=\bigcup\limits_{n=0}^\infty B_n</m>.
                 On a donc
                 <md>
-                  <mrow> \Pr\left(\bigcup\limits_{n=0}^\infty A_n\right) \amp= \sum\limits_{n=0}^\infty \Pr(B_n) </mrow>
-                  <mrow> \amp= \Pr(A_0)+ \sum\limits_{n=1}^{\infty}\bigl(\Pr(A_n)-\Pr(A_{n-1})\bigr) </mrow>
-                  <mrow> \amp= \Pr(A_0)+\lim \Pr(A_n)-\Pr(A_0) </mrow>
-                  <mrow> \amp= \lim_{n\to\infty} \Pr(A_n) </mrow>
+                  <mrow> \Pr{\bigcup\limits_{n=0}^\infty A_n} \amp= \sum\limits_{n=0}^\infty \Pr{B_n} </mrow>
+                  <mrow> \amp= \Pr{A_0}+ \sum\limits_{n=1}^{\infty}\bigl(\Pr{A_n}-\Pr{A_{n-1}}\bigr) </mrow>
+                  <mrow> \amp= \Pr{A_0}+\lim \Pr{A_n}-\Pr{A_0} </mrow>
+                  <mrow> \amp= \lim_{n\to\infty} \Pr{A_n} </mrow>
                 </md>
               </p>
             </li>
@@ -470,9 +470,9 @@
                 On suppose que <m>(A_n)_n</m> est décroissante.
                 Alors <m>(A_n^c)_n</m> est croissante et on peut ainsi écrire
                 <md>
-                  <mrow>\Pr\Bigl(\bigcap_{n\in\N}A_n\Bigr) \amp=1-\Pr\Bigl(\bigcup_{n\in\N}A_n^c\Bigr) </mrow>
-                  <mrow> \amp= 1-\lim \Pr(A_n^c) </mrow>
-                  <mrow> \amp= \lim \Pr(A_n) </mrow>
+                  <mrow>\Pr{\bigcap_{n\in\N}A_n} \amp=1-\Pr{\bigcup_{n\in\N}A_n^c} </mrow>
+                  <mrow> \amp= 1-\lim \Pr{A_n^c} </mrow>
+                  <mrow> \amp= \lim \Pr{A_n} </mrow>
                 </md>
               </p>
             </li>
@@ -488,11 +488,11 @@
           Alors
           <ol>
             <li>
-              <m>\Pr\left(\bigcup\limits_{n=0}^\infty A_n\right)=\lim_{n\to\infty} \Pr\bigl(\bigcup\limits_{k=0}^nA_k\bigr). </m>
+              <m>\Pr{\bigcup\limits_{n=0}^\infty A_n}=\lim_{n\to\infty} \Pr{\bigcup\limits_{k=0}^nA_k}. </m>
             </li>
 
             <li>
-              <m>\Pr\left(\bigcap\limits_{n=0}^\infty A_n\right)=\lim_{n\to\infty}\Pr\bigl(\bigcap\limits_{k=0}^nA_k\bigr).</m>
+              <m>\Pr{\bigcap\limits_{n=0}^\infty A_n}=\lim_{n\to\infty}\Pr{\bigcap\limits_{k=0}^nA_k}.</m>
             </li>
           </ol>
         </p>
@@ -558,39 +558,11 @@
           Soit <m>(B_i)_{i\in I}</m> un SCE de <m>(\Omega,\mathscr T)</m>.
           Alors pour tout <m>A\in\mathscr T</m>, on a
           <me>
-            \Pr(A)=\sum\limits_{i\in I} \Pr(A\cap B_i)
+            \Pr{A}=\sum\limits_{i\in I} \Pr{A\cap B_i}
           </me>
         </p>
       </statement>
     </theorem>
-
-    <example>
-      <title>(exemples génériques d'utilisation de la formule des probabilités totales)</title>
-
-      <p>
-        <ol>
-          <li>
-            <p>
-              si on fixe un événement <m>B</m> alors
-              <me>
-                \forall A\in\mathscr T,\; \Pr(A)=\Pr(A\cap B)+\Pr(A\cap B^c)
-              </me>
-            </p>
-          </li>
-
-          <li>
-            <p>
-              Si <m>B_1,B_2,\ldots,B_{n+1}</m> sont des événements quelconques alors
-              <me>
-                \Pr\biggl(\Bigl(\bigcap_{k=1}^nB_{k}\Bigr)\cap B_{n+1}^c\biggr)=\Pr\biggl(\bigcap_{k=1}^{n}B_{k}\biggr)- \Pr\biggl(\bigcap_{k=1}^{n+1} B_{k}\biggr)
-              </me>
-            </p>
-          </li>
-
-          
-        </ol>
-      </p>
-    </example>
 
     <remark>
       <p>
@@ -599,9 +571,19 @@
             <p>
               Ce résultat reste valable si les événements <m>B_i</m> sont deux à deux disjoints, sans former une partition de <m>\Omega</m>, à condition que
               <me>
-                \Pr\Bigl(\bigcup_{i\in I}B_i\Bigr) =1
+                \Pr{\bigcup_{i\in I}B_i} =1
               </me>
             </p>
+            <explanation><p>
+              Car si on pose <m>B=\bigcup_{i\in I}B_i</m> alors <m>B\subset A\cup B</m> et donc <m>\Pr{A\cup B}=1</m>. Par suite 
+              <m>
+                \Pr{A\cap B}=\Pr{B}+\Pr{A}-\Pr{A\cup B}=\Pr{A}
+              </m>
+              et donc 
+              <me>
+                \Pr{A}=\Pr{A\cap B}=\Pr{\bigcup_{i\in I}(A\cap B_i)}=\sum_{i\in I}\Pr{A\cap B_i}
+              </me>
+            </p></explanation>
           </li>
 
           <li>
@@ -612,21 +594,52 @@
           </li>
           <li xml:id="rem-progsigmatrib">
             <p>
-              Reprenons le contexte de la <xref ref="prop-sigmatrib"/> et considérons une famille <m>(p_i)_{i\in I}</m> de nombre réel positifs dont la somme vaut <m>1</m>. Alors on définit complétement une probabilité <m>\Pr</m> sur l'espace <m>(\Omega,\sigma(\mathcal A))</m> en posant 
-              <me>\forall i\in I,\; \Pr(A_i)=p_i</me> 
-              On a alors pour tout <m>A=\cup_{i\in I'}\in\sigma(\mathcal A)</m> 
+              Reprenons le contexte de la <xref ref="prop-sigmatrib"/> et considérons une famille <m>(p_i)_{i\in I}</m> de nombre réel positifs dont la somme vaut <m>1</m>. Alors on définit complétement une probabilité <m>\PP</m> sur l'espace <m>(\Omega,\sigma(\mathcal A))</m> en posant 
+              <me>\forall i\in I,\; \Pr{A_i}=p_i</me> 
+              On a alors pour tout <m>A=\cup_{i\in I'}A_i\in\sigma(\mathcal A)</m> 
               <me>
-                \Pr(A)=\sum_{i\in I'}p_i
+                \Pr{A}=\sum_{i\in I'}p_i
               </me>
               
             </p>
             <p>
-              Le théorème suivant n'est qu'un cas particulier de ce dernier résultat.
+              Le <xref ref="thm-probadisc"/> énoncé ci-après n'est qu'un cas particulier de ce dernier résultat.
             </p>
           </li>
         </ol>
       </p>
     </remark>
+
+    <example>
+      <title>(exemples génériques d'utilisation de la formule des probabilités totales)</title>
+
+      <p>
+        <ol>
+          <li>
+            <p>
+              si on fixe un événement <m>B</m> alors
+              <me>
+                \forall A\in\mathscr T,\; \Pr{A}=\Pr{A\cap B}+\Pr{A\cap B^c}
+              </me>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Si <m>B_1,B_2,\ldots,B_{n+1}</m> sont des événements quelconques alors
+              <me>
+                \Pr{\Bigl(\bigcap_{k=1}^nB_{k}\Bigr)\cap B_{n+1}^c}=\Pr{\bigcap_{k=1}^{n}B_{k}}- \Pr{\bigcap_{k=1}^{n+1} B_{k}}
+              </me>
+            </p>
+          </li>
+
+          
+        </ol>
+        Ces relations serviront notamment dans l'étude des événements indépendants (<xref ref="def-independance"/>)
+      </p>
+    </example>
+
+    
 
     
 
@@ -637,21 +650,21 @@
           <ol>
             <li>
               <p>
-                Soit <m>\Pr</m> une probabilité de <m>(\Omega,\mathscr P(\Omega))</m>.
+                Soit <m>\PP</m> une probabilité de <m>(\Omega,\mathscr P(\Omega))</m>.
                 Pour tout <m>A\in\mathscr T</m>, on a
                 <me>
-                  \Pr(A)=\sum\limits_{\omega\in A} \Pr(\{\omega\})
+                  \Pr{A}=\sum\limits_{\omega\in A} \Pr{\{\omega\}}
                 </me>
-                <m>\Pr</m> est  entièrement détérminée par les probabilités des singletons <m>\{\omega\}</m>.
+                <m>\PP</m> est  entièrement détérminée par les probabilités des singletons <m>\{\omega\}</m>.
               </p>
             </li>
 
             <li>
               <p>
                 Soit <m>(p_\omega)_{\omega\in\Omega}</m> une famille de nombres réels positifs de somme <m>1</m>.
-                Alors il existe une unique probabilité <m>\Pr</m> sur <m>\mathscr T</m> telle que
+                Alors il existe une unique probabilité <m>\PP</m> sur <m>\mathscr T</m> telle que
                 <me>
-                  \forall \omega\in\Omega,\;\Pr(\{\omega\})=p_\omega
+                  \forall \omega\in\Omega,\;\Pr{\{\omega\}}=p_\omega
                 </me>
               </p>
             </li>
@@ -664,9 +677,9 @@
       <p>
         Si <m>\Omega</m> est au plus dénombrable alors pour toute famille sommable <m>x=(x_\omega)_{\omega\in\Omega}</m> de nombre réels positifs de somme <m>S>0</m>, on peut définir une probabilté sur <m>(\Omega,\mathscr P(\Omega)</m> en posant
         <me>
-          \forall A\in\mathscr P(\Omega),\; \Pr_x(A)=\frac1S\sum\limits_{\omega\in A} x_\omega
+          \forall A\in\mathscr P(\Omega),\; \PP_x(A)=\frac1S\sum\limits_{\omega\in A} x_\omega
         </me>
-        Cette remarque peut avoir des applications analytiques intéressantes même dans des cas où la probabilité <m>\Pr_x</m> ne correspond pas réellement à une expérience aléatoire.
+        Cette remarque peut avoir des applications analytiques intéressantes même dans des cas où la probabilité <m>\PP_x</m> ne correspond pas réellement à une expérience aléatoire.
       </p>
     </remark>
 
@@ -674,11 +687,11 @@
     <proposition xml:id="prop-probcond">
       <title>Probabilité conditionnelle</title>
       <notation>
-        <usage><m>\Pr(A\mid B)</m></usage>
+        <usage><m>\Pr{A \giv  B}</m></usage>
         <description>probabilité de <m>A</m> sachant <m>B</m></description>
       </notation>
       <notation>
-        <usage><m>\Pr_B(A)</m></usage>
+        <usage><m>\PP_B(A)</m></usage>
         <description>probabilité de <m>A</m> sachant <m>B</m></description>
       </notation>
       
@@ -686,21 +699,21 @@
       <statement>
         <p>
           On considère un événemnt <m>B</m> de probabilité non nulle.
-          L'application <m>\Pr_B</m> définie sur <m>\mathscr T</m> par
+          L'application <m>\PP_B</m> définie sur <m>\mathscr T</m> par
           <me>
-            \forall A\in\mathscr T,\; \Pr_B(A)=\frac{\Pr(A\cap B)}{\Pr(B)}
+            \forall A\in\mathscr T,\; \PP_B(A)=\frac{\Pr{A\cap B}}{\Pr{B}}
           </me>
           est une probabilité de <m>(\Omega,\mathscr T)</m>.
-          La probabilité <m>\Pr_B(A)</m> est aussi notée <m>\Pr(A\mid B)</m> et on l'appelle probailité de <m>A</m> sachant <m>B</m>.
+          La probabilité <m>\PP_B(A)</m> est aussi notée <m>\Pr{A \giv  B}</m> et on l'appelle probailité de <m>A</m> sachant <m>B</m>.
         </p>
       </statement>
 
 
       <proof>
         <p>
-          On a bien <m>\Pr_B(\Omega)=1</m> et pour toute suite <m>(A_n)_{n\in\N}</m> d'éléments de <m>\mathscr T</m> deux à deux disjoints, on a
+          On a bien <m>\PP_B(\Omega)=1</m> et pour toute suite <m>(A_n)_{n\in\N}</m> d'éléments de <m>\mathscr T</m> deux à deux disjoints, on a
           <me>
-            \Pr_B\left(\bigcup\limits_{n=0}^\infty A_n\right)=\frac{\Pr\left(\bigcup\limits_{n=0}^\infty A_n\cap B\right)}{\Pr(B)}=\sum\limits_{n=0}^\infty \frac{\Pr(A_n\cap B)}{\Pr(B)}=\sum\limits_{n=0}^\infty \Pr_B(A_n)
+            \PP_B\left(\bigcup\limits_{n=0}^\infty A_n\right)=\frac{\Pr{\bigcup\limits_{n=0}^\infty A_n\cap B}}{\Pr{B}}=\sum\limits_{n=0}^\infty \frac{\Pr{A_n\cap B}}{\Pr{B}}=\sum\limits_{n=0}^\infty \PP_B(A_n)
           </me>
         </p>
       </proof>
@@ -711,11 +724,11 @@
         la probabilité de «<m>A</m> sachant <m>B</m>» est la probabilité de réalisation d'un résultat favorable à <m>A</m> quand on ne retient que les résultats favorables à <m>B</m>.
         C'est une approximation du rapport des fréquences de réalisation des événements <m>A\cap B</m> et <m>B</m> dans une série d'expériences.
         <me>
-          \Pr(A\mid B)\approx\frac{k_N(A\cap B)}{k_N(B)}=\frac{k_N(A\cap B)/N}{k_N(B)/N}
+          \Pr{A \giv  B}\approx\frac{k_N(A\cap B)}{k_N(B)}=\frac{k_N(A\cap B)/N}{k_N(B)/N}
         </me>.
         D'où la définition
         <me>
-          \Pr(A\mid B)=\frac{\Pr(A\cap B)}{\Pr(B)}
+          \Pr{A \giv  B}=\frac{\Pr{A\cap B}}{\Pr{B}}
         </me>
       </p>
       </justification>
@@ -726,24 +739,24 @@
         <ol>
           <li>
             <p>
-              Si <m>\Pr(B)=0</m> alors par convention, pour tout <m>A\in\mathscr T</m>, <m>\Pr(A\mid B)=\Pr(A)</m>.
+              Si <m>\Pr{B}=0</m> alors par convention, pour tout <m>A\in\mathscr T</m>, <m>\Pr{A \giv  B}=\Pr{A}</m>.
               Ce choix s'explique par le fait que tout se passe comme si l'événement <m>B</m> n'avait pas eu lieu.
             </p>
 
             <p>
               Avec cette convention on peut toujours écrire
               <me>
-                \Pr(A\cap B)=\Pr(A\mid B)\Pr(B)
+                \Pr{A\cap B}=\Pr{A \giv  B}\Pr{B}
               </me>
             </p>
           </li>
 
           <li>
             <p>
-              Sachant que <m>\Pr_B</m> est une probabilité on peut lui appliquer toutes propriétés vues précédemment.
+              Sachant que <m>\PP_B</m> est une probabilité on peut lui appliquer toutes propriétés vues précédemment.
               Par exemple
               <me>
-                \Pr(A^c\mid B)=1-\Pr(A\mid B)
+                \Pr{A^c \giv  B}=1-\Pr{A \giv  B}
               </me>
             </p>
           </li>
@@ -763,7 +776,7 @@
           Soit <m>(B_i)_{i\in I}</m> un SCE de <m>(\Omega,\mathscr T)</m>.
           Alors
           <me>
-            \forall A\in\mathscr T,\; \Pr(A)=\sum\limits_{i\in I} \Pr(A\mid B_i)\Pr(B_i)
+            \forall A\in\mathscr T,\; \Pr{A}=\sum\limits_{i\in I} \Pr{A \giv  B_i}\Pr{B_i}
           </me>
         </p>
       </statement>
@@ -781,7 +794,7 @@
                 Soient <m>A</m> et <m>B</m> deux événements de probabilités non nulles.
                 Alors
                 <me>
-                  \Pr(A\mid B)=\frac{\Pr(B\mid A)\Pr(A)}{\Pr(B)}
+                  \Pr{A \giv  B}=\frac{\Pr{B \giv  A}\Pr{A}}{\Pr{B}}
                 </me>
               </p>
             </li>
@@ -791,7 +804,7 @@
                 Soit <m>(B_i)_{i\in I}</m> un SCE de <m>(\Omega,\mathscr T)</m> et <m>A\in\mathscr T</m> un événement de probabilité non nulle.
                 Alors pour tout <m>i\in I</m>, on a
                 <me>
-                  \Pr(B_i\mid A)=\frac{\Pr(A\mid B_i)\Pr(B_i)}{\sum\limits_{j\in I} \Pr(A\mid B_j)\Pr(B_j)}
+                  \Pr{B_i \giv  A}=\frac{\Pr{A \giv  B_i}\Pr{B_i}}{\sum\limits_{j\in I} \Pr{A \giv  B_j}\Pr{B_j}}
                 </me>
               </p>
             </li>
@@ -815,12 +828,12 @@
 
       <explanation>
         <p>
-          Si on note <m>A</m> l'événement «la pièce est défectueuse» et <m>B_k</m> l'événement «la pièce provient de la machine numéro <m>k</m>» alors on cherche <m>\Pr(B_k\mid A)</m>.
+          Si on note <m>A</m> l'événement «la pièce est défectueuse» et <m>B_k</m> l'événement «la pièce provient de la machine numéro <m>k</m>» alors on cherche <m>\Pr{B_k \giv  A}</m>.
           Celle-ci est donnée par la formule de Bayes :
           <me>
-            \Pr(B_k\mid A)=\frac{\Pr(A\mid B_k)\Pr(B_k)}{\sum\limits_{j=1}^N \Pr(A\mid B_j)\Pr(B_j)}= \frac{p_k}{\sum\limits_{j=1}^N p_j}
+            \Pr{B_k \giv  A}=\frac{\Pr{A \giv  B_k}\Pr{B_k}}{\sum\limits_{j=1}^N \Pr{A \giv  B_j}\Pr{B_j}}= \frac{p_k}{\sum\limits_{j=1}^N p_j}
           </me>
-          car <m>\Pr(B_k)=\frac1N</m> et <m>\Pr(A\mid B_k)=p_k</m> pour tout <m>k\in\{1,\ldots,N\}</m>.
+          car <m>\Pr{B_k}=\frac1N</m> et <m>\Pr{A \giv  B_k}=p_k</m> pour tout <m>k\in\{1,\ldots,N\}</m>.
         </p>
       </explanation>
     </example>
@@ -831,7 +844,7 @@
 
     <note>
       <p>
-        Dans tout la suite, <m>(\Omega,\mathscr T,\Pr)</m> désignera un espace probabilisé.
+        Dans tout la suite, <m>(\Omega,\mathscr T,\PP</m> désignera un espace probabilisé.
       </p>
     </note>
 
@@ -841,7 +854,7 @@
           <ol>
             <li>
               <p>
-                Deux événements <m>A</m> et <m>B</m> de <m>\mathscr T</m> sont dits indépendants si <m>\Pr(A\cap B)=\Pr(A)\Pr(B)</m>.
+                Deux événements <m>A</m> et <m>B</m> de <m>\mathscr T</m> sont dits indépendants si <m>\Pr{A\cap B}=\Pr{A}\Pr{B}</m>.
               </p>
             </li>
 
@@ -849,7 +862,7 @@
               <p>
                 Une famille <m>(A_i)_{i\in I}</m> d'événements de <m>\mathscr T</m> est dite mutuellement indépendante (MI) si pour toute partie finie <m>J</m> de <m>I</m>,
                 <me>
-                  \Pr\left(\bigcap\limits_{j\in J} A_j\right)=\prod\limits_{j\in J} \Pr(A_j)
+                  \Pr{\bigcap\limits_{j\in J} A_j}=\prod\limits_{j\in J} \Pr{A_j}
                 </me>
               </p>
             </li>
@@ -864,9 +877,9 @@
           <title>Indépendance de deux événements</title>
 
           <p>
-            <m>A</m> est indépendant de <m>B</m> si la probabilité de réalisation de <m>A</m> sachant <m>B</m> est la même que celle de réalisation de <m>A</m> : <m>\Pr(A\mid B)=\Pr(A)</m>. Ce qui revient à
+            <m>A</m> est indépendant de <m>B</m> si la probabilité de réalisation de <m>A</m> sachant <m>B</m> est la même que celle de réalisation de <m>A</m> : <m>\Pr{A \giv  B}=\Pr{A}</m>. Ce qui revient à
             <me>
-              \Pr(A\cap B)=\Pr(A)\Pr(B)
+              \Pr{A\cap B}=\Pr{A}\Pr{B}
             </me>
           </p>
         </li>
@@ -877,7 +890,7 @@
           <p>
             Des évéments <m>A_i</m>, <m>i\in I</m> sont mutuelement indépendants si et seulement si pour tout <m>i\in I</m> et pour toute partie finie <m>J\subset I</m> ne contenant pas <m>i</m> on a
             <me>
-              \Pr(A_i\cap \bigcap\limits_{j\in J} A_j)=\Pr(A_i)\Pr\left(\bigcap\limits_{j\in J} A_j\right)
+              \Pr{A_i\cap \bigcap\limits_{j\in J} A_j}=\Pr{A_i}\Pr{\bigcap\limits_{j\in J} A_j}
             </me>
             c'est à dire si et seulement si  la réalisation de chaque événement <m>A_i</m> est indépendante de la réalisation simultanée d'un ou plusieurs évenements <m>A_j</m> lorsque <m>j\ne i</m>.
           </p>
@@ -891,13 +904,13 @@
         <ol>
           <li>
             <p>
-              Si <m>\Pr(A)=0</m> ou <m>\Pr(A)=1</m> alors tout événement <m>B</m> est indépendant de <m>A</m>.
+              Si <m>\Pr{A}=0</m> ou <m>\Pr{A}=1</m> alors tout événement <m>B</m> est indépendant de <m>A</m>.
             </p>
           </li>
 
           <li>
             <p>
-              deux événements incompatibles <m>A</m> et <m>B</m> ne peuvent être indépendants que si <m>\Pr(A)=0</m> ou <m>\Pr(B)=0</m>.
+              deux événements incompatibles <m>A</m> et <m>B</m> ne peuvent être indépendants que si <m>\Pr{A}=0</m> ou <m>\Pr{B}=0</m>.
             </p>
           </li>
 
@@ -919,7 +932,7 @@
             <p>
               Dans un SCE <m>(B_i)_{i\in I}</m> les événements <m>B_i</m> ne peuvent être  deux à deux indépendants, et a fortiori MI,  que s'il existe <m>i_0\in I</m> tel que
               <me>
-                \Pr(B_{i_0})=1 \text{ et } \forall i\ne i_0,\; \Pr(B_{i})=0
+                \Pr{B_{i_0}}=1 \text{ et } \forall i\ne i_0,\; \Pr{B_{i}}=0
               </me>.
             </p>
           </li>
@@ -972,7 +985,7 @@
           Soient <m>A_1,A_2,\ldots,A_n</m> des événements de <m>(\Omega,\mathscr T)</m>.
           Alors
           <me>
-            \begin{split}\Pr\left(A_1\cap A_2\cap\cdots\cap A_n\right)= \Pr(A_1)\Pr(A_2\mid A_1)\Pr(A_3\mid A_1\cap A_2)\cdots{}\\ \Pr(A_n\mid A_1\cap A_2\cap\cdots\cap A_{n-1}) \end{split}
+            \begin{split}\Pr{A_1\cap A_2\cap\cdots\cap A_n}= \Pr{A_1}\Pr{A_2 \giv  A_1}\Pr{A_3 \giv  A_1\cap A_2}\cdots{}\\ \Pr{A_n \giv  A_1\cap A_2\cap\cdots\cap A_{n-1}} \end{split}
           </me>
         </p>
       </statement>
@@ -982,9 +995,9 @@
         <p>
           On écrit
           <me>
-            \Pr(A_1\cap A_2\cap\cdots\cap A_n)=\Pr(A_1)\Pr(A_2\cap\cdots\cap A_n\mid A_1)=\Pr(A_1)\Pr_{A_1}(A_2\cap\cdots\cap A_n)
+            \Pr{A_1\cap A_2\cap\cdots\cap A_n}=\Pr{A_1}\Pr{A_2\cap\cdots\cap A_n \giv  A_1}=\Pr{A_1}\PP_{A_1}(A_2\cap\cdots\cap A_n)
           </me>
-          et on raisonne par récurrnece en appliquant l'hypothèse de récurrence avec la probailité <m>\Pr_{A_1}</m>
+          et on raisonne par récurrnece en appliquant l'hypothèse de récurrence avec la probailité <m>\PP_{A_1}</m>
         </p>
       </proof>
     </proposition>
@@ -1015,13 +1028,13 @@
 
         <li>
           <p>
-            un événement <m>A</m> est dit presque sûr si <m>\Pr(A)=1</m> et négligeable si <m>\Pr(A)=0</m> ;
+            un événement <m>A</m> est dit presque sûr si <m>\Pr{A}=1</m> et négligeable si <m>\Pr{A}=0</m> ;
           </p>
         </li>
 
         <li>
           <p>
-            deux événements <m>A</m> et <m>B</m> sont dits incompatibles si <m>\Pr(A\cap B)=0</m> ;
+            deux événements <m>A</m> et <m>B</m> sont dits incompatibles si <m>\Pr{A\cap B}=0</m> ;
           </p>
         </li>
       </ul>
@@ -1049,7 +1062,7 @@
             <p>
               <m>U=\bigcup\limits_{n\in\N}\bigg(\bigcap\limits_{k=n}^{\infty} A_k\bigg)</m> est l'événement «les événements <m>A_k</m> se réalisent tous à partir d'un certain rang <m>n</m> pour pour au moins un indice <m>n</m>». La probabilité de cet événement est
               <me>
-                \Pr(U)=\lim\limits_{n\to\infty} \Pr\biggl(\bigcap\limits_{k=n}^{\infty} A_k\biggr)=\lim\limits_{n\to\infty}\lim_{m\to\infty} \Pr\left(\bigcap\limits_{k=n}^{n+m} A_k\right)
+                \Pr{U}=\lim\limits_{n\to\infty} \Pr{\bigcap\limits_{k=n}^{\infty} A_k}=\lim\limits_{n\to\infty}\lim_{m\to\infty} \Pr{\bigcap\limits_{k=n}^{n+m} A_k}
               </me>
             </p>
           </li>
@@ -1058,7 +1071,7 @@
             <p>
               <m>V=\bigcap\limits_{n\in\N}\bigg(\bigcup\limits_{k=n}^{\infty} A_k\bigg)</m> est l'événement «l'événement <m>A_n</m> se réalise pour une infinité d'indices <m>n</m>». La probabilité de cet événement est
               <me>
-                \Pr(V)=1-\Pr\left(\bigcup\limits_{n\in\N}\bigg(\bigcap\limits_{k=n}^{\infty}A_k^c\bigg)\right)=1-\lim\limits_{n\to\infty}\lim_{m\to\infty} \Pr\left(\bigcap\limits_{k=n}^{n+m} A_k^c\right)
+                \Pr{V}=1-\Pr{\bigcup\limits_{n\in\N}\bigg(\bigcap\limits_{k=n}^{\infty}A_k^c\bigg)}=1-\lim\limits_{n\to\infty}\lim_{m\to\infty} \Pr{\bigcap\limits_{k=n}^{n+m} A_k^c}
               </me>
             </p>
           </li>
@@ -1071,7 +1084,7 @@
       <ol>
         <li>
           <p>
-            Définir un espace <m>(\Omega,\mathscr T, \Pr)</m> où <m>\Omega</m> représente exactement l'ensemble des résultats possibles de l'expérience.
+            Définir un espace <m>(\Omega,\mathscr T, \PP</m> où <m>\Omega</m> représente exactement l'ensemble des résultats possibles de l'expérience.
           </p>
         </li>
 
@@ -1100,7 +1113,7 @@
       <p>
         On lance un dé à 6 faces.
         On peut modéliser cette expérience par <m>\Omega=\{1,2,3,4,5,6\}</m> et <m>\mathscr T=\mathscr P(\Omega)</m>.
-        On peut définir une probabilité sur <m>\mathscr T</m> en posant <m>\Pr(\{i\})=\frac 16</m> pour tout <m>i\in\Omega</m>.
+        On peut définir une probabilité sur <m>\mathscr T</m> en posant <m>\Pr{\{i\}}=\frac 16</m> pour tout <m>i\in\Omega</m>.
       </p>
     </example>
 
@@ -1110,7 +1123,7 @@
       <p>
         On lance deux dés à 6 faces.
         On peut modéliser cette expérience par <m>\Omega=\{1,2,3,4,5,6\}^2</m> et <m>\mathscr T=\mathscr P(\Omega)</m>.
-        On peut définir une probabilité sur <m>\mathscr T</m> en posant <m>\Pr(\{(i,j)\})=\frac 1{36}</m> pour tout <m>(i,j)\in\Omega</m>.
+        On peut définir une probabilité sur <m>\mathscr T</m> en posant <m>\Pr{\{(i,j)\}}=\frac 1{36}</m> pour tout <m>(i,j)\in\Omega</m>.
       </p>
 
       <p>
@@ -1128,7 +1141,7 @@
       <p>
         On lance indéfiniment une piece de monnaie.
         Si on ne s'intéresse qu'au numéro du premier lancer qui donne «face» alors peut modéliser cette expérience par <m>\Omega=\N^*</m> et <m>\mathscr T=\mathscr P(\Omega)</m>.
-        On peut définir une probabilité sur <m>\mathscr T</m> en posant <m>\Pr(\{n\})=\frac 1{2^n}</m> pour tout <m>n\in\N^*</m>.
+        On peut définir une probabilité sur <m>\mathscr T</m> en posant <m>\Pr{\{n\}}=\frac 1{2^n}</m> pour tout <m>n\in\N^*</m>.
       </p>
 
       <p>
@@ -1208,17 +1221,17 @@
       <solution>
         <p>
           On note <m>A</m> cet événement et <m>A_n</m> l'événement «le numéro du premier lancer qui donne face est <m>n</m>».
-          Alors <m>A=\bigcup\limits_{n\in\N^*}A_{2n}</m>, réunion d'événements deux à deux disjoints. On a <m>\Pr(A_n)=p(1-p)^{2n-1}</m> donc 
+          Alors <m>A=\bigcup\limits_{n\in\N^*}A_{2n}</m>, réunion d'événements deux à deux disjoints. On a <m>\Pr{A_n}=p(1-p)^{2n-1}</m> donc 
           <me>
-            \Pr(A)=\sum\limits_{n\in\N^*} \Pr(A_{2n})=p\sum\limits_{n\in\N^*} (1-p)^{2n-1}=\frac{p(1-p)}{1-(1-p)^2}=\frac{1-p}{2-p} 
+            \Pr{A}=\sum\limits_{n\in\N^*} \Pr{A_{2n}}=p\sum\limits_{n\in\N^*} (1-p)^{2n-1}=\frac{p(1-p)}{1-(1-p)^2}=\frac{1-p}{2-p} 
           </me>
-          Par ailleur <m>\Pr(A^c)=\Pr(A)</m> si et seulement si <m>\Pr(A)=1/2</m>. Ce qui équivaut à <m>\frac {1-p}{2-p}=\frac12</m> ou encore à <m>p=0</m>.
+          Par ailleur <m>\Pr{A^c}=\Pr{A}</m> si et seulement si <m>\Pr{A}=1/2</m>. Ce qui équivaut à <m>\frac {1-p}{2-p}=\frac12</m> ou encore à <m>p=0</m>.
         </p> 
         <p>
-          On constate qu'en général <m>0\lt \Pr(A)\lt \frac12</m> sans jamais toucher ces valeurs extrêmes lorsque <m>p</m> varie dans <m>]0,1[</m>. La probabilité que le premier face ait un numéro impaire est toujours plus grande que celle que ce numéro soit paire et on n'approche d'un équilibre des deux probabilités que si <m>p</m> est presque nul, c'est à dire quand il est presque impossible d'obtenir face.
+          On constate qu'en général <m>0\lt \Pr{A}\lt \frac12</m> sans jamais toucher ces valeurs extrêmes lorsque <m>p</m> varie dans <m>]0,1[</m>. La probabilité que le premier face ait un numéro impaire est toujours plus grande que celle que ce numéro soit paire et on n'approche d'un équilibre des deux probabilités que si <m>p</m> est presque nul, c'est à dire quand il est presque impossible d'obtenir face.
         </p>
         <p>
-          C'est un comportement contre-intuitif. L'intuition pousse plutôt vers <m>\Pr(A^c)=\Pr(A)</m> sous pretexte qu'il y a «autant de nombres paires que de nombres impaires».
+          C'est un comportement contre-intuitif. L'intuition pousse plutôt vers <m>\Pr{A^c}=\Pr{A}</m> sous pretexte qu'il y a «autant de nombres paires que de nombres impaires».
         </p>
       </solution>
     </task>
@@ -1229,16 +1242,33 @@
         </p>
       </statement>
       <solution>
-        <p>
-          On note <m>B</m> l'evénement «tous les lancers qui donnent face sont pairs». <m>(A_n)_{n\in\N^*}</m> est un SCE donc selon la formule des probabilité totales 
+        <case><title>Une première méthode</title> <p>
+          On note <m>B</m> l'evénement «tous les lancers qui donnent face sont pairs» et pour tout <m>n\in\N^*</m>, <m>B_n</m> l'événement «jusqu'au lancer <m>2n</m>, tous les lancers qui ont donné face sont de numéro paire». Alors 
           <me>
-          \Pr(B)=\sum_{n\in\N^*}\Pr(B\mid A_n)\Pr(A_n)
+            B=\bigcap_{n=1}^{+\infty} B_n
           </me>
-          Pusique <m>B</m> ne se réalise pas si un événement <m>A_{2n+1}</m> se réalise alors <m>\Pr(B\mid A_{2n+1})=0</m> pour tout <m>n\in\N</m> et donc  
+          la suite <m>(B_n)_n</m> et décroissante donc <m>\Pr{B}=\lim\Pr{B_n}</m>. Selon la formule des probabilités totales 
+          <md>
+          <mrow>\Pr{B_{n+1}} \amp=\Pr{B_{n+1}\giv B_n}\Pr{B_n}+\Pr{B_{n+1}\giv B_n^c}\Pr{B_n^c} </mrow>
+          <mrow> \amp=\Pr{B_{n+1}\giv B_n}\Pr{B_n} </mrow>
+          </md>
+          la probabilité conditionnelle <m>\Pr{B_{n+1}\giv B_n^c} </m> étant clairement nulle. Or si on sait que tout les lancers jusqu'à l'instant <m>2n</m> qui ont donné face sont de numéro paire, alors pour que <m>B_{n+1}</m> se réalise il faut et il suffit que le lancer <m>2n+1</m> ne donne pas face, peut importe ce que donne le lancer <m>2n+2</m>. Donc 
+          <m>\Pr{B_{n+1}\giv B_n}=q</m> et ainsi 
           <me>
-          \Pr(B)=\sum_{n\in\N^*}\Pr(B\mid A_{2n})\Pr(A_{2n})
+            \Pr{B_{n+1}}=q\Pr{B_n}
           </me>
-        </p>
+          <m>\Pr{B_n}</m> suit une progression géométrique de raison <m>q\in]0,1[</m> donc elle converge vers <m>0</m>. Alors <m>\Pr{B}=0</m>.
+        </p></case>
+        <case><title>Autre méthode</title><p>
+         Il suffit de remarquer qu'en fait 
+        <me>
+          B=\bigcap_{n\in\N^*}A_{2n+1}^c 
+        </me>
+        et que les événements <m>A_n</m> sont mutuellement indépendants et donc 
+        <me>
+          \Pr{B}=\lim\Pr[\bigg]{\bigcap_{k=1}^n A_{2k+1}^c}=\lim q^n=0
+        </me>
+        </p></case>
       </solution>
     </task>
   </activity>
@@ -1253,14 +1283,14 @@
         <me>
           A_d=\{k\in\Omega\mid d\text{ divise }k\}
         </me>
-        On munit <m>\Omega</m> de la probabilité uniforme <m>\Pr</m>.
+        On munit <m>\Omega</m> de la probabilité uniforme <m>\PP</m>.
       </p>
     </introduction>
 
 
     <task>
       <p>
-        Calculer <m>\Pr(A_d)</m>.
+        Calculer <m>\Pr{A_d}</m>.
       </p>
     </task>
 
@@ -1301,21 +1331,21 @@
     <statement>
       <p>
         On fixe un réel <m>x\gt 1</m>.
-        On note <m>p_n</m> le <m>n^{\mathrm{e}}</m> nombre premier par ordre croissant et on définit la probabilité <m>\Pr_x</m> sur <m>(\N^*,\mathscr P(\N^*))</m> par
+        On note <m>p_n</m> le <m>n^{\mathrm{e}}</m> nombre premier par ordre croissant et on définit la probabilité <m>\PP_x</m> sur <m>(\N^*,\mathscr P(\N^*))</m> par
         <me>
-          \forall n\in\N^*,\; \Pr_x(\{n\})=\frac1{\zeta(x)n^x}
+          \forall n\in\N^*,\; \PP_x(\{n\})=\frac1{\zeta(x)n^x}
         </me>
         On note pour tout <m>n\in\N^*</m>, <m>M_n</m> l'ensemble des multiple de <m>n</m>.
         <ol>
           <li>
             <p>
-              Justifier que <m>\Pr_x</m> définit bien une probabilité sur <m>\mathscr P(\N^*)</m>.
+              Justifier que <m>\PP_x</m> définit bien une probabilité sur <m>\mathscr P(\N^*)</m>.
             </p>
           </li>
 
           <li>
             <p>
-              Calculer <m>\Pr_x(M_n)</m> pour tout <m>n\in\N^*</m>
+              Calculer <m>\PP_x(M_n)</m> pour tout <m>n\in\N^*</m>
             </p>
           </li>
 

@@ -6,6 +6,13 @@
     <section xml:id="sec-expgraph">
         <title>Exploration graphique</title>
 
+        <subsection xml:id="subsec-graphbinomiale">
+            <title>Représentation graphique de lois usuelles</title>
+            
+            <introduction>
+            Dans cette section on ne s'interesse qu'au comportement graphique des fonctions de masse de certaines lois discrètes. Il ne sera pas encore question de numériquement simuler des variables aléatoires. 
+            </introduction>
+
         <activity>
             <title>Exploration de la loi binomiale</title>
 
@@ -22,7 +29,7 @@
                     <p>
                         Utiliser les curseurs ci-dessous pour choisir les valeurs de <m> n </m> et <m> p </m>, puis observer comment l'histogramme de la loi binomiale évolue.
                     </p>
-                    <sage>
+                    <p><sage>
                     <input>
 @interact
 def binomial_histogram(n=slider(1, 50, 1, default=10, label="n"),
@@ -36,7 +43,8 @@ def binomial_histogram(n=slider(1, 50, 1, default=10, label="n"),
                     <output>
                     <!-- L'histogramme sera affiché ici -->
                     </output>
-                    </sage>
+                    </sage></p>
+                Donne une description sommaire de comportement de la distribution en fonction de la valeur du paramètre <m>p</m>.
                 </statement>
 
                 <solution>
@@ -56,7 +64,7 @@ def binomial_histogram(n=slider(1, 50, 1, default=10, label="n"),
                             </li>
 
                             <li>
-                                Plus <m> n </m> est grand, plus la distribution ressemble à une courbe en cloche (approximation normale).
+                                Plus <m> n </m> est grand, plus la distribution ressemble à une courbe en cloche (rappelant une distribution de Poisson).
                             </li>
                         </ul>
                     </p>
@@ -70,26 +78,70 @@ def binomial_histogram(n=slider(1, 50, 1, default=10, label="n"),
                         Expliquer théoriquement vos observations
                     </p>
                 </statement>
+                <solution>
+                    <p>
+                    Considérons une variable <m>X\sim\mathscr B(n,p)</m>. Pour <m>k\in\iic{0,n}</m> on a
+
+                    <md>
+                    <mrow>\frac{\PP(X=n-k)}{\PP(X=k)} \amp=
+                    \frac{p^{n-k}(1-p)^k}{p^k(1-p)^{n-k}}
+                    </mrow>
+                    <mrow>\amp=
+                    \left(\frac{p}{1-p}\right)^{n-2k}
+                    </mrow>
+                </md>
+                la fonction <m>p\longmapsto p/(1-p)</m> est croissante et varie entre <m>0</m> et <m>+\infty</m> en prenant la valeur <m>1</m> en <m>p=1/2</m>. Cela signifie que si <m>p\lt 1/2</m> alors <m>\PP(X=k)\geq \PP(X=n-k)</m> tant que <m>n-2k\geq 0</m>. Le maximum de <m>\PP(X=k)</m> est atteint donc en un point <m>k\in\iic{0,\ceil{n/2}}</m>. Si <m>p\gt 1/2</m> ce maximum est atteint pour <m>k\in\iic{\ceil{n/2},n}</m>. Losque <m>p=1/2</m>, <m>\PP(X=n-k)=\PP(X=k)</m> pour tout <m>k</m> ce qui signifie que le graphe de la distribution est symétrique par rapport au milieu <m>n/2</m>.
+                    <md>
+                    <mrow>\frac{\PP(X=k+1)}{\PP(X=k)} \amp= 
+                    \frac{\binom n{k+1}}{\binom nk}\cdot \frac{p}{1-p}
+                    </mrow>
+                    <mrow> \amp= 
+                    \frac{n!}{(k+1)!(n-k-1)!}\cdot \frac{k!(n-k)!}{n!}\cdot\frac{p}{1-p}
+                    </mrow>
+                    <mrow> \amp= 
+                    \frac{n-k}{k+1}\cdot \frac{p}{1-p}
+                    </mrow>
+                    </md>
+                    pour un <m>p</m> fixé on a donc 
+                    <md> 
+                    <mrow> \PP(X=k+1)\geq \PP(X=k)\amp
+                    \Longleftrightarrow 
+                        p(n-k)\geq (1-p)(k+1) 
+                    </mrow>
+                    <mrow> \amp\Longleftrightarrow 
+                        k\leq p(n+1)-1 </mrow>
+                    <mrow> \amp\Longleftrightarrow 
+                    k\leq r-1
+                     </mrow>  
+                    </md>
+                    où <m>r=\ceil{p(n+1)}</m>. La fonction de masses <m>k\longmapsto \PP(X=k)</m> reste croissante tant que <m>k\leq r-1</m> et devient décroissante au delà. Son maximum ne peut être atteint qu'en <m>k=r-1</m> et/ou en <m>k=r</m>.
+                        </p>
+                    <p>
+                        Noter que si <m>p\lt 1/2</m> alors <m>r-1\leq\ceil{n/2}</m> et si <m>p\gt 1/2</m> alors <m>r-1\geq \ceil{n/2}</m>. Ce qui confirme le constat précédent en le précisant. 
+                    </p>
+                    </solution>
             </task>
         </activity>
 
         <activity>
             <title>Comportement asymptotique d'une loi binomiale</title>
+            <introduction><p>
+            Dans cette activité, on s'intéresse à la convergence de la loi binomiale vers la loi de Poisson lorsque le nombre d'essais <m> n </m> devient grand.
+            </p></introduction>
 
             <task>
                 <statement>
                     <p>
-                        Visualiser l'approximation de la loi binomiale <m>B(n, p)</m> par la loi de Poisson <m>P(np)</m> lorsque <m>n</m> est grand.
+                        Visualiser l'approximation de la loi binomiale <m>B(n, p)</m> par la loi de Poisson <m>\mathscr P(np)</m> lorsque <m>n</m> est grand.
                     </p>
-
+                    </statement>
+                        
+                    <solution>        
                     <p>
-                        Ce graphique affiche en bleu l'histogramme de la loi binomiale <m>B(n, p)</m> et en rouge la courbe de la loi de Poisson <m>P(np)</m>.
-                        Il permet de visualiser comment la distribution binomiale se rapproche de la distribution de Poisson lorsque <m>n</m> devient grand.
-                    </p>
                     <sage>
                     <input>
 @interact
-def binomial_vs_poisson(n=slider(50, 100, 1, default=50, label="n"),
+def binomial_vs_poisson(n=slider(50, 500, 1, default=50, label="n"),
                         p=slider(0.01, 0.99, 0.01, default=0.5, label="p")):
     lambda_ = n * p  # Paramètre de la loi de Poisson
     P_binom = [binomial(n, k) * p^k * (1 - p)^(n - k) for k in range(n + 1)]
@@ -99,35 +151,223 @@ def binomial_vs_poisson(n=slider(50, 100, 1, default=50, label="n"),
     # Graphique pour la loi de Poisson (points reliés par une ligne)
     g_poisson = list_plot(P_poisson, plotjoined=True, color='red', marker="o", legend_label="Poisson P(np)")
     # Affichage combiné
-    show(g_binom + g_poisson, figsize=4, axes_labels=[r"$k$", r"$P(X = k)$"])
+    show(g_binom + g_poisson, figsize=(6,5), axes_labels=[r"$k$", r"$P(X = k)$"])
                     </input>
                     <output>
                     </output>
-                    </sage>
-                </statement>
-
-                <solution>
+                    </sage></p>
                     <p>
-                        Lorsque <m>n</m> est grand et <m>p</m> est petit, la distribution binomiale <m>B(n, p)</m> devient similaire à la distribution de Poisson <m>P(np)</m>.
+                        Ce graphique affiche en bleu l'histogramme de la loi binomiale <m>B(n, p)</m> et en rouge la courbe de la loi de Poisson <m>\mathscr P(np)</m>.
+                        Il permet de visualiser comment la distribution binomiale se rapproche de la distribution de Poisson lorsque <m>n</m> devient grand.
+                    </p>
+                    <p>
+                        Lorsque <m>n</m> est grand et <m>p</m> est petit, la distribution binomiale <m>B(n, p)</m> devient similaire à la distribution de Poisson <m>\mathscr P(np)</m>.
                         Cette visualisation interactive permet d'observer cette convergence.
                     </p>
                 </solution>
-            </task>
-
-
-            <task>
+                </task>
+                <task>
                 <statement>
                     <p>
                         Expliquer théoriquement vos observations
                     </p>
                 </statement>
+
+                <solution>
+                    <p>
+                        Voir <xref ref="act-binomial-poisson"/>
+                    </p>
+                </solution>
             </task>
         </activity>
+
+    </subsection>
+    <subsection xml:id="subsec-histogramme-lois-usuelles">
+                <title>Échantillonage d'une loi discrète</title>
+
+                <introduction>
+                <p> Dans cette section on commencera à utiliser les fonctions offertes par les bibliothèques Python pour simuler des variables aléatoires et on essayera de comparer graphiquement leurs comportement avec celui des lois théoriques.     
+                </p>
+                </introduction>
+                
+                <activity><title>Loi binomiale</title>
+                <statement>
+                    <p>
+                    Utiliser les fonctions Python <c>numpy.random.binomial</c> et <c>numpy.random.poisson</c> pour générer des variables aléatoires qui suit la loi binomiale et la loi de Poisson. Écrire un script Python qui permet de modifier la taille <m>N</m> de l'échantillon utilisé ainsi que les paramètres <m>n</m> et <m>p</m> et <m>\lambda</m> et qui trace intéractivement l'histogramme des proportions des valeurs réalisées par, au choix, l'une des deux variables simulées dans l'échantillon ainsi que la courbe de la loi théorique correspondante.
+                    </p>
+                </statement>
+
+                <solution><p>
+                        <sage>
+                            <input>
+import numpy as np
+import matplotlib.pyplot as plt
+import math
+
+def binomial_pmf(k, n, p):
+    """Calcule la probabilité P(X = k) pour une loi binomiale."""
+    return math.comb(n, k) * (p**k) * ((1 - p)**(n - k))
+
+def poisson_pmf(k, lam):
+    """Calcule la probabilité P(X = k) pour une loi de Poisson."""
+    return (lam**k * np.exp(-lam)) / math.factorial(k)
+
+@interact
+def plot_distributions(distribution=['Binomiale', 'Poisson'], 
+        N=slider(10, 10000, 10, default=1000), 
+        n=slider(1, 50, 1, default=10), 
+        p=0.3, 
+        lam=10.0):
+    plt.figure(figsize=(5, 5))
+    
+    if distribution == 'Binomiale':
+        X = np.random.binomial(n, p, N)
+        k_values = np.arange(0, n + 1)
+        Pk_values = [binomial_pmf(k, n, p) for k in k_values]
+    
+    elif distribution == 'Poisson':
+        X = np.random.poisson(lam, N)
+        k_values = np.arange(0, max(15, int(2 * lam)))
+        Pk_values = [poisson_pmf(k, lam) for k in k_values]
+    
+    plt.hist(X, bins=np.arange(min(X), max(X) + 1.5) - 0.5, density=True, alpha=0.6, color='blue', edgecolor='black', label="Échantillon")
+    plt.plot(k_values, Pk_values, 'ro-', label="Théorique", markersize=5)
+
+    plt.xlabel("Valeurs")
+    plt.ylabel("Fréquence")
+    plt.title(f"Distribution {distribution} (N={N})")
+    plt.legend()
+    plt.grid(axis='y', linestyle='--', alpha=0.7)
+    plt.show()
+
+                            </input>
+                            <output>
+                                
+                            </output>
+                        </sage>
+                    </p></solution>
+                </activity>
+            </subsection>
+        
+        <subsection xml:id="subsec-lo-faible">
+            <title>Loi Faible des grands nombres avec une loi géométrique</title>
+
+            <introduction>
+            <p>
+                Dans cette section on essai de visualiser le conformance de la moyenne empirique sur un échantillon d'une loi géométrique avec la loi faible des grands nombre. 
+            </p>
+            </introduction>
+            
+
+            <activity>
+                <task>
+                    <statement>
+                <p>
+                    En utilisant la fonction <c>numpy.random.geometric</c> créer une variable qui suit la loi géométrique. 
+                </p> 
+                <p>
+                    Écrire un script Python qui permet de changer intéractivement la valeur du paramètre <m>p</m> de la taille <c>N_max</c> de l'échantillon et qui trace la courbe d'évolution de la moyenne des valeurs réalisées en fonction de la taille <m>N</m> de l'échantillon.  
+                </p>
+                </statement>
+                <solution>
+                <p>
+                    <sage>
+                        <input>
+import numpy as np
+import matplotlib.pyplot as plt
+
+@interact
+def loi_faible_grands_nombres_geom(
+        p=slider(0.05, 1.0, 0.05, default=0.2), 
+        N_max=slider(500, 10000, 100, default=1000)):
+    plt.figure(figsize=(6, 5))
+
+    # Génération des échantillons selon une loi géométrique
+    N_values = np.arange(1, N_max + 1)
+    X = np.random.geometric(p, N_max)  # Tableau de résultats selon la Loi géométrique avec paramètre p 
+    E_theorique = 1 / p  # Espérance théorique de la loi géométrique
+
+    # Calcul de la moyenne empirique cumulée
+    moyennes_empiriques = np.cumsum(X) / N_values
+
+    # Tracé des résultats 
+    plt.plot(N_values, moyennes_empiriques, label="Moyenne empirique", color="blue")
+    plt.axhline(E_theorique, color="red", linestyle="--", label=f"Espérance théorique ({E_theorique:.2f})")
+
+    plt.xlabel("Taille de l'échantillon (N)")
+    plt.ylabel("Moyenne empirique")
+    plt.title(f"Loi faible des grands nombres - Loi Géométrique (p={p})")
+    plt.legend()
+    plt.grid(alpha=0.7)
+    plt.show()
+
+                        </input>
+                        <output>
+                            
+                        </output>
+                    </sage>
+                </p>    
+                </solution>
+                </task>
+                <task>
+                    <statement>
+                        <p>
+                            Écrire un script qui permet de fixer intéractivement la valeur de la taille de l'échantillon et qui trace la courbe d'évolution de la moyenne empirique de la loi ainsi que celle de la fonction <m>p\longmapsto \EE(X)</m> quand <m>p</m> varie entre <m>0.1</m> et <m>0.99</m>. 
+                        </p>
+                    </statement>
+                <solution>
+                    <p>
+                        <sage>
+                        <input>
+import numpy as np
+import matplotlib.pyplot as plt
+
+@interact
+def loi_faible_grands_nombres_geom_variable_p(
+    N=slider(100, 10000, 100, default=1000)):
+    plt.figure(figsize=(6, 5))
+
+    # Valeurs de p variant linéairement de 0.01 à 0.99
+    p_values = np.linspace(0.01, 0.99, 50)
+    moyennes_empiriques = []
+    esperances_theoriques = []
+
+    for p in p_values:
+        X = np.random.geometric(p, N)  # Générer un échantillon de taille N
+        moyennes_empiriques.append(np.mean(X))  # Calculer la moyenne empirique
+        esperances_theoriques.append(1 / p)  # Espérance théorique de la loi géométrique
+
+    # Tracé des résultats
+    plt.plot(p_values, moyennes_empiriques, 'bo-', label="Moyenne empirique")
+    plt.plot(p_values, esperances_theoriques, 'r--', label="Espérance théorique")
+
+    plt.xlabel("Paramètre p")
+    plt.ylabel("Moyenne empirique")
+    plt.title(f"Loi faible des grands nombres - Loi Géométrique avec N={N}")
+    plt.legend()
+    plt.grid(alpha=0.7)
+    plt.show()
+
+                        </input>
+                        <output>
+                            
+                        </output>
+                    </sage>
+                    </p>
+                </solution>
+            
+            </task>
+            </activity>
+            
+        </subsection>
+
     </section>
 
     <section xml:id="sec-principeinversion">
         <title>Principe d'inversion et simulation de variables aléatoires discrètes</title>
-
+    <subsection xml:id="subsec-basetheo">
+        <title>Base théorique</title>
+        
         <introduction>
             <p>
                 Dans cette section, nous allons étudier le <em>principe d'inversion</em>, une méthode mathématique pour simuler des variables aléatoires discrètes à partir d'une variable uniforme <m> U \sim \mathcal{U}([0,1]) </m> ( <xref ref="example-U"/> ).
@@ -204,7 +444,7 @@ def binomial_vs_poisson(n=slider(50, 100, 1, default=50, label="n"),
                     </ul> 
                 Maintenant que <xref ref="eq-equivbase"/> est acquise, on en déduit que pour tout <m>t\in\R</m>
                 <me>
-                    F_Y(t)=\Pr(G(U)\leq t)=\Pr(U\leq F_X(t))=F_U\bigl(F_X(t)\bigr)
+                    F_Y(t)=\Pr{G(U)\leq t}=\Pr{U\leq F_X(t)}=F_U\bigl(F_X(t)\bigr)
                 </me>
                 mais comme <m>U\sim\mathscr U([0,1])</m> alors 
                 <m>F_U(u)=u</m> pour tout <m>u\in[0,1]</m> et ainsi 
@@ -226,25 +466,25 @@ def binomial_vs_poisson(n=slider(50, 100, 1, default=50, label="n"),
                 <p>
                     Soit <m>X</m> une VADR dont l'ensemble des valeurs s'organise en une suite strictement croissante <m>(x_n)_{n\in I}</m> avec <m>I=\iic{0,N}</m> si <m>X(\Omega)</m> est fini et <m>I=\N</m> sinon. On pose  pour tout <m>n\in I</m>, 
                     <me>
-                        p_n=\Pr(X=x_n) \qtext{et} u_n=\sum_{k=0}^np_k
+                        p_n=\Pr{X=x_n} \qtext{et} u_n=\sum_{k=0}^np_k
                     </me>
                     <aside>
                         <p>
                             Si pour un certain <m>n</m> on a <m>p_n=0</m> alors <m>u_n=u_{n-1}</m> et  donc l'evénement <m>(u_{n-1}\lt U\leq u_{n})</m> est vide. La formule reste donc valable dans ce cas. 
                         </p>
                     </aside>
-                    Alors <m>\Pr(X=x_0)=\Pr(U\leq u_0)</m> et pour tout <m>n\in I\setminus \{0\}</m> 
+                    Alors <m>\Pr{X=x_0}=\Pr{U\leq u_0}</m> et pour tout <m>n\in I\setminus \{0\}</m> 
                     <me>
-                        \Pr(X=x_n)=(u_{n-1}\lt U\leq u_n)
+                        \Pr{X=x_n}=(u_{n-1}\lt U\leq u_n)
                     </me>
                 </p>
             </statement>
             <proof>
             <p>
-            Pour <m>n=0</m>, <m>\Pr(U\leq u_0)=F_U(p_0)=p_0</m> et 
+            Pour <m>n=0</m>, <m>\Pr{U\leq u_0}=F_U(p_0)=p_0</m> et 
               pour tout <m>n\in I\setminus\{0\}</m>
               <me>
-                \Pr(u_{n-1}\lt U\leq u_n)=F_U(u_n)-F_U(u_{n-1})=u_n-u_{n-1}=p_n
+                \Pr{u_{n-1}\lt U\leq u_n}=F_U(u_n)-F_U(u_{n-1})=u_n-u_{n-1}=p_n
               </me>
             </p>
         </proof>
@@ -260,6 +500,12 @@ def binomial_vs_poisson(n=slider(50, 100, 1, default=50, label="n"),
             </p>
         </explanation>
         </corollary>
+        </subsection>
+
+        <subsection xml:id="subsec-simulation-principe-inverse">
+            <title>Simulation numérique</title>
+            
+       
 
         <activity><title>Simulation d'une variable finie</title>
         <introduction>
@@ -631,5 +877,6 @@ plt.show()
                 </solution>
             </task>
         </activity>
+         </subsection>
     </section>
 </chapter>
