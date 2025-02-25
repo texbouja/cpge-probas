@@ -12,37 +12,37 @@
 </head>
 <body class="ignore-math">
 <article class="definition definition-like"><h5 class="heading">
-<span class="type">Définition</span><span class="space"> </span><span class="codenumber">1.86</span><span class="period">.</span>
+<span class="type">Définition</span><span class="space"> </span><span class="codenumber">1.89</span><span class="period">.</span>
 </h5>
 <ol class="decimal" id="def-varcovar-3-1">
 <li><div class="para logical">
-<div class="para">Soit <span class="process-math">\(X\in L^2(\Omega)\text{.}\)</span> La variable <span class="process-math">\((X-E(X))^2\)</span> est sommable et son espérance est appelée variance de <span class="process-math">\(X\text{.}\)</span> On la note <span class="process-math">\(\Va(X)\)</span>
+<div class="para">Soit <span class="process-math">\(X\in L^2(\Omega)\text{.}\)</span> La variable <span class="process-math">\((X-E(X))^2\)</span> est sommable et son espérance est appelée variance de <span class="process-math">\(X\text{.}\)</span> On la note <span class="process-math">\(\VV(X)\)</span>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
-\Va(X):=\Es\bigl((X-\Es(X))^2\bigr)
+\VV(X):=\EE\bigl((X-\EE(X))^2\bigr)
 \end{equation*}
 </div>
 </div></li>
 <li><div class="para logical">
-<div class="para">Soient <span class="process-math">\(X,Y\in L^2(\Omega)\text{.}\)</span> La variable <span class="process-math">\((X-\Es(X))(Y-\Es(Y))\)</span> est sommable et son espérance est appelée covariance des variables <span class="process-math">\(X\)</span> et <span class="process-math">\(Y\text{.}\)</span> On la note <span class="process-math">\(\Cov(X,Y)\text{.}\)</span>
+<div class="para">Soient <span class="process-math">\(X,Y\in L^2(\Omega)\text{.}\)</span> La variable <span class="process-math">\((X-\EE(X))(Y-\EE(Y))\)</span> est sommable et son espérance est appelée covariance des variables <span class="process-math">\(X\)</span> et <span class="process-math">\(Y\text{.}\)</span> On la note <span class="process-math">\(\Cov(X,Y)\text{.}\)</span>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
-\Cov(X,Y):=\Es\bigl((X-\Es(X))(Y-\Es(Y))\bigr)
+\Cov(X,Y):=\EE\bigl((X-\EE(X))(Y-\EE(Y))\bigr)
 \end{equation*}
 </div>
 </div></li>
 </ol>
 <details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h6 class="heading"><span class="type">Explication<span class="period">.</span></span></h6></summary><article class="hiddenproof knowl__content"><div class="para">
-<span class="process-math">\(V(X)\)</span> est la moyenne «quadratique» de <span class="process-math">\(X-\Es(X)\text{.}\)</span> Elle mésure la moyenne de l’écart que peut prendre <span class="process-math">\(X\)</span> avec sa moyenne <span class="process-math">\(\Es(X)\text{.}\)</span>
+<span class="process-math">\(V(X)\)</span> est la moyenne «quadratique» de <span class="process-math">\(X-\EE(X)\text{.}\)</span> Elle mésure la moyenne de l’écart que peut prendre <span class="process-math">\(X\)</span> avec sa moyenne <span class="process-math">\(\EE(X)\text{.}\)</span>
 </div>
 <div class="para logical">
 <div class="para">
-<span class="process-math">\(\Cov(X,Y)\)</span> mésure le degré de corélation entre <span class="process-math">\(X\)</span> et <span class="process-math">\(Y\text{,}\)</span> c’est à dire à quels points les résultats obtenus par <span class="process-math">\(X\)</span> et par <span class="process-math">\(Y\)</span> s’influencent les uns les autres. On notera par exemple que si <span class="process-math">\(X\)</span> et <span class="process-math">\(Y\)</span> sont indépendantes (aucune corélation) alors <span class="process-math">\(X-\Es(X)\)</span> et <span class="process-math">\(Y-\Es(Y)\)</span> sont indépendantes et donc</div>
+<span class="process-math">\(\Cov(X,Y)\)</span> mésure le degré de corélation entre <span class="process-math">\(X\)</span> et <span class="process-math">\(Y\text{,}\)</span> c’est à dire à quels points les résultats obtenus par <span class="process-math">\(X\)</span> et par <span class="process-math">\(Y\)</span> s’influencent les uns les autres. On notera par exemple que si <span class="process-math">\(X\)</span> et <span class="process-math">\(Y\)</span> sont indépendantes (aucune corélation) alors <span class="process-math">\(X-\EE(X)\)</span> et <span class="process-math">\(Y-\EE(Y)\)</span> sont indépendantes et donc</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\Cov(X,Y)=\Es(X-\Es(X))\Es(Y-\Es(Y))=0
+\Cov(X,Y)=\EE(X-\EE(X))\EE(Y-\EE(Y))=0
 \end{equation*}
 </div>
 </div></article></details></article><span class="incontext"><a class="internal" href="sec-espvaralea.html#def-varcovar">Contexte</a></span>

@@ -159,19 +159,21 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\R}{\mathbb R}
 \newcommand{\C}{\mathbb C}
 \newcommand{\K}{\mathbb K}
-\renewcommand{\Pr}{\mathbb P}
-\newcommand{\Es}{\mathbb E}
-\newcommand{\Va}{\mathbb V}
+\newcommand{\bbone}{\mathbb 1}
 \newcommand{\PP}{\mathbb P}
-\newcommand{\ES}{\mathbb E}
-\newcommand{\VA}{\mathbb V}
-\newcommand\bbone{\mathbb 1}
-\newcommand\Cov{\operatorname{Cov}}
-\newcommand\card{\operatorname{Card}}
-\newcommand\qtext[1]{\quad\text{#1}\quad}
-\renewcommand\llbracket{[\![}
-\renewcommand\rrbracket{]\!]}
-\newcommand\iic[1]{\llbracket #1 \rrbracket}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\VV}{\mathbb V}
+\newcommand\giv{\nonscript\:\middle\vert\nonscript\:\mathopen{}}
+\renewcommand{\Pr}[2][]{\mathbb{P}\left(#2\right)}
+\renewcommand{\Es}[2][]{\mathbb{E}\left(#2\right)}
+\renewcommand{\Va}[2][]{\mathbb{V}\left(#2\right)}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\card}{\operatorname{Card}}
+\newcommand{\qtext}[1]{\quad\text{#1}\quad}
+\renewcommand\ceil[1]{[#1]}
+\renewcommand{\llbracket}{[\![}
+\renewcommand{\rrbracket}{]\!]}
+\newcommand{\iic}[1]{\llbracket #1 \rrbracket}
 \let\geq\geqslant
 \let\leq\leqslant
 \let\ds\displaystyle
@@ -200,9 +202,9 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="sec-varalea.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Variables aléatoires</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-varalea" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Variables aléatoires</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-loivaralea" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Loi d’une variable aléatoire discrète</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-indvar" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Indépendance des variables aléatoires discrètes</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-loiusuelles" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Lois discrusueètes usuelles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-indvar" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Indépendance des variables aléatoires discrètes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-loivaralea" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Loi d’une variable aléatoire discrète</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-loiusuelles" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Lois discrètes usuelles</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-fonction-repartition" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Loi d’une variable aléatoire réelle : fonction de répartition </span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-loi-activite" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Activités</span></a></div></li>
 </ul>
@@ -243,8 +245,21 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-actinum.html" class="internal"><span class="codenumber">2</span> <span class="title">Activités numériques</span></a></div>
 <ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-expgraph.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Exploration graphique</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-principeinversion.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Principe d’inversion et simulation de variables aléatoires discrètes</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-expgraph.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Exploration graphique</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-expgraph.html#subsec-graphbinomiale" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Représentation graphique de lois usuelles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-expgraph.html#subsec-histogramme-lois-usuelles" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Échantillonage d’une loi discrète</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-expgraph.html#subsec-lo-faible" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Loi Faible des grands nombres avec une loi géométrique</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-principeinversion.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Principe d’inversion et simulation de variables aléatoires discrètes</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-principeinversion.html#subsec-basetheo" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Base théorique</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-principeinversion.html#subsec-simulation-principe-inverse" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Simulation numérique</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-exercices.html" class="internal"><span class="codenumber">3</span> <span class="title">Exercices</span></a></div></li>
@@ -259,13 +274,16 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-principeinversion"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">2.2</span><span class="space"> </span><span class="title">Principe d’inversion et simulation de variables aléatoires discrètes</span>
 </h2>
-<section class="introduction" id="sec-principeinversion-2"><div class="para" id="sec-principeinversion-2-1">Dans cette section, nous allons étudier le <em class="emphasis">principe d’inversion</em>, une méthode mathématique pour simuler des variables aléatoires discrètes à partir d’une variable uniforme <span class="process-math">\(U \sim \mathcal{U}([0,1]) \)</span> ( <a href="sec-varalea.html#example-U" class="xref" data-knowl="./knowl/xref/example-U.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exemple 1.72: Loi uniforme sur un segment">Exemple 1.72</a> ).</div>
-<div class="para" id="sec-principeinversion-2-2">Nous appliquerons ensuite ce principe à des lois discrètes usuelles (Bernoulli, binomiale, géométrique et Poisson) et implémenterons des simulations en Python.</div></section><article class="warning remark-like" id="sec-principeinversion-3"><h3 class="heading">
-<span class="type">Mise en garde</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span>
+<section class="subsection" id="subsec-basetheo"><h3 class="heading hide-type">
+<span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="space"> </span><span class="title">Base théorique</span>
 </h3>
-<div class="para" id="sec-principeinversion-3-1">Les résultats énoncés dans cette section ne font pas partie du programme officiel et doivent être taités comme des exercices d’approfondissement.</div></article><article class="theorem theorem-like" id="thm-prininv"><h3 class="heading">
+<section class="introduction" id="subsec-basetheo-2"><div class="para" id="subsec-basetheo-2-1">Dans cette section, nous allons étudier le <em class="emphasis">principe d’inversion</em>, une méthode mathématique pour simuler des variables aléatoires discrètes à partir d’une variable uniforme <span class="process-math">\(U \sim \mathcal{U}([0,1]) \)</span> ( <a href="sec-varalea.html#example-U" class="xref" data-knowl="./knowl/xref/example-U.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exemple 1.75: Loi uniforme sur un segment">Exemple 1.75</a> ).</div>
+<div class="para" id="subsec-basetheo-2-2">Nous appliquerons ensuite ce principe à des lois discrètes usuelles (Bernoulli, binomiale, géométrique et Poisson) et implémenterons des simulations en Python.</div></section><article class="warning remark-like" id="subsec-basetheo-3"><h4 class="heading">
+<span class="type">Mise en garde</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsec-basetheo-3-1">Les résultats énoncés dans cette section ne font pas partie du programme officiel et doivent être taités comme des exercices d’approfondissement.</div></article><article class="theorem theorem-like" id="thm-prininv"><h4 class="heading">
 <span class="type">Théorème</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Principe d’inversion (énoncé mathématique).</span>
-</h3> <div class="para logical" id="thm-prininv-2-2">
+</h4> <div class="para logical" id="thm-prininv-2-2">
 <div class="para">Soit <span class="process-math">\(X \)</span> une <em class="emphasis">variable aléatoire réelle</em>. La fonction de répartition <span class="process-math">\(F_X \)</span> de <span class="process-math">\(X \)</span> est définie par (voir <a href="sec-varalea.html#subsec-fonction-repartition" class="internal" title="Sous-section 1.2.5: Loi d’une variable aléatoire réelle : fonction de répartition ">Sous-section 1.2.5</a>) :</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/subsec-fonction-repartition.html">
 \begin{equation*}
@@ -282,7 +300,7 @@ G(u)=\inf\{t\in\R\mid F_X(t)\geq u\}
 <div class="para">
 <aside class="aside aside-like" id="thm-prininv-2-2-9"><div class="para" id="thm-prininv-2-2-9-1">si <span class="process-math">\(F_X\)</span> est bijective alors <span class="process-math">\(G=F_X^{-1}\text{.}\)</span> Noter que <span class="process-math">\(F_X\)</span> n’est jamais bijective dans le cas d’une variable discrète.</div></aside> <span class="process-math">\(G\)</span> est appelé inverse généralisé de la fonction <span class="process-math">\(F_X\)</span>
 </div>
-</div> <div class="para" id="thm-prininv-2-3">Si <span class="process-math">\(U \sim \mathcal{U}([0,1]) \text{,}\)</span> alors la variable aléatoire <span class="process-math">\(Y=G(U)\)</span> suit la même loi que <span class="process-math">\(X \text{.}\)</span> </div></article><details id="thm-prininv-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Démonstration<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-prininv-3-1">
+</div> <div class="para" id="thm-prininv-2-3">Si <span class="process-math">\(U \sim \mathcal{U}([0,1]) \text{,}\)</span> alors la variable aléatoire <span class="process-math">\(Y=G(U)\)</span> suit la même loi que <span class="process-math">\(X \text{.}\)</span> </div></article><details id="thm-prininv-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Démonstration<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-prininv-3-1">
 <div class="para">Montrons d’abords que pour tous <span class="process-math">\(u\in [0,1]\)</span> et <span class="process-math">\(t\in\R\)</span>
 </div>
 <div class="displaymath process-math" id="eq-equivbase">
@@ -308,7 +326,7 @@ F_X(t)\geq u \Longleftrightarrow t\geq G(u)\tag{2.1}
 </div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-equivbase.html">
 \begin{equation*}
-F_Y(t)=\Pr(G(U)\leq t)=\Pr(U\leq F_X(t))=F_U\bigl(F_X(t)\bigr)
+F_Y(t)=\Pr{G(U)\leq t}=\Pr{U\leq F_X(t)}=F_U\bigl(F_X(t)\bigr)
 \end{equation*}
 </div>
 <div class="para">mais comme <span class="process-math">\(U\sim\mathscr U([0,1])\)</span> alors <span class="process-math">\(F_U(u)=u\)</span> pour tout <span class="process-math">\(u\in[0,1]\)</span> et ainsi</div>
@@ -319,40 +337,43 @@ F_Y(t)=F_X(t)
 </div>
 <div class="para">Alors <span class="process-math">\(Y\)</span> suit la même loi que <span class="process-math">\(X\text{.}\)</span>
 </div>
-</div></article></details><article class="corollary theorem-like" id="cor-prininv"><h3 class="heading">
+</div></article></details><article class="corollary theorem-like" id="cor-prininv"><h4 class="heading">
 <span class="type">Corollaire</span><span class="space"> </span><span class="codenumber">2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Cas où les valeurs de <span class="process-math">\(X\)</span> sont des points isolés.</span>
-</h3>
+</h4>
 <div class="para logical" id="cor-prininv-2-1">
 <div class="para">Soit <span class="process-math">\(X\)</span> une VADR dont l’ensemble des valeurs s’organise en une suite strictement croissante <span class="process-math">\((x_n)_{n\in I}\)</span> avec <span class="process-math">\(I=\iic{0,N}\)</span> si <span class="process-math">\(X(\Omega)\)</span> est fini et <span class="process-math">\(I=\N\)</span> sinon. On pose  pour tout <span class="process-math">\(n\in I\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
-p_n=\Pr(X=x_n) \qtext{et} u_n=\sum_{k=0}^np_k
+p_n=\Pr{X=x_n} \qtext{et} u_n=\sum_{k=0}^np_k
 \end{equation*}
 </div>
 <div class="para">
-<aside class="aside aside-like" id="cor-prininv-2-1-8"><div class="para" id="cor-prininv-2-1-8-1">Si pour un certain <span class="process-math">\(n\)</span> on a <span class="process-math">\(p_n=0\)</span> alors <span class="process-math">\(u_n=u_{n-1}\)</span> et  donc l’evénement <span class="process-math">\((u_{n-1}\lt U\leq u_{n})\)</span> est vide. La formule reste donc valable dans ce cas.</div></aside> Alors <span class="process-math">\(\Pr(X=x_0)=\Pr(U\leq u_0)\)</span> et pour tout <span class="process-math">\(n\in I\setminus \{0\}\)</span>
+<aside class="aside aside-like" id="cor-prininv-2-1-8"><div class="para" id="cor-prininv-2-1-8-1">Si pour un certain <span class="process-math">\(n\)</span> on a <span class="process-math">\(p_n=0\)</span> alors <span class="process-math">\(u_n=u_{n-1}\)</span> et  donc l’evénement <span class="process-math">\((u_{n-1}\lt U\leq u_{n})\)</span> est vide. La formule reste donc valable dans ce cas.</div></aside> Alors <span class="process-math">\(\Pr{X=x_0}=\Pr{U\leq u_0}\)</span> et pour tout <span class="process-math">\(n\in I\setminus \{0\}\)</span>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
-\Pr(X=x_n)=(u_{n-1}\lt U\leq u_n)
+\Pr{X=x_n}=(u_{n-1}\lt U\leq u_n)
 \end{equation*}
 </div>
-</div></article><details id="cor-prininv-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Démonstration<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="cor-prininv-3-1">
-<div class="para">Pour <span class="process-math">\(n=0\text{,}\)</span> <span class="process-math">\(\Pr(U\leq u_0)=F_U(p_0)=p_0\)</span> et pour tout <span class="process-math">\(n\in I\setminus\{0\}\)</span>
+</div></article><details id="cor-prininv-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Démonstration<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="cor-prininv-3-1">
+<div class="para">Pour <span class="process-math">\(n=0\text{,}\)</span> <span class="process-math">\(\Pr{U\leq u_0}=F_U(p_0)=p_0\)</span> et pour tout <span class="process-math">\(n\in I\setminus\{0\}\)</span>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
-\Pr(u_{n-1}\lt U\leq u_n)=F_U(u_n)-F_U(u_{n-1})=u_n-u_{n-1}=p_n
+\Pr{u_{n-1}\lt U\leq u_n}=F_U(u_n)-F_U(u_{n-1})=u_n-u_{n-1}=p_n
 \end{equation*}
 </div>
-</div></article></details><details id="cor-prininv-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Explication<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="cor-prininv-4-1">Si <span class="process-math">\(X\)</span> prend comme valeurs les termes d’une suite strictement croissantes de nombres réels <span class="process-math">\((x_n)_n\text{,}\)</span> la probabilité pour la valeur <span class="process-math">\(x_n\)</span> se réalise est la même que si on tire un nombre <span class="process-math">\(u\)</span> selon la  loi uniforme <span class="process-math">\(\mathscr{U}([0,1])\)</span> et qu’on cherche ensuite sa position dans la suite préalablement formée <span class="process-math">\(u_0,u_1,\ldots,u_n,\ldots\text{.}\)</span> La variable <span class="process-math">\(Y\)</span> qui prend comme valeur l’indice <span class="process-math">\(n\)</span> tel que <span class="process-math">\(u_{n-1}\lt u\leq u_n\)</span> suit la même loi que <span class="process-math">\(X\text{.}\)</span>
+</div></article></details><details id="cor-prininv-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Explication<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="cor-prininv-4-1">Si <span class="process-math">\(X\)</span> prend comme valeurs les termes d’une suite strictement croissantes de nombres réels <span class="process-math">\((x_n)_n\text{,}\)</span> la probabilité pour la valeur <span class="process-math">\(x_n\)</span> se réalise est la même que si on tire un nombre <span class="process-math">\(u\)</span> selon la  loi uniforme <span class="process-math">\(\mathscr{U}([0,1])\)</span> et qu’on cherche ensuite sa position dans la suite préalablement formée <span class="process-math">\(u_0,u_1,\ldots,u_n,\ldots\text{.}\)</span> La variable <span class="process-math">\(Y\)</span> qui prend comme valeur l’indice <span class="process-math">\(n\)</span> tel que <span class="process-math">\(u_{n-1}\lt u\leq u_n\)</span> suit la même loi que <span class="process-math">\(X\text{.}\)</span>
 </div>
 <div class="para" id="cor-prininv-4-2">Tous langage de programmation qui se respecte offre au moins une fonction pseudo-aléatoire qui simule le comportement de la loi <span class="process-math">\(\mathscr U([0,1])\text{.}\)</span> Trouver la position d’un nombre <span class="process-math">\(u\)</span> tiré selon cette loi dans une une liste croissante préetablie de nombres est un problème de tri. Un tri par insertion est parfaitement adapté à ce problème.</div>
-<div class="para" id="cor-prininv-4-3">Il peut toutefois être plus rapide de trouver une expression théorique de <span class="process-math">\(Y\)</span> et de l’implémenter directement comme une fonction.</div></article></details><article class="activity project-like" id="sec-principeinversion-6"><h6 class="heading">
-<span class="type">Activité</span><span class="codenumber"> 2.3 - </span> <span class="title">Simulation d’une variable finie.</span>
+<div class="para" id="cor-prininv-4-3">Il peut toutefois être plus rapide de trouver une expression théorique de <span class="process-math">\(Y\)</span> et de l’implémenter directement comme une fonction.</div></article></details></section><section class="subsection" id="subsec-simulation-principe-inverse"><h3 class="heading hide-type">
+<span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="space"> </span><span class="title">Simulation numérique</span>
+</h3>
+<article class="activity project-like" id="subsec-simulation-principe-inverse-2"><h6 class="heading">
+<span class="type">Activité</span><span class="codenumber"> 2.5 - </span> <span class="title">Simulation d’une variable finie.</span>
 </h6>
-<div class="introduction" id="sec-principeinversion-6-2"><div class="para logical" id="sec-principeinversion-6-2-1">
+<div class="introduction" id="subsec-simulation-principe-inverse-2-2"><div class="para logical" id="subsec-simulation-principe-inverse-2-2-1">
 <div class="para">On veut simuler une variable aléatoire discrète avec le principe d’inversion. Les données sont les suivantes : les valeurs prises par la variable sont les entiers de 1 à 10 avec la liste des probabilité probabilités respectives</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -360,20 +381,20 @@ L=(1,0,0.1,0.2,0.25,0.15,0,0.05,0.05)
 \end{equation*}
 </div>
 </div></div>
-<article class="task exercise-like" id="sec-principeinversion-6-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-principeinversion-6-3-1-1">Écrire un programme Python qui simule la variable. Visualiser graphiquement le bon fonctionnement du programme avec un échantillon de 1000 valeurs de la variable simulée.</div>
-<div class="para logical" id="sec-principeinversion-6-3-1-2">
+<article class="task exercise-like" id="subsec-simulation-principe-inverse-2-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="subsec-simulation-principe-inverse-2-3-1-1">Écrire un programme Python qui simule la variable. Visualiser graphiquement le bon fonctionnement du programme avec un échantillon de 1000 valeurs de la variable simulée.</div>
+<div class="para logical" id="subsec-simulation-principe-inverse-2-3-1-2">
 <div class="para">Toutes les fonctions de la biliothèque <code class="code-inline tex2jax_ignore">Numpy</code> peuvent être utilisée. En particulier</div>
-<ul class="disc" id="sec-principeinversion-6-3-1-2-2">
-<li id="sec-principeinversion-6-3-1-2-2-1"><div class="para" id="sec-principeinversion-6-3-1-2-2-1-1">
+<ul class="disc" id="subsec-simulation-principe-inverse-2-3-1-2-2">
+<li id="subsec-simulation-principe-inverse-2-3-1-2-2-1"><div class="para" id="subsec-simulation-principe-inverse-2-3-1-2-2-1-1">
 <code class="code-inline tex2jax_ignore">np.random.uniform</code> qui génère une variable aléatoire qui suit la loi <span class="process-math">\(\mathscr U([a,b])\)</span> ;</div></li>
-<li id="sec-principeinversion-6-3-1-2-2-2"><div class="para" id="sec-principeinversion-6-3-1-2-2-2-1">
+<li id="subsec-simulation-principe-inverse-2-3-1-2-2-2"><div class="para" id="subsec-simulation-principe-inverse-2-3-1-2-2-2-1">
 <code class="code-inline tex2jax_ignore">np.cumsum</code> qui retourne la liste des «sommes cummulées» de la  liste fournie ;</div></li>
-<li id="sec-principeinversion-6-3-1-2-2-3"><div class="para" id="sec-principeinversion-6-3-1-2-2-3-1">
+<li id="subsec-simulation-principe-inverse-2-3-1-2-2-3"><div class="para" id="subsec-simulation-principe-inverse-2-3-1-2-2-3-1">
 <code class="code-inline tex2jax_ignore">np.searchsorted</code> qui permet de trouver l’indice d’un élément dans une liste ordonnée ;</div></li>
 </ul>
 </div>
-<div class="solutions"><details id="sec-principeinversion-6-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="sec-principeinversion-6-3-2-1">Deux fonctions de simultions, la première utilise <code class="code-inline tex2jax_ignore">random.uniform</code> de la bibliothèque <code class="code-inline tex2jax_ignore">numpy</code> et la deuxième <code class="code-inline tex2jax_ignore">random</code> de la bibliothèque <span class="process-math">\(random\text{.}\)</span>  Vous pouver augmenter la valeur de <code class="code-inline tex2jax_ignore">N</code> pour une meilleure qualité de la simulation. <div id="sec-principeinversion-6-3-2-1-6" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">import numpy as np
+<div class="solutions"><details id="subsec-simulation-principe-inverse-2-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="subsec-simulation-principe-inverse-2-3-2-1">Deux fonctions de simultions, la première utilise <code class="code-inline tex2jax_ignore">random.uniform</code> de la bibliothèque <code class="code-inline tex2jax_ignore">numpy</code> et la deuxième <code class="code-inline tex2jax_ignore">random</code> de la bibliothèque <span class="process-math">\(random\text{.}\)</span>  Vous pouver augmenter la valeur de <code class="code-inline tex2jax_ignore">N</code> pour une meilleure qualité de la simulation. <div id="subsec-simulation-principe-inverse-2-3-2-1-6" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">import numpy as np
 from random import random 
 import matplotlib.pyplot as plt
 
@@ -443,26 +464,26 @@ plt.grid(True, linestyle="--", alpha=0.6)
 # Affichage
 plt.show()
 </script></div>
-</div></div></details></div></article></article><article class="activity project-like" id="sec-principeinversion-7"><h6 class="heading">
-<span class="type">Activité</span><span class="codenumber"> 2.4 - </span> <span class="title">Simulation des lois discrètes usuelles.</span>
+</div></div></details></div></article></article><article class="activity project-like" id="subsec-simulation-principe-inverse-3"><h6 class="heading">
+<span class="type">Activité</span><span class="codenumber"> 2.6 - </span> <span class="title">Simulation des lois discrètes usuelles.</span>
 </h6>
-<div class="introduction" id="sec-principeinversion-7-2"><div class="para logical" id="sec-principeinversion-7-2-1">
+<div class="introduction" id="subsec-simulation-principe-inverse-3-2"><div class="para logical" id="subsec-simulation-principe-inverse-3-2-1">
 <div class="para">Les objectifs de cette activité sont :</div>
-<ul class="disc" id="sec-principeinversion-7-2-1-1">
-<li id="sec-principeinversion-7-2-1-1-1"><div class="para" id="p-derived-sec-principeinversion-7-2-1-1-1">Comprendre le principe d’inversion et son fondement mathématique.</div></li>
-<li id="sec-principeinversion-7-2-1-1-2"><div class="para" id="p-derived-sec-principeinversion-7-2-1-1-2">Appliquer ce principe pour simuler des variables aléatoires discrètes.</div></li>
-<li id="sec-principeinversion-7-2-1-1-3"><div class="para" id="p-derived-sec-principeinversion-7-2-1-1-3">Implémenter des simulations en Python pour les lois Bernoulli, binomiale, géométrique et Poisson.</div></li>
+<ul class="disc" id="subsec-simulation-principe-inverse-3-2-1-1">
+<li id="subsec-simulation-principe-inverse-3-2-1-1-1"><div class="para" id="p-derived-subsec-simulation-principe-inverse-3-2-1-1-1">Comprendre le principe d’inversion et son fondement mathématique.</div></li>
+<li id="subsec-simulation-principe-inverse-3-2-1-1-2"><div class="para" id="p-derived-subsec-simulation-principe-inverse-3-2-1-1-2">Appliquer ce principe pour simuler des variables aléatoires discrètes.</div></li>
+<li id="subsec-simulation-principe-inverse-3-2-1-1-3"><div class="para" id="p-derived-subsec-simulation-principe-inverse-3-2-1-1-3">Implémenter des simulations en Python pour les lois Bernoulli, binomiale, géométrique et Poisson.</div></li>
 </ul>
 </div></div>
-<article class="task exercise-like" id="sec-principeinversion-7-3"><h4 class="heading">
+<article class="task exercise-like" id="subsec-simulation-principe-inverse-3-3"><h5 class="heading">
 <span class="codenumber">(a)</span><span class="space"> </span><span class="title">Simulation de la loi de Bernoulli.</span>
-</h4>
-<div class="para logical" id="sec-principeinversion-7-3-2-1"><ol class="decimal" id="sec-principeinversion-7-3-2-1-1">
-<li id="sec-principeinversion-7-3-2-1-1-1"><div class="para" id="p-derived-sec-principeinversion-7-3-2-1-1-1">Écrire un programme Python pour simuler une variable de Bernoulli en utilisant le principe d’inversion.</div></li>
-<li id="sec-principeinversion-7-3-2-1-1-2"><div class="para" id="p-derived-sec-principeinversion-7-3-2-1-1-2">Générer 1000 simulations et vérifier que la proportion de <span class="process-math">\(1 \)</span> est proche de <span class="process-math">\(p \text{.}\)</span>
+</h5>
+<div class="para logical" id="subsec-simulation-principe-inverse-3-3-2-1"><ol class="decimal" id="subsec-simulation-principe-inverse-3-3-2-1-1">
+<li id="subsec-simulation-principe-inverse-3-3-2-1-1-1"><div class="para" id="p-derived-subsec-simulation-principe-inverse-3-3-2-1-1-1">Écrire un programme Python pour simuler une variable de Bernoulli en utilisant le principe d’inversion.</div></li>
+<li id="subsec-simulation-principe-inverse-3-3-2-1-1-2"><div class="para" id="p-derived-subsec-simulation-principe-inverse-3-3-2-1-1-2">Générer 1000 simulations et vérifier que la proportion de <span class="process-math">\(1 \)</span> est proche de <span class="process-math">\(p \text{.}\)</span>
 </div></li>
 </ol></div>
-<div class="solutions"><details id="sec-principeinversion-7-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="sec-principeinversion-7-3-3-1">Code Python : <div id="sec-principeinversion-7-3-3-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">from random import random 
+<div class="solutions"><details id="subsec-simulation-principe-inverse-3-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="subsec-simulation-principe-inverse-3-3-3-1">Code Python : <div id="subsec-simulation-principe-inverse-3-3-3-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">from random import random 
 def x_bernoulli(p): 
     U = random() 
     return 1 if U < p else 0 
@@ -472,14 +493,14 @@ simulations = [x_bernoulli(p) for _ in range(1000)]
 proportion = sum(simulations)/len(simulations)*1. 
 print(f"Proportion de succès : {proportion}")
 </script></div>
-</div></div></details></div></article><article class="task exercise-like" id="sec-principeinversion-7-4"><h4 class="heading">
+</div></div></details></div></article><article class="task exercise-like" id="subsec-simulation-principe-inverse-3-4"><h5 class="heading">
 <span class="codenumber">(b)</span><span class="space"> </span><span class="title">Simulation de la loi binomiale.</span>
-</h4>
-<div class="para logical" id="sec-principeinversion-7-4-2-1"><ol class="decimal" id="sec-principeinversion-7-4-2-1-1">
-<li id="sec-principeinversion-7-4-2-1-1-1"><div class="para" id="p-derived-sec-principeinversion-7-4-2-1-1-1">Écrire un programme Python pour simuler une variable binomiale en fonction la variable de Bernouilli écrite dans le code précédent.</div></li>
-<li id="sec-principeinversion-7-4-2-1-1-2"><div class="para" id="p-derived-sec-principeinversion-7-4-2-1-1-2">Générer 1000 simulations et comparer graphiquement la distribution obtenue avec la loi théorique.</div></li>
+</h5>
+<div class="para logical" id="subsec-simulation-principe-inverse-3-4-2-1"><ol class="decimal" id="subsec-simulation-principe-inverse-3-4-2-1-1">
+<li id="subsec-simulation-principe-inverse-3-4-2-1-1-1"><div class="para" id="p-derived-subsec-simulation-principe-inverse-3-4-2-1-1-1">Écrire un programme Python pour simuler une variable binomiale en fonction la variable de Bernouilli écrite dans le code précédent.</div></li>
+<li id="subsec-simulation-principe-inverse-3-4-2-1-1-2"><div class="para" id="p-derived-subsec-simulation-principe-inverse-3-4-2-1-1-2">Générer 1000 simulations et comparer graphiquement la distribution obtenue avec la loi théorique.</div></li>
 </ol></div>
-<div class="solutions"><details id="sec-principeinversion-7-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="sec-principeinversion-7-4-3-1">Code Python : <div id="sec-principeinversion-7-4-3-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage"># Importer les bibliothèques nécessaires
+<div class="solutions"><details id="subsec-simulation-principe-inverse-3-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="subsec-simulation-principe-inverse-3-4-3-1">Code Python : <div id="subsec-simulation-principe-inverse-3-4-3-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage"># Importer les bibliothèques nécessaires
 import matplotlib.pyplot as plt
 import math
 
@@ -523,16 +544,16 @@ def afficher_histogramme_binomiale(n, p, N):
 def afficher_histogramme(n=10, p=0.3, N=1000):
     afficher_histogramme_binomiale(n, p, N)
 </script></div>
-</div></div></details></div></article><article class="task exercise-like" id="sec-principeinversion-7-5"><h4 class="heading">
+</div></div></details></div></article><article class="task exercise-like" id="subsec-simulation-principe-inverse-3-5"><h5 class="heading">
 <span class="codenumber">(c)</span><span class="space"> </span><span class="title">Simulation de la loi géométrique.</span>
-</h4>
-<div class="para logical" id="sec-principeinversion-7-5-2-1"><ol class="decimal" id="sec-principeinversion-7-5-2-1-1">
-<li id="sec-principeinversion-7-5-2-1-1-1"><div class="para" id="sec-principeinversion-7-5-2-1-1-1-1">Simplifier le problème d’inversion d’une loi géométrique.</div></li>
-<li id="sec-principeinversion-7-5-2-1-1-2"><div class="para" id="p-derived-sec-principeinversion-7-5-2-1-1-2">Écrire un programme Python pour la simuler.</div></li>
-<li id="sec-principeinversion-7-5-2-1-1-3"><div class="para" id="p-derived-sec-principeinversion-7-5-2-1-1-3">Générer 1000 simulations et vérifier que la moyenne est proche de <span class="process-math">\(\frac{1}{p} \text{.}\)</span>
+</h5>
+<div class="para logical" id="subsec-simulation-principe-inverse-3-5-2-1"><ol class="decimal" id="subsec-simulation-principe-inverse-3-5-2-1-1">
+<li id="subsec-simulation-principe-inverse-3-5-2-1-1-1"><div class="para" id="subsec-simulation-principe-inverse-3-5-2-1-1-1-1">Simplifier le problème d’inversion d’une loi géométrique.</div></li>
+<li id="subsec-simulation-principe-inverse-3-5-2-1-1-2"><div class="para" id="p-derived-subsec-simulation-principe-inverse-3-5-2-1-1-2">Écrire un programme Python pour la simuler.</div></li>
+<li id="subsec-simulation-principe-inverse-3-5-2-1-1-3"><div class="para" id="p-derived-subsec-simulation-principe-inverse-3-5-2-1-1-3">Générer 1000 simulations et vérifier que la moyenne est proche de <span class="process-math">\(\frac{1}{p} \text{.}\)</span>
 </div></li>
 </ol></div>
-<div class="solutions"><details id="sec-principeinversion-7-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="sec-principeinversion-7-5-3-1"><div id="sec-principeinversion-7-5-3-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">from math import log 
+<div class="solutions"><details id="subsec-simulation-principe-inverse-3-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="subsec-simulation-principe-inverse-3-5-3-1"><div id="subsec-simulation-principe-inverse-3-5-3-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">from math import log 
 def x_geometrique(p): 
     U = random() 
     return int(log(1 - U) / log(1 - p)) + 1 
@@ -542,14 +563,14 @@ simulations = [x_geometrique(p) for _ in range(1000)]
 moyenne = sum(simulations) / len(simulations)*1.
 print(f"Moyenne empirique : {moyenne}")
 print(f"Moyenne théorique : {1/p}")
-</script></div></div></div></details></div></article><article class="task exercise-like" id="sec-principeinversion-7-6"><h4 class="heading">
+</script></div></div></div></details></div></article><article class="task exercise-like" id="subsec-simulation-principe-inverse-3-6"><h5 class="heading">
 <span class="codenumber">(d)</span><span class="space"> </span><span class="title">Simulation de la loi de Poisson.</span>
-</h4>
-<div class="para logical" id="sec-principeinversion-7-6-2-1"><ol class="decimal" id="sec-principeinversion-7-6-2-1-1">
-<li id="sec-principeinversion-7-6-2-1-1-1"><div class="para" id="p-derived-sec-principeinversion-7-6-2-1-1-1">Écrire un programme Python pour simuler une variable de Poisson en utilisant le principe d’inversion.</div></li>
-<li id="sec-principeinversion-7-6-2-1-1-2"><div class="para" id="p-derived-sec-principeinversion-7-6-2-1-1-2">Générer 1000 simulations et la comparer graphiquement avec la distribution théorique.</div></li>
+</h5>
+<div class="para logical" id="subsec-simulation-principe-inverse-3-6-2-1"><ol class="decimal" id="subsec-simulation-principe-inverse-3-6-2-1-1">
+<li id="subsec-simulation-principe-inverse-3-6-2-1-1-1"><div class="para" id="p-derived-subsec-simulation-principe-inverse-3-6-2-1-1-1">Écrire un programme Python pour simuler une variable de Poisson en utilisant le principe d’inversion.</div></li>
+<li id="subsec-simulation-principe-inverse-3-6-2-1-1-2"><div class="para" id="p-derived-subsec-simulation-principe-inverse-3-6-2-1-1-2">Générer 1000 simulations et la comparer graphiquement avec la distribution théorique.</div></li>
 </ol></div>
-<div class="solutions"><details id="sec-principeinversion-7-6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="sec-principeinversion-7-6-3-1"><div id="sec-principeinversion-7-6-3-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">import random
+<div class="solutions"><details id="subsec-simulation-principe-inverse-3-6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="subsec-simulation-principe-inverse-3-6-3-1"><div id="subsec-simulation-principe-inverse-3-6-3-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">import random
 import numpy as np
 import matplotlib.pyplot as plt
 import math
@@ -595,7 +616,7 @@ plt.grid(True, linestyle="--", alpha=0.6)
 
 # Affichage
 plt.show()
-</script></div></div></div></details></div></article></article></section></div>
+</script></div></div></div></details></div></article></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-expgraph.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-exercices.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

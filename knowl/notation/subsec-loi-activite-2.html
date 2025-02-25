@@ -19,7 +19,7 @@
 <div class="para">Quelle est la loi de <span class="process-math">\(X\)</span> ?</div>
 <div class="solutions">
 <details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Réponse</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para">
-<span class="process-math">\(X(\Omega)\subset[\![0,n]\!]\)</span> et <span class="process-math">\(\forall k\in X(\Omega),\; \displaystyle \Pr(X=k)=\frac{\binom{pN}k\binom{(1-p)N}{n-k}}{\binom Nn}\)</span>
+<span class="process-math">\(X(\Omega)\subset[\![0,n]\!]\)</span> et <span class="process-math">\(\forall k\in X(\Omega),\; \displaystyle \Pr{X=k}=\frac{\binom{pN}k\binom{(1-p)N}{n-k}}{\binom Nn}\)</span>
 </div></div></details><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical">
 <div class="para">Le nombre <span class="process-math">\(k\)</span> de tests positifs dans l’échantiloon ne peut dépasser <span class="process-math">\(n\text{,}\)</span> ni <span class="process-math">\(pN\)</span> le nombre total d’individus positifs dans toute la population. D’un autre côté si <span class="process-math">\(N-pN\lt n\)</span> alors on est sûr d’avoir au moins <span class="process-math">\(n-(N-pN)\)</span> tests positifs dans l’échantillon. Ainsi</div>
@@ -34,7 +34,7 @@
 <div class="para">Ensuite, il y a <span class="process-math">\(\binom Nn\)</span> façon de prélever équiprobablement <span class="process-math">\(n\)</span> individus dans une population de <span class="process-math">\(N\)</span> éléments. Parmi ces prélévements, ceux qui contiendront exactement <span class="process-math">\(k\)</span> individus positifs sont au nombre de <span class="process-math">\(\binom{pN}{k}\binom{N-pN}{n-k}\)</span> car il s’agit de prélever <span class="process-math">\(k\)</span> indivdus parmi <span class="process-math">\(pN\)</span> qui sont positifs au test et <span class="process-math">\(n-k\)</span> individus parmi <span class="process-math">\(N-pN\)</span> qui ne le sont pas. Vu l’équiprobabilité des prélèvements on a donc</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\Pr(X=k)=\frac{\binom{pN}{k}\binom{(1-p)N}{n-k}}{\binom Nn}
+\Pr{X=k}=\frac{\binom{pN}{k}\binom{(1-p)N}{n-k}}{\binom Nn}
 \end{equation*}
 </div>
 <div class="para">On notera <span class="process-math">\(\mathscr H(N,n,p)\)</span> la loi de la variable <span class="process-math">\(X\text{.}\)</span> Elle est dite loi hypergéomètrique de paramètres <span class="process-math">\(N,n\)</span> et <span class="process-math">\(p\text{.}\)</span>
@@ -44,7 +44,7 @@
 </div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para">On note <span class="process-math">\(X_k\)</span> le résultat du test du <span class="process-math">\(k^\text{e}\)</span> individu. Quelle est la loi de <span class="process-math">\(X_k\)</span> ?</div>
 <div class="solutions">
-<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Réponse</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para"><span class="process-math">\(\Pr(X_k=1)=p\)</span></div></div></details><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Réponse</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para"><span class="process-math">\(\Pr{X_k=1}=p\)</span></div></div></details><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical">
 <div class="para">Prélever un échantillon de <span class="process-math">\(n\)</span> individus de façon équiprobable revient à prelever sans remise un à un et de façon équiporbable les <span class="process-math">\(n\)</span> individus. Notons <span class="process-math">\(X_k\)</span> la variable de Bernouilli qui vaut <span class="process-math">\(1\)</span> si le <span class="process-math">\(k^\text{e}\)</span> individu prélevé de la population est positif au test. Alors <span class="process-math">\(X=X_1+X_2+\cdots+X_n\text{.}\)</span> La question précédente montre ainsi que pour tout <span class="process-math">\(k\in[\![1,N]\!]\)</span>
 </div>
 <div class="displaymath process-math">
@@ -55,20 +55,20 @@ S_k=X_1+X_2+\cdots+X_k\sim\mathscr H(N,k,p)
 <div class="para">Soit maintenant <span class="process-math">\(k\in[\![1,N-1]\!]\text{.}\)</span> Grâce à la formule des probabilités totales, on peut écrire</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\Pr(X_{k+1}=1)=\sum_{i=0}^{k}\Pr(X_{k+1}=1\mid S_{k}=i)\Pr(S_{k}=i)
+\Pr{X_{k+1}=1}=\sum_{i=0}^{k}\Pr{X_{k+1}=1\giv S_{k}=i}\Pr{S_{k}=i}
 \end{equation*}
 </div>
 <div class="para">
-<span class="process-math">\(\Pr(X_{k+1}=1\mid S_{k}=i)\)</span> est la probabilité que le <span class="process-math">\((k+1)^{\text{e}}\)</span> individu prélevé soit positif sachant que <span class="process-math">\(i\)</span> individus ont été positifs pour les <span class="process-math">\(k\)</span> prélévements précédents. Dans ces condition, il reste <span class="process-math">\(N-k\)</span> individu dans la population dont <span class="process-math">\(pN-i\)</span> sont positifs. Par équiprobabilité des prélévements on a donc</div>
+<span class="process-math">\(\Pr{X_{k+1}=1\giv S_{k}=i}\)</span> est la probabilité que le <span class="process-math">\((k+1)^{\text{e}}\)</span> individu prélevé soit positif sachant que <span class="process-math">\(i\)</span> individus ont été positifs pour les <span class="process-math">\(k\)</span> prélévements précédents. Dans ces condition, il reste <span class="process-math">\(N-k\)</span> individu dans la population dont <span class="process-math">\(pN-i\)</span> sont positifs. Par équiprobabilité des prélévements on a donc</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\Pr(X_k=1\mid S_{k-1}=i)=\frac{pN-i}{N-k}
+\Pr{X_k=1 \giv  S_{k-1}=i}=\frac{pN-i}{N-k}
 \end{equation*}
 </div>
 <div class="para">Ainsi</div>
 <div class="displaymath process-math">
 \begin{align*}
-\Pr(X_{k+1}=1) \amp= \sum_{i=0}^{k}\frac{pN-i}{N-k}\cdot \frac{\binom{pN}{i}\binom{(1-p)N}{k-i}}{\binom{N}{k}} \\
+\Pr{X_{k+1}=1} \amp= \sum_{i=0}^{k}\frac{pN-i}{N-k}\cdot \frac{\binom{pN}{i}\binom{(1-p)N}{k-i}}{\binom{N}{k}} \\
 \amp=\frac{1}{(N-k)\binom Nk}\textstyle\left(pN\sum\limits_{i=0}^k\binom{pN}{i}\binom{(1-p)N}{k-i}-\sum\limits_{i=0}^k i\binom{pN}{i}\binom{(1-p)N}{k-i}\right) \\
 \amp= \frac{pN}{(N-k)\binom Nk}\left(\textstyle\sum\limits_{i=0}^k\binom{pN}{i}\binom{(1-p)N}{k-i}- \sum\limits_{i=1}^k \binom{pN-1}{i-1}\binom{(1-p)N}{k-i}\right) \\
 \amp= \frac{pN}{(N-k)\binom Nk}\left(\binom Nk-\binom{N-1}{k-1}\right) \\

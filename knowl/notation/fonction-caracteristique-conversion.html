@@ -22,7 +22,7 @@
 <div class="para">Soit <span class="process-math">\(X \)</span> une variable aléatoire à valeurs dans <span class="process-math">\(\Z\text{.}\)</span> On définit sa fonction caractéristique <span class="process-math">\(\phi_X \)</span> par :</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\phi_X(t) = \Es\left[e^{itX}\right] = \sum_{n\in\Z} \Pr(X = n) e^{int},
+\phi_X(t) = \EE\left[e^{itX}\right] = \sum_{n\in\Z} \Pr{X = n} e^{int},
 \end{equation*}
 </div>
 <div class="para">où <span class="process-math">\(t \in \R \text{.}\)</span>
@@ -37,7 +37,7 @@
 <li><div class="para">La fonction caractéristique <span class="process-math">\(\phi_X(t) \)</span> est bien définie pour tout <span class="process-math">\(t \in \R \text{,}\)</span> car <span class="process-math">\(|e^{itX}|=1\)</span> et donc <span class="process-math">\(e^{itX}\)</span> est sommable.</div></li>
 <li><div class="para">Les fonctions <span class="process-math">\(t\mapsto e^{int} \)</span> sont <span class="process-math">\(2\pi \)</span>-périodiques, donc <span class="process-math">\(\phi_X \)</span> est également <span class="process-math">\(2\pi \)</span>-périodique. En outre, on peut écrire<div class="displaymath process-math">
 \begin{equation*}
-\phi_X(t)=\sum_{n=0}^{+\infty}\Pr(X=n)e^{int}+\sum_{n=1}^{+\infty}\Pr(X=-n)e^{-int}.
+\phi_X(t)=\sum_{n=0}^{+\infty}\Pr{X=n}e^{int}+\sum_{n=1}^{+\infty}\Pr{X=-n}e^{-int}.
 \end{equation*}
 </div>Les sommes des deux séries dans cette expression sont continues par convergence normale sur <span class="process-math">\(\R\text{.}\)</span> D’où la continuité de <span class="process-math">\(\phi_X \)</span> sur <span class="process-math">\(\R\text{.}\)</span>
 </div></li>
@@ -92,25 +92,25 @@
 <div class="para logical"><ol class="decimal" id="fonction-caracteristique-conversion-6-2-1-1">
 <li><div class="para">Montrer que si <span class="process-math">\(X \)</span> admet un moment d’ordre <span class="process-math">\(p \text{,}\)</span> alors <span class="process-math">\(\phi_X \)</span> est de classe <span class="process-math">\(\mathcal{C}^p \)</span> et :<div class="displaymath process-math">
 \begin{equation*}
-\phi_X^{(k)}(0) = i^k \Es(X^k) \quad \text{pour tout } k \in \{1, \dots, p\}.
+\phi_X^{(k)}(0) = i^k \EE(X^k) \quad \text{pour tout } k \in \{1, \dots, p\}.
 \end{equation*}
 </div>
 </div></li>
 <li><div class="para">Montrer que si <span class="process-math">\(X\)</span> admet des moments à tout ordre et s’il existe des constantes <span class="process-math">\(c,r\gt 0\)</span> telles que<div class="displaymath process-math">
 \begin{equation*}
-\forall n\in\N,\; \Es(|X|^n)\leq cr^n
+\forall n\in\N,\; \EE(|X|^n)\leq cr^n
 \end{equation*}
 </div>alors <span class="process-math">\(\phi_X\)</span> est développable en série entière sur <span class="process-math">\(\R\)</span> et<div class="displaymath process-math">
 \begin{equation*}
-\phi_X(t)=\sum_{n=0}^{+\infty}\frac{i^n}{n!}\Es(X^n)t^n
+\phi_X(t)=\sum_{n=0}^{+\infty}\frac{i^n}{n!}\EE(X^n)t^n
 \end{equation*}
 </div>
 </div></li>
 </ol></div>
 <div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical"><ol class="decimal" id="fonction-caracteristique-conversion-6-3-1-1">
-<li><div class="para">Si <span class="process-math">\(X \)</span> admet un moment d’ordre <span class="process-math">\(p \text{,}\)</span> alors la série <span class="process-math">\(\sum_{n=-\infty}^{+\infty} n^k \Pr(X = n) \)</span> converge pour tout <span class="process-math">\(k \leq p \text{.}\)</span> Par le théorème de dérivation terme à terme, <span class="process-math">\(\phi_X \)</span> est de classe <span class="process-math">\(\mathcal{C}^p \text{,}\)</span> et :<div class="displaymath process-math">
+<li><div class="para">Si <span class="process-math">\(X \)</span> admet un moment d’ordre <span class="process-math">\(p \text{,}\)</span> alors la série <span class="process-math">\(\sum_{n=-\infty}^{+\infty} n^k \Pr{X = n} \)</span> converge pour tout <span class="process-math">\(k \leq p \text{.}\)</span> Par le théorème de dérivation terme à terme, <span class="process-math">\(\phi_X \)</span> est de classe <span class="process-math">\(\mathcal{C}^p \text{,}\)</span> et :<div class="displaymath process-math">
 \begin{equation*}
-\phi_X^{(k)}(0) = i^k \sum_{n=-\infty}^{+\infty} n^k \Pr(X = n) = i^k \Es(X^k).
+\phi_X^{(k)}(0) = i^k \sum_{n=-\infty}^{+\infty} n^k \Pr{X = n} = i^k \EE(X^k).
 \end{equation*}
 </div>
 </div></li>
@@ -118,11 +118,11 @@
 \begin{equation*}
 \left| e^{int} - \sum_{k=0}^p \frac{i^k n^k}{k!} t^k \right| \leq \frac{|n t|^{p+1}}{(p+1)!}.
 \end{equation*}
-</div>En multipliant par <span class="process-math">\(\Pr(X = n) \)</span> et en sommant sur <span class="process-math">\(\Z \text{,}\)</span> on obtient :<div class="displaymath process-math">
+</div>En multipliant par <span class="process-math">\(\Pr{X = n} \)</span> et en sommant sur <span class="process-math">\(\Z \text{,}\)</span> on obtient :<div class="displaymath process-math">
 \begin{equation*}
-\left| \Es(e^{itX}) - \sum_{k=0}^p \frac{i^k}{k!} \Es(X^k) t^k \right| \leq \frac{\Es\left(|X|^{p+1}\right)}{(p+1)!} |t|^{p+1}.
+\left| \EE(e^{itX}) - \sum_{k=0}^p \frac{i^k}{k!} \EE(X^k) t^k \right| \leq \frac{\EE\left(|X|^{p+1}\right)}{(p+1)!} |t|^{p+1}.
 \end{equation*}
-</div>Ainsi, <span class="process-math">\(\phi_X(t) = \sum_{p=0}^{+\infty} \frac{i^p}{p!} \Es(X^p) t^p \text{.}\)</span>
+</div>Ainsi, <span class="process-math">\(\phi_X(t) = \sum_{p=0}^{+\infty} \frac{i^p}{p!} \EE(X^p) t^p \text{.}\)</span>
 </div></li>
 </ol></div></div></details></div></article></article><span class="incontext"><a class="internal" href="sec-fctgen.html#fonction-caracteristique-conversion">Contexte</a></span>
 </body>

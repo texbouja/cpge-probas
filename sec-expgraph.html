@@ -159,19 +159,21 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\R}{\mathbb R}
 \newcommand{\C}{\mathbb C}
 \newcommand{\K}{\mathbb K}
-\renewcommand{\Pr}{\mathbb P}
-\newcommand{\Es}{\mathbb E}
-\newcommand{\Va}{\mathbb V}
+\newcommand{\bbone}{\mathbb 1}
 \newcommand{\PP}{\mathbb P}
-\newcommand{\ES}{\mathbb E}
-\newcommand{\VA}{\mathbb V}
-\newcommand\bbone{\mathbb 1}
-\newcommand\Cov{\operatorname{Cov}}
-\newcommand\card{\operatorname{Card}}
-\newcommand\qtext[1]{\quad\text{#1}\quad}
-\renewcommand\llbracket{[\![}
-\renewcommand\rrbracket{]\!]}
-\newcommand\iic[1]{\llbracket #1 \rrbracket}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\VV}{\mathbb V}
+\newcommand\giv{\nonscript\:\middle\vert\nonscript\:\mathopen{}}
+\renewcommand{\Pr}[2][]{\mathbb{P}\left(#2\right)}
+\renewcommand{\Es}[2][]{\mathbb{E}\left(#2\right)}
+\renewcommand{\Va}[2][]{\mathbb{V}\left(#2\right)}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\card}{\operatorname{Card}}
+\newcommand{\qtext}[1]{\quad\text{#1}\quad}
+\renewcommand\ceil[1]{[#1]}
+\renewcommand{\llbracket}{[\![}
+\renewcommand{\rrbracket}{]\!]}
+\newcommand{\iic}[1]{\llbracket #1 \rrbracket}
 \let\geq\geqslant
 \let\leq\leqslant
 \let\ds\displaystyle
@@ -200,9 +202,9 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="sec-varalea.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Variables aléatoires</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-varalea" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Variables aléatoires</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-loivaralea" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Loi d’une variable aléatoire discrète</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-indvar" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Indépendance des variables aléatoires discrètes</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-loiusuelles" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Lois discrusueètes usuelles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-indvar" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Indépendance des variables aléatoires discrètes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-loivaralea" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Loi d’une variable aléatoire discrète</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-loiusuelles" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Lois discrètes usuelles</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-fonction-repartition" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Loi d’une variable aléatoire réelle : fonction de répartition </span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-varalea.html#subsec-loi-activite" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Activités</span></a></div></li>
 </ul>
@@ -243,8 +245,21 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-actinum.html" class="internal"><span class="codenumber">2</span> <span class="title">Activités numériques</span></a></div>
 <ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-expgraph.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Exploration graphique</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-principeinversion.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Principe d’inversion et simulation de variables aléatoires discrètes</span></a></div></li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-expgraph.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Exploration graphique</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-expgraph.html#subsec-graphbinomiale" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Représentation graphique de lois usuelles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-expgraph.html#subsec-histogramme-lois-usuelles" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Échantillonage d’une loi discrète</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-expgraph.html#subsec-lo-faible" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Loi Faible des grands nombres avec une loi géométrique</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-principeinversion.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Principe d’inversion et simulation de variables aléatoires discrètes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-principeinversion.html#subsec-basetheo" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Base théorique</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-principeinversion.html#subsec-simulation-principe-inverse" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Simulation numérique</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-exercices.html" class="internal"><span class="codenumber">3</span> <span class="title">Exercices</span></a></div></li>
@@ -259,12 +274,15 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-expgraph"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">2.1</span><span class="space"> </span><span class="title">Exploration graphique</span>
 </h2>
-<article class="activity project-like" id="sec-expgraph-2"><h6 class="heading">
+<section class="subsection" id="subsec-graphbinomiale"><h3 class="heading hide-type">
+<span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="space"> </span><span class="title">Représentation graphique de lois usuelles</span>
+</h3>
+<section class="introduction" id="subsec-graphbinomiale-2"></section><article class="activity project-like" id="subsec-graphbinomiale-3"><h6 class="heading">
 <span class="type">Activité</span><span class="codenumber"> 2.1 - </span> <span class="title">Exploration de la loi binomiale.</span>
 </h6>
-<div class="introduction" id="sec-expgraph-2-2"><div class="para" id="sec-expgraph-2-2-1">Dans cette activité, vous allez explorer comment les paramètres <span class="process-math">\(n \)</span> (nombre d’essais) et <span class="process-math">\(p \)</span> (probabilité de succès) influencent la forme de la distribution binomiale. Vous pourrez choisir différentes valeurs de <span class="process-math">\(n \)</span> et <span class="process-math">\(p \)</span> et observer l’histogramme correspondant.</div></div>
-<article class="task exercise-like" id="sec-expgraph-2-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-expgraph-2-3-1-1">Utiliser les curseurs ci-dessous pour choisir les valeurs de <span class="process-math">\(n \)</span> et <span class="process-math">\(p \text{,}\)</span> puis observer comment l’histogramme de la loi binomiale évolue.</div> <div id="sec-expgraph-2-3-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">@interact
+<div class="introduction" id="subsec-graphbinomiale-3-2"><div class="para" id="subsec-graphbinomiale-3-2-1">Dans cette activité, vous allez explorer comment les paramètres <span class="process-math">\(n \)</span> (nombre d’essais) et <span class="process-math">\(p \)</span> (probabilité de succès) influencent la forme de la distribution binomiale. Vous pourrez choisir différentes valeurs de <span class="process-math">\(n \)</span> et <span class="process-math">\(p \)</span> et observer l’histogramme correspondant.</div></div>
+<article class="task exercise-like" id="subsec-graphbinomiale-3-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="subsec-graphbinomiale-3-3-1-1">Utiliser les curseurs ci-dessous pour choisir les valeurs de <span class="process-math">\(n \)</span> et <span class="process-math">\(p \text{,}\)</span> puis observer comment l’histogramme de la loi binomiale évolue.</div> <div class="para" id="subsec-graphbinomiale-3-3-1-2"><div id="subsec-graphbinomiale-3-3-1-2-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">@interact
 def binomial_histogram(n=slider(1, 50, 1, default=10, label="n"),
                 p=slider(0.01, 1, 0.01, default=0.5, label="p")):
     P = [binomial(n, k) * p^k * (1 - p)^(n - k) for k in range(n + 1)]
@@ -272,22 +290,64 @@ def binomial_histogram(n=slider(1, 50, 1, default=10, label="n"),
     g = bar_chart(P, width=0.5, axes_labels=[r"$k$", r"$P(X = k)$"])
     # Ajuste la taille de l'affichage si nécessaire avec figsize
     show(g, figsize=5)
-</script></div>
-<div class="solutions"><details id="sec-expgraph-2-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="sec-expgraph-2-3-2-1">
+</script></div></div> Donne une description sommaire de comportement de la distribution en fonction de la valeur du paramètre <span class="process-math">\(p\text{.}\)</span><div class="solutions"><details id="subsec-graphbinomiale-3-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="subsec-graphbinomiale-3-3-2-1">
 <div class="para">En modifiant les valeurs de <span class="process-math">\(n \)</span> et <span class="process-math">\(p \text{,}\)</span> observer comment la forme de la distribution binomiale change :</div>
-<ul class="disc" id="sec-expgraph-2-3-2-1-3">
-<li id="sec-expgraph-2-3-2-1-3-1"><div class="para" id="p-derived-sec-expgraph-2-3-2-1-3-1">Si <span class="process-math">\(p = 0.5 \text{,}\)</span> la distribution est symétrique.</div></li>
-<li id="sec-expgraph-2-3-2-1-3-2"><div class="para" id="p-derived-sec-expgraph-2-3-2-1-3-2">Si <span class="process-math">\(p \lt 0.5 \text{,}\)</span> la distribution est décalée vers la gauche.</div></li>
-<li id="sec-expgraph-2-3-2-1-3-3"><div class="para" id="p-derived-sec-expgraph-2-3-2-1-3-3">Si <span class="process-math">\(p \gt 0.5 \text{,}\)</span> la distribution est décalée vers la droite.</div></li>
-<li id="sec-expgraph-2-3-2-1-3-4"><div class="para" id="p-derived-sec-expgraph-2-3-2-1-3-4">Plus <span class="process-math">\(n \)</span> est grand, plus la distribution ressemble à une courbe en cloche (approximation normale).</div></li>
+<ul class="disc" id="subsec-graphbinomiale-3-3-2-1-3">
+<li id="subsec-graphbinomiale-3-3-2-1-3-1"><div class="para" id="p-derived-subsec-graphbinomiale-3-3-2-1-3-1">Si <span class="process-math">\(p = 0.5 \text{,}\)</span> la distribution est symétrique.</div></li>
+<li id="subsec-graphbinomiale-3-3-2-1-3-2"><div class="para" id="p-derived-subsec-graphbinomiale-3-3-2-1-3-2">Si <span class="process-math">\(p \lt 0.5 \text{,}\)</span> la distribution est décalée vers la gauche.</div></li>
+<li id="subsec-graphbinomiale-3-3-2-1-3-3"><div class="para" id="p-derived-subsec-graphbinomiale-3-3-2-1-3-3">Si <span class="process-math">\(p \gt 0.5 \text{,}\)</span> la distribution est décalée vers la droite.</div></li>
+<li id="subsec-graphbinomiale-3-3-2-1-3-4"><div class="para" id="p-derived-subsec-graphbinomiale-3-3-2-1-3-4">Plus <span class="process-math">\(n \)</span> est grand, plus la distribution ressemble à une courbe en cloche (rappelant une distribution de Poisson).</div></li>
 </ul>
-</div></div></details></div></article><article class="task exercise-like" id="sec-expgraph-2-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-expgraph-2-4-1-1">Expliquer théoriquement vos observations</div></article></article><article class="activity project-like" id="sec-expgraph-3"><h6 class="heading">
+</div></div></details></div></article><article class="task exercise-like" id="subsec-graphbinomiale-3-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="subsec-graphbinomiale-3-4-1-1">Expliquer théoriquement vos observations</div>
+<div class="solutions"><details id="subsec-graphbinomiale-3-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-graphbinomiale-3-4-2-1">
+<div class="para">Considérons une variable <span class="process-math">\(X\sim\mathscr B(n,p)\text{.}\)</span> Pour <span class="process-math">\(k\in\iic{0,n}\)</span> on a</div>
+<div class="displaymath process-math" id="subsec-graphbinomiale-3-4-2-1-3">
+\begin{align*}
+\frac{\PP(X=n-k)}{\PP(X=k)} \amp=
+\frac{p^{n-k}(1-p)^k}{p^k(1-p)^{n-k}}\\
+\amp=
+\left(\frac{p}{1-p}\right)^{n-2k}
+\end{align*}
+</div>
+<div class="para">la fonction <span class="process-math">\(p\longmapsto p/(1-p)\)</span> est croissante et varie entre <span class="process-math">\(0\)</span> et <span class="process-math">\(+\infty\)</span> en prenant la valeur <span class="process-math">\(1\)</span> en <span class="process-math">\(p=1/2\text{.}\)</span> Cela signifie que si <span class="process-math">\(p\lt 1/2\)</span> alors <span class="process-math">\(\PP(X=k)\geq \PP(X=n-k)\)</span> tant que <span class="process-math">\(n-2k\geq 0\text{.}\)</span> Le maximum de <span class="process-math">\(\PP(X=k)\)</span> est atteint donc en un point <span class="process-math">\(k\in\iic{0,\ceil{n/2}}\text{.}\)</span> Si <span class="process-math">\(p\gt 1/2\)</span> ce maximum est atteint pour <span class="process-math">\(k\in\iic{\ceil{n/2},n}\text{.}\)</span> Losque <span class="process-math">\(p=1/2\text{,}\)</span> <span class="process-math">\(\PP(X=n-k)=\PP(X=k)\)</span> pour tout <span class="process-math">\(k\)</span> ce qui signifie que le graphe de la distribution est symétrique par rapport au milieu <span class="process-math">\(n/2\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-graphbinomiale-3-4-2-1-20">
+\begin{align*}
+\frac{\PP(X=k+1)}{\PP(X=k)} \amp= 
+\frac{\binom n{k+1}}{\binom nk}\cdot \frac{p}{1-p}\\
+\amp= 
+\frac{n!}{(k+1)!(n-k-1)!}\cdot \frac{k!(n-k)!}{n!}\cdot\frac{p}{1-p}\\
+\amp= 
+\frac{n-k}{k+1}\cdot \frac{p}{1-p}
+\end{align*}
+</div>
+<div class="para">pour un <span class="process-math">\(p\)</span> fixé on a donc</div>
+<div class="displaymath process-math" id="subsec-graphbinomiale-3-4-2-1-22">
+\begin{align*}
+\PP(X=k+1)\geq \PP(X=k)\amp
+\Longleftrightarrow 
+p(n-k)\geq (1-p)(k+1) \\
+\amp\Longleftrightarrow 
+k\leq p(n+1)-1 \\
+\amp\Longleftrightarrow 
+k\leq r-1
+\end{align*}
+</div>
+<div class="para">où <span class="process-math">\(r=\ceil{p(n+1)}\text{.}\)</span> La fonction de masses <span class="process-math">\(k\longmapsto \PP(X=k)\)</span> reste croissante tant que <span class="process-math">\(k\leq r-1\)</span> et devient décroissante au delà. Son maximum ne peut être atteint qu’en <span class="process-math">\(k=r-1\)</span> et/ou en <span class="process-math">\(k=r\text{.}\)</span>
+</div>
+</div>
+<div class="para" id="subsec-graphbinomiale-3-4-2-2">Noter que si <span class="process-math">\(p\lt 1/2\)</span> alors <span class="process-math">\(r-1\leq\ceil{n/2}\)</span> et si <span class="process-math">\(p\gt 1/2\)</span> alors <span class="process-math">\(r-1\geq \ceil{n/2}\text{.}\)</span> Ce qui confirme le constat précédent en le précisant.</div>
+</div></details></div></article></article><article class="activity project-like" id="subsec-graphbinomiale-4"><h6 class="heading">
 <span class="type">Activité</span><span class="codenumber"> 2.2 - </span> <span class="title">Comportement asymptotique d’une loi binomiale.</span>
 </h6>
-<article class="task exercise-like" id="sec-expgraph-3-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-expgraph-3-2-1-1">Visualiser l’approximation de la loi binomiale <span class="process-math">\(B(n, p)\)</span> par la loi de Poisson <span class="process-math">\(P(np)\)</span> lorsque <span class="process-math">\(n\)</span> est grand.</div> <div class="para" id="sec-expgraph-3-2-1-2">Ce graphique affiche en bleu l’histogramme de la loi binomiale <span class="process-math">\(B(n, p)\)</span> et en rouge la courbe de la loi de Poisson <span class="process-math">\(P(np)\text{.}\)</span> Il permet de visualiser comment la distribution binomiale se rapproche de la distribution de Poisson lorsque <span class="process-math">\(n\)</span> devient grand.</div> <div id="sec-expgraph-3-2-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">@interact
-def binomial_vs_poisson(n=slider(50, 100, 1, default=50, label="n"),
+<div class="introduction" id="subsec-graphbinomiale-4-2"><div class="para" id="subsec-graphbinomiale-4-2-1">Dans cette activité, on s’intéresse à la convergence de la loi binomiale vers la loi de Poisson lorsque le nombre d’essais <span class="process-math">\(n \)</span> devient grand.</div></div>
+<article class="task exercise-like" id="subsec-graphbinomiale-4-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="subsec-graphbinomiale-4-3-1-1">Visualiser l’approximation de la loi binomiale <span class="process-math">\(B(n, p)\)</span> par la loi de Poisson <span class="process-math">\(\mathscr P(np)\)</span> lorsque <span class="process-math">\(n\)</span> est grand.</div>
+<div class="solutions"><details id="subsec-graphbinomiale-4-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="subsec-graphbinomiale-4-3-2-1"><div id="subsec-graphbinomiale-4-3-2-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">@interact
+def binomial_vs_poisson(n=slider(50, 500, 1, default=50, label="n"),
                         p=slider(0.01, 0.99, 0.01, default=0.5, label="p")):
     lambda_ = n * p  # Paramètre de la loi de Poisson
     P_binom = [binomial(n, k) * p^k * (1 - p)^(n - k) for k in range(n + 1)]
@@ -297,10 +357,126 @@ def binomial_vs_poisson(n=slider(50, 100, 1, default=50, label="n"),
     # Graphique pour la loi de Poisson (points reliés par une ligne)
     g_poisson = list_plot(P_poisson, plotjoined=True, color='red', marker="o", legend_label="Poisson P(np)")
     # Affichage combiné
-    show(g_binom + g_poisson, figsize=4, axes_labels=[r"$k$", r"$P(X = k)$"])
-</script></div>
-<div class="solutions"><details id="sec-expgraph-3-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="sec-expgraph-3-2-2-1">Lorsque <span class="process-math">\(n\)</span> est grand et <span class="process-math">\(p\)</span> est petit, la distribution binomiale <span class="process-math">\(B(n, p)\)</span> devient similaire à la distribution de Poisson <span class="process-math">\(P(np)\text{.}\)</span> Cette visualisation interactive permet d’observer cette convergence.</div></div></details></div></article><article class="task exercise-like" id="sec-expgraph-3-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-expgraph-3-3-1-1">Expliquer théoriquement vos observations</div></article></article></section></div>
+    show(g_binom + g_poisson, figsize=(6,5), axes_labels=[r"$k$", r"$P(X = k)$"])
+</script></div></div>
+<div class="para" id="subsec-graphbinomiale-4-3-2-2">Ce graphique affiche en bleu l’histogramme de la loi binomiale <span class="process-math">\(B(n, p)\)</span> et en rouge la courbe de la loi de Poisson <span class="process-math">\(\mathscr P(np)\text{.}\)</span> Il permet de visualiser comment la distribution binomiale se rapproche de la distribution de Poisson lorsque <span class="process-math">\(n\)</span> devient grand.</div>
+<div class="para" id="subsec-graphbinomiale-4-3-2-3">Lorsque <span class="process-math">\(n\)</span> est grand et <span class="process-math">\(p\)</span> est petit, la distribution binomiale <span class="process-math">\(B(n, p)\)</span> devient similaire à la distribution de Poisson <span class="process-math">\(\mathscr P(np)\text{.}\)</span> Cette visualisation interactive permet d’observer cette convergence.</div>
+</div></details></div></article><article class="task exercise-like" id="subsec-graphbinomiale-4-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="subsec-graphbinomiale-4-4-1-1">Expliquer théoriquement vos observations</div>
+<div class="solutions"><details id="subsec-graphbinomiale-4-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="subsec-graphbinomiale-4-4-2-1">Voir <a href="sec-varalea.html#act-binomial-poisson" class="xref" data-knowl="./knowl/xref/act-binomial-poisson.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Activité 1.6: Comportement asymptotique d’une loi binomiale">Activité 1.6</a>
+</div></div></details></div></article></article></section><section class="subsection" id="subsec-histogramme-lois-usuelles"><h3 class="heading hide-type">
+<span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="space"> </span><span class="title">Échantillonage d’une loi discrète</span>
+</h3>
+<section class="introduction" id="subsec-histogramme-lois-usuelles-2"><div class="para" id="subsec-histogramme-lois-usuelles-2-1">Dans cette section on commencera à utiliser les fonctions offertes par les bibliothèques Python pour simuler des variables aléatoires et on essayera de comparer graphiquement leurs comportement avec celui des lois théoriques.</div></section><article class="activity project-like" id="subsec-histogramme-lois-usuelles-3"><h6 class="heading">
+<span class="type">Activité</span><span class="codenumber"> 2.3 - </span> <span class="title">Loi binomiale.</span>
+</h6>
+<div class="para" id="subsec-histogramme-lois-usuelles-3-2-1">Utiliser les fonctions Python <code class="code-inline tex2jax_ignore">numpy.random.binomial</code> et <code class="code-inline tex2jax_ignore">numpy.random.poisson</code> pour générer des variables aléatoires qui suit la loi binomiale et la loi de Poisson. Écrire un script Python qui permet de modifier la taille <span class="process-math">\(N\)</span> de l’échantillon utilisé ainsi que les paramètres <span class="process-math">\(n\)</span> et <span class="process-math">\(p\)</span> et <span class="process-math">\(\lambda\)</span> et qui trace intéractivement l’histogramme des proportions des valeurs réalisées par, au choix, l’une des deux variables simulées dans l’échantillon ainsi que la courbe de la loi théorique correspondante.</div>
+<div class="solutions"><details id="subsec-histogramme-lois-usuelles-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="subsec-histogramme-lois-usuelles-3-3-1"><div id="subsec-histogramme-lois-usuelles-3-3-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">import numpy as np
+import matplotlib.pyplot as plt
+import math
+
+def binomial_pmf(k, n, p):
+    """Calcule la probabilité P(X = k) pour une loi binomiale."""
+    return math.comb(n, k) * (p**k) * ((1 - p)**(n - k))
+
+def poisson_pmf(k, lam):
+    """Calcule la probabilité P(X = k) pour une loi de Poisson."""
+    return (lam**k * np.exp(-lam)) / math.factorial(k)
+
+@interact
+def plot_distributions(distribution=['Binomiale', 'Poisson'], 
+        N=slider(10, 10000, 10, default=1000), 
+        n=slider(1, 50, 1, default=10), 
+        p=0.3, 
+        lam=10.0):
+    plt.figure(figsize=(5, 5))
+    
+    if distribution == 'Binomiale':
+        X = np.random.binomial(n, p, N)
+        k_values = np.arange(0, n + 1)
+        Pk_values = [binomial_pmf(k, n, p) for k in k_values]
+    
+    elif distribution == 'Poisson':
+        X = np.random.poisson(lam, N)
+        k_values = np.arange(0, max(15, int(2 * lam)))
+        Pk_values = [poisson_pmf(k, lam) for k in k_values]
+    
+    plt.hist(X, bins=np.arange(min(X), max(X) + 1.5) - 0.5, density=True, alpha=0.6, color='blue', edgecolor='black', label="Échantillon")
+    plt.plot(k_values, Pk_values, 'ro-', label="Théorique", markersize=5)
+
+    plt.xlabel("Valeurs")
+    plt.ylabel("Fréquence")
+    plt.title(f"Distribution {distribution} (N={N})")
+    plt.legend()
+    plt.grid(axis='y', linestyle='--', alpha=0.7)
+    plt.show()
+</script></div></div></div></details></div></article></section><section class="subsection" id="subsec-lo-faible"><h3 class="heading hide-type">
+<span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="space"> </span><span class="title">Loi Faible des grands nombres avec une loi géométrique</span>
+</h3>
+<section class="introduction" id="subsec-lo-faible-2"><div class="para" id="subsec-lo-faible-2-1">Dans cette section on essai de visualiser le conformance de la moyenne empirique sur un échantillon d’une loi géométrique avec la loi faible des grands nombre.</div></section><article class="activity project-like" id="subsec-lo-faible-3"><h6 class="heading">
+<span class="type">Activité</span><span class="codenumber"> 2.4 - </span>
+</h6>
+<article class="task exercise-like" id="subsec-lo-faible-3-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="subsec-lo-faible-3-1-1-1">En utilisant la fonction <code class="code-inline tex2jax_ignore">numpy.random.geometric</code> créer une variable qui suit la loi géométrique.</div> <div class="para" id="subsec-lo-faible-3-1-1-2">Écrire un script Python qui permet de changer intéractivement la valeur du paramètre <span class="process-math">\(p\)</span> de la taille <code class="code-inline tex2jax_ignore">N_max</code> de l’échantillon et qui trace la courbe d’évolution de la moyenne des valeurs réalisées en fonction de la taille <span class="process-math">\(N\)</span> de l’échantillon.</div>
+<div class="solutions"><details id="subsec-lo-faible-3-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="subsec-lo-faible-3-1-2-1"><div id="subsec-lo-faible-3-1-2-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">import numpy as np
+import matplotlib.pyplot as plt
+
+@interact
+def loi_faible_grands_nombres_geom(
+        p=slider(0.05, 1.0, 0.05, default=0.2), 
+        N_max=slider(500, 10000, 100, default=1000)):
+    plt.figure(figsize=(6, 5))
+
+    # Génération des échantillons selon une loi géométrique
+    N_values = np.arange(1, N_max + 1)
+    X = np.random.geometric(p, N_max)  # Tableau de résultats selon la Loi géométrique avec paramètre p 
+    E_theorique = 1 / p  # Espérance théorique de la loi géométrique
+
+    # Calcul de la moyenne empirique cumulée
+    moyennes_empiriques = np.cumsum(X) / N_values
+
+    # Tracé des résultats 
+    plt.plot(N_values, moyennes_empiriques, label="Moyenne empirique", color="blue")
+    plt.axhline(E_theorique, color="red", linestyle="--", label=f"Espérance théorique ({E_theorique:.2f})")
+
+    plt.xlabel("Taille de l'échantillon (N)")
+    plt.ylabel("Moyenne empirique")
+    plt.title(f"Loi faible des grands nombres - Loi Géométrique (p={p})")
+    plt.legend()
+    plt.grid(alpha=0.7)
+    plt.show()
+</script></div></div></div></details></div></article><article class="task exercise-like" id="subsec-lo-faible-3-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="subsec-lo-faible-3-2-1-1">Écrire un script qui permet de fixer intéractivement la valeur de la taille de l’échantillon et qui trace la courbe d’évolution de la moyenne empirique de la loi ainsi que celle de la fonction <span class="process-math">\(p\longmapsto \EE(X)\)</span> quand <span class="process-math">\(p\)</span> varie entre <span class="process-math">\(0.1\)</span> et <span class="process-math">\(0.99\text{.}\)</span>
+</div>
+<div class="solutions"><details id="subsec-lo-faible-3-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="subsec-lo-faible-3-2-2-1"><div id="subsec-lo-faible-3-2-2-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">import numpy as np
+import matplotlib.pyplot as plt
+
+@interact
+def loi_faible_grands_nombres_geom_variable_p(
+    N=slider(100, 10000, 100, default=1000)):
+    plt.figure(figsize=(6, 5))
+
+    # Valeurs de p variant linéairement de 0.01 à 0.99
+    p_values = np.linspace(0.01, 0.99, 50)
+    moyennes_empiriques = []
+    esperances_theoriques = []
+
+    for p in p_values:
+        X = np.random.geometric(p, N)  # Générer un échantillon de taille N
+        moyennes_empiriques.append(np.mean(X))  # Calculer la moyenne empirique
+        esperances_theoriques.append(1 / p)  # Espérance théorique de la loi géométrique
+
+    # Tracé des résultats
+    plt.plot(p_values, moyennes_empiriques, 'bo-', label="Moyenne empirique")
+    plt.plot(p_values, esperances_theoriques, 'r--', label="Espérance théorique")
+
+    plt.xlabel("Paramètre p")
+    plt.ylabel("Moyenne empirique")
+    plt.title(f"Loi faible des grands nombres - Loi Géométrique avec N={N}")
+    plt.legend()
+    plt.grid(alpha=0.7)
+    plt.show()
+</script></div></div></div></details></div></article></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ch-actinum.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-principeinversion.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
