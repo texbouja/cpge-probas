@@ -846,7 +846,7 @@ X  \amp   Y  \amp   1  \amp   2  \amp   3 \\
 <li id="ch-exercices-8-3-1-2-1"><div class="para" id="p-derived-ch-exercices-8-3-1-2-1">Calculer <span class="process-math">\(\mathbb{P}(B_{j_1,m} \cap B_{j_2,m} \cap \cdots \cap B_{j_k,m}) \text{,}\)</span> où <span class="process-math">\(j_1, j_2, \ldots, j_k \)</span> sont des indices distincts compris entre 1 et <span class="process-math">\(n \text{.}\)</span>
 </div></li>
 <li id="ch-exercices-8-3-1-2-2"><div class="para" id="p-derived-ch-exercices-8-3-1-2-2">En déduire que <span class="process-math">\(\mathbb{P}(X\gt m) = \sum_{k=1}^n (-1)^{k-1} \binom{n}{k} \left( \frac{n - k}{n} \right)^m \text{.}\)</span> Calculer <span class="process-math">\(\lim_{m \to +\infty} \mathbb{P}(X\gt m) \text{.}\)</span> Interpréter.</div></li>
-<li id="ch-exercices-8-3-1-2-3"><div class="para" id="p-derived-ch-exercices-8-3-1-2-3">Montrer que <span class="process-math">\(\mathbb{E}(X) = n \sum_{k=1}^n (-1)^{k-1} \frac{\binom{n}{k}}{k} \text{,}\)</span> en utilisant l’exercice 18 de la page 911.</div></li>
+<li id="ch-exercices-8-3-1-2-3"><div class="para" id="p-derived-ch-exercices-8-3-1-2-3">Montrer que <span class="process-math">\(\mathbb{E}(X) = n \sum_{k=1}^n (-1)^{k-1} \frac{\binom{n}{k}}{k} \text{,}\)</span> en utilisant  <a href="sec-espvaralea.html#act-essomme" class="xref" data-knowl="./knowl/xref/act-essomme.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Activité 1.14: Espérance d’une variable à valeurs dans \N">Activité 1.14</a>.</div></li>
 <li id="ch-exercices-8-3-1-2-4"><div class="para" id="p-derived-ch-exercices-8-3-1-2-4">Montrer que <span class="process-math">\(\mathbb{E}(X) = n \left( 1 + \frac{1}{2} + \cdots + \frac{1}{n} \right) \text{.}\)</span> En déduire un équivalent de <span class="process-math">\(\mathbb{E}(X) \)</span> quand <span class="process-math">\(n \)</span> tend vers <span class="process-math">\(+\infty \text{.}\)</span>
 </div></li>
 </ol>
@@ -862,11 +862,11 @@ X  \amp   Y  \amp   1  \amp   2  \amp   3 \\
 \mathbb{P}(X\gt m) = \mathbb{P}\left( \bigcup_{j=1}^n B_{j,m} \right) = \sum_{k=1}^n (-1)^{k-1} \binom{n}{k} \left( \frac{n - k}{n} \right)^m.
 \end{equation*}
 </div>La limite <span class="process-math">\(\lim_{m \to +\infty} \mathbb{P}(X\gt m) = 0 \)</span> car <span class="process-math">\(\left( \frac{n - k}{n} \right)^m \)</span> tend vers 0 pour tout <span class="process-math">\(k \geq 1 \text{.}\)</span> Cela signifie qu’il est presque sûr que tous les numéros seront obtenus en un nombre fini de tirages.</div></li>
-<li id="ch-exercices-8-3-2-1-1-3"><div class="para" id="p-derived-ch-exercices-8-3-2-1-1-3">En utilisant l’exercice 18 de la page 911, on a :<div class="displaymath process-math">
+<li id="ch-exercices-8-3-2-1-1-3"><div class="para" id="p-derived-ch-exercices-8-3-2-1-1-3">En utilisant  <a href="sec-espvaralea.html#act-essomme" class="xref" data-knowl="./knowl/xref/act-essomme.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Activité 1.14: Espérance d’une variable à valeurs dans \N">Activité 1.14</a>, on a :<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/act-essomme.html">
 \begin{equation*}
 \mathbb{E}(X) = \sum_{m=0}^{+\infty} \mathbb{P}(X\gt m) = \sum_{m=0}^{+\infty} \sum_{k=1}^n (-1)^{k-1} \binom{n}{k} \left( \frac{n - k}{n} \right)^m.
 \end{equation*}
-</div>En intervertissant les sommes, on obtient :<div class="displaymath process-math">
+</div>En intervertissant les sommes, on obtient :<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/act-essomme.html">
 \begin{equation*}
 \mathbb{E}(X) = \sum_{k=1}^n (-1)^{k-1} \binom{n}{k} \sum_{m=0}^{+\infty} \left( \frac{n - k}{n} \right)^m = \sum_{k=1}^n (-1)^{k-1} \binom{n}{k} \frac{1}{1 - \frac{n - k}{n}} = n \sum_{k=1}^n (-1)^{k-1} \frac{\binom{n}{k}}{k}.
 \end{equation*}
@@ -1517,7 +1517,8 @@ S_{i} = X_{1} + \cdots + X_{i}, \quad B_{i} = \left\{\left|S_{1}\right| \lt a\ri
 <div class="para">En déduire l’inégalité de Kolmogorov :</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\Pr{\sup \left(\left|S_{1}\right|, \left|S_{2}\right|, \ldots, \left|S_{n}\right|} \geqslant a\right) \leqslant \frac{\VV(S_{n})}{a^{2}}.
+\Pr{\sup \left(\left|S_{1}\right|, \left|S_{2}\right|, \ldots, \left|S_{n}\right|\right) \geqslant a}
+\leqslant \frac{\VV(S_{n})}{a^{2}}.
 \end{equation*}
 </div>
 </div></article></article><article class="exercise exercise-like" id="ch-exercices-19"><h2 class="heading">
@@ -1917,7 +1918,7 @@ A_{n+1} \setminus A_n = A_{n-r} \cap S_{n-r+1} \cap S_{n-r+2} \cap \cdots \cap S
 </ol></div></div></details></div></article><article class="task exercise-like" id="ch-exercices-25-3"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <ol class="decimal" id="ch-exercices-25-3-1-1">
 <li id="ch-exercices-25-3-1-1-1"><div class="para" id="p-derived-ch-exercices-25-3-1-1-1">Déduire de la question 1 que l’on peut définir une variable aléatoire <span class="process-math">\(T\)</span> égale au temps d’attente de <span class="process-math">\(r\)</span> succès consécutifs. On définira <span class="process-math">\(\{T = k\}\)</span> comme l’événement « on a obtenu des succès aux épreuves de rang <span class="process-math">\(k-r+1\text{,}\)</span> <span class="process-math">\(k-r+2\text{,}\)</span> ..., <span class="process-math">\(k\)</span> sans jamais avoir obtenu <span class="process-math">\(r\)</span> succès consécutifs auparavant ».</div></li>
-<li id="ch-exercices-25-3-1-1-2"><div class="para" id="p-derived-ch-exercices-25-3-1-1-2">Montrer en utilisant le résultat de l’exercice 18 de la page 911 que :<div class="displaymath process-math">
+<li id="ch-exercices-25-3-1-1-2"><div class="para" id="p-derived-ch-exercices-25-3-1-1-2">Montrer en utilisant le résultat de <a href="sec-espvaralea.html#act-essomme" class="xref" data-knowl="./knowl/xref/act-essomme.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Activité 1.14: Espérance d’une variable à valeurs dans \N">Activité 1.14</a> que :<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/act-essomme.html">
 \begin{equation*}
 \mathbb{E}(T) = \frac{1 - p^r}{(1 - p)p^r}.
 \end{equation*}
@@ -1931,11 +1932,11 @@ A_{n+1} \setminus A_n = A_{n-r} \cap S_{n-r+1} \cap S_{n-r+2} \cap \cdots \cap S
 \end{equation*}
 </div>On obtient de manière presque sûre une suite de <span class="process-math">\(r\)</span> succès consécutifs au bout d’un nombre fini d’épreuves. Sur un ensemble de probabilité 1, on peut définir l’application <span class="process-math">\(T\text{.}\)</span> On a, par définition <span class="process-math">\(\{T = k\} = A_{k+1} \setminus A_k\text{,}\)</span> donc <span class="process-math">\(\{T = k\}\)</span> est un événement et <span class="process-math">\(T\)</span> une variable aléatoire à valeurs dans <span class="process-math">\(\mathbb{N}^*\text{.}\)</span>
 </div></li>
-<li id="ch-exercices-25-3-2-1-2"><div class="para" id="p-derived-ch-exercices-25-3-2-1-2">Pour tout <span class="process-math">\(k \in \mathbb{N}\text{,}\)</span> on a <span class="process-math">\(\{T \gt k\} = A_k\)</span> et donc <span class="process-math">\(\mathbb{P}(T \gt k) = 1 - \Pi_k\text{.}\)</span> D’après la question 1, on a pour tout <span class="process-math">\(k \geq 0\)</span> :<div class="displaymath process-math">
+<li id="ch-exercices-25-3-2-1-2"><div class="para" id="p-derived-ch-exercices-25-3-2-1-2">Pour tout <span class="process-math">\(k \in \mathbb{N}\text{,}\)</span> on a <span class="process-math">\(\{T \gt k\} = A_k\)</span> et donc <span class="process-math">\(\mathbb{P}(T \gt k) = 1 - \Pi_k\text{.}\)</span> D’après la question 1, on a pour tout <span class="process-math">\(k \geq 0\)</span> :<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/act-essomme.html">
 \begin{equation*}
 1 - \Pi_k = \frac{\Pi_{k+r+1} - \Pi_{k+r}}{(1 - p)p^r}.
 \end{equation*}
-</div>D’après l’exercice 18 de la page 911, on en déduit :<div class="displaymath process-math">
+</div>D’après <a href="sec-espvaralea.html#act-essomme" class="xref" data-knowl="./knowl/xref/act-essomme.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Activité 1.14: Espérance d’une variable à valeurs dans \N">Activité 1.14</a>, on en déduit :<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/act-essomme.html">
 \begin{equation*}
 \mathbb{E}(T) = \sum_{k=0}^{+\infty} \frac{\Pi_{k+r+1} - \Pi_{k+r}}{(1 - p)p^r} = \frac{\lim_{n \to +\infty} \Pi_n - \Pi_r}{(1 - p)p^r} = \frac{1 - p^r}{(1 - p)p^r}.
 \end{equation*}
